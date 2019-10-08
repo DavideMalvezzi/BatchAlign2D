@@ -108,6 +108,7 @@ void batch_align2D(
 			offset += (pyr.cols * pyr.rows) / ((1 << l) * (1 << l));
 		}
 		uint8_t* cur_img = pyr.data + offset;
+
 		// Get image pyramid level size
 		int cur_img_cols = pyr.cols / (1 << levels[k]);
 		int cur_img_rows = pyr.rows / (1 << levels[k]);

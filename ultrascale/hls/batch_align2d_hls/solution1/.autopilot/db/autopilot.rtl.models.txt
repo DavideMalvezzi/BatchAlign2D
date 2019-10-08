@@ -1,0 +1,4 @@
+batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1
+batch_align2D_ctrl_s_axi
+batch_align2D_gmem_m_axi
+batch_align2D
