@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Oct  8 14:56:02 2019
+# Process ID: 9612
+# Current directory: /home/davide/Desktop/svo_batch_align2d
+# Command line: vivado
+# Log file: /home/davide/Desktop/svo_batch_align2d/vivado.log
+# Journal file: /home/davide/Desktop/svo_batch_align2d/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project batch_align2d_design /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design -part xczu9eg-ffvb1156-2-e
+set_property board_part xilinx.com:zcu102:part0:3.3 [current_project]

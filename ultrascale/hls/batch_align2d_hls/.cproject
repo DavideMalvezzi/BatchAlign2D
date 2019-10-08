@@ -53,8 +53,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
@@ -88,8 +86,6 @@
                                 <option id="gnu.c.compiler.option.include.paths.763083156" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/ap_sysc"/>
                                     									
@@ -225,8 +221,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
@@ -250,8 +244,6 @@
                                 <option id="gnu.c.compiler.option.include.paths.1289071960" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vivado/2019.1/include/ap_sysc"/>
                                     									
