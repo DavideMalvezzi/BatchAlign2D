@@ -100,3 +100,19 @@ Run output will be captured here: /home/davide/Desktop/svo_batch_align2d/ultrasc
 [Tue Oct  8 15:01:04 2019] Launched impl_1...
 Run output will be captured here: /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.runs/impl_1/runme.log
 launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 7133.207 ; gain = 100.352 ; free physical = 288 ; free virtual = 6625
+file copy -force /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.runs/impl_1/design_1.sysdef /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+
+launch_sdk -workspace /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.runs/impl_1/design_1.sysdef /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+
+launch_sdk -workspace /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
