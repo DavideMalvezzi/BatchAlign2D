@@ -56,7 +56,7 @@
 #include "utils.h"
 #include "xbatch_align2d.h"
 
-#define BATCH_SIZE 10
+#define BATCH_SIZE 1
 
 
 int main()
@@ -89,27 +89,36 @@ int main()
 
 	// Timer
 	XTime timer;
-	XTime_GetTime(&timer);
 
-	// Flush cache so the data into the RAM is updated
-    Xil_DCacheFlush();
-
-    // Send data to the FPGA
+	// Send data to the FPGA
 	XBatch_align2d_Set_cur_px_estimate(&XBA, (u64)cur_px_estimate);
 	XBatch_align2d_Set_converged(&XBA, (u64)converged);
 
-	// Start and wait for FPGA to finish
-	XBatch_align2d_Start(&XBA);
-	while(!XBatch_align2d_IsDone(&XBA));
+	while(1) {
+		for(int i = 0; i < 3; i++){
+			// Start timer
+			XTime_GetTime(&timer);
 
-	// Invalidate the cache so the data is read from the RAM
-	Xil_DCacheInvalidate();
+			// Flush cache so the data into the RAM is updated
+			Xil_DCacheFlush();
 
-	// Print elapsed time
-	time_print("Elapsed %d.%d us \n\r", time_elapsed(timer));
+			// Start and wait for FPGA to finish
+			XBatch_align2d_Start(&XBA);
+			while(!XBatch_align2d_IsDone(&XBA));
 
-	// Print result
-	xil_printf("conv %d pos %d %d \n\r", converged[0], (int)cur_px_estimate[0][0], (int)cur_px_estimate[0][1]);
+			// Invalidate the cache so the data is read from the RAM
+			Xil_DCacheInvalidate();
+
+			// Print elapsed time
+			time_print("Elapsed %d.%d us \n\r", time_elapsed(timer) * 1000 * 1000);
+
+			// Print result
+			xil_printf("conv %d pos %d %d \n\r", converged[0], (int)cur_px_estimate[0][0], (int)cur_px_estimate[0][1]);
+		}
+		sleep(10);
+	}
+
+
 
 	// Clean
     cleanup_platform();

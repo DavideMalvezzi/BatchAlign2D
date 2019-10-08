@@ -12,9 +12,19 @@
     "Package": "-ffvb1156",
     "Speed": "-2-e"
   },
-  "HlsSolution": {
-    
-  },
+  "HlsSolution": {"Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
+      "config_export -vivado_optimization_level=2",
+      "config_export -vivado_phys_opt=place",
+      "config_export -vivado_report_level=0",
+      "config_interface -clock_enable=0",
+      "config_interface -expose_global=0",
+      "config_interface -m_axi_addr64=1",
+      "config_interface -m_axi_offset=slave",
+      "config_interface -register_io=off",
+      "config_interface -trim_dangling_port=0"
+    ]},
   "Args": {
     "cur_px_estimate": {
       "index": "0",
@@ -214,7 +224,7 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "32"
+          "Width": "64"
         },
         "AWID": {
           "Type": "integer unsigned",
@@ -242,7 +252,7 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "32"
+          "Width": "64"
         },
         "ARID": {
           "Type": "integer unsigned",
@@ -282,10 +292,10 @@
       "MAX_WRITE_BURST_LENGTH": "16",
       "offset_slave_name": "s_axi_ctrl",
       "port_width": {
-        "ARADDR": "32",
+        "ARADDR": "64",
         "ARID": "1",
         "ARUSER": "1",
-        "AWADDR": "32",
+        "AWADDR": "64",
         "AWID": "1",
         "AWUSER": "1",
         "BID": "1",
@@ -305,7 +315,7 @@
       "mode": "slave",
       "port_prefix": "s_axi_ctrl",
       "param_prefix": "C_S_AXI_CTRL",
-      "addr_bits": "5",
+      "addr_bits": "6",
       "registers": [
         {
           "offset": "0x00",
@@ -465,7 +475,7 @@
         },
         {
           "offset": "0x10",
-          "name": "cur_px_estimate",
+          "name": "cur_px_estimate_1",
           "access": "W",
           "reset_value": "0x0",
           "description": "Data signal of cur_px_estimate",
@@ -479,8 +489,23 @@
             }]
         },
         {
-          "offset": "0x18",
-          "name": "converged",
+          "offset": "0x14",
+          "name": "cur_px_estimate_2",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of cur_px_estimate",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "cur_px_estimate",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of cur_px_estimate"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "converged_1",
           "access": "W",
           "reset_value": "0x0",
           "description": "Data signal of converged",
@@ -491,6 +516,21 @@
               "access": "W",
               "reset_value": "0",
               "description": "Bit 31 to 0 Data signal of converged"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "converged_2",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of converged",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "converged",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 63 to 32 Data signal of converged"
             }]
         }
       ],
@@ -515,7 +555,7 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "5"
+          "Width": "6"
         },
         "WDATA": {
           "Type": "null",
@@ -527,7 +567,7 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "5"
+          "Width": "6"
         },
         "RDATA": {
           "Type": "null",
@@ -536,8 +576,8 @@
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "5",
-        "AWADDR": "5",
+        "ARADDR": "6",
+        "AWADDR": "6",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -555,7 +595,7 @@
     },
     "s_axi_ctrl_AWADDR": {
       "dir": "in",
-      "width": "5"
+      "width": "6"
     },
     "s_axi_ctrl_WVALID": {
       "dir": "in",
@@ -583,7 +623,7 @@
     },
     "s_axi_ctrl_ARADDR": {
       "dir": "in",
-      "width": "5"
+      "width": "6"
     },
     "s_axi_ctrl_RVALID": {
       "dir": "out",
@@ -636,7 +676,7 @@
     },
     "m_axi_gmem_AWADDR": {
       "dir": "out",
-      "width": "32"
+      "width": "64"
     },
     "m_axi_gmem_AWID": {
       "dir": "out",
@@ -720,7 +760,7 @@
     },
     "m_axi_gmem_ARADDR": {
       "dir": "out",
-      "width": "32"
+      "width": "64"
     },
     "m_axi_gmem_ARID": {
       "dir": "out",
@@ -859,8 +899,8 @@
         "Area": {
           "BRAM_18K": "2",
           "DSP48E": "3",
-          "FF": "1185",
-          "LUT": "1416",
+          "FF": "1253",
+          "LUT": "1544",
           "URAM": "0"
         }
       }}
@@ -875,7 +915,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2019-10-08 14:52:59 CEST",
+    "Time": "2019-10-08 20:43:07 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }

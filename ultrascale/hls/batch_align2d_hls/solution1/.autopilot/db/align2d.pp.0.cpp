@@ -28830,6 +28830,7 @@ void batch_align2D(
    volatile bool* converged
 ){
 
+
 #pragma HLS INTERFACE m_axi depth=1 port=&cur_px_estimate offset=slave
 #pragma HLS INTERFACE m_axi depth=1 port=&converged offset=slave
 

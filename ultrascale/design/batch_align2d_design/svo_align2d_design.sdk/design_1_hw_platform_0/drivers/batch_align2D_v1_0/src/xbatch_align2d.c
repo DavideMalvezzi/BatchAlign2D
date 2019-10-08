@@ -73,37 +73,41 @@ void XBatch_align2d_DisableAutoRestart(XBatch_align2d *InstancePtr) {
     XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_AP_CTRL, 0);
 }
 
-void XBatch_align2d_Set_cur_px_estimate(XBatch_align2d *InstancePtr, u32 Data) {
+void XBatch_align2d_Set_cur_px_estimate(XBatch_align2d *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CUR_PX_ESTIMATE_DATA, Data);
+    XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CUR_PX_ESTIMATE_DATA, (u32)(Data));
+    XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CUR_PX_ESTIMATE_DATA + 4, (u32)(Data >> 32));
 }
 
-u32 XBatch_align2d_Get_cur_px_estimate(XBatch_align2d *InstancePtr) {
-    u32 Data;
+u64 XBatch_align2d_Get_cur_px_estimate(XBatch_align2d *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XBatch_align2d_ReadReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CUR_PX_ESTIMATE_DATA);
+    Data += (u64)XBatch_align2d_ReadReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CUR_PX_ESTIMATE_DATA + 4) << 32;
     return Data;
 }
 
-void XBatch_align2d_Set_converged(XBatch_align2d *InstancePtr, u32 Data) {
+void XBatch_align2d_Set_converged(XBatch_align2d *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA, Data);
+    XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA, (u32)(Data));
+    XBatch_align2d_WriteReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA + 4, (u32)(Data >> 32));
 }
 
-u32 XBatch_align2d_Get_converged(XBatch_align2d *InstancePtr) {
-    u32 Data;
+u64 XBatch_align2d_Get_converged(XBatch_align2d *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XBatch_align2d_ReadReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA);
+    Data += (u64)XBatch_align2d_ReadReg(InstancePtr->Ctrl_BaseAddress, XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA + 4) << 32;
     return Data;
 }
 

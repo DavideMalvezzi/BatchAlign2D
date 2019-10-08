@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/davide/FPGA-design/svo_align2d_design/svo_align2d_design.runs/design_1_batch_align2D_0_9_synth_1'
+HD_PWD='/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.runs/design_1_batch_align2D_0_9_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

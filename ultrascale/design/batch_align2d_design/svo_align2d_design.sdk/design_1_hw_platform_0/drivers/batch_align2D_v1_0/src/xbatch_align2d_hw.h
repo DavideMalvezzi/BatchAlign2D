@@ -23,10 +23,14 @@
 //        others - reserved
 // 0x10 : Data signal of cur_px_estimate
 //        bit 31~0 - cur_px_estimate[31:0] (Read/Write)
-// 0x14 : reserved
-// 0x18 : Data signal of converged
+// 0x14 : Data signal of cur_px_estimate
+//        bit 31~0 - cur_px_estimate[63:32] (Read/Write)
+// 0x18 : reserved
+// 0x1c : Data signal of converged
 //        bit 31~0 - converged[31:0] (Read/Write)
-// 0x1c : reserved
+// 0x20 : Data signal of converged
+//        bit 31~0 - converged[63:32] (Read/Write)
+// 0x24 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XBATCH_ALIGN2D_CTRL_ADDR_AP_CTRL              0x00
@@ -34,7 +38,7 @@
 #define XBATCH_ALIGN2D_CTRL_ADDR_IER                  0x08
 #define XBATCH_ALIGN2D_CTRL_ADDR_ISR                  0x0c
 #define XBATCH_ALIGN2D_CTRL_ADDR_CUR_PX_ESTIMATE_DATA 0x10
-#define XBATCH_ALIGN2D_CTRL_BITS_CUR_PX_ESTIMATE_DATA 32
-#define XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA       0x18
-#define XBATCH_ALIGN2D_CTRL_BITS_CONVERGED_DATA       32
+#define XBATCH_ALIGN2D_CTRL_BITS_CUR_PX_ESTIMATE_DATA 64
+#define XBATCH_ALIGN2D_CTRL_ADDR_CONVERGED_DATA       0x1c
+#define XBATCH_ALIGN2D_CTRL_BITS_CONVERGED_DATA       64
 

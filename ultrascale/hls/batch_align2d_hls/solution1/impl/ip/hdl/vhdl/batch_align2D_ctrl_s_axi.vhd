@@ -8,7 +8,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity batch_align2D_ctrl_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 5;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 6;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -36,8 +36,8 @@ port (
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
     ap_idle               :in   STD_LOGIC;
-    cur_px_estimate       :out  STD_LOGIC_VECTOR(31 downto 0);
-    converged             :out  STD_LOGIC_VECTOR(31 downto 0)
+    cur_px_estimate       :out  STD_LOGIC_VECTOR(63 downto 0);
+    converged             :out  STD_LOGIC_VECTOR(63 downto 0)
 );
 end entity batch_align2D_ctrl_s_axi;
 
@@ -62,10 +62,14 @@ end entity batch_align2D_ctrl_s_axi;
 --        others - reserved
 -- 0x10 : Data signal of cur_px_estimate
 --        bit 31~0 - cur_px_estimate[31:0] (Read/Write)
--- 0x14 : reserved
--- 0x18 : Data signal of converged
+-- 0x14 : Data signal of cur_px_estimate
+--        bit 31~0 - cur_px_estimate[63:32] (Read/Write)
+-- 0x18 : reserved
+-- 0x1c : Data signal of converged
 --        bit 31~0 - converged[31:0] (Read/Write)
--- 0x1c : reserved
+-- 0x20 : Data signal of converged
+--        bit 31~0 - converged[63:32] (Read/Write)
+-- 0x24 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of batch_align2D_ctrl_s_axi is
@@ -78,10 +82,12 @@ architecture behave of batch_align2D_ctrl_s_axi is
     constant ADDR_IER                    : INTEGER := 16#08#;
     constant ADDR_ISR                    : INTEGER := 16#0c#;
     constant ADDR_CUR_PX_ESTIMATE_DATA_0 : INTEGER := 16#10#;
-    constant ADDR_CUR_PX_ESTIMATE_CTRL   : INTEGER := 16#14#;
-    constant ADDR_CONVERGED_DATA_0       : INTEGER := 16#18#;
-    constant ADDR_CONVERGED_CTRL         : INTEGER := 16#1c#;
-    constant ADDR_BITS         : INTEGER := 5;
+    constant ADDR_CUR_PX_ESTIMATE_DATA_1 : INTEGER := 16#14#;
+    constant ADDR_CUR_PX_ESTIMATE_CTRL   : INTEGER := 16#18#;
+    constant ADDR_CONVERGED_DATA_0       : INTEGER := 16#1c#;
+    constant ADDR_CONVERGED_DATA_1       : INTEGER := 16#20#;
+    constant ADDR_CONVERGED_CTRL         : INTEGER := 16#24#;
+    constant ADDR_BITS         : INTEGER := 6;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(31 downto 0);
@@ -103,8 +109,8 @@ architecture behave of batch_align2D_ctrl_s_axi is
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
-    signal int_cur_px_estimate : UNSIGNED(31 downto 0) := (others => '0');
-    signal int_converged       : UNSIGNED(31 downto 0) := (others => '0');
+    signal int_cur_px_estimate : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_converged       : UNSIGNED(63 downto 0) := (others => '0');
 
 
 begin
@@ -228,8 +234,12 @@ begin
                         rdata_data <= (1 => int_isr(1), 0 => int_isr(0), others => '0');
                     when ADDR_CUR_PX_ESTIMATE_DATA_0 =>
                         rdata_data <= RESIZE(int_cur_px_estimate(31 downto 0), 32);
+                    when ADDR_CUR_PX_ESTIMATE_DATA_1 =>
+                        rdata_data <= RESIZE(int_cur_px_estimate(63 downto 32), 32);
                     when ADDR_CONVERGED_DATA_0 =>
                         rdata_data <= RESIZE(int_converged(31 downto 0), 32);
+                    when ADDR_CONVERGED_DATA_1 =>
+                        rdata_data <= RESIZE(int_converged(63 downto 32), 32);
                     when others =>
                         rdata_data <= (others => '0');
                     end case;
@@ -384,8 +394,30 @@ begin
     begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CUR_PX_ESTIMATE_DATA_1) then
+                    int_cur_px_estimate(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_cur_px_estimate(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_CONVERGED_DATA_0) then
                     int_converged(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_converged(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_CONVERGED_DATA_1) then
+                    int_converged(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_converged(63 downto 32));
                 end if;
             end if;
         end if;

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'batch_align2D'" level="0">
-<item name = "Date">Tue Oct  8 14:52:58 2019
+<item name = "Date">Tue Oct  8 20:43:05 2019
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">batch_align2d_hls</item>

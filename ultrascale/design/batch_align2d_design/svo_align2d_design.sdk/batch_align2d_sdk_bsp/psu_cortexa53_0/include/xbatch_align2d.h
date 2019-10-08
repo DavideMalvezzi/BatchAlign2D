@@ -84,10 +84,10 @@ u32 XBatch_align2d_IsReady(XBatch_align2d *InstancePtr);
 void XBatch_align2d_EnableAutoRestart(XBatch_align2d *InstancePtr);
 void XBatch_align2d_DisableAutoRestart(XBatch_align2d *InstancePtr);
 
-void XBatch_align2d_Set_cur_px_estimate(XBatch_align2d *InstancePtr, u32 Data);
-u32 XBatch_align2d_Get_cur_px_estimate(XBatch_align2d *InstancePtr);
-void XBatch_align2d_Set_converged(XBatch_align2d *InstancePtr, u32 Data);
-u32 XBatch_align2d_Get_converged(XBatch_align2d *InstancePtr);
+void XBatch_align2d_Set_cur_px_estimate(XBatch_align2d *InstancePtr, u64 Data);
+u64 XBatch_align2d_Get_cur_px_estimate(XBatch_align2d *InstancePtr);
+void XBatch_align2d_Set_converged(XBatch_align2d *InstancePtr, u64 Data);
+u64 XBatch_align2d_Get_converged(XBatch_align2d *InstancePtr);
 
 void XBatch_align2d_InterruptGlobalEnable(XBatch_align2d *InstancePtr);
 void XBatch_align2d_InterruptGlobalDisable(XBatch_align2d *InstancePtr);

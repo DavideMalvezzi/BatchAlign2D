@@ -106,19 +106,19 @@ ap_ready { }
 ap_idle { }
 cur_px_estimate { 
 	dir I
-	width 32
+	width 64
 	depth 1
 	mode ap_none
 	offset 16
-	offset_end 23
+	offset_end 27
 }
 converged { 
 	dir I
-	width 32
+	width 64
 	depth 1
 	mode ap_none
-	offset 24
-	offset_end 31
+	offset 28
+	offset_end 39
 }
 }
 dict set axilite_register_dict ctrl $port_ctrl

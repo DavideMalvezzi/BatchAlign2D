@@ -17,7 +17,7 @@
 
 namespace ap_rtl {
 
-template<unsigned int C_M_AXI_GMEM_ADDR_WIDTH = 32,
+template<unsigned int C_M_AXI_GMEM_ADDR_WIDTH = 64,
          unsigned int C_M_AXI_GMEM_ID_WIDTH = 1,
          unsigned int C_M_AXI_GMEM_AWUSER_WIDTH = 1,
          unsigned int C_M_AXI_GMEM_DATA_WIDTH = 32,
@@ -25,7 +25,7 @@ template<unsigned int C_M_AXI_GMEM_ADDR_WIDTH = 32,
          unsigned int C_M_AXI_GMEM_ARUSER_WIDTH = 1,
          unsigned int C_M_AXI_GMEM_RUSER_WIDTH = 1,
          unsigned int C_M_AXI_GMEM_BUSER_WIDTH = 1,
-         unsigned int C_S_AXI_CTRL_ADDR_WIDTH = 5,
+         unsigned int C_S_AXI_CTRL_ADDR_WIDTH = 6,
          unsigned int C_S_AXI_CTRL_DATA_WIDTH = 32>
 struct batch_align2D : public sc_module {
     // Port declarations 65
@@ -115,7 +115,7 @@ struct batch_align2D : public sc_module {
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
     batch_align2D_ctrl_s_axi<C_S_AXI_CTRL_ADDR_WIDTH,C_S_AXI_CTRL_DATA_WIDTH>* batch_align2D_ctrl_s_axi_U;
-    batch_align2D_gmem_m_axi<0,32,32,5,16,16,16,16,C_M_AXI_GMEM_ID_WIDTH,C_M_AXI_GMEM_ADDR_WIDTH,C_M_AXI_GMEM_DATA_WIDTH,C_M_AXI_GMEM_AWUSER_WIDTH,C_M_AXI_GMEM_ARUSER_WIDTH,C_M_AXI_GMEM_WUSER_WIDTH,C_M_AXI_GMEM_RUSER_WIDTH,C_M_AXI_GMEM_BUSER_WIDTH,C_M_AXI_GMEM_USER_VALUE,C_M_AXI_GMEM_PROT_VALUE,C_M_AXI_GMEM_CACHE_VALUE>* batch_align2D_gmem_m_axi_U;
+    batch_align2D_gmem_m_axi<0,32,64,5,16,16,16,16,C_M_AXI_GMEM_ID_WIDTH,C_M_AXI_GMEM_ADDR_WIDTH,C_M_AXI_GMEM_DATA_WIDTH,C_M_AXI_GMEM_AWUSER_WIDTH,C_M_AXI_GMEM_ARUSER_WIDTH,C_M_AXI_GMEM_WUSER_WIDTH,C_M_AXI_GMEM_RUSER_WIDTH,C_M_AXI_GMEM_BUSER_WIDTH,C_M_AXI_GMEM_USER_VALUE,C_M_AXI_GMEM_PROT_VALUE,C_M_AXI_GMEM_CACHE_VALUE>* batch_align2D_gmem_m_axi_U;
     batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1<1,2,32,32,32>* batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U1;
     sc_signal< sc_logic > ap_rst_n_inv;
     sc_signal< sc_logic > ap_start;
@@ -124,8 +124,8 @@ struct batch_align2D : public sc_module {
     sc_signal< sc_lv<39> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_logic > ap_ready;
-    sc_signal< sc_lv<32> > cur_px_estimate;
-    sc_signal< sc_lv<32> > converged;
+    sc_signal< sc_lv<64> > cur_px_estimate;
+    sc_signal< sc_lv<64> > converged;
     sc_signal< sc_logic > gmem_blk_n_AR;
     sc_signal< sc_logic > ap_CS_fsm_state12;
     sc_signal< sc_logic > gmem_blk_n_R;
@@ -142,23 +142,23 @@ struct batch_align2D : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_pp0_stage0;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter1;
     sc_signal< bool > ap_block_pp0_stage0;
-    sc_signal< sc_lv<1> > icmp_ln71_reg_347;
+    sc_signal< sc_lv<1> > icmp_ln72_reg_338;
     sc_signal< sc_logic > ap_CS_fsm_state20;
     sc_signal< sc_logic > ap_enable_reg_pp1_iter3;
     sc_signal< bool > ap_block_pp1_stage0;
-    sc_signal< sc_lv<1> > icmp_ln82_reg_387;
-    sc_signal< sc_lv<1> > icmp_ln82_reg_387_pp1_iter2_reg;
+    sc_signal< sc_lv<1> > icmp_ln83_reg_378;
+    sc_signal< sc_lv<1> > icmp_ln83_reg_378_pp1_iter2_reg;
     sc_signal< sc_logic > ap_CS_fsm_state29;
     sc_signal< sc_logic > gmem_AWVALID;
     sc_signal< sc_logic > gmem_AWREADY;
-    sc_signal< sc_lv<32> > gmem_AWADDR;
+    sc_signal< sc_lv<64> > gmem_AWADDR;
     sc_signal< sc_lv<32> > gmem_AWLEN;
     sc_signal< sc_logic > gmem_WVALID;
     sc_signal< sc_logic > gmem_WREADY;
     sc_signal< sc_lv<32> > gmem_WDATA;
     sc_signal< sc_logic > gmem_ARVALID;
     sc_signal< sc_logic > gmem_ARREADY;
-    sc_signal< sc_lv<32> > gmem_ARADDR;
+    sc_signal< sc_lv<64> > gmem_ARADDR;
     sc_signal< sc_lv<32> > gmem_ARLEN;
     sc_signal< sc_logic > gmem_RVALID;
     sc_signal< sc_logic > gmem_RREADY;
@@ -174,33 +174,30 @@ struct batch_align2D : public sc_module {
     sc_signal< sc_lv<1> > gmem_BUSER;
     sc_signal< sc_lv<32> > v_buff_0_1_0_reg_154;
     sc_signal< sc_lv<32> > v_buff_0_0_0_reg_166;
-    sc_signal< sc_lv<2> > phi_ln71_reg_178;
-    sc_signal< sc_lv<2> > phi_ln82_reg_189;
-    sc_signal< sc_lv<30> > converged3_reg_323;
-    sc_signal< sc_lv<30> > tmp_reg_328;
-    sc_signal< sc_lv<32> > gmem_addr_1_reg_333;
-    sc_signal< sc_lv<32> > gmem_addr_reg_340;
-    sc_signal< sc_logic > ap_CS_fsm_state8;
-    sc_signal< sc_lv<1> > icmp_ln71_fu_244_p2;
+    sc_signal< sc_lv<2> > phi_ln72_reg_178;
+    sc_signal< sc_lv<2> > phi_ln83_reg_189;
+    sc_signal< sc_lv<64> > gmem_addr_reg_324;
+    sc_signal< sc_lv<64> > gmem_addr_1_reg_331;
+    sc_signal< sc_lv<1> > icmp_ln72_fu_245_p2;
     sc_signal< bool > ap_block_state9_pp0_stage0_iter0;
     sc_signal< bool > ap_block_state10_pp0_stage0_iter1;
     sc_signal< bool > ap_block_state11_pp0_stage0_iter2;
     sc_signal< bool > ap_block_pp0_stage0_11001;
-    sc_signal< sc_lv<1> > icmp_ln71_reg_347_pp0_iter1_reg;
-    sc_signal< sc_lv<2> > add_ln71_fu_250_p2;
+    sc_signal< sc_lv<1> > icmp_ln72_reg_338_pp0_iter1_reg;
+    sc_signal< sc_lv<2> > add_ln72_fu_251_p2;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter0;
-    sc_signal< sc_lv<1> > trunc_ln71_fu_256_p1;
-    sc_signal< sc_lv<1> > trunc_ln71_reg_356;
-    sc_signal< sc_lv<1> > trunc_ln71_reg_356_pp0_iter1_reg;
-    sc_signal< sc_lv<32> > gmem_addr_1_read_reg_362;
-    sc_signal< sc_lv<32> > v_buff_0_1_1_fu_263_p3;
+    sc_signal< sc_lv<1> > trunc_ln72_fu_257_p1;
+    sc_signal< sc_lv<1> > trunc_ln72_reg_347;
+    sc_signal< sc_lv<1> > trunc_ln72_reg_347_pp0_iter1_reg;
+    sc_signal< sc_lv<32> > gmem_addr_1_read_reg_353;
+    sc_signal< sc_lv<32> > v_buff_0_1_1_fu_264_p3;
     sc_signal< sc_logic > ap_enable_reg_pp0_iter2;
-    sc_signal< sc_lv<32> > v_buff_0_1_2_fu_270_p3;
-    sc_signal< sc_lv<1> > trunc_ln72_fu_277_p1;
-    sc_signal< sc_lv<1> > trunc_ln72_reg_377;
-    sc_signal< sc_lv<1> > xor_ln83_fu_281_p2;
-    sc_signal< sc_lv<1> > xor_ln83_reg_382;
-    sc_signal< sc_lv<1> > icmp_ln82_fu_286_p2;
+    sc_signal< sc_lv<32> > v_buff_0_1_2_fu_271_p3;
+    sc_signal< sc_lv<1> > trunc_ln73_fu_278_p1;
+    sc_signal< sc_lv<1> > trunc_ln73_reg_368;
+    sc_signal< sc_lv<1> > xor_ln84_fu_282_p2;
+    sc_signal< sc_lv<1> > xor_ln84_reg_373;
+    sc_signal< sc_lv<1> > icmp_ln83_fu_287_p2;
     sc_signal< sc_logic > ap_CS_fsm_pp1_stage0;
     sc_signal< bool > ap_block_state21_pp1_stage0_iter0;
     sc_signal< bool > ap_block_state22_pp1_stage0_iter1;
@@ -208,27 +205,30 @@ struct batch_align2D : public sc_module {
     sc_signal< bool > ap_block_state24_pp1_stage0_iter3;
     sc_signal< bool > ap_block_state24_io;
     sc_signal< bool > ap_block_pp1_stage0_11001;
-    sc_signal< sc_lv<1> > icmp_ln82_reg_387_pp1_iter1_reg;
-    sc_signal< sc_lv<2> > add_ln82_fu_292_p2;
+    sc_signal< sc_lv<1> > icmp_ln83_reg_378_pp1_iter1_reg;
+    sc_signal< sc_lv<2> > add_ln83_fu_293_p2;
     sc_signal< sc_logic > ap_enable_reg_pp1_iter0;
-    sc_signal< sc_lv<32> > select_ln82_fu_302_p3;
-    sc_signal< sc_lv<32> > select_ln82_reg_396;
+    sc_signal< sc_lv<32> > select_ln83_fu_303_p3;
+    sc_signal< sc_lv<32> > select_ln83_reg_387;
     sc_signal< sc_lv<32> > grp_fu_200_p2;
-    sc_signal< sc_lv<32> > select_ln_reg_401;
-    sc_signal< sc_lv<32> > tmp_1_fu_314_p4;
-    sc_signal< sc_lv<32> > tmp_1_reg_406;
+    sc_signal< sc_lv<32> > select_ln_reg_392;
+    sc_signal< sc_lv<32> > tmp_1_fu_315_p4;
+    sc_signal< sc_lv<32> > tmp_1_reg_397;
+    sc_signal< sc_logic > ap_CS_fsm_state8;
     sc_signal< bool > ap_block_pp0_stage0_subdone;
     sc_signal< sc_logic > ap_condition_pp0_exit_iter0_state9;
     sc_signal< bool > ap_block_pp1_stage0_subdone;
     sc_signal< sc_logic > ap_condition_pp1_exit_iter0_state21;
     sc_signal< sc_logic > ap_enable_reg_pp1_iter1;
     sc_signal< sc_logic > ap_enable_reg_pp1_iter2;
-    sc_signal< sc_lv<64> > zext_ln71_fu_225_p1;
-    sc_signal< sc_lv<64> > empty_fu_235_p1;
-    sc_signal< sc_lv<32> > bitcast_ln82_fu_310_p1;
+    sc_signal< sc_lv<64> > empty_fu_215_p1;
+    sc_signal< sc_lv<64> > zext_ln72_fu_235_p1;
+    sc_signal< sc_lv<32> > bitcast_ln83_fu_311_p1;
     sc_signal< bool > ap_block_pp1_stage0_01001;
-    sc_signal< sc_lv<32> > v_buff_0_0_fu_260_p1;
-    sc_signal< sc_lv<1> > trunc_ln82_fu_298_p1;
+    sc_signal< sc_lv<62> > converged3_fu_205_p4;
+    sc_signal< sc_lv<62> > tmp_fu_225_p4;
+    sc_signal< sc_lv<32> > v_buff_0_0_fu_261_p1;
+    sc_signal< sc_lv<1> > trunc_ln83_fu_299_p1;
     sc_signal< sc_logic > grp_fu_200_ce;
     sc_signal< sc_lv<39> > ap_NS_fsm;
     sc_signal< sc_logic > ap_idle_pp0;
@@ -296,8 +296,8 @@ struct batch_align2D : public sc_module {
     static const int C_M_AXI_GMEM_PROT_VALUE;
     static const int C_M_AXI_GMEM_CACHE_VALUE;
     static const int C_M_AXI_DATA_WIDTH;
-    static const sc_lv<32> ap_const_lv32_7;
     static const sc_lv<32> ap_const_lv32_12;
+    static const sc_lv<32> ap_const_lv32_7;
     static const sc_lv<1> ap_const_lv1_1;
     static const sc_lv<2> ap_const_lv2_0;
     static const sc_lv<32> ap_const_lv32_2;
@@ -305,6 +305,7 @@ struct batch_align2D : public sc_module {
     static const sc_lv<4> ap_const_lv4_0;
     static const sc_lv<4> ap_const_lv4_F;
     static const sc_lv<32> ap_const_lv32_40000000;
+    static const sc_lv<32> ap_const_lv32_3F;
     static const sc_lv<2> ap_const_lv2_2;
     static const sc_lv<2> ap_const_lv2_1;
     // Thread declarations
@@ -317,8 +318,8 @@ struct batch_align2D : public sc_module {
     void thread_ap_var_for_const6();
     void thread_ap_var_for_const7();
     void thread_ap_clk_no_reset_();
-    void thread_add_ln71_fu_250_p2();
-    void thread_add_ln82_fu_292_p2();
+    void thread_add_ln72_fu_251_p2();
+    void thread_add_ln83_fu_293_p2();
     void thread_ap_CS_fsm_pp0_stage0();
     void thread_ap_CS_fsm_pp1_stage0();
     void thread_ap_CS_fsm_state1();
@@ -358,8 +359,9 @@ struct batch_align2D : public sc_module {
     void thread_ap_idle_pp1();
     void thread_ap_ready();
     void thread_ap_rst_n_inv();
-    void thread_bitcast_ln82_fu_310_p1();
-    void thread_empty_fu_235_p1();
+    void thread_bitcast_ln83_fu_311_p1();
+    void thread_converged3_fu_205_p4();
+    void thread_empty_fu_215_p1();
     void thread_gmem_ARADDR();
     void thread_gmem_ARLEN();
     void thread_gmem_ARVALID();
@@ -376,18 +378,19 @@ struct batch_align2D : public sc_module {
     void thread_gmem_blk_n_R();
     void thread_gmem_blk_n_W();
     void thread_grp_fu_200_ce();
-    void thread_icmp_ln71_fu_244_p2();
-    void thread_icmp_ln82_fu_286_p2();
-    void thread_select_ln82_fu_302_p3();
-    void thread_tmp_1_fu_314_p4();
-    void thread_trunc_ln71_fu_256_p1();
-    void thread_trunc_ln72_fu_277_p1();
-    void thread_trunc_ln82_fu_298_p1();
-    void thread_v_buff_0_0_fu_260_p1();
-    void thread_v_buff_0_1_1_fu_263_p3();
-    void thread_v_buff_0_1_2_fu_270_p3();
-    void thread_xor_ln83_fu_281_p2();
-    void thread_zext_ln71_fu_225_p1();
+    void thread_icmp_ln72_fu_245_p2();
+    void thread_icmp_ln83_fu_287_p2();
+    void thread_select_ln83_fu_303_p3();
+    void thread_tmp_1_fu_315_p4();
+    void thread_tmp_fu_225_p4();
+    void thread_trunc_ln72_fu_257_p1();
+    void thread_trunc_ln73_fu_278_p1();
+    void thread_trunc_ln83_fu_299_p1();
+    void thread_v_buff_0_0_fu_261_p1();
+    void thread_v_buff_0_1_1_fu_264_p3();
+    void thread_v_buff_0_1_2_fu_271_p3();
+    void thread_xor_ln84_fu_282_p2();
+    void thread_zext_ln72_fu_235_p1();
     void thread_ap_NS_fsm();
     void thread_hdltv_gen();
 };

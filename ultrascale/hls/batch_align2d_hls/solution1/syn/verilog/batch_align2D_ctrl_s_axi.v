@@ -5,7 +5,7 @@
 `timescale 1ns/1ps
 module batch_align2D_ctrl_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 5,
+    C_S_AXI_ADDR_WIDTH = 6,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -33,8 +33,8 @@ module batch_align2D_ctrl_s_axi
     input  wire                          ap_done,
     input  wire                          ap_ready,
     input  wire                          ap_idle,
-    output wire [31:0]                   cur_px_estimate,
-    output wire [31:0]                   converged
+    output wire [63:0]                   cur_px_estimate,
+    output wire [63:0]                   converged
 );
 //------------------------Address Info-------------------
 // 0x00 : Control signals
@@ -57,22 +57,28 @@ module batch_align2D_ctrl_s_axi
 //        others - reserved
 // 0x10 : Data signal of cur_px_estimate
 //        bit 31~0 - cur_px_estimate[31:0] (Read/Write)
-// 0x14 : reserved
-// 0x18 : Data signal of converged
+// 0x14 : Data signal of cur_px_estimate
+//        bit 31~0 - cur_px_estimate[63:32] (Read/Write)
+// 0x18 : reserved
+// 0x1c : Data signal of converged
 //        bit 31~0 - converged[31:0] (Read/Write)
-// 0x1c : reserved
+// 0x20 : Data signal of converged
+//        bit 31~0 - converged[63:32] (Read/Write)
+// 0x24 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL                = 5'h00,
-    ADDR_GIE                    = 5'h04,
-    ADDR_IER                    = 5'h08,
-    ADDR_ISR                    = 5'h0c,
-    ADDR_CUR_PX_ESTIMATE_DATA_0 = 5'h10,
-    ADDR_CUR_PX_ESTIMATE_CTRL   = 5'h14,
-    ADDR_CONVERGED_DATA_0       = 5'h18,
-    ADDR_CONVERGED_CTRL         = 5'h1c,
+    ADDR_AP_CTRL                = 6'h00,
+    ADDR_GIE                    = 6'h04,
+    ADDR_IER                    = 6'h08,
+    ADDR_ISR                    = 6'h0c,
+    ADDR_CUR_PX_ESTIMATE_DATA_0 = 6'h10,
+    ADDR_CUR_PX_ESTIMATE_DATA_1 = 6'h14,
+    ADDR_CUR_PX_ESTIMATE_CTRL   = 6'h18,
+    ADDR_CONVERGED_DATA_0       = 6'h1c,
+    ADDR_CONVERGED_DATA_1       = 6'h20,
+    ADDR_CONVERGED_CTRL         = 6'h24,
     WRIDLE                      = 2'd0,
     WRDATA                      = 2'd1,
     WRRESP                      = 2'd2,
@@ -80,7 +86,7 @@ localparam
     RDIDLE                      = 2'd0,
     RDDATA                      = 2'd1,
     RDRESET                     = 2'd2,
-    ADDR_BITS         = 5;
+    ADDR_BITS         = 6;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -103,8 +109,8 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
-    reg  [31:0]                   int_cur_px_estimate = 'b0;
-    reg  [31:0]                   int_converged = 'b0;
+    reg  [63:0]                   int_cur_px_estimate = 'b0;
+    reg  [63:0]                   int_converged = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -215,8 +221,14 @@ always @(posedge ACLK) begin
                 ADDR_CUR_PX_ESTIMATE_DATA_0: begin
                     rdata <= int_cur_px_estimate[31:0];
                 end
+                ADDR_CUR_PX_ESTIMATE_DATA_1: begin
+                    rdata <= int_cur_px_estimate[63:32];
+                end
                 ADDR_CONVERGED_DATA_0: begin
                     rdata <= int_converged[31:0];
+                end
+                ADDR_CONVERGED_DATA_1: begin
+                    rdata <= int_converged[63:32];
                 end
             endcase
         end
@@ -335,6 +347,16 @@ always @(posedge ACLK) begin
     end
 end
 
+// int_cur_px_estimate[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_cur_px_estimate[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CUR_PX_ESTIMATE_DATA_1)
+            int_cur_px_estimate[63:32] <= (WDATA[31:0] & wmask) | (int_cur_px_estimate[63:32] & ~wmask);
+    end
+end
+
 // int_converged[31:0]
 always @(posedge ACLK) begin
     if (ARESET)
@@ -342,6 +364,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_CONVERGED_DATA_0)
             int_converged[31:0] <= (WDATA[31:0] & wmask) | (int_converged[31:0] & ~wmask);
+    end
+end
+
+// int_converged[63:32]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_converged[63:32] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_CONVERGED_DATA_1)
+            int_converged[63:32] <= (WDATA[31:0] & wmask) | (int_converged[63:32] & ~wmask);
     end
 end
 

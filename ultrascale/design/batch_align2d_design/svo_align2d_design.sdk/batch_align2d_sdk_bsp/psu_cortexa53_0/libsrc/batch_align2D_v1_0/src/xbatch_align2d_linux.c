@@ -123,7 +123,7 @@ int XBatch_align2d_Initialize(XBatch_align2d *InstancePtr, const char* InstanceN
     }
 
     // NOTE: slave interface 'Ctrl' should be mapped to uioX/map0
-    InstancePtr->Ctrl_BaseAddress = (u32)mmap(NULL, InfoPtr->maps[0].size, PROT_READ|PROT_WRITE, MAP_SHARED, InfoPtr->uio_fd, 0 * getpagesize());
+    InstancePtr->Ctrl_BaseAddress = (u64)mmap(NULL, InfoPtr->maps[0].size, PROT_READ|PROT_WRITE, MAP_SHARED, InfoPtr->uio_fd, 0 * getpagesize());
     assert(InstancePtr->Ctrl_BaseAddress);
 
     InstancePtr->IsReady = XIL_COMPONENT_IS_READY;

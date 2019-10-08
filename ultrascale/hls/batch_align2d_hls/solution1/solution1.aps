@@ -10,11 +10,13 @@
     </clockList>
     <config>
         <schedule model="batch_align2D"/>
-        <config_export format="ip_catalog" rtl="verilog"/>
+        <config_export format="ip_catalog" rtl="verilog" use_netlist="" vivado_optimization_level="2" vivado_phys_opt="place" vivado_report_level="0"/>
+        <config_interface clock_enable="0" expose_global="0" m_axi_addr64="1" m_axi_offset="slave" register_io="off" trim_dangling_port="0"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf boardInfo="Zynq UltraScale+ ZCU102 Evaluation Board (xczu9eg-ffvb1156-2-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
+            <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -68,7 +70,7 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/zynquplus/zynquplus"/>
-        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+        <library name="DefaultPlatform" value="xilinx/zynquplus/zynquplus_fpv7"/>
     </libraryList>
 </solution>
 

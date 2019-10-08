@@ -15,7 +15,7 @@
       <simLog/>
       <mgLog/>
       <packageLog>
-        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xA;create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1410.355 ; gain = 49.074 ; free physical = 219 ; free virtual = 5948" projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-08T14:53:39.609+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xA;create_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.379 ; gain = 42.137 ; free physical = 332 ; free virtual = 4555" projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-08T20:43:36.500+0200" type="Warning"/>
       </packageLog>
       <csimLog/>
     </logs>

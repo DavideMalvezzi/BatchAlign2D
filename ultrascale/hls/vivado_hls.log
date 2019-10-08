@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'davide' on host 'davide-X550CL' (Linux_x86_64 version 5.0.0-29-generic) on Tue Oct 08 14:53:19 CEST 2019
+INFO: [HLS 200-10] For user 'davide' on host 'davide-X550CL' (Linux_x86_64 version 5.0.0-29-generic) on Tue Oct 08 20:43:16 CEST 2019
 INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
 INFO: [HLS 200-10] In directory '/home/davide/Desktop/svo_batch_align2d/ultrascale/hls'
 Sourcing Tcl script '/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/solution1/export.tcl'
@@ -19,10 +19,10 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1410.355 ; gain = 49.074 ; free physical = 219 ; free virtual = 5948
+create_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.379 ; gain = 42.137 ; free physical = 332 ; free virtual = 4555
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'batch_align2D_ap_fmul_0_max_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_ap_fmul_0_max_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 14:53:45 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 20:43:42 2019...

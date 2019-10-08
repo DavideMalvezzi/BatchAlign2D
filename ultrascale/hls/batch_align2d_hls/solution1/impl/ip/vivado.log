@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Oct  8 14:53:22 2019
-# Process ID: 9511
+# Start of session at: Tue Oct  8 20:43:20 2019
+# Process ID: 9341
 # Current directory: /home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/solution1/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/solution1/impl/ip/vivado.log
@@ -14,10 +14,10 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1410.355 ; gain = 49.074 ; free physical = 219 ; free virtual = 5948
+create_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.379 ; gain = 42.137 ; free physical = 332 ; free virtual = 4555
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'batch_align2D_ap_fmul_0_max_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_ap_fmul_0_max_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 14:53:45 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 20:43:42 2019...

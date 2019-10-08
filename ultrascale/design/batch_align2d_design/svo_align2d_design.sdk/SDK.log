@@ -10048,3 +10048,710 @@ Design is not opened in the current session.
 connect -url tcp:127.0.0.1:3121
 ----------------End of Script----------------
 
+15:58:30 INFO  : Registering command handlers for SDK TCF services
+15:58:32 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+15:58:35 INFO  : XSCT server has started successfully.
+15:58:35 INFO  : Successfully done setting XSCT server connection channel  
+15:58:35 INFO  : Successfully done setting SDK workspace  
+15:58:35 INFO  : Processing command line option -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf.
+15:58:35 INFO  : Checking for hwspec changes in the project design_1_hw_platform_0.
+20:23:45 INFO  : Registering command handlers for SDK TCF services
+20:23:47 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:23:51 INFO  : XSCT server has started successfully.
+20:23:51 INFO  : Successfully done setting XSCT server connection channel  
+20:23:51 INFO  : Successfully done setting SDK workspace  
+20:23:51 INFO  : Processing command line option -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf.
+20:23:51 INFO  : Checking for hwspec changes in the project design_1_hw_platform_0.
+20:24:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:24:24 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:24:24 INFO  : 'jtag frequency' command is executed.
+20:24:24 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:24:24 INFO  : Context for 'APU' is selected.
+20:24:25 INFO  : System reset is completed.
+20:24:28 INFO  : 'after 3000' command is executed.
+20:24:29 INFO  : Context for 'APU' is selected.
+20:24:29 INFO  : Cleared APU and A53 resets
+20:24:29 INFO  : Context for 'RPU' is selected.
+20:24:29 INFO  : Cleared RPU and R5 resets
+20:24:29 INFO  : Split mode is enabled for R5#1
+20:24:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0' command is executed.
+20:24:45 INFO  : FPGA configured successfully with bitstream "/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit"
+20:24:45 INFO  : Context for 'APU' is selected.
+20:24:45 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:24:45 INFO  : 'configparams force-mem-access 1' command is executed.
+20:24:45 INFO  : Context for 'APU' is selected.
+20:24:45 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:24:47 INFO  : 'psu_init' command is executed.
+20:24:48 INFO  : 'after 1000' command is executed.
+20:24:48 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:24:49 INFO  : 'after 1000' command is executed.
+20:24:49 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:24:49 INFO  : 'catch {psu_protection}' command is executed.
+20:24:49 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:24:49 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:24:50 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:24:50 INFO  : 'configparams force-mem-access 0' command is executed.
+20:24:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0
+fpga -file /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:24:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:24:50 INFO  : 'con' command is executed.
+20:24:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:24:50 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:25:29 INFO  : Disconnected from the channel tcfchan#1.
+20:25:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:25:40 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  5339 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:25:40 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:25:43 INFO  : XSCT server has started successfully.
+20:25:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:25:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:25:57 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:25:57 INFO  : 'jtag frequency' command is executed.
+20:25:57 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:25:57 INFO  : Context for 'APU' is selected.
+20:25:57 INFO  : Cleared APU and A53 resets
+20:25:57 INFO  : Context for 'RPU' is selected.
+20:25:58 INFO  : Cleared RPU and R5 resets
+20:25:58 INFO  : Split mode is enabled for R5#1
+20:25:58 INFO  : Context for 'APU' is selected.
+20:25:58 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:25:58 INFO  : 'configparams force-mem-access 1' command is executed.
+20:25:58 INFO  : Context for 'APU' is selected.
+20:25:58 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:26:00 INFO  : 'psu_init' command is executed.
+20:26:01 INFO  : 'after 1000' command is executed.
+20:26:01 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:26:02 INFO  : 'after 1000' command is executed.
+20:26:02 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:26:02 INFO  : 'catch {psu_protection}' command is executed.
+20:26:02 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:26:02 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:26:03 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:26:03 INFO  : 'configparams force-mem-access 0' command is executed.
+20:26:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:26:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:26:03 INFO  : 'con' command is executed.
+20:26:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:26:03 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:26:52 INFO  : Disconnected from the channel tcfchan#1.
+20:26:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:27:02 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  5853 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:27:02 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:27:05 INFO  : XSCT server has started successfully.
+20:27:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:27:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:27:25 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:27:25 INFO  : 'jtag frequency' command is executed.
+20:27:25 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:27:25 INFO  : Context for 'APU' is selected.
+20:27:25 INFO  : Cleared APU and A53 resets
+20:27:26 INFO  : Context for 'RPU' is selected.
+20:27:26 INFO  : Cleared RPU and R5 resets
+20:27:26 INFO  : Split mode is enabled for R5#1
+20:27:26 INFO  : Context for 'APU' is selected.
+20:27:27 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:27:27 INFO  : 'configparams force-mem-access 1' command is executed.
+20:27:27 INFO  : Context for 'APU' is selected.
+20:27:27 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:27:29 INFO  : 'psu_init' command is executed.
+20:27:30 INFO  : 'after 1000' command is executed.
+20:27:30 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:27:31 INFO  : 'after 1000' command is executed.
+20:27:31 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:27:31 INFO  : 'catch {psu_protection}' command is executed.
+20:27:31 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:27:31 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:27:31 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:27:32 INFO  : 'configparams force-mem-access 0' command is executed.
+20:27:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:27:32 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:27:32 INFO  : 'con' command is executed.
+20:27:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:27:32 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:33:34 INFO  : Disconnected from the channel tcfchan#1.
+20:33:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:33:44 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  6173 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:33:44 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:33:47 INFO  : XSCT server has started successfully.
+20:33:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:33:48 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:34:00 INFO  : 'jtag frequency' command is executed.
+20:34:00 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:34:00 INFO  : Context for 'APU' is selected.
+20:34:00 INFO  : Cleared APU and A53 resets
+20:34:01 INFO  : Context for 'RPU' is selected.
+20:34:01 INFO  : Cleared RPU and R5 resets
+20:34:01 INFO  : Split mode is enabled for R5#1
+20:34:01 INFO  : Context for 'APU' is selected.
+20:34:01 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:34:01 INFO  : 'configparams force-mem-access 1' command is executed.
+20:34:01 INFO  : Context for 'APU' is selected.
+20:34:01 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:34:01 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:34:01 INFO  : 'jtag frequency' command is executed.
+20:34:03 INFO  : 'psu_init' command is executed.
+20:34:03 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:34:04 INFO  : 'after 1000' command is executed.
+20:34:04 INFO  : Context for 'APU' is selected.
+20:34:04 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:34:04 INFO  : Cleared APU and A53 resets
+20:34:05 INFO  : 'after 1000' command is executed.
+20:34:06 INFO  : Context for 'RPU' is selected.
+20:34:06 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:34:06 INFO  : Cleared RPU and R5 resets
+20:34:06 INFO  : 'catch {psu_protection}' command is executed.
+20:34:06 INFO  : Split mode is enabled for R5#1
+20:34:06 INFO  : Context for 'APU' is selected.
+20:34:06 INFO  : Context for 'APU' is selected.
+20:34:06 INFO  : 32 bit mode is enabled on 'psu_cortexa53_0'
+20:34:06 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:34:06 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:34:06 INFO  : 'configparams force-mem-access 1' command is executed.
+20:34:06 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:34:06 INFO  : Context for 'APU' is selected.
+20:34:07 ERROR : Code 16 Time 1570559646617 Format {Invalid context}
+20:34:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+enable_a32_mode 0
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+----------------End of Script----------------
+
+20:34:07 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:34:08 INFO  : 'psu_init' command is executed.
+20:34:09 INFO  : 'after 1000' command is executed.
+20:34:09 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:34:10 INFO  : 'after 1000' command is executed.
+20:34:10 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:34:10 INFO  : 'catch {psu_protection}' command is executed.
+20:34:11 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:34:12 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:34:15 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:34:15 INFO  : 'configparams force-mem-access 0' command is executed.
+20:34:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:34:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:34:16 INFO  : 'con' command is executed.
+20:34:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:34:16 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:35:45 INFO  : Disconnected from the channel tcfchan#1.
+20:35:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:35:55 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  7260 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:35:55 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:35:58 INFO  : XSCT server has started successfully.
+20:35:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:35:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:36:13 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:36:13 INFO  : 'jtag frequency' command is executed.
+20:36:13 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:36:13 INFO  : Context for 'APU' is selected.
+20:36:13 INFO  : Cleared APU and A53 resets
+20:36:13 INFO  : Context for 'RPU' is selected.
+20:36:14 INFO  : Cleared RPU and R5 resets
+20:36:14 INFO  : Split mode is enabled for R5#1
+20:36:14 INFO  : Context for 'APU' is selected.
+20:36:14 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:36:14 INFO  : 'configparams force-mem-access 1' command is executed.
+20:36:14 INFO  : Context for 'APU' is selected.
+20:36:14 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:36:16 INFO  : 'psu_init' command is executed.
+20:36:17 INFO  : 'after 1000' command is executed.
+20:36:17 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:36:18 INFO  : 'after 1000' command is executed.
+20:36:18 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:36:18 INFO  : 'catch {psu_protection}' command is executed.
+20:36:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:36:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:36:18 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:36:18 INFO  : 'configparams force-mem-access 0' command is executed.
+20:36:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:36:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:36:19 INFO  : 'con' command is executed.
+20:36:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:36:19 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:36:50 INFO  : Disconnected from the channel tcfchan#1.
+20:36:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:00 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  7716 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:37:00 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:37:03 INFO  : XSCT server has started successfully.
+20:37:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:37:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:20 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:37:20 INFO  : 'jtag frequency' command is executed.
+20:37:20 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:37:20 INFO  : Context for 'APU' is selected.
+20:37:20 INFO  : Cleared APU and A53 resets
+20:37:20 INFO  : Context for 'RPU' is selected.
+20:37:20 INFO  : Cleared RPU and R5 resets
+20:37:21 INFO  : Split mode is enabled for R5#1
+20:37:21 INFO  : Context for 'APU' is selected.
+20:37:21 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:37:21 INFO  : 'configparams force-mem-access 1' command is executed.
+20:37:21 INFO  : Context for 'APU' is selected.
+20:37:21 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:37:23 INFO  : 'psu_init' command is executed.
+20:37:24 INFO  : 'after 1000' command is executed.
+20:37:24 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:37:25 INFO  : 'after 1000' command is executed.
+20:37:25 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:37:25 INFO  : 'catch {psu_protection}' command is executed.
+20:37:25 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:37:25 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:37:25 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:37:25 INFO  : 'configparams force-mem-access 0' command is executed.
+20:37:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:37:25 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:37:25 INFO  : 'con' command is executed.
+20:37:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:37:25 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:37:46 INFO  : Disconnected from the channel tcfchan#1.
+20:37:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:56 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  8032 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:37:56 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:37:59 INFO  : XSCT server has started successfully.
+20:37:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:38:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:38:16 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:38:16 INFO  : 'jtag frequency' command is executed.
+20:38:16 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:38:16 INFO  : Context for 'APU' is selected.
+20:38:17 INFO  : System reset is completed.
+20:38:20 INFO  : 'after 3000' command is executed.
+20:38:20 INFO  : Context for 'APU' is selected.
+20:38:20 INFO  : Cleared APU and A53 resets
+20:38:20 INFO  : Context for 'RPU' is selected.
+20:38:20 INFO  : Cleared RPU and R5 resets
+20:38:20 INFO  : Split mode is enabled for R5#1
+20:38:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0' command is executed.
+20:38:35 INFO  : FPGA configured successfully with bitstream "/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit"
+20:38:36 INFO  : Context for 'APU' is selected.
+20:38:36 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:38:36 INFO  : 'configparams force-mem-access 1' command is executed.
+20:38:36 INFO  : Context for 'APU' is selected.
+20:38:36 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:38:38 INFO  : 'psu_init' command is executed.
+20:38:39 INFO  : 'after 1000' command is executed.
+20:38:39 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:38:40 INFO  : 'after 1000' command is executed.
+20:38:40 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:38:40 INFO  : 'catch {psu_protection}' command is executed.
+20:38:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:38:40 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:38:40 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:38:40 INFO  : 'configparams force-mem-access 0' command is executed.
+20:38:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0
+fpga -file /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:38:41 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:38:41 INFO  : 'con' command is executed.
+20:38:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:38:41 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:39:37 INFO  : Disconnected from the channel tcfchan#1.
+20:39:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:49 ERROR : (XSDB Server)/tools/Xilinx/SDK/2019.1/bin/loader: line 267:  8283 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+
+20:39:49 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+20:39:52 INFO  : XSCT server has started successfully.
+20:39:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:39:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:40:11 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+20:40:11 INFO  : 'jtag frequency' command is executed.
+20:40:11 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+20:40:11 INFO  : Context for 'APU' is selected.
+20:40:12 INFO  : System reset is completed.
+20:40:15 INFO  : 'after 3000' command is executed.
+20:40:15 INFO  : Context for 'APU' is selected.
+20:40:15 INFO  : Cleared APU and A53 resets
+20:40:15 INFO  : Context for 'RPU' is selected.
+20:40:15 INFO  : Cleared RPU and R5 resets
+20:40:16 INFO  : Split mode is enabled for R5#1
+20:40:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0' command is executed.
+20:40:31 INFO  : FPGA configured successfully with bitstream "/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit"
+20:40:31 INFO  : Context for 'APU' is selected.
+20:40:31 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+20:40:31 INFO  : 'configparams force-mem-access 1' command is executed.
+20:40:31 INFO  : Context for 'APU' is selected.
+20:40:31 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+20:40:33 INFO  : 'psu_init' command is executed.
+20:40:34 INFO  : 'after 1000' command is executed.
+20:40:34 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+20:40:35 INFO  : 'after 1000' command is executed.
+20:40:35 INFO  : 'psu_ps_pl_reset_config' command is executed.
+20:40:35 INFO  : 'catch {psu_protection}' command is executed.
+20:40:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:40:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+20:40:36 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+20:40:36 INFO  : 'configparams force-mem-access 0' command is executed.
+20:40:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0
+fpga -file /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:40:36 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+20:40:36 INFO  : 'con' command is executed.
+20:40:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+20:40:36 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+20:50:55 INFO  : Disconnected from the channel tcfchan#1.
+21:00:00 INFO  : Registering command handlers for SDK TCF services
+21:00:03 INFO  : Launching XSCT server: xsct -n -interactive /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/temp_xsdb_launch_script.tcl
+21:00:08 INFO  : XSCT server has started successfully.
+21:00:08 INFO  : Successfully done setting XSCT server connection channel  
+21:00:09 INFO  : Successfully done setting SDK workspace  
+21:00:09 INFO  : Processing command line option -hwspec /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf.
+21:00:09 INFO  : Checking for hwspec changes in the project design_1_hw_platform_0.
+21:00:23 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1570561164000,  Project:1570540220000
+21:00:23 INFO  : The hardware specification for project 'design_1_hw_platform_0' is different from /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf.
+21:00:24 INFO  : Copied contents of /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1.hdf into /design_1_hw_platform_0/system.hdf.
+21:00:43 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:00:45 INFO  : 
+21:00:46 INFO  : Updating hardware inferred compiler options for batch_align2d_sdk.
+21:00:46 INFO  : Clearing existing target manager status.
+21:00:46 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+21:00:47 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+21:01:42 INFO  : Refreshed build settings on project batch_align2d_sdk
+21:02:18 INFO  : Refreshed build settings on project batch_align2d_sdk
+21:03:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:03:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:03:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:03:39 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A474F1' is selected.
+21:03:39 INFO  : 'jtag frequency' command is executed.
+21:03:39 INFO  : Sourcing of '/tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl' is done.
+21:03:39 INFO  : Context for 'APU' is selected.
+21:03:40 INFO  : System reset is completed.
+21:03:43 INFO  : 'after 3000' command is executed.
+21:03:43 INFO  : Context for 'APU' is selected.
+21:03:43 INFO  : Cleared APU and A53 resets
+21:03:43 INFO  : Context for 'RPU' is selected.
+21:03:44 INFO  : Cleared RPU and R5 resets
+21:03:44 INFO  : Split mode is enabled for R5#1
+21:03:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0' command is executed.
+21:03:59 INFO  : FPGA configured successfully with bitstream "/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit"
+21:03:59 INFO  : Context for 'APU' is selected.
+21:03:59 INFO  : Hardware design information is loaded from '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf'.
+21:03:59 INFO  : 'configparams force-mem-access 1' command is executed.
+21:03:59 INFO  : Context for 'APU' is selected.
+21:03:59 INFO  : Sourcing of '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl' is done.
+21:04:01 INFO  : 'psu_init' command is executed.
+21:04:02 INFO  : 'after 1000' command is executed.
+21:04:02 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:04:03 INFO  : 'after 1000' command is executed.
+21:04:03 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:04:03 INFO  : 'catch {psu_protection}' command is executed.
+21:04:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:04:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:04:04 INFO  : The application '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:04:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:04:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /tools/Xilinx/SDK/2019.1/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+reset_apu
+targets -set -nocase -filter {name =~"RPU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+clear_rpu_reset
+enable_split_mode
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1" && level==0} -index 0
+fpga -file /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/design_1.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+loadhw -hw /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+source /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/design_1_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+rst -processor
+dow /home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/batch_align2d_sdk/Debug/batch_align2d_sdk.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:04:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:04:04 INFO  : 'con' command is executed.
+21:04:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A474F1"} -index 1
+con
+----------------End of Script----------------
+
+21:04:04 INFO  : Launch script is exported to file '/home/davide/Desktop/svo_batch_align2d/ultrascale/design/batch_align2d_design/svo_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
