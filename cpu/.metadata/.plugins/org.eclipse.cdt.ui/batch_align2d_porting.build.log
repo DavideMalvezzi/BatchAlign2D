@@ -1,0 +1,24 @@
+14:25:59 **** Incremental Build of configuration Debug for project batch_align2d_porting ****
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/align2d.h:11:0,
+                 from ../src/main.c:16:
+../src/datatypes.h:31:2: warning: variably modified ‘data’ at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:22:7: warning: unused variable ‘buff’ [-Wunused-variable]
+  char buff[32];
+       ^~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_porting
+Invoking: GCC C Linker
+gcc  -o "batch_align2d_porting"  ./src/align2d.o ./src/main.o ./src/utils.o   
+Finished building target: batch_align2d_porting
+ 
+
+14:25:59 Build Finished (took 615ms)
+

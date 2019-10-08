@@ -1,0 +1,113 @@
+
+/**
+ * Copyright 1993-2012 NVIDIA Corporation.  All rights reserved.
+ *
+ * Please refer to the NVIDIA end user license agreement (EULA) associated
+ * with this source code for terms and conditions that govern your use of
+ * this software. Any use, reproduction, disclosure, or distribution of
+ * this software and related documentation outside the terms of the EULA
+ * is strictly prohibited.
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+#include "align2d.h"
+
+int main(int argc, char **argv)
+{
+	/*
+	Image imgs[BATCH_SIZE];
+	PatchBorder ref_patch_with_border[BATCH_SIZE];
+	Patch ref_patch[BATCH_SIZE];
+	Vector2d cur_px_estimate[BATCH_SIZE];
+	int n_iter;
+	bool converged[BATCH_SIZE];
+
+	batch_align2D(imgs, ref_patch_with_border, ref_patch, cur_px_estimate, n_iter, converged);
+	*/
+
+	Test tests[BATCH_SIZE];
+	char buff[32];
+
+	PyrImage pyr;
+	int levels[BATCH_SIZE];
+	PatchBorder ref_patch_with_border[BATCH_SIZE];
+	Patch ref_patch[BATCH_SIZE];
+	Vector2f cur_px_estimate[BATCH_SIZE];
+	int n_iter = 10;
+	bool converged[BATCH_SIZE];
+
+	Patch b[32];
+	printf("Test size is %d\n", sizeof(Test));
+	printf("Batch size is %d\n", sizeof(Batch));
+	printf("Patch %x %x %x\n", b, &b[0], &b[1]);
+
+
+
+	Image im;
+	int offset = 0;
+	for(int k = 0; k < 10; k++){
+		load_tests("/home/davide/svo-workspace/rpg_svo/svo/bin/test.bin", tests, BATCH_SIZE, BATCH_SIZE * k);
+
+		//Save img pyramid
+		/*
+		for(int i = 0; i < 10; i++){
+
+			offset = 0;
+			for(int j = 0; j < 3; j++){
+				im.cols = tests[i].pyr.cols / (1 << j);
+				im.rows = tests[i].pyr.rows / (1 << j);
+
+				printf("size level %d (%d %d) \n", j, im.cols, im.rows);
+
+
+				memcpy(im.data, tests[i].pyr.data + offset, im.cols * im.rows);
+				offset +=im.cols * im.rows;
+
+				sprintf(buff, "img%d_%d.pgm", k * 10 + i, j);
+				save_img(buff, im);
+			}
+		}
+		*/
+
+
+
+		for(int i = 0; i < BATCH_SIZE; i++){
+			printf("id %d rows %d  cols %d step %d level %d ", tests[i].id, tests[i].pyr.rows, tests[i].pyr.cols, tests[i].pyr.step, tests[i].level);
+			printf("max_it %d computed %d converged %d ", tests[i].n_iter, tests[i].last_iter+1, tests[i].converged);
+			printf("\nfinal_pos %f %f \n", tests[i].final_cur_px_estimate[0],  tests[i].final_cur_px_estimate[1]);
+			/*
+			for(int j = 0; j<tests[i].last_iter+1; j++){
+				printf("iter %d jacobian %f %f %f  u %f v %f \n", j, tests[i].iter_jacobians[j][0], tests[i].iter_jacobians[j][1], tests[i].iter_jacobians[j][2], tests[i].iter_pos[j][0], tests[i].iter_pos[j][1]);
+			}
+			*/
+
+			//sprintf(buff, "img%d.pgm", k * 10 + i);
+			//save_img(buff, tests[i].img);
+			//save_patch(buff, tests[i].ref_patch);
+			//save_patch_with_border(buff, tests[i].ref_patch_with_border);
+
+			//printf("hessian \n"); print_matrix(tests[i].hessian);
+			//printf("inv_hessian \n"); print_matrix(tests[i].inverse_hessian);
+
+			pyr = tests[i].pyr;
+			levels[i] = tests[i].level;
+			memcpy(ref_patch_with_border[i], tests[i].ref_patch_with_border, sizeof(PatchBorder));
+			memcpy(ref_patch[i], tests[i].ref_patch, sizeof(Patch));
+			memcpy(cur_px_estimate[i], tests[i].cur_px_estimate, sizeof(Vector2f));
+
+			batch_align2D(pyr, levels, ref_patch_with_border, ref_patch, cur_px_estimate, n_iter, converged);
+
+		}
+		printf("\n");
+
+
+
+
+
+	}
+
+	return 0;
+}
