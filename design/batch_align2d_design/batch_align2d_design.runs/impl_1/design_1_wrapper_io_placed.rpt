@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Wed Oct 16 18:19:26 2019
+| Date                      : Wed Oct 16 19:59:55 2019
 | Host                      : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper

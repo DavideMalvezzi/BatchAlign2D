@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 16 17:46:52 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 16 19:43:19 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:zcu102:part0:3.2" DEVICE="xczu9eg" NAME="design_1" PACKAGE="ffvb1156" SPEEDGRADE="-2"/>
 
@@ -1201,7 +1201,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="1910161745" FULLNAME="/batch_align2D_0" HWVERSION="1.0" INSTANCE="batch_align2D_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="batch_align2D" VLNV="xilinx.com:hls:batch_align2D:1.0">
+    <MODULE COREREVISION="1910161941" FULLNAME="/batch_align2D_0" HWVERSION="1.0" INSTANCE="batch_align2D_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="batch_align2D" VLNV="xilinx.com:hls:batch_align2D:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="read-write" INTERFACE="s_axi_ctrl" NAME="Reg" RANGE="65536" USAGE="register">
@@ -1886,7 +1886,7 @@
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="1173"/>
+        <PARAMETER NAME="latency" VALUE="90"/>
         <PARAMETER NAME="II" VALUE="x"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S_AXI_CTRL_BASEADDR" VALUE="0xA0000000"/>
@@ -3540,191 +3540,178 @@
             <CONNECTION INSTANCE="rst_ps8_0_99M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awid">
+        <PORT DIR="O" LEFT="39" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_AWADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="39" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awaddr">
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_AWVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awaddr"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awlen">
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_AWREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awlen"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awsize">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awsize"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awburst">
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WSTRB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awburst"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_awlock" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awlock">
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awlock"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awcache">
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awcache"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awprot">
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_BRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awprot"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_BRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awqos">
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_BVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awqos"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_awvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awvalid">
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_BREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awvalid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_awready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awready">
+        <PORT DIR="O" LEFT="39" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_ARADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awready"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wdata">
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_ARVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wdata"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_ARVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wstrb">
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_ARREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wstrb"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_ARREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_wlast" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wlast">
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wlast"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_wvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wvalid">
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wvalid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_wready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wready">
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wready"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bid">
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bresp">
+        <PORT DIR="O" LEFT="39" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_AWADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bresp"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_bvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bvalid">
+        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_AWVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bvalid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_AWVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_bready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bready">
+        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_AWREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bready"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arid">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="39" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_araddr">
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WSTRB">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_araddr"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WSTRB"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arlen">
+        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arlen"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arsize">
+        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arsize"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arburst">
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_BRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arburst"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_BRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arlock" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arlock">
+        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_BVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arlock"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_BVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arcache">
+        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_BREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arcache"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arprot">
+        <PORT DIR="O" LEFT="39" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_ARADDR">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arprot"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_ARADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arqos">
+        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_ARVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arqos"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_ARVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arvalid">
+        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_ARREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arvalid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_ARREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S00_AXI_arready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arready">
+        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RDATA">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arready"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RDATA"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rid">
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RRESP">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rid"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RRESP"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rdata">
+        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RVALID">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rdata"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RVALID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rresp">
+        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RREADY">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S00_AXI_rlast" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S00_AXI_rvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rready"/>
+            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="S01_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S01_AXI_awid">
@@ -3914,178 +3901,191 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_AWADDR">
+        <PORT DIR="I" LEFT="15" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_AWADDR"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_AWVALID">
+        <PORT DIR="I" LEFT="39" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_AWVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_AWREADY">
+        <PORT DIR="I" LEFT="7" NAME="S00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_AWREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WDATA">
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WDATA"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WSTRB">
+        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WSTRB"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WVALID">
+        <PORT DIR="I" NAME="S00_AXI_awlock" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_WREADY">
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_WREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_BRESP">
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_BRESP"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_BVALID">
+        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awqos">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_BVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awqos"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_BREADY">
+        <PORT DIR="I" NAME="S00_AXI_awvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_BREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_ARADDR">
+        <PORT DIR="O" NAME="S00_AXI_awready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_ARADDR"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_ARVALID">
+        <PORT DIR="I" LEFT="127" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_ARVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_ARREADY">
+        <PORT DIR="I" LEFT="15" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_ARREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RDATA">
+        <PORT DIR="I" NAME="S00_AXI_wlast" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RDATA"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RRESP">
+        <PORT DIR="I" NAME="S00_AXI_wvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RRESP"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RVALID">
+        <PORT DIR="O" NAME="S00_AXI_wready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_ctrl_RREADY">
+        <PORT DIR="O" LEFT="15" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_ctrl_RREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_AWADDR">
+        <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_AWADDR"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_AWVALID">
+        <PORT DIR="O" NAME="S00_AXI_bvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_AWVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_AWREADY">
+        <PORT DIR="I" NAME="S00_AXI_bready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_AWREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WDATA">
+        <PORT DIR="I" LEFT="15" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WDATA"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WSTRB">
+        <PORT DIR="I" LEFT="39" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WSTRB"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WVALID">
+        <PORT DIR="I" LEFT="7" NAME="S00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_WREADY">
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_WREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_BRESP">
+        <PORT DIR="I" LEFT="1" NAME="S00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_BRESP"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_BVALID">
+        <PORT DIR="I" NAME="S00_AXI_arlock" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_BVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_BREADY">
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_BREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_ARADDR">
+        <PORT DIR="I" LEFT="2" NAME="S00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_ARADDR"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_ARVALID">
+        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arqos">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_ARVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arqos"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_ARREADY">
+        <PORT DIR="I" NAME="S00_AXI_arvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_ARREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RDATA">
+        <PORT DIR="O" NAME="S00_AXI_arready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RDATA"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RRESP">
+        <PORT DIR="O" LEFT="15" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RRESP"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RVALID">
+        <PORT DIR="O" LEFT="127" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RVALID"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="batch_align2D_0_s_axi_param_RREADY">
+        <PORT DIR="O" LEFT="1" NAME="S00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="batch_align2D_0" PORT="s_axi_param_RREADY"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S00_AXI_rlast" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S00_AXI_rvalid" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="ps8_0_axi_periph_S00_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp0_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

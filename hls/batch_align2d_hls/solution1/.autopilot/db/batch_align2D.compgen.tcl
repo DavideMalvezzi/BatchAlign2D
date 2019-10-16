@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 495
+set id 1
 set name batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1
 set corename simcore_fadd
 set op fadd
@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 496
+set id 2
 set name batch_align2D_sitofp_32ns_32_3_1
 set corename simcore_sitofp
 set op sitofp
@@ -173,7 +173,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 497
+set id 3
 set name batch_align2D_mux_366_32_1_1
 set corename simcore_mux
 set op mux
@@ -451,7 +451,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 # Memory (RAM/ROM)  definition:
-set ID 501
+set ID 7
 set hasByteEnable 0
 set MemName batch_align2D_pyr_data
 set CoreName ap_simcore_mem
@@ -587,7 +587,7 @@ inv_out {
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 502 \
+			id 8 \
 			corename batch_align2D_ctrl_axilite \
 			name batch_align2D_ctrl_s_axi \
 			ports {$port_ctrl} \
@@ -659,7 +659,7 @@ transfer_pyr {
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 503 \
+			id 9 \
 			corename batch_align2D_param_axilite \
 			name batch_align2D_param_s_axi \
 			ports {$port_param} \
@@ -679,7 +679,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 504 \
+    id 10 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -700,28 +700,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 505 \
-    corename {m_axi} \
-    op interface \
-    max_latency -1 \ 
-    delay_budget 8.75 \ 
-    is_flushable 0 \ 
-    name {batch_align2D_patches_m_axi} \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'patches'"
-}
-}
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler batch_align2D_patches_m_axi
-}
-
-# Native M_AXI:
-if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
-eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 506 \
+    id 11 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -742,7 +721,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 507 \
+    id 12 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 

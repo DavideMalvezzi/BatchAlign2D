@@ -154,7 +154,7 @@ void batch_align2D(
 		#endif
 
 		// Compute the inverse Hessian matrix for the patch
-		compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
+		//compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
 
 		// Get image level pointer
 		/*

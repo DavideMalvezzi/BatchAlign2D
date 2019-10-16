@@ -6438,12 +6438,8 @@ _ssdm_SpecArrayPartition( H_inv, 0, "COMPLETE", 0, "");
  batch_loop: for(k = 0; k < 4; k++){
 
 _ssdm_Unroll(0,0,0, "");
-
-
-
- compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
 # 174 "batch_align2d_hls/align2d.c"
-  cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
+ cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
  }
 
  memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));
