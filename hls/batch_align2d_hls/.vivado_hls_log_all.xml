@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_3_0' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.065+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_2_1' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.050+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_2_0' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.044+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_1_1' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.036+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_1_0' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.029+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_0_1' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.022+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_0_0' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.012+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cur_px_estimate_3_1' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:23.005+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.996+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_10' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.988+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_21' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.978+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_32' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.970+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_43' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.963+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_54' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.954+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_65' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.947+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_76' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.940+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_87' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.930+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_98' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.923+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_99' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.913+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_698' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.906+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_688' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.898+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_677' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.890+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_666' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.883+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_655' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.874+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_644' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.865+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_633' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.857+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_622' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.850+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_611' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.843+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_600' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.836+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_599' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.830+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_86' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.823+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_88' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.816+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_89' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.808+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_90' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.799+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_91' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.789+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ref_patch_with_borde_92' is power-on initialization." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:43:22.780+0200" type="Warning"/>
+      </synLog>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_sitofp_1_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:44:44.580+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fsub_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:44:42.335+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:44:40.601+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fdiv_6_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:44:38.286+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_faddfsub_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="batch_align2d_hls" solutionName="solution1" date="2019-10-16T08:44:36.381+0200" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

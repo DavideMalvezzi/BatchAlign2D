@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 15 20:01:01 2019
+# Process ID: 62833
+# Current directory: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls
+# Command line: vivado
+# Log file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/vivado.log
+# Journal file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 6671.219 ; gain = 106.203 ; free physical = 11119 ; free virtual = 44158
+update_compile_order -fileset sources_1
+file mkdir /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk
+file copy -force /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1.sysdef /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+
+launch_sdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 15 20:02:34 2019...

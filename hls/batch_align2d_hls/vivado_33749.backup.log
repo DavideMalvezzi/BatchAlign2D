@@ -1,0 +1,223 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 15 16:09:15 2019
+# Process ID: 33749
+# Current directory: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls
+# Command line: vivado
+# Log file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/vivado.log
+# Journal file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project batch_align2d_design /home/dmalvezzi/batch_align2d/design/batch_align2d_design -part xczu9eg-ffvb1156-2-e
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 6679.527 ; gain = 105.109 ; free physical = 3506 ; free virtual = 42599
+set_property board_part xilinx.com:zcu102:part0:3.2 [current_project]
+set_property  ip_repo_paths  /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1'.
+create_bd_design "design_1"
+Wrote  : </home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 6710.629 ; gain = 6.508 ; free physical = 3404 ; free virtual = 42560
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.2 zynq_ultra_ps_e_0
+create_bd_cell: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6874.141 ; gain = 118.258 ; free physical = 3298 ; free virtual = 42484
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:batch_align2D:1.0 batch_align2D_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/batch_align2D_0/s_axi_ctrl} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins batch_align2D_0/s_axi_ctrl]
+</batch_align2D_0/s_axi_ctrl/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xA0000000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/batch_align2D_0/s_axi_param} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins batch_align2D_0/s_axi_param]
+</batch_align2D_0/s_axi_param/Reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xA0010000 [ 64K ]>
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/batch_align2D_0/s_axi_ctrl} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+endgroup
+set_property location {3 1158 374} [get_bd_cells smartconnect_0]
+connect_bd_intf_net [get_bd_intf_pins smartconnect_0/S00_AXI] [get_bd_intf_pins batch_align2D_0/m_axi_gmem]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+startgroup
+set_property -dict [list CONFIG.PSU__USE__S_AXI_GP2 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (99 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/batch_align2D_0/m_axi_gmem} Slave {/zynq_ultra_ps_e_0/S_AXI_HP0_FPD} intc_ip {/smartconnect_0} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
+WARNING: [BD 41-2126] < /batch_align2D_0/Data_m_axi_gmem > is accessible by connection to < /zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_HIGH > but cannot address it because it lacks the required addressables bits < 36 > to address its fixed address of < 0x800000000 [ 32G ] >
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW> is being mapped into </batch_align2D_0/Data_m_axi_gmem> at <0x00000000 [ 2G ]>
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_PCIE_LOW> is being mapped into </batch_align2D_0/Data_m_axi_gmem> at <0xE0000000 [ 256M ]>
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI> is being mapped into </batch_align2D_0/Data_m_axi_gmem> at <0xC0000000 [ 512M ]>
+</zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> is being mapped into </batch_align2D_0/Data_m_axi_gmem> at <0xFF000000 [ 16M ]>
+INFO: [BD 41-1051] The usage <register> of peripheral </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> does not match the usage <memory> of master </batch_align2D_0/Data_m_axi_gmem> and will be excluded using sparse connectivity from its address space. Use the include_bd_addr_seg command to override this precaution and make this peripheral visible within this masters address space.
+Excluding </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> from </batch_align2D_0/Data_m_axi_gmem>
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+CRITICAL WARNING: [BD 41-1629] </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> is excluded from all addressable master spaces.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /smartconnect_0/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /smartconnect_0/M00_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /batch_align2D_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_zynq_ultra_ps_e_0_0_pl_clk0 
+validate_bd_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 7068.680 ; gain = 25.000 ; free physical = 3089 ; free virtual = 42287
+startgroup
+set_property -dict [list CONFIG.NUM_SI {1}] [get_bd_cells smartconnect_0]
+endgroup
+save_bd_design
+Wrote  : </home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+validate_bd_design
+CRITICAL WARNING: [BD 41-1629] </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> is excluded from all addressable master spaces.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /smartconnect_0/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /smartconnect_0/M00_AXI(0)
+WARNING: [BD 41-927] Following properties on pin /batch_align2D_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_zynq_ultra_ps_e_0_0_pl_clk0 
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 7260.766 ; gain = 0.000 ; free physical = 3027 ; free virtual = 42256
+save_bd_design
+Wrote  : </home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/design_1.bd> 
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-1629] </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> is excluded from all addressable master spaces.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to net 'batch_align2D_0_m_axi_gmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_awlock'(1) to net 'batch_align2D_0_m_axi_gmem_AWLOCK'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to net 'batch_align2D_0_m_axi_gmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_awlock'(1) to net 'batch_align2D_0_m_axi_gmem_AWLOCK'(2) - Only lower order bits will be connected.
+VHDL Output written to : /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.2-0] design_1_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+WARNING: [IP_Flow 19-519] IP 'design_1_batch_align2D_0_0' detected a language mismatch between 'VHDL Simulation Wrapper' and 'Verilog Simulation' output products. Please check with the IP provider to see if this is expected.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block batch_align2D_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_99M .
+Exporting to file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/hw_handoff/design_1_smartconnect_0_0.hwh
+Generated Block Design Tcl file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/hw_handoff/design_1_smartconnect_0_0_bd.tcl
+Generated Hardware Definition File /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/synth/design_1_smartconnect_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block smartconnect_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_pc .
+Exporting to file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property top design_1 [current_fileset]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+launch_runs impl_1 -to_step write_bitstream -jobs 24
+[Tue Oct 15 16:16:30 2019] Launched design_1_batch_align2D_0_0_synth_1, design_1_auto_ds_1_synth_1, design_1_zynq_ultra_ps_e_0_0_synth_1, design_1_xbar_0_synth_1, design_1_auto_pc_1_synth_1, design_1_rst_ps8_0_99M_0_synth_1, design_1_smartconnect_0_0_synth_1, design_1_auto_ds_0_synth_1, design_1_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_batch_align2D_0_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_batch_align2D_0_0_synth_1/runme.log
+design_1_auto_ds_1_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_ds_1_synth_1/runme.log
+design_1_zynq_ultra_ps_e_0_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_xbar_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_rst_ps8_0_99M_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_rst_ps8_0_99M_0_synth_1/runme.log
+design_1_smartconnect_0_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_smartconnect_0_0_synth_1/runme.log
+design_1_auto_ds_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_ds_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_pc_0_synth_1/runme.log
+synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/synth_1/runme.log
+[Tue Oct 15 16:16:30 2019] Launched impl_1...
+Run output will be captured here: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/runme.log
+reset_run design_1_auto_ds_0_synth_1
+reset_run design_1_auto_pc_0_synth_1
+reset_run synth_1
+reset_run design_1_batch_align2D_0_0_synth_1
+reset_run design_1_auto_ds_1_synth_1
+reset_run design_1_zynq_ultra_ps_e_0_0_synth_1
+reset_run design_1_xbar_0_synth_1
+reset_run design_1_auto_pc_1_synth_1
+reset_run design_1_rst_ps8_0_99M_0_synth_1
+reset_run design_1_smartconnect_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_smartconnect_0_0_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Oct 15 16:18:06 2019] Launched design_1_batch_align2D_0_0_synth_1, design_1_auto_ds_1_synth_1, design_1_zynq_ultra_ps_e_0_0_synth_1, design_1_xbar_0_synth_1, design_1_auto_pc_1_synth_1, design_1_rst_ps8_0_99M_0_synth_1, design_1_smartconnect_0_0_synth_1, design_1_auto_ds_0_synth_1, design_1_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_batch_align2D_0_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_batch_align2D_0_0_synth_1/runme.log
+design_1_auto_ds_1_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_ds_1_synth_1/runme.log
+design_1_zynq_ultra_ps_e_0_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_xbar_0_synth_1/runme.log
+design_1_auto_pc_1_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_rst_ps8_0_99M_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_rst_ps8_0_99M_0_synth_1/runme.log
+design_1_smartconnect_0_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_smartconnect_0_0_synth_1/runme.log
+design_1_auto_ds_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_ds_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/design_1_auto_pc_0_synth_1/runme.log
+synth_1: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/synth_1/runme.log
+[Tue Oct 15 16:18:06 2019] Launched impl_1...
+Run output will be captured here: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/runme.log
+file mkdir /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk
+file copy -force /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1.sysdef /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+
+launch_sdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1.sysdef /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+file copy -force /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1.sysdef /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+
+launch_sdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+close_hw
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+open_bd_design {/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Tue Oct 15 17:08:26 2019] Launched impl_1...
+Run output will be captured here: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/runme.log
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+reset_run impl_1 -prev_step 
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 15 17:12:16 2019...

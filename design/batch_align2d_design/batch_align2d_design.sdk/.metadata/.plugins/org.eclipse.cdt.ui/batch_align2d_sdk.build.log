@@ -1,0 +1,6 @@
+10:36:41 **** Incremental Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+make: Nothing to be done for `all'.
+
+10:36:41 Build Finished (took 87ms)
+

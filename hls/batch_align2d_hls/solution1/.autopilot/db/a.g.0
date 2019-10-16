@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.0.bc ${1+"$@"}

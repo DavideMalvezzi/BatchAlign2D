@@ -1,0 +1,774 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 09:50:46 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_zynq_ultra_ps_e_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_zynq_ultra_ps_e_0_0 (xilinx.com:ip:zynq_ultra_ps_e:3.2 (Rev. 2)) to Vivado generation flows.
+
+2. Upgrade messages
+-------------------
+
+Set parameter PSU__GPIO_EMIO__PERIPHERAL__IO to value 95 (source 'default')
+WARNING: upgrade cannot add parameter PSU__USE__USB3_0_HUB with default value 0 : a parameter called PSU__USE__USB3_0_HUB already exists in zynq_ultra_ps_e_v3_2
+WARNING: upgrade cannot add parameter PSU__USE__USB3_1_HUB with default value 0 : a parameter called PSU__USE__USB3_1_HUB already exists in zynq_ultra_ps_e_v3_2
+Set parameter PSU__PROTECTION__FPD_SEGMENTS to value SA:0xFD1A0000 ;SIZE:1280;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD000000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD010000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD020000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD030000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD040000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD050000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD610000 ;SIZE:512;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware  |  SA:0xFD5D0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware (source 'default')
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 09:50:46 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps8_0_99M_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rst_ps8_0_99M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 09:50:46 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ps8_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_ps8_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1 (Rev. 19)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 09:50:46 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_batch_align2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_batch_align2D_0_0 (xilinx.com:hls:batch_align2D:1.0 (Rev. 1910160844)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 09:50:46 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_smc_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_axi_smc_0 (xilinx.com:ip:smartconnect:1.0 (Rev. 10)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_axi_smc_0'.
+
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_axi_smc_0'. These changes may impact your design.
+
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 08:48:56 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-i-es2
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_zynq_ultra_ps_e_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_zynq_ultra_ps_e_0_0 (xilinx.com:ip:zynq_ultra_ps_e:3.2 (Rev. 2)) to Vivado generation flows.
+
+2. Upgrade messages
+-------------------
+
+Set parameter PSU__GPIO_EMIO__PERIPHERAL__IO to value 95 (source 'default')
+WARNING: upgrade cannot add parameter PSU__USE__USB3_0_HUB with default value 0 : a parameter called PSU__USE__USB3_0_HUB already exists in zynq_ultra_ps_e_v3_2
+WARNING: upgrade cannot add parameter PSU__USE__USB3_1_HUB with default value 0 : a parameter called PSU__USE__USB3_1_HUB already exists in zynq_ultra_ps_e_v3_2
+Set parameter PSU__PROTECTION__FPD_SEGMENTS to value SA:0xFD1A0000 ;SIZE:1280;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD000000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD010000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD020000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD030000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD040000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD050000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD610000 ;SIZE:512;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware | SA:0xFD5D0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware (source 'default')
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 08:48:56 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-i-es2
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rst_ps8_0_99M_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rst_ps8_0_99M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 08:48:56 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-i-es2
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_ps8_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_ps8_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1 (Rev. 19)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 08:48:56 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-i-es2
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_batch_align2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_batch_align2D_0_0 (xilinx.com:hls:batch_align2D:1.0 (Rev. 1910160844)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 08:48:56 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-i-es2
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_smc_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_axi_smc_0 (xilinx.com:ip:smartconnect:1.0 (Rev. 10)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_axi_smc_0'.
+
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_axi_smc_0'. These changes may impact your design.
+
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Oct 16 08:45:42 2019
+| Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+-----------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_batch_align2D_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_batch_align2D_0_0 (xilinx.com:hls:batch_align2D:1.0) from (Rev. 1910151737) to (Rev. 1910160844)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_batch_align2D_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_gmem'
+
+-Upgrade has added interface 'm_axi_debug' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'm_axi_patches' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'm_axi_pos_r' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'm_axi_pyr' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_batch_align2D_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'm_axi_gmem_ARADDR'
+
+-Upgrade has removed port 'm_axi_gmem_ARBURST'
+
+-Upgrade has removed port 'm_axi_gmem_ARCACHE'
+
+-Upgrade has removed port 'm_axi_gmem_ARLEN'
+
+-Upgrade has removed port 'm_axi_gmem_ARLOCK'
+
+-Upgrade has removed port 'm_axi_gmem_ARPROT'
+
+-Upgrade has removed port 'm_axi_gmem_ARQOS'
+
+-Upgrade has removed port 'm_axi_gmem_ARREADY'
+
+-Upgrade has removed port 'm_axi_gmem_ARREGION'
+
+-Upgrade has removed port 'm_axi_gmem_ARSIZE'
+
+-Upgrade has removed port 'm_axi_gmem_ARVALID'
+
+-Upgrade has removed port 'm_axi_gmem_AWADDR'
+
+-Upgrade has removed port 'm_axi_gmem_AWBURST'
+
+-Upgrade has removed port 'm_axi_gmem_AWCACHE'
+
+-Upgrade has removed port 'm_axi_gmem_AWLEN'
+
+-Upgrade has removed port 'm_axi_gmem_AWLOCK'
+
+-Upgrade has removed port 'm_axi_gmem_AWPROT'
+
+-Upgrade has removed port 'm_axi_gmem_AWQOS'
+
+-Upgrade has removed port 'm_axi_gmem_AWREADY'
+
+-Upgrade has removed port 'm_axi_gmem_AWREGION'
+
+-Upgrade has removed port 'm_axi_gmem_AWSIZE'
+
+-Upgrade has removed port 'm_axi_gmem_AWVALID'
+
+-Upgrade has removed port 'm_axi_gmem_BREADY'
+
+-Upgrade has removed port 'm_axi_gmem_BRESP'
+
+-Upgrade has removed port 'm_axi_gmem_BVALID'
+
+-Upgrade has removed port 'm_axi_gmem_RDATA'
+
+-Upgrade has removed port 'm_axi_gmem_RLAST'
+
+-Upgrade has removed port 'm_axi_gmem_RREADY'
+
+-Upgrade has removed port 'm_axi_gmem_RRESP'
+
+-Upgrade has removed port 'm_axi_gmem_RVALID'
+
+-Upgrade has removed port 'm_axi_gmem_WDATA'
+
+-Upgrade has removed port 'm_axi_gmem_WLAST'
+
+-Upgrade has removed port 'm_axi_gmem_WREADY'
+
+-Upgrade has removed port 'm_axi_gmem_WSTRB'
+
+-Upgrade has removed port 'm_axi_gmem_WVALID'
+
+-Upgrade has added port 'm_axi_debug_ARADDR'
+
+-Upgrade has added port 'm_axi_debug_ARBURST'
+
+-Upgrade has added port 'm_axi_debug_ARCACHE'
+
+-Upgrade has added port 'm_axi_debug_ARLEN'
+
+-Upgrade has added port 'm_axi_debug_ARLOCK'
+
+-Upgrade has added port 'm_axi_debug_ARPROT'
+
+-Upgrade has added port 'm_axi_debug_ARQOS'
+
+-Upgrade has added port 'm_axi_debug_ARREADY'
+
+-Upgrade has added port 'm_axi_debug_ARREGION'
+
+-Upgrade has added port 'm_axi_debug_ARSIZE'
+
+-Upgrade has added port 'm_axi_debug_ARVALID'
+
+-Upgrade has added port 'm_axi_debug_AWADDR'
+
+-Upgrade has added port 'm_axi_debug_AWBURST'
+
+-Upgrade has added port 'm_axi_debug_AWCACHE'
+
+-Upgrade has added port 'm_axi_debug_AWLEN'
+
+-Upgrade has added port 'm_axi_debug_AWLOCK'
+
+-Upgrade has added port 'm_axi_debug_AWPROT'
+
+-Upgrade has added port 'm_axi_debug_AWQOS'
+
+-Upgrade has added port 'm_axi_debug_AWREADY'
+
+-Upgrade has added port 'm_axi_debug_AWREGION'
+
+-Upgrade has added port 'm_axi_debug_AWSIZE'
+
+-Upgrade has added port 'm_axi_debug_AWVALID'
+
+-Upgrade has added port 'm_axi_debug_BREADY'
+
+-Upgrade has added port 'm_axi_debug_BRESP'
+
+-Upgrade has added port 'm_axi_debug_BVALID'
+
+-Upgrade has added port 'm_axi_debug_RDATA'
+
+-Upgrade has added port 'm_axi_debug_RLAST'
+
+-Upgrade has added port 'm_axi_debug_RREADY'
+
+-Upgrade has added port 'm_axi_debug_RRESP'
+
+-Upgrade has added port 'm_axi_debug_RVALID'
+
+-Upgrade has added port 'm_axi_debug_WDATA'
+
+-Upgrade has added port 'm_axi_debug_WLAST'
+
+-Upgrade has added port 'm_axi_debug_WREADY'
+
+-Upgrade has added port 'm_axi_debug_WSTRB'
+
+-Upgrade has added port 'm_axi_debug_WVALID'
+
+-Upgrade has added port 'm_axi_patches_ARADDR'
+
+-Upgrade has added port 'm_axi_patches_ARBURST'
+
+-Upgrade has added port 'm_axi_patches_ARCACHE'
+
+-Upgrade has added port 'm_axi_patches_ARLEN'
+
+-Upgrade has added port 'm_axi_patches_ARLOCK'
+
+-Upgrade has added port 'm_axi_patches_ARPROT'
+
+-Upgrade has added port 'm_axi_patches_ARQOS'
+
+-Upgrade has added port 'm_axi_patches_ARREADY'
+
+-Upgrade has added port 'm_axi_patches_ARREGION'
+
+-Upgrade has added port 'm_axi_patches_ARSIZE'
+
+-Upgrade has added port 'm_axi_patches_ARVALID'
+
+-Upgrade has added port 'm_axi_patches_AWADDR'
+
+-Upgrade has added port 'm_axi_patches_AWBURST'
+
+-Upgrade has added port 'm_axi_patches_AWCACHE'
+
+-Upgrade has added port 'm_axi_patches_AWLEN'
+
+-Upgrade has added port 'm_axi_patches_AWLOCK'
+
+-Upgrade has added port 'm_axi_patches_AWPROT'
+
+-Upgrade has added port 'm_axi_patches_AWQOS'
+
+-Upgrade has added port 'm_axi_patches_AWREADY'
+
+-Upgrade has added port 'm_axi_patches_AWREGION'
+
+-Upgrade has added port 'm_axi_patches_AWSIZE'
+
+-Upgrade has added port 'm_axi_patches_AWVALID'
+
+-Upgrade has added port 'm_axi_patches_BREADY'
+
+-Upgrade has added port 'm_axi_patches_BRESP'
+
+-Upgrade has added port 'm_axi_patches_BVALID'
+
+-Upgrade has added port 'm_axi_patches_RDATA'
+
+-Upgrade has added port 'm_axi_patches_RLAST'
+
+-Upgrade has added port 'm_axi_patches_RREADY'
+
+-Upgrade has added port 'm_axi_patches_RRESP'
+
+-Upgrade has added port 'm_axi_patches_RVALID'
+
+-Upgrade has added port 'm_axi_patches_WDATA'
+
+-Upgrade has added port 'm_axi_patches_WLAST'
+
+-Upgrade has added port 'm_axi_patches_WREADY'
+
+-Upgrade has added port 'm_axi_patches_WSTRB'
+
+-Upgrade has added port 'm_axi_patches_WVALID'
+
+-Upgrade has added port 'm_axi_pos_r_ARADDR'
+
+-Upgrade has added port 'm_axi_pos_r_ARBURST'
+
+-Upgrade has added port 'm_axi_pos_r_ARCACHE'
+
+-Upgrade has added port 'm_axi_pos_r_ARLEN'
+
+-Upgrade has added port 'm_axi_pos_r_ARLOCK'
+
+-Upgrade has added port 'm_axi_pos_r_ARPROT'
+
+-Upgrade has added port 'm_axi_pos_r_ARQOS'
+
+-Upgrade has added port 'm_axi_pos_r_ARREADY'
+
+-Upgrade has added port 'm_axi_pos_r_ARREGION'
+
+-Upgrade has added port 'm_axi_pos_r_ARSIZE'
+
+-Upgrade has added port 'm_axi_pos_r_ARVALID'
+
+-Upgrade has added port 'm_axi_pos_r_AWADDR'
+
+-Upgrade has added port 'm_axi_pos_r_AWBURST'
+
+-Upgrade has added port 'm_axi_pos_r_AWCACHE'
+
+-Upgrade has added port 'm_axi_pos_r_AWLEN'
+
+-Upgrade has added port 'm_axi_pos_r_AWLOCK'
+
+-Upgrade has added port 'm_axi_pos_r_AWPROT'
+
+-Upgrade has added port 'm_axi_pos_r_AWQOS'
+
+-Upgrade has added port 'm_axi_pos_r_AWREADY'
+
+-Upgrade has added port 'm_axi_pos_r_AWREGION'
+
+-Upgrade has added port 'm_axi_pos_r_AWSIZE'
+
+-Upgrade has added port 'm_axi_pos_r_AWVALID'
+
+-Upgrade has added port 'm_axi_pos_r_BREADY'
+
+-Upgrade has added port 'm_axi_pos_r_BRESP'
+
+-Upgrade has added port 'm_axi_pos_r_BVALID'
+
+-Upgrade has added port 'm_axi_pos_r_RDATA'
+
+-Upgrade has added port 'm_axi_pos_r_RLAST'
+
+-Upgrade has added port 'm_axi_pos_r_RREADY'
+
+-Upgrade has added port 'm_axi_pos_r_RRESP'
+
+-Upgrade has added port 'm_axi_pos_r_RVALID'
+
+-Upgrade has added port 'm_axi_pos_r_WDATA'
+
+-Upgrade has added port 'm_axi_pos_r_WLAST'
+
+-Upgrade has added port 'm_axi_pos_r_WREADY'
+
+-Upgrade has added port 'm_axi_pos_r_WSTRB'
+
+-Upgrade has added port 'm_axi_pos_r_WVALID'
+
+-Upgrade has added port 'm_axi_pyr_ARADDR'
+
+-Upgrade has added port 'm_axi_pyr_ARBURST'
+
+-Upgrade has added port 'm_axi_pyr_ARCACHE'
+
+-Upgrade has added port 'm_axi_pyr_ARLEN'
+
+-Upgrade has added port 'm_axi_pyr_ARLOCK'
+
+-Upgrade has added port 'm_axi_pyr_ARPROT'
+
+-Upgrade has added port 'm_axi_pyr_ARQOS'
+
+-Upgrade has added port 'm_axi_pyr_ARREADY'
+
+-Upgrade has added port 'm_axi_pyr_ARREGION'
+
+-Upgrade has added port 'm_axi_pyr_ARSIZE'
+
+-Upgrade has added port 'm_axi_pyr_ARVALID'
+
+-Upgrade has added port 'm_axi_pyr_AWADDR'
+
+-Upgrade has added port 'm_axi_pyr_AWBURST'
+
+-Upgrade has added port 'm_axi_pyr_AWCACHE'
+
+-Upgrade has added port 'm_axi_pyr_AWLEN'
+
+-Upgrade has added port 'm_axi_pyr_AWLOCK'
+
+-Upgrade has added port 'm_axi_pyr_AWPROT'
+
+-Upgrade has added port 'm_axi_pyr_AWQOS'
+
+-Upgrade has added port 'm_axi_pyr_AWREADY'
+
+-Upgrade has added port 'm_axi_pyr_AWREGION'
+
+-Upgrade has added port 'm_axi_pyr_AWSIZE'
+
+-Upgrade has added port 'm_axi_pyr_AWVALID'
+
+-Upgrade has added port 'm_axi_pyr_BREADY'
+
+-Upgrade has added port 'm_axi_pyr_BRESP'
+
+-Upgrade has added port 'm_axi_pyr_BVALID'
+
+-Upgrade has added port 'm_axi_pyr_RDATA'
+
+-Upgrade has added port 'm_axi_pyr_RLAST'
+
+-Upgrade has added port 'm_axi_pyr_RREADY'
+
+-Upgrade has added port 'm_axi_pyr_RRESP'
+
+-Upgrade has added port 'm_axi_pyr_RVALID'
+
+-Upgrade has added port 'm_axi_pyr_WDATA'
+
+-Upgrade has added port 'm_axi_pyr_WLAST'
+
+-Upgrade has added port 'm_axi_pyr_WREADY'
+
+-Upgrade has added port 'm_axi_pyr_WSTRB'
+
+-Upgrade has added port 'm_axi_pyr_WVALID'
+
+
+4. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_GMEM_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_GMEM_ID_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_DATA_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_GMEM_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_GMEM_AWUSER_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_WUSER_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_BUSER_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_ARUSER_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_RUSER_WIDTH' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_GMEM_USER_VALUE' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_GMEM_PROT_VALUE' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_GMEM_CACHE_VALUE' is no longer present on the upgraded IP 'design_1_batch_align2D_0_0', and cannot be set to '"0011"'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:batch_align2D:1.0 -user_name design_1_batch_align2D_0_0
+set_property -dict "\
+  CONFIG.Component_Name {design_1_batch_align2D_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_ctrl:s_axi_param:m_axi_gmem} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.ap_clk.FREQ_HZ {99990005} \
+  CONFIG.ap_clk.INSERT_VIP {0} \
+  CONFIG.ap_clk.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.ap_clk.PHASE {0.000} \
+  CONFIG.ap_rst_n.INSERT_VIP {0} \
+  CONFIG.ap_rst_n.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.interrupt.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {558} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_ctrl.ADDR_WIDTH {6} \
+  CONFIG.s_axi_ctrl.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_ctrl.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_ctrl.BUSER_WIDTH {0} \
+  CONFIG.s_axi_ctrl.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.s_axi_ctrl.DATA_WIDTH {32} \
+  CONFIG.s_axi_ctrl.FREQ_HZ {99990005} \
+  CONFIG.s_axi_ctrl.HAS_BRESP {1} \
+  CONFIG.s_axi_ctrl.HAS_BURST {0} \
+  CONFIG.s_axi_ctrl.HAS_CACHE {0} \
+  CONFIG.s_axi_ctrl.HAS_LOCK {0} \
+  CONFIG.s_axi_ctrl.HAS_PROT {0} \
+  CONFIG.s_axi_ctrl.HAS_QOS {0} \
+  CONFIG.s_axi_ctrl.HAS_REGION {0} \
+  CONFIG.s_axi_ctrl.HAS_RRESP {1} \
+  CONFIG.s_axi_ctrl.HAS_WSTRB {1} \
+  CONFIG.s_axi_ctrl.ID_WIDTH {0} \
+  CONFIG.s_axi_ctrl.INSERT_VIP {0} \
+  CONFIG.s_axi_ctrl.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.s_axi_ctrl.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_ctrl.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_ctrl.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_ctrl.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_ctrl.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_ctrl.PHASE {0.000} \
+  CONFIG.s_axi_ctrl.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_ctrl.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_ctrl.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_ctrl.RUSER_WIDTH {0} \
+  CONFIG.s_axi_ctrl.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_ctrl.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_ctrl.WUSER_WIDTH {0} \
+  CONFIG.s_axi_param.ADDR_WIDTH {7} \
+  CONFIG.s_axi_param.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_param.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_param.BUSER_WIDTH {0} \
+  CONFIG.s_axi_param.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.s_axi_param.DATA_WIDTH {32} \
+  CONFIG.s_axi_param.FREQ_HZ {99990005} \
+  CONFIG.s_axi_param.HAS_BRESP {1} \
+  CONFIG.s_axi_param.HAS_BURST {0} \
+  CONFIG.s_axi_param.HAS_CACHE {0} \
+  CONFIG.s_axi_param.HAS_LOCK {0} \
+  CONFIG.s_axi_param.HAS_PROT {0} \
+  CONFIG.s_axi_param.HAS_QOS {0} \
+  CONFIG.s_axi_param.HAS_REGION {0} \
+  CONFIG.s_axi_param.HAS_RRESP {1} \
+  CONFIG.s_axi_param.HAS_WSTRB {1} \
+  CONFIG.s_axi_param.ID_WIDTH {0} \
+  CONFIG.s_axi_param.INSERT_VIP {0} \
+  CONFIG.s_axi_param.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.s_axi_param.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_param.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_param.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_param.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_param.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_param.PHASE {0.000} \
+  CONFIG.s_axi_param.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_param.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_param.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_param.RUSER_WIDTH {0} \
+  CONFIG.s_axi_param.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_param.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_param.WUSER_WIDTH {0} " [get_ips design_1_batch_align2D_0_0]
+
+
