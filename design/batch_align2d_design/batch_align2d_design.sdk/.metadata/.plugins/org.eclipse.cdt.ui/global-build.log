@@ -1843,3 +1843,275 @@ Finished building: batch_align2d_sdk.elf.size
 13:56:34 **** Incremental Build of configuration Debug for project batch_align2d_sdk ****
 make all 
 make: Nothing to be done for 'all'.
+14:10:39 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_sdk.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../batch_align2d_sdk_bsp/psu_cortexa53_0/lib -o "batch_align2d_sdk.elf"  ./src/align2d.o ./src/main.o ./src/platform.o ./src/utils.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: batch_align2d_sdk.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size batch_align2d_sdk.elf  |tee "batch_align2d_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116820	   4676	1107302364	1107423860	4201f274	batch_align2d_sdk.elf
+Finished building: batch_align2d_sdk.elf.size
+ 
+14:13:33 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_sdk.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../batch_align2d_sdk_bsp/psu_cortexa53_0/lib -o "batch_align2d_sdk.elf"  ./src/align2d.o ./src/main.o ./src/platform.o ./src/utils.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: batch_align2d_sdk.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size batch_align2d_sdk.elf  |tee "batch_align2d_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116884	   4676	1107302364	1107423924	4201f2b4	batch_align2d_sdk.elf
+Finished building: batch_align2d_sdk.elf.size
+ 
+14:14:03 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:83:21: error: '(Test *)&t' is a pointer; did you mean to use '->'?
+     PyrImage pyr = t.pyr;
+                     ^
+                     ->
+../src/main.c:190:26: error: '(Test *)&t' is a pointer; did you mean to use '->'?
+    printf("%f %f \n\r", t.inverse_hessian[i], inv[0][i]);
+                          ^
+                          ->
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+14:14:06 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:190:26: error: '(Test *)&t' is a pointer; did you mean to use '->'?
+    printf("%f %f \n\r", t.inverse_hessian[i], inv[0][i]);
+                          ^
+                          ->
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+14:14:18 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:191:26: error: '(Test *)&t' is a pointer; did you mean to use '->'?
+    printf("%f %f \n\r", t.inverse_hessian[i], inv[0][i]);
+                          ^
+                          ->
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+14:14:55 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:191:26: error: '(Test *)&t' is a pointer; did you mean to use '->'?
+    printf("%f %f \n\r", t.inverse_hessian[i], inv[0][i]);
+                          ^
+                          ->
+make: *** [src/main.o] Error 1
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+14:15:07 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:193:26: error: '(Test *)&t' is a pointer; did you mean to use '->'?
+    printf("%f %f \n\r", t.inverse_hessian[i], inv[0][i]);
+                          ^
+                          ->
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+14:15:56 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_sdk.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../batch_align2d_sdk_bsp/psu_cortexa53_0/lib -o "batch_align2d_sdk.elf"  ./src/align2d.o ./src/main.o ./src/platform.o ./src/utils.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: batch_align2d_sdk.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size batch_align2d_sdk.elf  |tee "batch_align2d_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116948	   4676	1107302364	1107423988	4201f2f4	batch_align2d_sdk.elf
+Finished building: batch_align2d_sdk.elf.size
+ 
+14:16:37 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_sdk.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../batch_align2d_sdk_bsp/psu_cortexa53_0/lib -o "batch_align2d_sdk.elf"  ./src/align2d.o ./src/main.o ./src/platform.o ./src/utils.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: batch_align2d_sdk.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size batch_align2d_sdk.elf  |tee "batch_align2d_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116404	   4676	1107302372	1107423452	4201f0dc	batch_align2d_sdk.elf
+Finished building: batch_align2d_sdk.elf.size
+ 
+14:16:46 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_sdk.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../batch_align2d_sdk_bsp/psu_cortexa53_0/lib -o "batch_align2d_sdk.elf"  ./src/align2d.o ./src/main.o ./src/platform.o ./src/utils.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: batch_align2d_sdk.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size batch_align2d_sdk.elf  |tee "batch_align2d_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116468	   4676	1107302372	1107423516	4201f11c	batch_align2d_sdk.elf
+Finished building: batch_align2d_sdk.elf.size
+ 
+14:16:48 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../batch_align2d_sdk_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:53:0:
+../../batch_align2d_sdk_bsp/psu_cortexa53_0/include/xtime_l.h:77:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from ../src/main.c:55:0:
+../src/datatypes.h:32:2: warning: variably modified 'data' at file scope
+  uint8_t data[PYR_SIZE];
+  ^~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: batch_align2d_sdk.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../batch_align2d_sdk_bsp/psu_cortexa53_0/lib -o "batch_align2d_sdk.elf"  ./src/align2d.o ./src/main.o ./src/platform.o ./src/utils.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: batch_align2d_sdk.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size batch_align2d_sdk.elf  |tee "batch_align2d_sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116468	   4676	1107302372	1107423516	4201f11c	batch_align2d_sdk.elf
+Finished building: batch_align2d_sdk.elf.size
+ 
+14:16:53 **** Incremental Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+make: Nothing to be done for 'all'.
+14:17:02 **** Incremental Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+make: Nothing to be done for 'all'.
+14:17:07 **** Incremental Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+make: Nothing to be done for 'all'.
+14:17:26 **** Incremental Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+make: Nothing to be done for 'all'.

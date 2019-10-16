@@ -59,7 +59,6 @@
 #define BATCH_SIZE 4
 
 
-
 int main()
 {
 	// Init PS
@@ -76,20 +75,22 @@ int main()
     print("Test file opened \n\r");
 
     // Read a test
-    Test t;
-    file_read(&fp, &t, sizeof(Test));
+    Test t[BATCH_SIZE];
+    file_read(&fp, &t, BATCH_SIZE * sizeof(Test));
     print("Tests readed \n\r");
 
     // Input vector
-    PyrImage pyr = t.pyr;
+    PyrImage pyr = t[0].pyr;
     PatchBorder ref_patch_with_border[BATCH_SIZE];
     Vector2f cur_px_estimate[BATCH_SIZE];
     XBatch_align2d_Levels levels;
     u64 converged = 0;
 
-    memcpy(ref_patch_with_border[0], t.ref_patch_with_border, sizeof(PatchBorder));
-    memcpy(cur_px_estimate[0], t.cur_px_estimate, sizeof(Vector2f));
-
+    // Copy data into input vector
+    for(int k = 0; k < BATCH_SIZE; k++){
+    	memcpy(ref_patch_with_border[k], t[k].ref_patch_with_border, sizeof(PatchBorder));
+    	memcpy(cur_px_estimate[k], t[k].cur_px_estimate, sizeof(Vector2f));
+    }
     //FPGA instance
 	XBatch_align2d XBA;
 
@@ -120,17 +121,19 @@ int main()
 		XBatch_align2d_Set_n_iter(&XBA, 10);
 		print("Sent params to XBA \n\r");
 
-		Matrix3f inv[4] = {0};
+		Matrix3f inv[BATCH_SIZE] = {0};
 		XBatch_align2d_Set_inv_out(&XBA, (u64)inv);
 		print("Sent debug to XBA \n\r");
 
 		for(int i = 0; i < 10; i++){
 			// Init data
 			converged = 0;
+			/*
 			for(int k = 0; k < BATCH_SIZE; k++){
 				cur_px_estimate[k][0] = 0;
 				cur_px_estimate[k][1] = 0;
 			}
+			*/
 			//xil_printf("conv %x pos %d %d \n\r", converged, (int)cur_px_estimate[0][0], (int)cur_px_estimate[0][1]);
 
 
@@ -186,15 +189,10 @@ int main()
 
 		}
 
-		for(int i = 0; i < 9; i++){
-			printf("%f %f \n\r", t.inverse_hessian[i], inv[0][i]);
-		}
-
 		for(int j = 0; j < 4; j++){
 			for(int i = 0; i < 9; i++){
-				printf("%f ", inv[j][i]);
+				printf("%f %f \n\r", t[j].inverse_hessian[i], inv[j][i]);
 			}
-			printf("\n");
 		}
 
 		//sleep(10);

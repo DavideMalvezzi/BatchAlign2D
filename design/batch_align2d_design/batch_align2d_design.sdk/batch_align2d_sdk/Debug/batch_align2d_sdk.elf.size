@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
- 116820	   4676	1107302364	1107423860	4201f274	batch_align2d_sdk.elf
+ 116468	   4676	1107302372	1107423516	4201f11c	batch_align2d_sdk.elf
