@@ -2,6 +2,10 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.arm.a53.exe.debug.1055812466;xilinx.gnu.arm.a53.exe.debug.1055812466.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include"/>
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include-fixed"/>
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/../../../../aarch64-none-elf/include"/>
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../aarch64-none-elf/libc/usr/include"/>
 <includePath path="/cad/xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include"/>
 <includePath path="/cad/xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include-fixed"/>
 <includePath path="/cad/xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/../../../../aarch64-none-elf/include"/>
@@ -718,6 +722,10 @@
 </instance>
 <instance id="xilinx.gnu.arm.a53.exe.debug.1055812466;xilinx.gnu.arm.a53.exe.debug.1055812466.;xilinx.gnu.arm.a53.c.toolchain.compiler.debug.1370487195;xilinx.gnu.arm.a53.c.compiler.input.920423629">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include"/>
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include-fixed"/>
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/../../../../aarch64-none-elf/include"/>
+<includePath path="/opt/Xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../aarch64-none-elf/libc/usr/include"/>
 <includePath path="/cad/xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include"/>
 <includePath path="/cad/xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/include-fixed"/>
 <includePath path="/cad/xilinx/SDK/2018.3/gnu/aarch64/lin/aarch64-none/bin/../lib/gcc/aarch64-none-elf/7.3.1/../../../../aarch64-none-elf/include"/>
