@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="batch_align2D" xd:componentRef="batch_align2D" xd:initiationInterval="477244" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="batch_align2D" xd:componentRef="batch_align2D" xd:initiationInterval="474943" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="*(pyr_data_ptr)" xd:originalName="pyr_data_ptr" xd:direction="inout" xd:interfaceRef="m_axi_pyr" xd:busTypeRef="aximm" xd:dataWidth="8" xd:bufferDirection="in"/>
   <xd:arg xd:name="ref_patch_with_border_ptr[]" xd:originalName="ref_patch_with_border_ptr" xd:direction="inout" xd:interfaceRef="m_axi_patches" xd:busTypeRef="aximm" xd:arraySize="100" xd:dataWidth="8" xd:bufferDirection="in"/>
@@ -15,6 +15,6 @@
   <xd:arg xd:name="n_iter" xd:originalName="n_iter" xd:direction="in" xd:interfaceRef="s_axi_param" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x40" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="transfer_pyr" xd:originalName="transfer_pyr" xd:direction="in" xd:interfaceRef="s_axi_param" xd:busTypeRef="axilite" xd:dataWidth="1" xd:offset="0x48" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="inv_out" xd:originalName="inv_out" xd:direction="in" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_debug" xd:dataWidth="64" xd:offset="0x34" xd:handshakeRef="ap_none"/>
-  <xd:latencyEstimates xd:best-case="3474" xd:worst-case="477243" xd:average-case="240359"/>
-  <xd:resourceEstimates xd:LUT="19296" xd:FF="10810" xd:BRAM="240" xd:DSP="18"/>
+  <xd:latencyEstimates xd:best-case="1173" xd:worst-case="474942" xd:average-case="238058"/>
+  <xd:resourceEstimates xd:LUT="48224" xd:FF="36621" xd:BRAM="240" xd:DSP="106"/>
 </xd:acceleratorMap>

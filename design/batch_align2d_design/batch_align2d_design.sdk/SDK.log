@@ -1303,3 +1303,17 @@ con
 ----------------End of Script----------------
 
 16:17:04 INFO  : Launch script is exported to file '/home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_batch_align2d_sdk.elf_on_local.tcl'
+18:32:46 INFO  : Registering command handlers for SDK TCF services
+18:32:47 INFO  : Launching XSCT server: xsct -n -interactive /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/temp_xsdb_launch_script.tcl
+18:32:50 INFO  : XSCT server has started successfully.
+18:32:51 INFO  : Successfully done setting XSCT server connection channel  
+18:32:51 INFO  : Successfully done setting SDK workspace  
+18:32:51 INFO  : Processing command line option -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf.
+18:32:51 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+18:33:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1571243458000,  Project:1571234520000
+18:33:00 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf.
+18:33:11 INFO  : Copied contents of /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+18:33:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:33:29 INFO  : 
+18:33:30 INFO  : Updating hardware inferred compiler options for batch_align2d_sdk.
+18:33:30 INFO  : Clearing existing target manager status.

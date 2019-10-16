@@ -1,13 +1,13 @@
 
 #include "align2d.h"
 
-//#define PAR_BATCH
+#define PAR_BATCH
 #define OPT_LOOP
 
 
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
-	#pragma HLS INLINE
-	//#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
+	#pragma HLS INLINE off
+	#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
 
 	// Jacobian vectors and Hessian matrix
 	float ref_patch_dx[PATCH_AREA];
@@ -59,7 +59,7 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	H[6] = H[2];
 	H[7] = H[5];
 
-	// Compute the invese of the Hessian matrix with the minors cofactors method
+	// Compute the inverse of the Hessian matrix with the minors cofactors method
 	float det = H[0] * H[4] * H[8] +
 				H[1] * H[5] * H[6] +
 				H[2] * H[3] * H[7] -

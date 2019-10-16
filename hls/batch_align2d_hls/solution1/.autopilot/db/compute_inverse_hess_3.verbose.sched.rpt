@@ -1,0 +1,830 @@
+
+
+================================================================
+== Vivado HLS Report for 'compute_inverse_hess_3'
+================================================================
+* Date:           Wed Oct 16 17:43:54 2019
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        batch_align2d_hls
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.623|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  674|  674|  674|  674|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                   |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- compute_hessian  |  640|  640|        10|          -|          -|    64|    no    |
+        +-------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 44
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+	12  / (exitcond)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	2  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.65>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read99)" [batch_align2d_hls/align2d.c:23]   --->   Operation 45 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_read_2 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read98)" [batch_align2d_hls/align2d.c:23]   --->   Operation 46 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read97)" [batch_align2d_hls/align2d.c:23]   --->   Operation 47 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_read_4 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read96)" [batch_align2d_hls/align2d.c:23]   --->   Operation 48 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_read_5 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read95)" [batch_align2d_hls/align2d.c:23]   --->   Operation 49 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_read_6 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read94)" [batch_align2d_hls/align2d.c:23]   --->   Operation 50 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_read_7 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read93)" [batch_align2d_hls/align2d.c:23]   --->   Operation 51 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_read_8 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read92)" [batch_align2d_hls/align2d.c:23]   --->   Operation 52 'read' 'p_read_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_read_9 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read91)" [batch_align2d_hls/align2d.c:23]   --->   Operation 53 'read' 'p_read_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_read_10 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read90)" [batch_align2d_hls/align2d.c:23]   --->   Operation 54 'read' 'p_read_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_read_11 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read89)" [batch_align2d_hls/align2d.c:23]   --->   Operation 55 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_read_12 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read88)" [batch_align2d_hls/align2d.c:23]   --->   Operation 56 'read' 'p_read_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_read_13 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read87)" [batch_align2d_hls/align2d.c:23]   --->   Operation 57 'read' 'p_read_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%p_read_14 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read86)" [batch_align2d_hls/align2d.c:23]   --->   Operation 58 'read' 'p_read_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%p_read_15 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read85)" [batch_align2d_hls/align2d.c:23]   --->   Operation 59 'read' 'p_read_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_read_16 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read84)" [batch_align2d_hls/align2d.c:23]   --->   Operation 60 'read' 'p_read_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_read_17 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read83)" [batch_align2d_hls/align2d.c:23]   --->   Operation 61 'read' 'p_read_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_read_18 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read82)" [batch_align2d_hls/align2d.c:23]   --->   Operation 62 'read' 'p_read_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%p_read_19 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read81)" [batch_align2d_hls/align2d.c:23]   --->   Operation 63 'read' 'p_read_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%p_read_20 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read80)" [batch_align2d_hls/align2d.c:23]   --->   Operation 64 'read' 'p_read_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_read_21 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read79)" [batch_align2d_hls/align2d.c:23]   --->   Operation 65 'read' 'p_read_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%p_read_22 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read78)" [batch_align2d_hls/align2d.c:23]   --->   Operation 66 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%p_read_23 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read77)" [batch_align2d_hls/align2d.c:23]   --->   Operation 67 'read' 'p_read_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%p_read_24 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read76)" [batch_align2d_hls/align2d.c:23]   --->   Operation 68 'read' 'p_read_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_read_25 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read75)" [batch_align2d_hls/align2d.c:23]   --->   Operation 69 'read' 'p_read_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%p_read_26 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read74)" [batch_align2d_hls/align2d.c:23]   --->   Operation 70 'read' 'p_read_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%p_read_27 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read73)" [batch_align2d_hls/align2d.c:23]   --->   Operation 71 'read' 'p_read_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%p_read_28 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read72)" [batch_align2d_hls/align2d.c:23]   --->   Operation 72 'read' 'p_read_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%p_read_29 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read71)" [batch_align2d_hls/align2d.c:23]   --->   Operation 73 'read' 'p_read_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%p_read_30 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read70)" [batch_align2d_hls/align2d.c:23]   --->   Operation 74 'read' 'p_read_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_read_31 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read69)" [batch_align2d_hls/align2d.c:23]   --->   Operation 75 'read' 'p_read_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%p_read_32 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read68)" [batch_align2d_hls/align2d.c:23]   --->   Operation 76 'read' 'p_read_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_read_33 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read67)" [batch_align2d_hls/align2d.c:23]   --->   Operation 77 'read' 'p_read_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%p_read_34 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read66)" [batch_align2d_hls/align2d.c:23]   --->   Operation 78 'read' 'p_read_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%p_read_35 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read65)" [batch_align2d_hls/align2d.c:23]   --->   Operation 79 'read' 'p_read_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%p_read_36 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read64)" [batch_align2d_hls/align2d.c:23]   --->   Operation 80 'read' 'p_read_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%p_read_37 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read63)" [batch_align2d_hls/align2d.c:23]   --->   Operation 81 'read' 'p_read_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%p_read_38 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read62)" [batch_align2d_hls/align2d.c:23]   --->   Operation 82 'read' 'p_read_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%p_read_39 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read61)" [batch_align2d_hls/align2d.c:23]   --->   Operation 83 'read' 'p_read_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%p_read_40 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read60)" [batch_align2d_hls/align2d.c:23]   --->   Operation 84 'read' 'p_read_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%p_read_41 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read59)" [batch_align2d_hls/align2d.c:23]   --->   Operation 85 'read' 'p_read_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%p_read_42 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read58)" [batch_align2d_hls/align2d.c:23]   --->   Operation 86 'read' 'p_read_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%p_read_43 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read57)" [batch_align2d_hls/align2d.c:23]   --->   Operation 87 'read' 'p_read_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%p_read_44 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read56)" [batch_align2d_hls/align2d.c:23]   --->   Operation 88 'read' 'p_read_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%p_read_45 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read55)" [batch_align2d_hls/align2d.c:23]   --->   Operation 89 'read' 'p_read_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%p_read_46 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read54)" [batch_align2d_hls/align2d.c:23]   --->   Operation 90 'read' 'p_read_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%p_read_47 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read53)" [batch_align2d_hls/align2d.c:23]   --->   Operation 91 'read' 'p_read_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%p_read_48 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read52)" [batch_align2d_hls/align2d.c:23]   --->   Operation 92 'read' 'p_read_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%p_read_49 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read51)" [batch_align2d_hls/align2d.c:23]   --->   Operation 93 'read' 'p_read_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%p_read_50 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read50)" [batch_align2d_hls/align2d.c:23]   --->   Operation 94 'read' 'p_read_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%p_read_51 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read49)" [batch_align2d_hls/align2d.c:23]   --->   Operation 95 'read' 'p_read_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%p_read_52 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read48)" [batch_align2d_hls/align2d.c:23]   --->   Operation 96 'read' 'p_read_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%p_read_53 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read47)" [batch_align2d_hls/align2d.c:23]   --->   Operation 97 'read' 'p_read_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%p_read_54 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read46)" [batch_align2d_hls/align2d.c:23]   --->   Operation 98 'read' 'p_read_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%p_read_55 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read45)" [batch_align2d_hls/align2d.c:23]   --->   Operation 99 'read' 'p_read_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%p_read_56 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read44)" [batch_align2d_hls/align2d.c:23]   --->   Operation 100 'read' 'p_read_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%p_read_57 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read43)" [batch_align2d_hls/align2d.c:23]   --->   Operation 101 'read' 'p_read_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%p_read_58 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read42)" [batch_align2d_hls/align2d.c:23]   --->   Operation 102 'read' 'p_read_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%p_read_59 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read41)" [batch_align2d_hls/align2d.c:23]   --->   Operation 103 'read' 'p_read_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%p_read_60 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read40)" [batch_align2d_hls/align2d.c:23]   --->   Operation 104 'read' 'p_read_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%p_read_61 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read39)" [batch_align2d_hls/align2d.c:23]   --->   Operation 105 'read' 'p_read_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%p_read_62 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read38)" [batch_align2d_hls/align2d.c:23]   --->   Operation 106 'read' 'p_read_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%p_read_63 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read37)" [batch_align2d_hls/align2d.c:23]   --->   Operation 107 'read' 'p_read_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%p_read_64 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read36)" [batch_align2d_hls/align2d.c:23]   --->   Operation 108 'read' 'p_read_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%p_read_65 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read35)" [batch_align2d_hls/align2d.c:23]   --->   Operation 109 'read' 'p_read_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%p_read_66 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read34)" [batch_align2d_hls/align2d.c:23]   --->   Operation 110 'read' 'p_read_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%p_read_67 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read33)" [batch_align2d_hls/align2d.c:23]   --->   Operation 111 'read' 'p_read_67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%p_read_68 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read32)" [batch_align2d_hls/align2d.c:23]   --->   Operation 112 'read' 'p_read_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%p_read_69 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read31)" [batch_align2d_hls/align2d.c:23]   --->   Operation 113 'read' 'p_read_69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%p_read_70 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read30)" [batch_align2d_hls/align2d.c:23]   --->   Operation 114 'read' 'p_read_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%p_read_71 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read29)" [batch_align2d_hls/align2d.c:23]   --->   Operation 115 'read' 'p_read_71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%p_read_72 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read28)" [batch_align2d_hls/align2d.c:23]   --->   Operation 116 'read' 'p_read_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%p_read_73 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read27)" [batch_align2d_hls/align2d.c:23]   --->   Operation 117 'read' 'p_read_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%p_read_74 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read26)" [batch_align2d_hls/align2d.c:23]   --->   Operation 118 'read' 'p_read_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%p_read_75 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read25)" [batch_align2d_hls/align2d.c:23]   --->   Operation 119 'read' 'p_read_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%p_read_76 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read24)" [batch_align2d_hls/align2d.c:23]   --->   Operation 120 'read' 'p_read_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%p_read_77 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read23)" [batch_align2d_hls/align2d.c:23]   --->   Operation 121 'read' 'p_read_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%p_read_78 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read22)" [batch_align2d_hls/align2d.c:23]   --->   Operation 122 'read' 'p_read_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%p_read_79 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read21)" [batch_align2d_hls/align2d.c:23]   --->   Operation 123 'read' 'p_read_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%p_read_80 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read20)" [batch_align2d_hls/align2d.c:23]   --->   Operation 124 'read' 'p_read_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%p_read_81 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read19)" [batch_align2d_hls/align2d.c:23]   --->   Operation 125 'read' 'p_read_81' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%p_read_82 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read18)" [batch_align2d_hls/align2d.c:23]   --->   Operation 126 'read' 'p_read_82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%p_read_83 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read17)" [batch_align2d_hls/align2d.c:23]   --->   Operation 127 'read' 'p_read_83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%p_read_84 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read16)" [batch_align2d_hls/align2d.c:23]   --->   Operation 128 'read' 'p_read_84' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%p_read_85 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read15)" [batch_align2d_hls/align2d.c:23]   --->   Operation 129 'read' 'p_read_85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%p_read_86 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read14)" [batch_align2d_hls/align2d.c:23]   --->   Operation 130 'read' 'p_read_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%p_read_87 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read13)" [batch_align2d_hls/align2d.c:23]   --->   Operation 131 'read' 'p_read_87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%p_read_88 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read12)" [batch_align2d_hls/align2d.c:23]   --->   Operation 132 'read' 'p_read_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%p_read_89 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read11)" [batch_align2d_hls/align2d.c:23]   --->   Operation 133 'read' 'p_read_89' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%p_read_90 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read10)" [batch_align2d_hls/align2d.c:23]   --->   Operation 134 'read' 'p_read_90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%p_read_91 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read9)" [batch_align2d_hls/align2d.c:23]   --->   Operation 135 'read' 'p_read_91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%p_read_92 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read8)" [batch_align2d_hls/align2d.c:23]   --->   Operation 136 'read' 'p_read_92' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%p_read_93 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read7)" [batch_align2d_hls/align2d.c:23]   --->   Operation 137 'read' 'p_read_93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%p_read_94 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read6)" [batch_align2d_hls/align2d.c:23]   --->   Operation 138 'read' 'p_read_94' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%p_read_95 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read5)" [batch_align2d_hls/align2d.c:23]   --->   Operation 139 'read' 'p_read_95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%p_read_96 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read4)" [batch_align2d_hls/align2d.c:23]   --->   Operation 140 'read' 'p_read_96' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%p_read_97 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read3)" [batch_align2d_hls/align2d.c:23]   --->   Operation 141 'read' 'p_read_97' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%p_read_98 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read2)" [batch_align2d_hls/align2d.c:23]   --->   Operation 142 'read' 'p_read_98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%p_read_99 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read1)" [batch_align2d_hls/align2d.c:23]   --->   Operation 143 'read' 'p_read_99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%p_read_100 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %p_read)" [batch_align2d_hls/align2d.c:23]   --->   Operation 144 'read' 'p_read_100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.65ns)   --->   "br label %0" [batch_align2d_hls/align2d.c:23]   --->   Operation 145 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 8.41>
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%tmp_2 = phi float [ %tmp_64, %branch3217 ], [ 0.000000e+00, %branch4221 ]" [batch_align2d_hls/align2d.c:44]   --->   Operation 146 'phi' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_3 = phi float [ %tmp_63, %branch3217 ], [ 0.000000e+00, %branch4221 ]" [batch_align2d_hls/align2d.c:43]   --->   Operation 147 'phi' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_4 = phi float [ %tmp_61, %branch3217 ], [ 0.000000e+00, %branch4221 ]" [batch_align2d_hls/align2d.c:42]   --->   Operation 148 'phi' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_5 = phi float [ %tmp_60, %branch3217 ], [ 0.000000e+00, %branch4221 ]" [batch_align2d_hls/align2d.c:41]   --->   Operation 149 'phi' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_6 = phi float [ %tmp_58, %branch3217 ], [ 0.000000e+00, %branch4221 ]" [batch_align2d_hls/align2d.c:40]   --->   Operation 150 'phi' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "%i = phi i7 [ %i_1, %branch3217 ], [ 0, %branch4221 ]"   --->   Operation 151 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 152 [1/1] (0.81ns)   --->   "%exitcond = icmp eq i7 %i, -64" [batch_align2d_hls/align2d.c:23]   --->   Operation 152 'icmp' 'exitcond' <Predicate = true> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)"   --->   Operation 153 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 154 [1/1] (0.77ns)   --->   "%i_1 = add i7 %i, 1" [batch_align2d_hls/align2d.c:23]   --->   Operation 154 'add' 'i_1' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %branch13246, label %branch3217" [batch_align2d_hls/align2d.c:23]   --->   Operation 155 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 156 [1/1] (0.00ns)   --->   "%tmp_43 = trunc i7 %i to i3" [batch_align2d_hls/align2d.c:33]   --->   Operation 156 'trunc' 'tmp_43' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_42 = call i3 @_ssdm_op_PartSelect.i3.i7.i32.i32(i7 %i, i32 3, i32 5)" [batch_align2d_hls/align2d.c:23]   --->   Operation 157 'partselect' 'tmp_42' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_35 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %tmp_42, i1 false)" [batch_align2d_hls/align2d.c:33]   --->   Operation 158 'bitconcatenate' 'tmp_35' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_35_cast = zext i4 %tmp_35 to i7" [batch_align2d_hls/align2d.c:33]   --->   Operation 159 'zext' 'tmp_35_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "%tmp_37 = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %tmp_42, i3 0)" [batch_align2d_hls/align2d.c:33]   --->   Operation 160 'bitconcatenate' 'tmp_37' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 161 [1/1] (0.00ns)   --->   "%tmp_37_cast = zext i6 %tmp_37 to i7" [batch_align2d_hls/align2d.c:33]   --->   Operation 161 'zext' 'tmp_37_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 162 [1/1] (0.78ns)   --->   "%tmp_41 = add i7 %tmp_37_cast, %tmp_35_cast" [batch_align2d_hls/align2d.c:33]   --->   Operation 162 'add' 'tmp_41' <Predicate = (!exitcond)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 163 [1/1] (0.00ns) (grouped into LUT with out node tmp_53)   --->   "%tmp_46_cast4 = zext i3 %tmp_43 to i7" [batch_align2d_hls/align2d.c:33]   --->   Operation 163 'zext' 'tmp_46_cast4' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_46_cast = zext i3 %tmp_43 to i5" [batch_align2d_hls/align2d.c:33]   --->   Operation 164 'zext' 'tmp_46_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 165 [1/1] (0.78ns)   --->   "%tmp = add i5 12, %tmp_46_cast" [batch_align2d_hls/align2d.c:33]   --->   Operation 165 'add' 'tmp' <Predicate = (!exitcond)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_cast = zext i5 %tmp to i7" [batch_align2d_hls/align2d.c:33]   --->   Operation 166 'zext' 'tmp_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 167 [1/1] (0.77ns)   --->   "%tmp_44 = add i7 %tmp_41, %tmp_cast" [batch_align2d_hls/align2d.c:33]   --->   Operation 167 'add' 'tmp_44' <Predicate = (!exitcond)> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 168 [1/1] (1.18ns)   --->   "%tmp_45 = call i8 @_ssdm_op_Mux.ap_auto.100i8.i7(i8 %p_read_100, i8 %p_read_99, i8 %p_read_98, i8 %p_read_97, i8 %p_read_96, i8 %p_read_95, i8 %p_read_94, i8 %p_read_93, i8 %p_read_92, i8 %p_read_91, i8 %p_read_90, i8 %p_read_89, i8 %p_read_88, i8 %p_read_87, i8 %p_read_86, i8 %p_read_85, i8 %p_read_84, i8 %p_read_83, i8 %p_read_82, i8 %p_read_81, i8 %p_read_80, i8 %p_read_79, i8 %p_read_78, i8 %p_read_77, i8 %p_read_76, i8 %p_read_75, i8 %p_read_74, i8 %p_read_73, i8 %p_read_72, i8 %p_read_71, i8 %p_read_70, i8 %p_read_69, i8 %p_read_68, i8 %p_read_67, i8 %p_read_66, i8 %p_read_65, i8 %p_read_64, i8 %p_read_63, i8 %p_read_62, i8 %p_read_61, i8 %p_read_60, i8 %p_read_59, i8 %p_read_58, i8 %p_read_57, i8 %p_read_56, i8 %p_read_55, i8 %p_read_54, i8 %p_read_53, i8 %p_read_52, i8 %p_read_51, i8 %p_read_50, i8 %p_read_49, i8 %p_read_48, i8 %p_read_47, i8 %p_read_46, i8 %p_read_45, i8 %p_read_44, i8 %p_read_43, i8 %p_read_42, i8 %p_read_41, i8 %p_read_40, i8 %p_read_39, i8 %p_read_38, i8 %p_read_37, i8 %p_read_36, i8 %p_read_35, i8 %p_read_34, i8 %p_read_33, i8 %p_read_32, i8 %p_read_31, i8 %p_read_30, i8 %p_read_29, i8 %p_read_28, i8 %p_read_27, i8 %p_read_26, i8 %p_read_25, i8 %p_read_24, i8 %p_read_23, i8 %p_read_22, i8 %p_read_21, i8 %p_read_20, i8 %p_read_19, i8 %p_read_18, i8 %p_read_17, i8 %p_read_16, i8 %p_read_15, i8 %p_read_14, i8 %p_read_13, i8 %p_read_12, i8 %p_read_11, i8 %p_read_10, i8 %p_read_9, i8 %p_read_8, i8 %p_read_7, i8 %p_read_6, i8 %p_read_5, i8 %p_read_4, i8 %p_read_3, i8 %p_read_2, i8 %p_read_1, i7 %tmp_44)" [batch_align2d_hls/align2d.c:33]   --->   Operation 168 'mux' 'tmp_45' <Predicate = (!exitcond)> <Delay = 1.18> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_49_cast = zext i8 %tmp_45 to i9" [batch_align2d_hls/align2d.c:33]   --->   Operation 169 'zext' 'tmp_49_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 170 [1/1] (0.78ns)   --->   "%tmp44 = add i5 10, %tmp_46_cast" [batch_align2d_hls/align2d.c:33]   --->   Operation 170 'add' 'tmp44' <Predicate = (!exitcond)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 171 [1/1] (0.00ns)   --->   "%tmp100_cast = zext i5 %tmp44 to i7" [batch_align2d_hls/align2d.c:33]   --->   Operation 171 'zext' 'tmp100_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 172 [1/1] (0.77ns)   --->   "%tmp_46 = add i7 %tmp_41, %tmp100_cast" [batch_align2d_hls/align2d.c:33]   --->   Operation 172 'add' 'tmp_46' <Predicate = (!exitcond)> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 173 [1/1] (1.18ns)   --->   "%tmp_47 = call i8 @_ssdm_op_Mux.ap_auto.100i8.i7(i8 %p_read_100, i8 %p_read_99, i8 %p_read_98, i8 %p_read_97, i8 %p_read_96, i8 %p_read_95, i8 %p_read_94, i8 %p_read_93, i8 %p_read_92, i8 %p_read_91, i8 %p_read_90, i8 %p_read_89, i8 %p_read_88, i8 %p_read_87, i8 %p_read_86, i8 %p_read_85, i8 %p_read_84, i8 %p_read_83, i8 %p_read_82, i8 %p_read_81, i8 %p_read_80, i8 %p_read_79, i8 %p_read_78, i8 %p_read_77, i8 %p_read_76, i8 %p_read_75, i8 %p_read_74, i8 %p_read_73, i8 %p_read_72, i8 %p_read_71, i8 %p_read_70, i8 %p_read_69, i8 %p_read_68, i8 %p_read_67, i8 %p_read_66, i8 %p_read_65, i8 %p_read_64, i8 %p_read_63, i8 %p_read_62, i8 %p_read_61, i8 %p_read_60, i8 %p_read_59, i8 %p_read_58, i8 %p_read_57, i8 %p_read_56, i8 %p_read_55, i8 %p_read_54, i8 %p_read_53, i8 %p_read_52, i8 %p_read_51, i8 %p_read_50, i8 %p_read_49, i8 %p_read_48, i8 %p_read_47, i8 %p_read_46, i8 %p_read_45, i8 %p_read_44, i8 %p_read_43, i8 %p_read_42, i8 %p_read_41, i8 %p_read_40, i8 %p_read_39, i8 %p_read_38, i8 %p_read_37, i8 %p_read_36, i8 %p_read_35, i8 %p_read_34, i8 %p_read_33, i8 %p_read_32, i8 %p_read_31, i8 %p_read_30, i8 %p_read_29, i8 %p_read_28, i8 %p_read_27, i8 %p_read_26, i8 %p_read_25, i8 %p_read_24, i8 %p_read_23, i8 %p_read_22, i8 %p_read_21, i8 %p_read_20, i8 %p_read_19, i8 %p_read_18, i8 %p_read_17, i8 %p_read_16, i8 %p_read_15, i8 %p_read_14, i8 %p_read_13, i8 %p_read_12, i8 %p_read_11, i8 %p_read_10, i8 %p_read_9, i8 %p_read_8, i8 %p_read_7, i8 %p_read_6, i8 %p_read_5, i8 %p_read_4, i8 %p_read_3, i8 %p_read_2, i8 %p_read_1, i7 %tmp_46)" [batch_align2d_hls/align2d.c:33]   --->   Operation 173 'mux' 'tmp_47' <Predicate = (!exitcond)> <Delay = 1.18> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_55_cast = zext i8 %tmp_47 to i9" [batch_align2d_hls/align2d.c:33]   --->   Operation 174 'zext' 'tmp_55_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 175 [1/1] (0.76ns)   --->   "%tmp_48 = sub i9 %tmp_49_cast, %tmp_55_cast" [batch_align2d_hls/align2d.c:33]   --->   Operation 175 'sub' 'tmp_48' <Predicate = (!exitcond)> <Delay = 0.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 176 [1/1] (0.78ns)   --->   "%tmp45 = add i5 -11, %tmp_46_cast" [batch_align2d_hls/align2d.c:34]   --->   Operation 176 'add' 'tmp45' <Predicate = (!exitcond)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 177 [1/1] (0.00ns)   --->   "%tmp101_cast = zext i5 %tmp45 to i7" [batch_align2d_hls/align2d.c:34]   --->   Operation 177 'zext' 'tmp101_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 178 [1/1] (0.77ns)   --->   "%tmp_50 = add i7 %tmp_41, %tmp101_cast" [batch_align2d_hls/align2d.c:34]   --->   Operation 178 'add' 'tmp_50' <Predicate = (!exitcond)> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 179 [1/1] (1.18ns)   --->   "%tmp_51 = call i8 @_ssdm_op_Mux.ap_auto.100i8.i7(i8 %p_read_100, i8 %p_read_99, i8 %p_read_98, i8 %p_read_97, i8 %p_read_96, i8 %p_read_95, i8 %p_read_94, i8 %p_read_93, i8 %p_read_92, i8 %p_read_91, i8 %p_read_90, i8 %p_read_89, i8 %p_read_88, i8 %p_read_87, i8 %p_read_86, i8 %p_read_85, i8 %p_read_84, i8 %p_read_83, i8 %p_read_82, i8 %p_read_81, i8 %p_read_80, i8 %p_read_79, i8 %p_read_78, i8 %p_read_77, i8 %p_read_76, i8 %p_read_75, i8 %p_read_74, i8 %p_read_73, i8 %p_read_72, i8 %p_read_71, i8 %p_read_70, i8 %p_read_69, i8 %p_read_68, i8 %p_read_67, i8 %p_read_66, i8 %p_read_65, i8 %p_read_64, i8 %p_read_63, i8 %p_read_62, i8 %p_read_61, i8 %p_read_60, i8 %p_read_59, i8 %p_read_58, i8 %p_read_57, i8 %p_read_56, i8 %p_read_55, i8 %p_read_54, i8 %p_read_53, i8 %p_read_52, i8 %p_read_51, i8 %p_read_50, i8 %p_read_49, i8 %p_read_48, i8 %p_read_47, i8 %p_read_46, i8 %p_read_45, i8 %p_read_44, i8 %p_read_43, i8 %p_read_42, i8 %p_read_41, i8 %p_read_40, i8 %p_read_39, i8 %p_read_38, i8 %p_read_37, i8 %p_read_36, i8 %p_read_35, i8 %p_read_34, i8 %p_read_33, i8 %p_read_32, i8 %p_read_31, i8 %p_read_30, i8 %p_read_29, i8 %p_read_28, i8 %p_read_27, i8 %p_read_26, i8 %p_read_25, i8 %p_read_24, i8 %p_read_23, i8 %p_read_22, i8 %p_read_21, i8 %p_read_20, i8 %p_read_19, i8 %p_read_18, i8 %p_read_17, i8 %p_read_16, i8 %p_read_15, i8 %p_read_14, i8 %p_read_13, i8 %p_read_12, i8 %p_read_11, i8 %p_read_10, i8 %p_read_9, i8 %p_read_8, i8 %p_read_7, i8 %p_read_6, i8 %p_read_5, i8 %p_read_4, i8 %p_read_3, i8 %p_read_2, i8 %p_read_1, i7 %tmp_50)" [batch_align2d_hls/align2d.c:34]   --->   Operation 179 'mux' 'tmp_51' <Predicate = (!exitcond)> <Delay = 1.18> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_62_cast = zext i8 %tmp_51 to i9" [batch_align2d_hls/align2d.c:34]   --->   Operation 180 'zext' 'tmp_62_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node tmp_53)   --->   "%tmp_52 = or i7 %tmp_41, 1" [batch_align2d_hls/align2d.c:33]   --->   Operation 181 'or' 'tmp_52' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 182 [1/1] (0.77ns) (out node of the LUT)   --->   "%tmp_53 = add i7 %tmp_46_cast4, %tmp_52" [batch_align2d_hls/align2d.c:34]   --->   Operation 182 'add' 'tmp_53' <Predicate = (!exitcond)> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 183 [1/1] (1.18ns)   --->   "%tmp_54 = call i8 @_ssdm_op_Mux.ap_auto.100i8.i7(i8 %p_read_100, i8 %p_read_99, i8 %p_read_98, i8 %p_read_97, i8 %p_read_96, i8 %p_read_95, i8 %p_read_94, i8 %p_read_93, i8 %p_read_92, i8 %p_read_91, i8 %p_read_90, i8 %p_read_89, i8 %p_read_88, i8 %p_read_87, i8 %p_read_86, i8 %p_read_85, i8 %p_read_84, i8 %p_read_83, i8 %p_read_82, i8 %p_read_81, i8 %p_read_80, i8 %p_read_79, i8 %p_read_78, i8 %p_read_77, i8 %p_read_76, i8 %p_read_75, i8 %p_read_74, i8 %p_read_73, i8 %p_read_72, i8 %p_read_71, i8 %p_read_70, i8 %p_read_69, i8 %p_read_68, i8 %p_read_67, i8 %p_read_66, i8 %p_read_65, i8 %p_read_64, i8 %p_read_63, i8 %p_read_62, i8 %p_read_61, i8 %p_read_60, i8 %p_read_59, i8 %p_read_58, i8 %p_read_57, i8 %p_read_56, i8 %p_read_55, i8 %p_read_54, i8 %p_read_53, i8 %p_read_52, i8 %p_read_51, i8 %p_read_50, i8 %p_read_49, i8 %p_read_48, i8 %p_read_47, i8 %p_read_46, i8 %p_read_45, i8 %p_read_44, i8 %p_read_43, i8 %p_read_42, i8 %p_read_41, i8 %p_read_40, i8 %p_read_39, i8 %p_read_38, i8 %p_read_37, i8 %p_read_36, i8 %p_read_35, i8 %p_read_34, i8 %p_read_33, i8 %p_read_32, i8 %p_read_31, i8 %p_read_30, i8 %p_read_29, i8 %p_read_28, i8 %p_read_27, i8 %p_read_26, i8 %p_read_25, i8 %p_read_24, i8 %p_read_23, i8 %p_read_22, i8 %p_read_21, i8 %p_read_20, i8 %p_read_19, i8 %p_read_18, i8 %p_read_17, i8 %p_read_16, i8 %p_read_15, i8 %p_read_14, i8 %p_read_13, i8 %p_read_12, i8 %p_read_11, i8 %p_read_10, i8 %p_read_9, i8 %p_read_8, i8 %p_read_7, i8 %p_read_6, i8 %p_read_5, i8 %p_read_4, i8 %p_read_3, i8 %p_read_2, i8 %p_read_1, i7 %tmp_53)" [batch_align2d_hls/align2d.c:34]   --->   Operation 183 'mux' 'tmp_54' <Predicate = (!exitcond)> <Delay = 1.18> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 184 [1/1] (0.00ns)   --->   "%tmp_66_cast = zext i8 %tmp_54 to i9" [batch_align2d_hls/align2d.c:34]   --->   Operation 184 'zext' 'tmp_66_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 185 [1/1] (0.76ns)   --->   "%tmp_55 = sub i9 %tmp_62_cast, %tmp_66_cast" [batch_align2d_hls/align2d.c:34]   --->   Operation 185 'sub' 'tmp_55' <Predicate = (!exitcond)> <Delay = 0.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 186 [2/2] (8.41ns)   --->   "%tmp_8 = fmul float %tmp_5, 2.500000e-01" [batch_align2d_hls/align2d.c:51]   --->   Operation 186 'fmul' 'tmp_8' <Predicate = (exitcond)> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 187 [2/2] (8.41ns)   --->   "%tmp_9 = fmul float %tmp_4, 5.000000e-01" [batch_align2d_hls/align2d.c:52]   --->   Operation 187 'fmul' 'tmp_9' <Predicate = (exitcond)> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 188 [2/2] (8.41ns)   --->   "%tmp_1 = fmul float %tmp_2, 5.000000e-01" [batch_align2d_hls/align2d.c:54]   --->   Operation 188 'fmul' 'tmp_1' <Predicate = (exitcond)> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 7.89>
+ST_3 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_65 = sext i9 %tmp_48 to i32" [batch_align2d_hls/align2d.c:33]   --->   Operation 189 'sext' 'tmp_65' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 190 [3/3] (7.89ns)   --->   "%tmp_49 = sitofp i32 %tmp_65 to float" [batch_align2d_hls/align2d.c:33]   --->   Operation 190 'sitofp' 'tmp_49' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 111 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 191 [1/1] (0.00ns)   --->   "%tmp_66 = sext i9 %tmp_55 to i32" [batch_align2d_hls/align2d.c:34]   --->   Operation 191 'sext' 'tmp_66' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 192 [3/3] (7.89ns)   --->   "%tmp_56 = sitofp i32 %tmp_66 to float" [batch_align2d_hls/align2d.c:34]   --->   Operation 192 'sitofp' 'tmp_56' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 111 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.89>
+ST_4 : Operation 193 [2/3] (7.89ns)   --->   "%tmp_49 = sitofp i32 %tmp_65 to float" [batch_align2d_hls/align2d.c:33]   --->   Operation 193 'sitofp' 'tmp_49' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 111 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 194 [2/3] (7.89ns)   --->   "%tmp_56 = sitofp i32 %tmp_66 to float" [batch_align2d_hls/align2d.c:34]   --->   Operation 194 'sitofp' 'tmp_56' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 111 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.89>
+ST_5 : Operation 195 [1/3] (7.89ns)   --->   "%tmp_49 = sitofp i32 %tmp_65 to float" [batch_align2d_hls/align2d.c:33]   --->   Operation 195 'sitofp' 'tmp_49' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 111 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_5 : Operation 196 [1/3] (7.89ns)   --->   "%tmp_56 = sitofp i32 %tmp_66 to float" [batch_align2d_hls/align2d.c:34]   --->   Operation 196 'sitofp' 'tmp_56' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 111 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 8.41>
+ST_6 : Operation 197 [2/2] (8.41ns)   --->   "%tmp_57 = fmul float %tmp_49, %tmp_49" [batch_align2d_hls/align2d.c:40]   --->   Operation 197 'fmul' 'tmp_57' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 198 [2/2] (8.41ns)   --->   "%tmp_59 = fmul float %tmp_49, %tmp_56" [batch_align2d_hls/align2d.c:41]   --->   Operation 198 'fmul' 'tmp_59' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 199 [4/4] (6.43ns)   --->   "%tmp_61 = fadd float %tmp_49, %tmp_4" [batch_align2d_hls/align2d.c:42]   --->   Operation 199 'fadd' 'tmp_61' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 200 [2/2] (8.41ns)   --->   "%tmp_62 = fmul float %tmp_56, %tmp_56" [batch_align2d_hls/align2d.c:43]   --->   Operation 200 'fmul' 'tmp_62' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 201 [4/4] (6.43ns)   --->   "%tmp_64 = fadd float %tmp_56, %tmp_2" [batch_align2d_hls/align2d.c:44]   --->   Operation 201 'fadd' 'tmp_64' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 8.41>
+ST_7 : Operation 202 [1/2] (8.41ns)   --->   "%tmp_57 = fmul float %tmp_49, %tmp_49" [batch_align2d_hls/align2d.c:40]   --->   Operation 202 'fmul' 'tmp_57' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 203 [1/2] (8.41ns)   --->   "%tmp_59 = fmul float %tmp_49, %tmp_56" [batch_align2d_hls/align2d.c:41]   --->   Operation 203 'fmul' 'tmp_59' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 204 [3/4] (6.43ns)   --->   "%tmp_61 = fadd float %tmp_49, %tmp_4" [batch_align2d_hls/align2d.c:42]   --->   Operation 204 'fadd' 'tmp_61' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 205 [1/2] (8.41ns)   --->   "%tmp_62 = fmul float %tmp_56, %tmp_56" [batch_align2d_hls/align2d.c:43]   --->   Operation 205 'fmul' 'tmp_62' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 206 [3/4] (6.43ns)   --->   "%tmp_64 = fadd float %tmp_56, %tmp_2" [batch_align2d_hls/align2d.c:44]   --->   Operation 206 'fadd' 'tmp_64' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.43>
+ST_8 : Operation 207 [4/4] (6.43ns)   --->   "%tmp_58 = fadd float %tmp_57, %tmp_6" [batch_align2d_hls/align2d.c:40]   --->   Operation 207 'fadd' 'tmp_58' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 208 [4/4] (6.43ns)   --->   "%tmp_60 = fadd float %tmp_59, %tmp_5" [batch_align2d_hls/align2d.c:41]   --->   Operation 208 'fadd' 'tmp_60' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 209 [2/4] (6.43ns)   --->   "%tmp_61 = fadd float %tmp_49, %tmp_4" [batch_align2d_hls/align2d.c:42]   --->   Operation 209 'fadd' 'tmp_61' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 210 [4/4] (6.43ns)   --->   "%tmp_63 = fadd float %tmp_62, %tmp_3" [batch_align2d_hls/align2d.c:43]   --->   Operation 210 'fadd' 'tmp_63' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 211 [2/4] (6.43ns)   --->   "%tmp_64 = fadd float %tmp_56, %tmp_2" [batch_align2d_hls/align2d.c:44]   --->   Operation 211 'fadd' 'tmp_64' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.43>
+ST_9 : Operation 212 [3/4] (6.43ns)   --->   "%tmp_58 = fadd float %tmp_57, %tmp_6" [batch_align2d_hls/align2d.c:40]   --->   Operation 212 'fadd' 'tmp_58' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 213 [3/4] (6.43ns)   --->   "%tmp_60 = fadd float %tmp_59, %tmp_5" [batch_align2d_hls/align2d.c:41]   --->   Operation 213 'fadd' 'tmp_60' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 214 [1/4] (6.43ns)   --->   "%tmp_61 = fadd float %tmp_49, %tmp_4" [batch_align2d_hls/align2d.c:42]   --->   Operation 214 'fadd' 'tmp_61' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 215 [3/4] (6.43ns)   --->   "%tmp_63 = fadd float %tmp_62, %tmp_3" [batch_align2d_hls/align2d.c:43]   --->   Operation 215 'fadd' 'tmp_63' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 216 [1/4] (6.43ns)   --->   "%tmp_64 = fadd float %tmp_56, %tmp_2" [batch_align2d_hls/align2d.c:44]   --->   Operation 216 'fadd' 'tmp_64' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.43>
+ST_10 : Operation 217 [2/4] (6.43ns)   --->   "%tmp_58 = fadd float %tmp_57, %tmp_6" [batch_align2d_hls/align2d.c:40]   --->   Operation 217 'fadd' 'tmp_58' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 218 [2/4] (6.43ns)   --->   "%tmp_60 = fadd float %tmp_59, %tmp_5" [batch_align2d_hls/align2d.c:41]   --->   Operation 218 'fadd' 'tmp_60' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 219 [2/4] (6.43ns)   --->   "%tmp_63 = fadd float %tmp_62, %tmp_3" [batch_align2d_hls/align2d.c:43]   --->   Operation 219 'fadd' 'tmp_63' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.43>
+ST_11 : Operation 220 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @p_str2) nounwind" [batch_align2d_hls/align2d.c:23]   --->   Operation 220 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 221 [1/4] (6.43ns)   --->   "%tmp_58 = fadd float %tmp_57, %tmp_6" [batch_align2d_hls/align2d.c:40]   --->   Operation 221 'fadd' 'tmp_58' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 222 [1/4] (6.43ns)   --->   "%tmp_60 = fadd float %tmp_59, %tmp_5" [batch_align2d_hls/align2d.c:41]   --->   Operation 222 'fadd' 'tmp_60' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 223 [1/4] (6.43ns)   --->   "%tmp_63 = fadd float %tmp_62, %tmp_3" [batch_align2d_hls/align2d.c:43]   --->   Operation 223 'fadd' 'tmp_63' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 224 [1/1] (0.00ns)   --->   "br label %0" [batch_align2d_hls/align2d.c:23]   --->   Operation 224 'br' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 2> <Delay = 8.41>
+ST_12 : Operation 225 [1/2] (8.41ns)   --->   "%tmp_8 = fmul float %tmp_5, 2.500000e-01" [batch_align2d_hls/align2d.c:51]   --->   Operation 225 'fmul' 'tmp_8' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 226 [1/2] (8.41ns)   --->   "%tmp_9 = fmul float %tmp_4, 5.000000e-01" [batch_align2d_hls/align2d.c:52]   --->   Operation 226 'fmul' 'tmp_9' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 227 [1/2] (8.41ns)   --->   "%tmp_1 = fmul float %tmp_2, 5.000000e-01" [batch_align2d_hls/align2d.c:54]   --->   Operation 227 'fmul' 'tmp_1' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 3> <Delay = 8.41>
+ST_13 : Operation 228 [2/2] (8.41ns)   --->   "%tmp_12 = fmul float %tmp_8, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 228 'fmul' 'tmp_12' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 229 [2/2] (8.41ns)   --->   "%tmp_14 = fmul float %tmp_9, %tmp_8" [batch_align2d_hls/align2d.c:68]   --->   Operation 229 'fmul' 'tmp_14' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 4> <Delay = 8.41>
+ST_14 : Operation 230 [1/2] (8.41ns)   --->   "%tmp_12 = fmul float %tmp_8, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 230 'fmul' 'tmp_12' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 231 [1/2] (8.41ns)   --->   "%tmp_14 = fmul float %tmp_9, %tmp_8" [batch_align2d_hls/align2d.c:68]   --->   Operation 231 'fmul' 'tmp_14' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 5> <Delay = 8.41>
+ST_15 : Operation 232 [2/2] (8.41ns)   --->   "%tmp_7 = fmul float %tmp_6, 2.500000e-01" [batch_align2d_hls/align2d.c:50]   --->   Operation 232 'fmul' 'tmp_7' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 233 [2/2] (8.41ns)   --->   "%tmp_s = fmul float %tmp_3, 2.500000e-01" [batch_align2d_hls/align2d.c:53]   --->   Operation 233 'fmul' 'tmp_s' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 234 [2/2] (8.41ns)   --->   "%tmp_13 = fmul float %tmp_12, %tmp_9" [batch_align2d_hls/align2d.c:68]   --->   Operation 234 'fmul' 'tmp_13' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 235 [2/2] (8.41ns)   --->   "%tmp_15 = fmul float %tmp_14, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 235 'fmul' 'tmp_15' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 6> <Delay = 8.41>
+ST_16 : Operation 236 [1/2] (8.41ns)   --->   "%tmp_7 = fmul float %tmp_6, 2.500000e-01" [batch_align2d_hls/align2d.c:50]   --->   Operation 236 'fmul' 'tmp_7' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 237 [1/2] (8.41ns)   --->   "%tmp_s = fmul float %tmp_3, 2.500000e-01" [batch_align2d_hls/align2d.c:53]   --->   Operation 237 'fmul' 'tmp_s' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 238 [1/2] (8.41ns)   --->   "%tmp_13 = fmul float %tmp_12, %tmp_9" [batch_align2d_hls/align2d.c:68]   --->   Operation 238 'fmul' 'tmp_13' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 239 [1/2] (8.41ns)   --->   "%tmp_15 = fmul float %tmp_14, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 239 'fmul' 'tmp_15' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 7> <Delay = 8.41>
+ST_17 : Operation 240 [2/2] (8.41ns)   --->   "%tmp_10 = fmul float %tmp_7, %tmp_s" [batch_align2d_hls/align2d.c:68]   --->   Operation 240 'fmul' 'tmp_10' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 241 [4/4] (6.43ns)   --->   "%tmp1 = fadd float %tmp_13, %tmp_15" [batch_align2d_hls/align2d.c:68]   --->   Operation 241 'fadd' 'tmp1' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 8> <Delay = 8.41>
+ST_18 : Operation 242 [1/2] (8.41ns)   --->   "%tmp_10 = fmul float %tmp_7, %tmp_s" [batch_align2d_hls/align2d.c:68]   --->   Operation 242 'fmul' 'tmp_10' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 243 [3/4] (6.43ns)   --->   "%tmp1 = fadd float %tmp_13, %tmp_15" [batch_align2d_hls/align2d.c:68]   --->   Operation 243 'fadd' 'tmp1' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 9> <Delay = 8.41>
+ST_19 : Operation 244 [2/2] (8.41ns)   --->   "%tmp_11 = fmul float %tmp_10, 6.400000e+01" [batch_align2d_hls/align2d.c:68]   --->   Operation 244 'fmul' 'tmp_11' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 245 [2/4] (6.43ns)   --->   "%tmp1 = fadd float %tmp_13, %tmp_15" [batch_align2d_hls/align2d.c:68]   --->   Operation 245 'fadd' 'tmp1' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 10> <Delay = 8.41>
+ST_20 : Operation 246 [1/2] (8.41ns)   --->   "%tmp_11 = fmul float %tmp_10, 6.400000e+01" [batch_align2d_hls/align2d.c:68]   --->   Operation 246 'fmul' 'tmp_11' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 247 [1/4] (6.43ns)   --->   "%tmp1 = fadd float %tmp_13, %tmp_15" [batch_align2d_hls/align2d.c:68]   --->   Operation 247 'fadd' 'tmp1' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 11> <Delay = 8.41>
+ST_21 : Operation 248 [4/4] (6.43ns)   --->   "%tmp_16 = fadd float %tmp1, %tmp_11" [batch_align2d_hls/align2d.c:68]   --->   Operation 248 'fadd' 'tmp_16' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 249 [2/2] (8.41ns)   --->   "%tmp_17 = fmul float %tmp_9, %tmp_s" [batch_align2d_hls/align2d.c:68]   --->   Operation 249 'fmul' 'tmp_17' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 12> <Delay = 8.41>
+ST_22 : Operation 250 [3/4] (6.43ns)   --->   "%tmp_16 = fadd float %tmp1, %tmp_11" [batch_align2d_hls/align2d.c:68]   --->   Operation 250 'fadd' 'tmp_16' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 251 [1/2] (8.41ns)   --->   "%tmp_17 = fmul float %tmp_9, %tmp_s" [batch_align2d_hls/align2d.c:68]   --->   Operation 251 'fmul' 'tmp_17' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 13> <Delay = 8.41>
+ST_23 : Operation 252 [2/4] (6.43ns)   --->   "%tmp_16 = fadd float %tmp1, %tmp_11" [batch_align2d_hls/align2d.c:68]   --->   Operation 252 'fadd' 'tmp_16' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 253 [2/2] (8.41ns)   --->   "%tmp_18 = fmul float %tmp_17, %tmp_9" [batch_align2d_hls/align2d.c:68]   --->   Operation 253 'fmul' 'tmp_18' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 254 [4/4] (6.43ns)   --->   "%tmp_32 = fsub float %tmp_12, %tmp_17" [batch_align2d_hls/align2d.c:72]   --->   Operation 254 'fsub' 'tmp_32' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 14> <Delay = 8.41>
+ST_24 : Operation 255 [1/4] (6.43ns)   --->   "%tmp_16 = fadd float %tmp1, %tmp_11" [batch_align2d_hls/align2d.c:68]   --->   Operation 255 'fadd' 'tmp_16' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 256 [1/2] (8.41ns)   --->   "%tmp_18 = fmul float %tmp_17, %tmp_9" [batch_align2d_hls/align2d.c:68]   --->   Operation 256 'fmul' 'tmp_18' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 257 [3/4] (6.43ns)   --->   "%tmp_32 = fsub float %tmp_12, %tmp_17" [batch_align2d_hls/align2d.c:72]   --->   Operation 257 'fsub' 'tmp_32' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 15> <Delay = 8.41>
+ST_25 : Operation 258 [4/4] (6.43ns)   --->   "%tmp_19 = fsub float %tmp_16, %tmp_18" [batch_align2d_hls/align2d.c:68]   --->   Operation 258 'fsub' 'tmp_19' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 259 [2/2] (8.41ns)   --->   "%tmp_20 = fmul float %tmp_8, %tmp_8" [batch_align2d_hls/align2d.c:68]   --->   Operation 259 'fmul' 'tmp_20' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 260 [2/2] (8.41ns)   --->   "%tmp_23 = fmul float %tmp_7, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 260 'fmul' 'tmp_23' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 261 [2/2] (8.41ns)   --->   "%tmp_28 = fmul float %tmp_8, 6.400000e+01" [batch_align2d_hls/align2d.c:71]   --->   Operation 261 'fmul' 'tmp_28' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 262 [2/2] (8.41ns)   --->   "%tmp_29 = fmul float %tmp_1, %tmp_9" [batch_align2d_hls/align2d.c:71]   --->   Operation 262 'fmul' 'tmp_29' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 263 [2/4] (6.43ns)   --->   "%tmp_32 = fsub float %tmp_12, %tmp_17" [batch_align2d_hls/align2d.c:72]   --->   Operation 263 'fsub' 'tmp_32' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 264 [2/2] (8.41ns)   --->   "%tmp_33 = fmul float %tmp_7, 6.400000e+01" [batch_align2d_hls/align2d.c:75]   --->   Operation 264 'fmul' 'tmp_33' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 265 [2/2] (8.41ns)   --->   "%tmp_34 = fmul float %tmp_9, %tmp_9" [batch_align2d_hls/align2d.c:75]   --->   Operation 265 'fmul' 'tmp_34' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 16> <Delay = 8.41>
+ST_26 : Operation 266 [3/4] (6.43ns)   --->   "%tmp_19 = fsub float %tmp_16, %tmp_18" [batch_align2d_hls/align2d.c:68]   --->   Operation 266 'fsub' 'tmp_19' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 267 [1/2] (8.41ns)   --->   "%tmp_20 = fmul float %tmp_8, %tmp_8" [batch_align2d_hls/align2d.c:68]   --->   Operation 267 'fmul' 'tmp_20' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 268 [1/2] (8.41ns)   --->   "%tmp_23 = fmul float %tmp_7, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 268 'fmul' 'tmp_23' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 269 [1/2] (8.41ns)   --->   "%tmp_28 = fmul float %tmp_8, 6.400000e+01" [batch_align2d_hls/align2d.c:71]   --->   Operation 269 'fmul' 'tmp_28' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 270 [1/2] (8.41ns)   --->   "%tmp_29 = fmul float %tmp_1, %tmp_9" [batch_align2d_hls/align2d.c:71]   --->   Operation 270 'fmul' 'tmp_29' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 271 [1/4] (6.43ns)   --->   "%tmp_32 = fsub float %tmp_12, %tmp_17" [batch_align2d_hls/align2d.c:72]   --->   Operation 271 'fsub' 'tmp_32' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 272 [1/2] (8.41ns)   --->   "%tmp_33 = fmul float %tmp_7, 6.400000e+01" [batch_align2d_hls/align2d.c:75]   --->   Operation 272 'fmul' 'tmp_33' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 273 [1/2] (8.41ns)   --->   "%tmp_34 = fmul float %tmp_9, %tmp_9" [batch_align2d_hls/align2d.c:75]   --->   Operation 273 'fmul' 'tmp_34' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 17> <Delay = 8.41>
+ST_27 : Operation 274 [2/4] (6.43ns)   --->   "%tmp_19 = fsub float %tmp_16, %tmp_18" [batch_align2d_hls/align2d.c:68]   --->   Operation 274 'fsub' 'tmp_19' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 275 [2/2] (8.41ns)   --->   "%tmp_21 = fmul float %tmp_20, 6.400000e+01" [batch_align2d_hls/align2d.c:68]   --->   Operation 275 'fmul' 'tmp_21' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 276 [2/2] (8.41ns)   --->   "%tmp_24 = fmul float %tmp_23, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 276 'fmul' 'tmp_24' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 277 [2/2] (8.41ns)   --->   "%tmp_25 = fmul float %tmp_s, 6.400000e+01" [batch_align2d_hls/align2d.c:70]   --->   Operation 277 'fmul' 'tmp_25' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 278 [2/2] (8.41ns)   --->   "%tmp_26 = fmul float %tmp_1, %tmp_1" [batch_align2d_hls/align2d.c:70]   --->   Operation 278 'fmul' 'tmp_26' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 279 [4/4] (6.43ns)   --->   "%tmp_30 = fsub float %tmp_28, %tmp_29" [batch_align2d_hls/align2d.c:71]   --->   Operation 279 'fsub' 'tmp_30' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 280 [4/4] (6.43ns)   --->   "%tmp_36 = fsub float %tmp_33, %tmp_34" [batch_align2d_hls/align2d.c:75]   --->   Operation 280 'fsub' 'tmp_36' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 281 [4/4] (6.43ns)   --->   "%tmp_38 = fsub float %tmp_23, %tmp_14" [batch_align2d_hls/align2d.c:76]   --->   Operation 281 'fsub' 'tmp_38' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 282 [4/4] (6.43ns)   --->   "%tmp_40 = fsub float %tmp_10, %tmp_20" [batch_align2d_hls/align2d.c:80]   --->   Operation 282 'fsub' 'tmp_40' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 18> <Delay = 8.41>
+ST_28 : Operation 283 [1/4] (6.43ns)   --->   "%tmp_19 = fsub float %tmp_16, %tmp_18" [batch_align2d_hls/align2d.c:68]   --->   Operation 283 'fsub' 'tmp_19' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 284 [1/2] (8.41ns)   --->   "%tmp_21 = fmul float %tmp_20, 6.400000e+01" [batch_align2d_hls/align2d.c:68]   --->   Operation 284 'fmul' 'tmp_21' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 285 [1/2] (8.41ns)   --->   "%tmp_24 = fmul float %tmp_23, %tmp_1" [batch_align2d_hls/align2d.c:68]   --->   Operation 285 'fmul' 'tmp_24' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 286 [1/2] (8.41ns)   --->   "%tmp_25 = fmul float %tmp_s, 6.400000e+01" [batch_align2d_hls/align2d.c:70]   --->   Operation 286 'fmul' 'tmp_25' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 287 [1/2] (8.41ns)   --->   "%tmp_26 = fmul float %tmp_1, %tmp_1" [batch_align2d_hls/align2d.c:70]   --->   Operation 287 'fmul' 'tmp_26' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 105 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 288 [3/4] (6.43ns)   --->   "%tmp_30 = fsub float %tmp_28, %tmp_29" [batch_align2d_hls/align2d.c:71]   --->   Operation 288 'fsub' 'tmp_30' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 289 [3/4] (6.43ns)   --->   "%tmp_36 = fsub float %tmp_33, %tmp_34" [batch_align2d_hls/align2d.c:75]   --->   Operation 289 'fsub' 'tmp_36' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 290 [3/4] (6.43ns)   --->   "%tmp_38 = fsub float %tmp_23, %tmp_14" [batch_align2d_hls/align2d.c:76]   --->   Operation 290 'fsub' 'tmp_38' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 291 [3/4] (6.43ns)   --->   "%tmp_40 = fsub float %tmp_10, %tmp_20" [batch_align2d_hls/align2d.c:80]   --->   Operation 291 'fsub' 'tmp_40' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 19> <Delay = 6.43>
+ST_29 : Operation 292 [4/4] (6.43ns)   --->   "%tmp_22 = fsub float %tmp_19, %tmp_21" [batch_align2d_hls/align2d.c:68]   --->   Operation 292 'fsub' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 293 [4/4] (6.43ns)   --->   "%tmp_27 = fsub float %tmp_25, %tmp_26" [batch_align2d_hls/align2d.c:70]   --->   Operation 293 'fsub' 'tmp_27' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 294 [2/4] (6.43ns)   --->   "%tmp_30 = fsub float %tmp_28, %tmp_29" [batch_align2d_hls/align2d.c:71]   --->   Operation 294 'fsub' 'tmp_30' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 295 [2/4] (6.43ns)   --->   "%tmp_36 = fsub float %tmp_33, %tmp_34" [batch_align2d_hls/align2d.c:75]   --->   Operation 295 'fsub' 'tmp_36' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 296 [2/4] (6.43ns)   --->   "%tmp_38 = fsub float %tmp_23, %tmp_14" [batch_align2d_hls/align2d.c:76]   --->   Operation 296 'fsub' 'tmp_38' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 297 [2/4] (6.43ns)   --->   "%tmp_40 = fsub float %tmp_10, %tmp_20" [batch_align2d_hls/align2d.c:80]   --->   Operation 297 'fsub' 'tmp_40' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 20> <Delay = 6.43>
+ST_30 : Operation 298 [3/4] (6.43ns)   --->   "%tmp_22 = fsub float %tmp_19, %tmp_21" [batch_align2d_hls/align2d.c:68]   --->   Operation 298 'fsub' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 299 [3/4] (6.43ns)   --->   "%tmp_27 = fsub float %tmp_25, %tmp_26" [batch_align2d_hls/align2d.c:70]   --->   Operation 299 'fsub' 'tmp_27' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 300 [1/4] (6.43ns)   --->   "%tmp_30 = fsub float %tmp_28, %tmp_29" [batch_align2d_hls/align2d.c:71]   --->   Operation 300 'fsub' 'tmp_30' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 301 [1/4] (6.43ns)   --->   "%tmp_36 = fsub float %tmp_33, %tmp_34" [batch_align2d_hls/align2d.c:75]   --->   Operation 301 'fsub' 'tmp_36' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 302 [1/4] (6.43ns)   --->   "%tmp_38 = fsub float %tmp_23, %tmp_14" [batch_align2d_hls/align2d.c:76]   --->   Operation 302 'fsub' 'tmp_38' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 303 [1/4] (6.43ns)   --->   "%tmp_40 = fsub float %tmp_10, %tmp_20" [batch_align2d_hls/align2d.c:80]   --->   Operation 303 'fsub' 'tmp_40' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 21> <Delay = 6.43>
+ST_31 : Operation 304 [2/4] (6.43ns)   --->   "%tmp_22 = fsub float %tmp_19, %tmp_21" [batch_align2d_hls/align2d.c:68]   --->   Operation 304 'fsub' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 305 [2/4] (6.43ns)   --->   "%tmp_27 = fsub float %tmp_25, %tmp_26" [batch_align2d_hls/align2d.c:70]   --->   Operation 305 'fsub' 'tmp_27' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 22> <Delay = 6.43>
+ST_32 : Operation 306 [1/4] (6.43ns)   --->   "%tmp_22 = fsub float %tmp_19, %tmp_21" [batch_align2d_hls/align2d.c:68]   --->   Operation 306 'fsub' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 307 [1/4] (6.43ns)   --->   "%tmp_27 = fsub float %tmp_25, %tmp_26" [batch_align2d_hls/align2d.c:70]   --->   Operation 307 'fsub' 'tmp_27' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 23> <Delay = 6.43>
+ST_33 : Operation 308 [4/4] (6.43ns)   --->   "%det = fsub float %tmp_22, %tmp_24" [batch_align2d_hls/align2d.c:68]   --->   Operation 308 'fsub' 'det' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 24> <Delay = 6.43>
+ST_34 : Operation 309 [3/4] (6.43ns)   --->   "%det = fsub float %tmp_22, %tmp_24" [batch_align2d_hls/align2d.c:68]   --->   Operation 309 'fsub' 'det' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 25> <Delay = 6.43>
+ST_35 : Operation 310 [2/4] (6.43ns)   --->   "%det = fsub float %tmp_22, %tmp_24" [batch_align2d_hls/align2d.c:68]   --->   Operation 310 'fsub' 'det' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 26> <Delay = 6.43>
+ST_36 : Operation 311 [1/4] (6.43ns)   --->   "%det = fsub float %tmp_22, %tmp_24" [batch_align2d_hls/align2d.c:68]   --->   Operation 311 'fsub' 'det' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 27> <Delay = 8.62>
+ST_37 : Operation 312 [8/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 312 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 313 [1/1] (0.00ns)   --->   "%tmp_34_to_int = bitcast float %tmp_30 to i32" [batch_align2d_hls/align2d.c:71]   --->   Operation 313 'bitcast' 'tmp_34_to_int' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 314 [1/1] (0.35ns)   --->   "%tmp_34_neg = xor i32 %tmp_34_to_int, -2147483648" [batch_align2d_hls/align2d.c:71]   --->   Operation 314 'xor' 'tmp_34_neg' <Predicate = true> <Delay = 0.35> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 315 [1/1] (0.00ns)   --->   "%tmp_31 = bitcast i32 %tmp_34_neg to float" [batch_align2d_hls/align2d.c:71]   --->   Operation 315 'bitcast' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 316 [8/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 316 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 317 [8/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 317 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 318 [8/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 318 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 319 [1/1] (0.00ns)   --->   "%tmp_43_to_int = bitcast float %tmp_38 to i32" [batch_align2d_hls/align2d.c:76]   --->   Operation 319 'bitcast' 'tmp_43_to_int' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 320 [1/1] (0.35ns)   --->   "%tmp_43_neg = xor i32 %tmp_43_to_int, -2147483648" [batch_align2d_hls/align2d.c:76]   --->   Operation 320 'xor' 'tmp_43_neg' <Predicate = true> <Delay = 0.35> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 321 [1/1] (0.00ns)   --->   "%tmp_39 = bitcast i32 %tmp_43_neg to float" [batch_align2d_hls/align2d.c:76]   --->   Operation 321 'bitcast' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 322 [8/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 322 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 323 [8/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 323 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 28> <Delay = 8.27>
+ST_38 : Operation 324 [7/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 324 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 325 [7/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 325 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 326 [7/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 326 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 327 [7/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 327 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 328 [7/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 328 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 329 [7/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 329 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 29> <Delay = 8.27>
+ST_39 : Operation 330 [6/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 330 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 331 [6/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 331 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 332 [6/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 332 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 333 [6/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 333 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 334 [6/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 334 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 335 [6/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 335 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 30> <Delay = 8.27>
+ST_40 : Operation 336 [5/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 336 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 337 [5/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 337 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 338 [5/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 338 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 339 [5/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 339 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 340 [5/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 340 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 341 [5/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 341 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 31> <Delay = 8.27>
+ST_41 : Operation 342 [4/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 342 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 343 [4/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 343 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 344 [4/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 344 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 345 [4/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 345 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 346 [4/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 346 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 347 [4/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 347 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 32> <Delay = 8.27>
+ST_42 : Operation 348 [3/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 348 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 349 [3/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 349 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 350 [3/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 350 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 351 [3/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 351 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 352 [3/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 352 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 353 [3/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 353 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 33> <Delay = 8.27>
+ST_43 : Operation 354 [2/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 354 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 355 [2/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 355 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 356 [2/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 356 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 357 [2/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 357 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 358 [2/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 358 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 359 [2/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 359 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 34> <Delay = 8.27>
+ST_44 : Operation 360 [1/8] (8.27ns)   --->   "%H_inv_0_write_assig = fdiv float %tmp_27, %det" [batch_align2d_hls/align2d.c:70]   --->   Operation 360 'fdiv' 'H_inv_0_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 361 [1/8] (8.27ns)   --->   "%H_inv_1_write_assig = fdiv float %tmp_31, %det" [batch_align2d_hls/align2d.c:71]   --->   Operation 361 'fdiv' 'H_inv_1_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 362 [1/8] (8.27ns)   --->   "%H_inv_2_write_assig = fdiv float %tmp_32, %det" [batch_align2d_hls/align2d.c:72]   --->   Operation 362 'fdiv' 'H_inv_2_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 363 [1/8] (8.27ns)   --->   "%H_inv_4_write_assig = fdiv float %tmp_36, %det" [batch_align2d_hls/align2d.c:75]   --->   Operation 363 'fdiv' 'H_inv_4_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 364 [1/8] (8.27ns)   --->   "%H_inv_5_write_assig = fdiv float %tmp_39, %det" [batch_align2d_hls/align2d.c:76]   --->   Operation 364 'fdiv' 'H_inv_5_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 365 [1/8] (8.27ns)   --->   "%H_inv_8_write_assig = fdiv float %tmp_40, %det" [batch_align2d_hls/align2d.c:80]   --->   Operation 365 'fdiv' 'H_inv_8_write_assig' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 106 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 366 [1/1] (0.00ns)   --->   "%mrv = insertvalue { float, float, float, float, float, float, float, float, float } undef, float %H_inv_0_write_assig, 0" [batch_align2d_hls/align2d.c:81]   --->   Operation 366 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 367 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv, float %H_inv_1_write_assig, 1" [batch_align2d_hls/align2d.c:81]   --->   Operation 367 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 368 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_1, float %H_inv_2_write_assig, 2" [batch_align2d_hls/align2d.c:81]   --->   Operation 368 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 369 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_2, float %H_inv_1_write_assig, 3" [batch_align2d_hls/align2d.c:81]   --->   Operation 369 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 370 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_3, float %H_inv_4_write_assig, 4" [batch_align2d_hls/align2d.c:81]   --->   Operation 370 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 371 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_4, float %H_inv_5_write_assig, 5" [batch_align2d_hls/align2d.c:81]   --->   Operation 371 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 372 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_5, float %H_inv_2_write_assig, 6" [batch_align2d_hls/align2d.c:81]   --->   Operation 372 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 373 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_6, float %H_inv_5_write_assig, 7" [batch_align2d_hls/align2d.c:81]   --->   Operation 373 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 374 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { float, float, float, float, float, float, float, float, float } %mrv_7, float %H_inv_8_write_assig, 8" [batch_align2d_hls/align2d.c:81]   --->   Operation 374 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 375 [1/1] (0.00ns)   --->   "ret { float, float, float, float, float, float, float, float, float } %mrv_8" [batch_align2d_hls/align2d.c:81]   --->   Operation 375 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.656ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('tmp_2', batch_align2d_hls/align2d.c:44) with incoming values : ('tmp_64', batch_align2d_hls/align2d.c:44) [203]  (0.656 ns)
+
+ <State 2>: 8.42ns
+The critical path consists of the following:
+	'phi' operation ('tmp_2', batch_align2d_hls/align2d.c:44) with incoming values : ('tmp_64', batch_align2d_hls/align2d.c:44) [203]  (0 ns)
+	'fmul' operation ('tmp_1', batch_align2d_hls/align2d.c:54) [263]  (8.42 ns)
+
+ <State 3>: 7.89ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp_49', batch_align2d_hls/align2d.c:33) [236]  (7.89 ns)
+
+ <State 4>: 7.89ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp_49', batch_align2d_hls/align2d.c:33) [236]  (7.89 ns)
+
+ <State 5>: 7.89ns
+The critical path consists of the following:
+	'sitofp' operation ('tmp_49', batch_align2d_hls/align2d.c:33) [236]  (7.89 ns)
+
+ <State 6>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_57', batch_align2d_hls/align2d.c:40) [249]  (8.42 ns)
+
+ <State 7>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_57', batch_align2d_hls/align2d.c:40) [249]  (8.42 ns)
+
+ <State 8>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_58', batch_align2d_hls/align2d.c:40) [250]  (6.44 ns)
+
+ <State 9>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_58', batch_align2d_hls/align2d.c:40) [250]  (6.44 ns)
+
+ <State 10>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_58', batch_align2d_hls/align2d.c:40) [250]  (6.44 ns)
+
+ <State 11>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_58', batch_align2d_hls/align2d.c:40) [250]  (6.44 ns)
+
+ <State 12>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', batch_align2d_hls/align2d.c:51) [260]  (8.42 ns)
+
+ <State 13>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', batch_align2d_hls/align2d.c:68) [266]  (8.42 ns)
+
+ <State 14>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_12', batch_align2d_hls/align2d.c:68) [266]  (8.42 ns)
+
+ <State 15>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', batch_align2d_hls/align2d.c:50) [259]  (8.42 ns)
+
+ <State 16>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_7', batch_align2d_hls/align2d.c:50) [259]  (8.42 ns)
+
+ <State 17>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_10', batch_align2d_hls/align2d.c:68) [264]  (8.42 ns)
+
+ <State 18>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_10', batch_align2d_hls/align2d.c:68) [264]  (8.42 ns)
+
+ <State 19>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_11', batch_align2d_hls/align2d.c:68) [265]  (8.42 ns)
+
+ <State 20>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_11', batch_align2d_hls/align2d.c:68) [265]  (8.42 ns)
+
+ <State 21>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_17', batch_align2d_hls/align2d.c:68) [272]  (8.42 ns)
+
+ <State 22>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_17', batch_align2d_hls/align2d.c:68) [272]  (8.42 ns)
+
+ <State 23>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_18', batch_align2d_hls/align2d.c:68) [273]  (8.42 ns)
+
+ <State 24>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_18', batch_align2d_hls/align2d.c:68) [273]  (8.42 ns)
+
+ <State 25>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_20', batch_align2d_hls/align2d.c:68) [275]  (8.42 ns)
+
+ <State 26>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_20', batch_align2d_hls/align2d.c:68) [275]  (8.42 ns)
+
+ <State 27>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_21', batch_align2d_hls/align2d.c:68) [276]  (8.42 ns)
+
+ <State 28>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_21', batch_align2d_hls/align2d.c:68) [276]  (8.42 ns)
+
+ <State 29>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_22', batch_align2d_hls/align2d.c:68) [277]  (6.44 ns)
+
+ <State 30>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_22', batch_align2d_hls/align2d.c:68) [277]  (6.44 ns)
+
+ <State 31>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_22', batch_align2d_hls/align2d.c:68) [277]  (6.44 ns)
+
+ <State 32>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_22', batch_align2d_hls/align2d.c:68) [277]  (6.44 ns)
+
+ <State 33>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('det', batch_align2d_hls/align2d.c:68) [280]  (6.44 ns)
+
+ <State 34>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('det', batch_align2d_hls/align2d.c:68) [280]  (6.44 ns)
+
+ <State 35>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('det', batch_align2d_hls/align2d.c:68) [280]  (6.44 ns)
+
+ <State 36>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('det', batch_align2d_hls/align2d.c:68) [280]  (6.44 ns)
+
+ <State 37>: 8.62ns
+The critical path consists of the following:
+	'xor' operation ('tmp_34_neg', batch_align2d_hls/align2d.c:71) [289]  (0.351 ns)
+	'fdiv' operation ('H_inv[1]', batch_align2d_hls/align2d.c:71) [291]  (8.27 ns)
+
+ <State 38>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+ <State 39>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+ <State 40>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+ <State 41>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+ <State 42>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+ <State 43>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+ <State 44>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('H_inv[0]', batch_align2d_hls/align2d.c:70) [284]  (8.27 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
