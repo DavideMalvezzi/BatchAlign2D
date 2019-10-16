@@ -483,13 +483,13 @@ set NewPortList {[
  	{ "name": "m_axi_debug_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "debug", "role": "BUSER" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"],
 		"CDFG" : "batch_align2D",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1970", "EstimateLatencyMax" : "475739",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3474", "EstimateLatencyMax" : "477243",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -945,24 +945,26 @@ set RtlHierarchyInfo {[
 	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_debug_m_axi_U", "Parent" : "0"},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1", "Parent" : "0"},
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U3", "Parent" : "0"},
 	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4", "Parent" : "0"},
 	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5", "Parent" : "0"},
 	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U7", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_sitofp_32s_32_3_1_U8", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U9", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U10", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U8", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_sitofp_32s_32_3_1_U9", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_sitofp_32s_32_3_1_U10", "Parent" : "0"},
 	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U11", "Parent" : "0"},
 	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U12", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_366_32_1_1_U13", "Parent" : "0"}]}
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U13", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U14", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_366_32_1_1_U15", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	batch_align2D {
 		pyr {Type I LastRead 9 FirstWrite -1}
 		patches {Type I LastRead 17 FirstWrite -1}
-		pos_r {Type IO LastRead 130 FirstWrite 34}
+		pos_r {Type IO LastRead 129 FirstWrite 34}
 		debug {Type O LastRead 28 FirstWrite 28}
 		pyr_data_ptr {Type I LastRead 0 FirstWrite -1}
 		img_w {Type I LastRead -1 FirstWrite -1}
@@ -1387,8 +1389,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1970", "Max" : "475739"}
-	, {"Name" : "Interval", "Min" : "1971", "Max" : "475740"}
+	{"Name" : "Latency", "Min" : "3474", "Max" : "477243"}
+	, {"Name" : "Interval", "Min" : "3475", "Max" : "477244"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -1397,7 +1399,6 @@ set PipelineEnableSignalInfo {[
 	{"Pipeline" : "2", "EnableSignal" : "ap_enable_pp2"}
 	{"Pipeline" : "3", "EnableSignal" : "ap_enable_pp3"}
 	{"Pipeline" : "4", "EnableSignal" : "ap_enable_pp4"}
-	{"Pipeline" : "5", "EnableSignal" : "ap_enable_pp5"}
 ]}
 
 set Spec2ImplPortList { 

@@ -6309,11 +6309,11 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 
  compute_hessian: for(int i = 0; i < 64; i++){
 
-#pragma HLS PIPELINE
 
 
 
- int y = i / 8;
+
+  int y = i / 8;
   int x = i % 8;
 
 

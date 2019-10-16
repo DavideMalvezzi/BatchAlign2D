@@ -6309,11 +6309,11 @@ _ssdm_SpecArrayPartition( H, 1, "COMPLETE", 0, "");
 
  compute_hessian: for(int i = 0; i < 64; i++){
 
-_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 
- int y = i / 8;
+
+  int y = i / 8;
   int x = i % 8;
 
 

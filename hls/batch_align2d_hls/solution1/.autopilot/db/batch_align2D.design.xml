@@ -16,10 +16,10 @@
 <EstimatedClockPeriod>9.062</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>1970</Best-caseLatency>
-<Average-caseLatency>238855</Average-caseLatency>
-<Worst-caseLatency>475739</Worst-caseLatency>
-<PipelineInitiationInterval>1971 ~ 475740</PipelineInitiationInterval>
+<Best-caseLatency>3474</Best-caseLatency>
+<Average-caseLatency>240359</Average-caseLatency>
+<Worst-caseLatency>477243</Worst-caseLatency>
+<PipelineInitiationInterval>3475 ~ 477244</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -47,15 +47,15 @@
 <batch_loop>
 <Name>batch_loop</Name>
 <TripCount>4</TripCount>
-<Latency>1488</Latency>
-<IterationLatency>372</IterationLatency>
-<PipelineDepth>372</PipelineDepth>
+<Latency>2992</Latency>
+<IterationLatency>748</IterationLatency>
+<PipelineDepth>748</PipelineDepth>
 <compute_hessian>
 <Name>compute_hessian</Name>
 <TripCount>64</TripCount>
-<Latency>263</Latency>
-<PipelineII>4</PipelineII>
-<PipelineDepth>12</PipelineDepth>
+<Latency>640</Latency>
+<IterationLatency>10</IterationLatency>
+<PipelineDepth>10</PipelineDepth>
 </compute_hessian>
 </batch_loop>
 <memcpy.inv_out.>
@@ -77,9 +77,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>240</BRAM_18K>
-<DSP48E>16</DSP48E>
-<FF>10582</FF>
-<LUT>8956</LUT>
+<DSP48E>18</DSP48E>
+<FF>10810</FF>
+<LUT>19296</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>

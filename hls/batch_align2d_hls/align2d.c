@@ -22,7 +22,7 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	// Compute Jacobians and Hessian
 	compute_hessian: for(int i = 0; i < PATCH_AREA; i++){
 		#ifdef OPT_LOOP
-			#pragma HLS PIPELINE
+			//#pragma HLS PIPELINE
 		#endif
 
 		// Get pixel position

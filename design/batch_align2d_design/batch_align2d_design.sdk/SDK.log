@@ -1127,3 +1127,20 @@ Reason: Cannot close sw design '/home/dmalvezzi/batch_align2d/design/batch_align
 Design is not opened in the current session.
 
 
+16:02:25 INFO  : Launching XSCT server: xsct -n -interactive /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/temp_xsdb_launch_script.tcl
+16:02:28 INFO  : XSCT server has started successfully.
+16:02:29 INFO  : Successfully done setting XSCT server connection channel  
+16:02:29 INFO  : Successfully done setting SDK workspace  
+16:02:41 INFO  : Registering command handlers for SDK TCF services
+16:02:41 INFO  : Processing command line option -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf.
+16:02:42 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+16:02:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1571234520000,  Project:1571230347000
+16:02:42 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf.
+16:02:43 INFO  : Copied contents of /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+16:02:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:03:01 INFO  : 
+16:03:02 INFO  : Updating hardware inferred compiler options for batch_align2d_sdk.
+16:03:02 INFO  : Clearing existing target manager status.
+16:03:02 INFO  : Closing and re-opening the MSS file of ther project batch_align2d_sdk_bsp
+16:03:04 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:03:31 WARN  : Linker script will not be updated automatically. Users need to update it manually.
