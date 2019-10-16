@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Oct 16 10:29:28 2019
+| Date         : Wed Oct 16 14:48:57 2019
 | Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,17 +24,17 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 143
+             Violations found: 89
 +-----------+----------+---------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                         | Violations |
 +-----------+----------+---------------------------------------------------------------------+------------+
-| DPIP-2    | Warning  | Input pipelining                                                    | 46         |
-| DPOP-3    | Warning  | PREG Output pipelining                                              | 42         |
-| DPOP-4    | Warning  | MREG Output pipelining                                              | 22         |
-| DPREG-7   | Warning  | DSP48E2_PregDynOpmodeZmuxP:                                         | 4          |
+| DPIP-2    | Warning  | Input pipelining                                                    | 28         |
+| DPOP-3    | Warning  | PREG Output pipelining                                              | 26         |
+| DPOP-4    | Warning  | MREG Output pipelining                                              | 14         |
+| DPREG-7   | Warning  | DSP48E2_PregDynOpmodeZmuxP:                                         | 2          |
 | RTSTAT-10 | Warning  | No routable loads                                                   | 1          |
-| AVAL-155  | Advisory | enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 22         |
-| AVAL-156  | Advisory | enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND    | 6          |
+| AVAL-155  | Advisory | enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 14         |
+| AVAL-156  | Advisory | enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND    | 4          |
 +-----------+----------+---------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -101,172 +101,82 @@ Related violations: <none>
 
 DPIP-2#13 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#14 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#15 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#16 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#17 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#18 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#19 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#20 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#21 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#22 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#23 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#24 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#25 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#26 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#27 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#28 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#29 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#30 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#31 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#32 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#33 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#34 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#35 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#36 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#37 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#38 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#39 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#40 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#41 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#42 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#43 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#44 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#45 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#46 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-3#1 Warning
@@ -301,182 +211,102 @@ Related violations: <none>
 
 DPOP-3#7 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#8 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#9 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#10 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#11 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#12 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#13 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#14 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#15 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#16 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#17 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#18 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#19 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#20 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#21 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#22 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#23 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#24 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#25 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#26 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#27 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#28 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#29 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#30 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#31 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#32 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#33 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#34 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#35 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#36 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#37 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#38 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#39 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#40 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#41 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-3#42 Warning
-PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-4#1 Warning
@@ -491,102 +321,62 @@ Related violations: <none>
 
 DPOP-4#3 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#4 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#5 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#6 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#7 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#8 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#9 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#10 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#11 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#12 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#13 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#14 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#15 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#16 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#17 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#18 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#19 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#20 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#21 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-4#22 Warning
-MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPREG-7#1 Warning
@@ -597,16 +387,6 @@ Related violations: <none>
 DPREG-7#2 Warning
 DSP48E2_PregDynOpmodeZmuxP:  
 The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-7#3 Warning
-DSP48E2_PregDynOpmodeZmuxP:  
-The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-Related violations: <none>
-
-DPREG-7#4 Warning
-DSP48E2_PregDynOpmodeZmuxP:  
-The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
 Related violations: <none>
 
 RTSTAT-10#1 Warning
@@ -626,132 +406,82 @@ Related violations: <none>
 
 AVAL-155#3 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#4 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#5 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#6 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#7 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#8 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#9 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#10 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#11 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#12 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#13 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#14 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#15 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#16 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#17 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#18 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#19 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#20 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#21 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-155#22 Advisory
-enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-156#1 Advisory
 enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-156#2 Advisory
 enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-156#3 Advisory
 enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-156#4 Advisory
 enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-156#5 Advisory
-enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-Related violations: <none>
-
-AVAL-156#6 Advisory
-enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 

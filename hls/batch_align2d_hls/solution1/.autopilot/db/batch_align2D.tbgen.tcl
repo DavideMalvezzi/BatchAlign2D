@@ -483,13 +483,13 @@ set NewPortList {[
  	{ "name": "m_axi_debug_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "debug", "role": "BUSER" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
 		"CDFG" : "batch_align2D",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1713", "EstimateLatencyMax" : "475482",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1970", "EstimateLatencyMax" : "475739",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -528,9 +528,15 @@ set RtlHierarchyInfo {[
 			{"Name" : "transfer_pyr", "Type" : "None", "Direction" : "I"},
 			{"Name" : "inv_out", "Type" : "None", "Direction" : "I"},
 			{"Name" : "pyr_data", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_487", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_485", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_497", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_403", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_404", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_405", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_406", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_407", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_408", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_409", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_410", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_412", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_413", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_414", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_415", "Type" : "OVld", "Direction" : "IO"},
@@ -597,29 +603,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "ref_patch_with_borde_482", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_483", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_484", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_485", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_486", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_489", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_490", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_491", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_492", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_493", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_494", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_495", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_496", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_401", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_402", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_403", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_404", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_405", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_406", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_407", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_408", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_409", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_410", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_412", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_587", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_585", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_597", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_487", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_503", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_504", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_505", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_506", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_507", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_508", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_509", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_510", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_512", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_513", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_514", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_515", "Type" : "OVld", "Direction" : "IO"},
@@ -686,40 +681,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "ref_patch_with_borde_582", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_583", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_584", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_585", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_586", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_589", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_590", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_591", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_592", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_593", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_594", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_595", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_596", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_501", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_502", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_503", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_504", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_505", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_506", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_507", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_508", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_509", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_510", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_512", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_399", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_400", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_411", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_422", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_433", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_444", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_455", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_466", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_477", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_488", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_498", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_687", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_685", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_697", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_587", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_603", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_604", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_605", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_606", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_607", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_608", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_609", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_610", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_612", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_613", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_614", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_615", "Type" : "OVld", "Direction" : "IO"},
@@ -786,40 +759,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "ref_patch_with_borde_682", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_683", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_684", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_685", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_686", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_689", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_690", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_691", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_692", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_693", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_694", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_695", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_696", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_601", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_602", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_603", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_604", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_605", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_606", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_607", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_608", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_609", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_610", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_612", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_499", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_500", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_511", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_522", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_533", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_544", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_555", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_566", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_577", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_588", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_598", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_11", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_13", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_687", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_95", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_94", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_93", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_92", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_91", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_90", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_89", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_88", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_86", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_85", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_84", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_83", "Type" : "OVld", "Direction" : "IO"},
@@ -886,7 +837,44 @@ set RtlHierarchyInfo {[
 			{"Name" : "ref_patch_with_borde_16", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_15", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_13", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_12", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_401", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_402", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_501", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_502", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_601", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_602", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_97", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_96", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_489", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_490", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_491", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_492", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_493", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_494", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_495", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_496", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_497", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_589", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_590", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_591", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_592", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_593", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_594", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_595", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_596", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_597", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_689", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_690", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_691", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_692", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_693", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_694", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_695", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_696", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_697", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_9", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_8", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_7", "Type" : "OVld", "Direction" : "IO"},
@@ -895,17 +883,29 @@ set RtlHierarchyInfo {[
 			{"Name" : "ref_patch_with_borde_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_97", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_96", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_95", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_94", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_93", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_92", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_91", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_90", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_89", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_88", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "ref_patch_with_borde_86", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_399", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_400", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_411", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_422", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_433", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_444", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_455", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_466", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_477", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_488", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_498", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_499", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_500", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_511", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_522", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_533", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_544", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_555", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_566", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_577", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_588", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "ref_patch_with_borde_598", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_599", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_600", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "ref_patch_with_borde_611", "Type" : "OVld", "Direction" : "IO"},
@@ -945,42 +945,25 @@ set RtlHierarchyInfo {[
 	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_debug_m_axi_U", "Parent" : "0"},
 	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1", "Parent" : "0"},
 	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4", "Parent" : "0"},
 	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5", "Parent" : "0"},
 	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U11", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U12", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U13", "Parent" : "0"},
-	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U14", "Parent" : "0"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U15", "Parent" : "0"},
-	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U16", "Parent" : "0"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_sitofp_32s_32_3_1_U17", "Parent" : "0"},
-	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U18", "Parent" : "0"},
-	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U19", "Parent" : "0"},
-	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1007_8_1_1_U20", "Parent" : "0"},
-	{"ID" : "28", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U21", "Parent" : "0"},
-	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U22", "Parent" : "0"},
-	{"ID" : "30", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1007_8_1_1_U23", "Parent" : "0"},
-	{"ID" : "31", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U24", "Parent" : "0"},
-	{"ID" : "32", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U25", "Parent" : "0"},
-	{"ID" : "33", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1007_8_1_1_U26", "Parent" : "0"},
-	{"ID" : "34", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U27", "Parent" : "0"},
-	{"ID" : "35", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1287_8_1_1_U28", "Parent" : "0"},
-	{"ID" : "36", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_1007_8_1_1_U29", "Parent" : "0"},
-	{"ID" : "37", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_366_32_1_1_U30", "Parent" : "0"}]}
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_fdiv_32ns_32ns_32_8_1_U7", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_sitofp_32s_32_3_1_U8", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U9", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U10", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U11", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_4009_8_1_1_U12", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.batch_align2D_mux_366_32_1_1_U13", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	batch_align2D {
 		pyr {Type I LastRead 9 FirstWrite -1}
 		patches {Type I LastRead 17 FirstWrite -1}
-		pos_r {Type IO LastRead 213 FirstWrite 65}
-		debug {Type O LastRead 207 FirstWrite 207}
+		pos_r {Type IO LastRead 130 FirstWrite 34}
+		debug {Type O LastRead 28 FirstWrite 28}
 		pyr_data_ptr {Type I LastRead 0 FirstWrite -1}
 		img_w {Type I LastRead -1 FirstWrite -1}
 		img_h {Type I LastRead -1 FirstWrite -1}
@@ -992,9 +975,15 @@ set ArgLastReadFirstWriteLatency {
 		transfer_pyr {Type I LastRead 0 FirstWrite -1}
 		inv_out {Type I LastRead 0 FirstWrite -1}
 		pyr_data {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_487 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_485 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_497 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_403 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_404 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_405 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_406 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_407 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_408 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_409 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_410 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_412 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_413 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_414 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_415 {Type IO LastRead -1 FirstWrite -1}
@@ -1061,29 +1050,18 @@ set ArgLastReadFirstWriteLatency {
 		ref_patch_with_borde_482 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_483 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_484 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_485 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_486 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_489 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_490 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_491 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_492 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_493 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_494 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_495 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_496 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_401 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_402 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_403 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_404 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_405 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_406 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_407 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_408 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_409 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_410 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_412 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_587 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_585 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_597 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_487 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_503 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_504 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_505 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_506 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_507 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_508 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_509 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_510 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_512 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_513 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_514 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_515 {Type IO LastRead -1 FirstWrite -1}
@@ -1150,40 +1128,18 @@ set ArgLastReadFirstWriteLatency {
 		ref_patch_with_borde_582 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_583 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_584 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_585 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_586 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_589 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_590 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_591 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_592 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_593 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_594 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_595 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_596 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_501 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_502 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_503 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_504 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_505 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_506 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_507 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_508 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_509 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_510 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_512 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_399 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_400 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_411 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_422 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_433 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_444 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_455 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_466 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_477 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_488 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_498 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_687 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_685 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_697 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_587 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_603 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_604 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_605 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_606 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_607 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_608 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_609 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_610 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_612 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_613 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_614 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_615 {Type IO LastRead -1 FirstWrite -1}
@@ -1250,40 +1206,18 @@ set ArgLastReadFirstWriteLatency {
 		ref_patch_with_borde_682 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_683 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_684 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_685 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_686 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_689 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_690 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_691 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_692 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_693 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_694 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_695 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_696 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_601 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_602 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_603 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_604 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_605 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_606 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_607 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_608 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_609 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_610 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_612 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_499 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_500 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_511 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_522 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_533 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_544 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_555 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_566 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_577 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_588 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_598 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_11 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_13 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_1 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_687 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_95 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_94 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_93 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_92 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_91 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_90 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_89 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_88 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_86 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_85 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_84 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_83 {Type IO LastRead -1 FirstWrite -1}
@@ -1350,7 +1284,44 @@ set ArgLastReadFirstWriteLatency {
 		ref_patch_with_borde_16 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_15 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_14 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_13 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_12 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_11 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_401 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_402 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_501 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_502 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_601 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_602 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_97 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_96 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_489 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_490 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_491 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_492 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_493 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_494 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_495 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_496 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_497 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_589 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_590 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_591 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_592 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_593 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_594 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_595 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_596 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_597 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_689 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_690 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_691 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_692 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_693 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_694 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_695 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_696 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_697 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_9 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_8 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_7 {Type IO LastRead -1 FirstWrite -1}
@@ -1359,17 +1330,29 @@ set ArgLastReadFirstWriteLatency {
 		ref_patch_with_borde_4 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_3 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_2 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_97 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_96 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_95 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_94 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_93 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_92 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_91 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_90 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_89 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_88 {Type IO LastRead -1 FirstWrite -1}
-		ref_patch_with_borde_86 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_1 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_399 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_400 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_411 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_422 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_433 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_444 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_455 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_466 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_477 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_488 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_498 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_499 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_500 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_511 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_522 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_533 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_544 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_555 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_566 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_577 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_588 {Type IO LastRead -1 FirstWrite -1}
+		ref_patch_with_borde_598 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_599 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_600 {Type IO LastRead -1 FirstWrite -1}
 		ref_patch_with_borde_611 {Type IO LastRead -1 FirstWrite -1}
@@ -1404,8 +1387,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1713", "Max" : "475482"}
-	, {"Name" : "Interval", "Min" : "1714", "Max" : "475483"}
+	{"Name" : "Latency", "Min" : "1970", "Max" : "475739"}
+	, {"Name" : "Interval", "Min" : "1971", "Max" : "475740"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -1415,9 +1398,6 @@ set PipelineEnableSignalInfo {[
 	{"Pipeline" : "3", "EnableSignal" : "ap_enable_pp3"}
 	{"Pipeline" : "4", "EnableSignal" : "ap_enable_pp4"}
 	{"Pipeline" : "5", "EnableSignal" : "ap_enable_pp5"}
-	{"Pipeline" : "6", "EnableSignal" : "ap_enable_pp6"}
-	{"Pipeline" : "7", "EnableSignal" : "ap_enable_pp7"}
-	{"Pipeline" : "8", "EnableSignal" : "ap_enable_pp8"}
 ]}
 
 set Spec2ImplPortList { 

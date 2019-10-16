@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Oct 16 10:13:44 2019
-# Process ID: 79615
+# Start of session at: Wed Oct 16 14:35:00 2019
+# Process ID: 14991
 # Current directory: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1
 # Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper.vdi
@@ -13,8 +13,8 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/impl'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1464.375 ; gain = 0.000 ; free physical = 8515 ; free virtual = 37893
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1464.375 ; gain = 0.000 ; free physical = 8469 ; free virtual = 37848
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1473.371 ; gain = 0.000 ; free physical = 2072 ; free virtual = 38726
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1473.371 ; gain = 0.000 ; free physical = 2024 ; free virtual = 38679
 Command: link_design -top design_1_wrapper -part xczu9eg-ffvb1156-2-e
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -27,7 +27,7 @@ INFO: [Project 1-454] Reading design checkpoint '/home/dmalvezzi/batch_align2d/d
 INFO: [Project 1-454] Reading design checkpoint '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.dcp' for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds'
 INFO: [Project 1-454] Reading design checkpoint '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_pc'
-INFO: [Netlist 29-17] Analyzing 1765 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1259 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
@@ -48,7 +48,7 @@ Parsing XDC File [/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batc
 Finished Parsing XDC File [/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst'
 Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl:2]
-all_registers: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2865.121 ; gain = 234.023 ; free physical = 7216 ; free virtual = 36604
+all_registers: Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2814.047 ; gain = 206.023 ; free physical = 828 ; free virtual = 37485
 Finished Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Finished Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
@@ -169,17 +169,17 @@ Finished Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl
 Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s02_nodes/s02_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Finished Sourcing Tcl File [/cad/xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/axi_smc/inst/s02_nodes/s02_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7300 ; free virtual = 36688
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 889 ; free virtual = 37545
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 348 instances were transformed.
-  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 26 instances
+  A total of 338 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 16 instances
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 4 instances
   RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 307 instances
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 11 instances
 
 20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:51 . Memory (MB): peak = 3009.191 ; gain = 1544.816 ; free physical = 7300 ; free virtual = 36687
+link_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:41 . Memory (MB): peak = 2958.117 ; gain = 1484.746 ; free physical = 889 ; free virtual = 37545
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu9eg'
@@ -190,56 +190,56 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7282 ; free virtual = 36671
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 883 ; free virtual = 37540
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 11ee9bad7
+Ending Cache Timing Information Task | Checksum: ed793f6c
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7192 ; free virtual = 36581
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 800 ; free virtual = 37458
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 49 inverter(s) to 4634 load pin(s).
+INFO: [Opt 31-138] Pushed 47 inverter(s) to 4538 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: bc9a1b83
+Phase 1 Retarget | Checksum: 532be184
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7204 ; free virtual = 36593
-INFO: [Opt 31-389] Phase Retarget created 644 cells and removed 1035 cells
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 802 ; free virtual = 37460
+INFO: [Opt 31-389] Phase Retarget created 596 cells and removed 978 cells
 INFO: [Opt 31-1021] In phase Retarget, 132 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 6 inverter(s) to 23 load pin(s).
-Phase 2 Constant propagation | Checksum: d0ad4ec3
+Phase 2 Constant propagation | Checksum: ad803af2
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7208 ; free virtual = 36597
-INFO: [Opt 31-389] Phase Constant propagation created 217 cells and removed 4396 cells
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 799 ; free virtual = 37457
+INFO: [Opt 31-389] Phase Constant propagation created 162 cells and removed 4212 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 130 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1132a5f78
+Phase 3 Sweep | Checksum: fc3bee52
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7205 ; free virtual = 36594
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2897 cells
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 803 ; free virtual = 37461
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2821 cells
 INFO: [Opt 31-1021] In phase Sweep, 282 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1132a5f78
+Phase 4 BUFG optimization | Checksum: fc3bee52
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7204 ; free virtual = 36593
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 805 ; free virtual = 37463
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 145aea9ad
+Phase 5 Shift Register Optimization | Checksum: 117360b73
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7206 ; free virtual = 36595
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 804 ; free virtual = 37462
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 14b9efc17
+Phase 6 Post Processing Netlist | Checksum: 122556a22
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7207 ; free virtual = 36597
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 800 ; free virtual = 37458
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 2 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 130 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -249,9 +249,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             644  |            1035  |                                            132  |
-|  Constant propagation         |             217  |            4396  |                                            130  |
-|  Sweep                        |               0  |            2897  |                                            282  |
+|  Retarget                     |             596  |             978  |                                            132  |
+|  Constant propagation         |             162  |            4212  |                                            130  |
+|  Sweep                        |               0  |            2821  |                                            282  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               2  |                                            130  |
@@ -261,17 +261,17 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7205 ; free virtual = 36594
-Ending Logic Optimization Task | Checksum: 13a2e738a
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 801 ; free virtual = 37459
+Ending Logic Optimization Task | Checksum: 129859043
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 3009.191 ; gain = 0.000 ; free physical = 7207 ; free virtual = 36596
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2958.117 ; gain = 0.000 ; free physical = 802 ; free virtual = 37460
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.689 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.791 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -280,40 +280,40 @@ Finished Running Vector-less Activity Propagation
 Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 121 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 72 newly gated: 0 Total Ports: 242
-Ending PowerOpt Patch Enables Task | Checksum: 800aab93
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 242
+Ending PowerOpt Patch Enables Task | Checksum: 129859043
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6148 ; free virtual = 35546
-Ending Power Optimization Task | Checksum: 800aab93
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 959 ; free virtual = 36423
+Ending Power Optimization Task | Checksum: 129859043
 
-Time (s): cpu = 00:01:51 ; elapsed = 00:02:36 . Memory (MB): peak = 4719.207 ; gain = 1710.016 ; free physical = 6209 ; free virtual = 35607
+Time (s): cpu = 00:01:38 ; elapsed = 00:02:23 . Memory (MB): peak = 4643.133 ; gain = 1685.016 ; free physical = 1005 ; free virtual = 36470
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 800aab93
+Ending Final Cleanup Task | Checksum: 129859043
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6209 ; free virtual = 35607
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1006 ; free virtual = 36470
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6208 ; free virtual = 35607
-Ending Netlist Obfuscation Task | Checksum: 1291c10ee
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1007 ; free virtual = 36472
+Ending Netlist Obfuscation Task | Checksum: 129859043
 
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6204 ; free virtual = 35602
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1007 ; free virtual = 36471
 INFO: [Common 17-83] Releasing license: Implementation
 46 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:02:36 ; elapsed = 00:03:13 . Memory (MB): peak = 4719.207 ; gain = 1710.016 ; free physical = 6207 ; free virtual = 35605
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6207 ; free virtual = 35606
+opt_design: Time (s): cpu = 00:02:16 ; elapsed = 00:02:55 . Memory (MB): peak = 4643.133 ; gain = 1685.016 ; free physical = 1006 ; free virtual = 36470
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1006 ; free virtual = 36470
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6196 ; free virtual = 35601
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1007 ; free virtual = 36477
 INFO: [Common 17-1381] The checkpoint '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6201 ; free virtual = 35613
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1003 ; free virtual = 36479
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6182 ; free virtual = 35593
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 1003 ; free virtual = 36478
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu9eg'
@@ -331,37 +331,37 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6178 ; free virtual = 35590
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 4dd16d76
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 993 ; free virtual = 36468
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: faef5a83
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6177 ; free virtual = 35589
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6187 ; free virtual = 35599
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 993 ; free virtual = 36469
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 992 ; free virtual = 36468
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d5280ec3
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: be3ea977
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 6093 ; free virtual = 35505
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 922 ; free virtual = 36397
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: fcd698b5
+Phase 1.3 Build Placer Netlist Model | Checksum: 15994b0a5
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:27 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5994 ; free virtual = 35406
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:23 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 836 ; free virtual = 36312
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: fcd698b5
+Phase 1.4 Constrain Clocks/Macros | Checksum: 15994b0a5
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:27 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5994 ; free virtual = 35406
-Phase 1 Placer Initialization | Checksum: fcd698b5
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:23 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 836 ; free virtual = 36311
+Phase 1 Placer Initialization | Checksum: 15994b0a5
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:27 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5948 ; free virtual = 35360
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:24 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 833 ; free virtual = 36309
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1dcfca2a0
+Phase 2.1 Floorplanning | Checksum: 277ba3e19
 
-Time (s): cpu = 00:01:38 ; elapsed = 00:00:50 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5870 ; free virtual = 35282
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:43 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 736 ; free virtual = 36211
 
 Phase 2.2 Physical Synthesis In Placer
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
@@ -372,7 +372,7 @@ INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization wa
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5839 ; free virtual = 35258
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 712 ; free virtual = 36188
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -381,71 +381,71 @@ Summary of Physical Synthesis Optimizations
 ----------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 ----------------------------------------------------------------------------------------------------------------------------------------
-|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register                |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  BRAM Register                 |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:01  |
+|  Total                         |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2 Physical Synthesis In Placer | Checksum: 21d834f62
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1e031cbf7
 
-Time (s): cpu = 00:03:25 ; elapsed = 00:02:19 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5841 ; free virtual = 35260
-Phase 2 Global Placement | Checksum: 23fa9144b
+Time (s): cpu = 00:02:41 ; elapsed = 00:01:48 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 712 ; free virtual = 36188
+Phase 2 Global Placement | Checksum: 1d1329ee0
 
-Time (s): cpu = 00:03:39 ; elapsed = 00:02:25 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5864 ; free virtual = 35282
+Time (s): cpu = 00:02:55 ; elapsed = 00:01:54 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 727 ; free virtual = 36203
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 23fa9144b
+Phase 3.1 Commit Multi Column Macros | Checksum: 1d1329ee0
 
-Time (s): cpu = 00:03:40 ; elapsed = 00:02:25 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5863 ; free virtual = 35281
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:54 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 729 ; free virtual = 36205
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1cc83bd45
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: ffc40186
 
-Time (s): cpu = 00:03:53 ; elapsed = 00:02:32 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5851 ; free virtual = 35269
+Time (s): cpu = 00:03:05 ; elapsed = 00:01:59 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 717 ; free virtual = 36193
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1fe6e574d
+Phase 3.3 Area Swap Optimization | Checksum: 14474628f
 
-Time (s): cpu = 00:03:55 ; elapsed = 00:02:33 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5851 ; free virtual = 35269
+Time (s): cpu = 00:03:06 ; elapsed = 00:02:00 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 714 ; free virtual = 36191
 
 Phase 3.4 Small Shape Clustering
-Phase 3.4 Small Shape Clustering | Checksum: 18c2892b8
+Phase 3.4 Small Shape Clustering | Checksum: b98aad82
 
-Time (s): cpu = 00:04:00 ; elapsed = 00:02:38 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5807 ; free virtual = 35226
+Time (s): cpu = 00:03:11 ; elapsed = 00:02:04 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 691 ; free virtual = 36167
 
 Phase 3.5 Flow Legalize Slice Clusters
-Phase 3.5 Flow Legalize Slice Clusters | Checksum: 1d5e49f74
+Phase 3.5 Flow Legalize Slice Clusters | Checksum: d85bc97d
 
-Time (s): cpu = 00:04:01 ; elapsed = 00:02:39 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5805 ; free virtual = 35223
+Time (s): cpu = 00:03:12 ; elapsed = 00:02:04 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 693 ; free virtual = 36169
 
 Phase 3.6 Slice Area Swap
-Phase 3.6 Slice Area Swap | Checksum: 1efa0ce97
+Phase 3.6 Slice Area Swap | Checksum: 127bb232d
 
-Time (s): cpu = 00:04:05 ; elapsed = 00:02:42 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5774 ; free virtual = 35193
+Time (s): cpu = 00:03:16 ; elapsed = 00:02:08 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 661 ; free virtual = 36137
 
 Phase 3.7 Commit Slice Clusters
-Phase 3.7 Commit Slice Clusters | Checksum: 2020bf25d
+Phase 3.7 Commit Slice Clusters | Checksum: 17a48698e
 
-Time (s): cpu = 00:04:21 ; elapsed = 00:02:47 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5771 ; free virtual = 35189
+Time (s): cpu = 00:03:29 ; elapsed = 00:02:12 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 665 ; free virtual = 36141
 
 Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: 1b749ddc7
+Phase 3.8 Re-assign LUT pins | Checksum: 1e42e9689
 
-Time (s): cpu = 00:04:25 ; elapsed = 00:02:51 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5781 ; free virtual = 35200
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:15 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 663 ; free virtual = 36139
 
 Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: 161d0b29a
+Phase 3.9 Pipeline Register Optimization | Checksum: 1f9518d67
 
-Time (s): cpu = 00:04:26 ; elapsed = 00:02:52 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5792 ; free virtual = 35211
-Phase 3 Detail Placement | Checksum: 161d0b29a
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:16 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 671 ; free virtual = 36148
+Phase 3 Detail Placement | Checksum: 1f9518d67
 
-Time (s): cpu = 00:04:27 ; elapsed = 00:02:53 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5797 ; free virtual = 35216
+Time (s): cpu = 00:03:33 ; elapsed = 00:02:16 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 676 ; free virtual = 36152
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -453,64 +453,64 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: e2d46e09
+Post Placement Optimization Initialization | Checksum: 1dc021e3a
 
 Phase 4.1.1.1 BUFG Insertion
-INFO: [Place 46-35] Processed net design_1_i/rst_ps8_0_99M/U0/peripheral_aresetn[0], inserted BUFG to drive 4353 loads.
+INFO: [Place 46-35] Processed net design_1_i/rst_ps8_0_99M/U0/peripheral_aresetn[0], inserted BUFG to drive 4275 loads.
 INFO: [Place 46-45] Replicated bufg driver design_1_i/rst_ps8_0_99M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_rep
 INFO: [Place 46-46] BUFG insertion identified 1 candidate nets, 1 success, 1 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
-Phase 4.1.1.1 BUFG Insertion | Checksum: 13c903f0f
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1c37838ee
 
-Time (s): cpu = 00:05:15 ; elapsed = 00:03:11 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5828 ; free virtual = 35247
-INFO: [Place 30-746] Post Placement Timing Summary WNS=3.900. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 110e53aa5
+Time (s): cpu = 00:04:12 ; elapsed = 00:02:32 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 701 ; free virtual = 36178
+INFO: [Place 30-746] Post Placement Timing Summary WNS=4.931. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1929f5b03
 
-Time (s): cpu = 00:05:16 ; elapsed = 00:03:12 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5799 ; free virtual = 35235
-Phase 4.1 Post Commit Optimization | Checksum: 110e53aa5
+Time (s): cpu = 00:04:13 ; elapsed = 00:02:33 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 701 ; free virtual = 36178
+Phase 4.1 Post Commit Optimization | Checksum: 1929f5b03
 
-Time (s): cpu = 00:05:16 ; elapsed = 00:03:12 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5792 ; free virtual = 35230
+Time (s): cpu = 00:04:13 ; elapsed = 00:02:33 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 701 ; free virtual = 36177
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 110e53aa5
+Phase 4.2 Post Placement Cleanup | Checksum: 1929f5b03
 
-Time (s): cpu = 00:05:17 ; elapsed = 00:03:13 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5819 ; free virtual = 35257
-Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5839 ; free virtual = 35258
+Time (s): cpu = 00:04:14 ; elapsed = 00:02:34 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 709 ; free virtual = 36185
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.16 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 683 ; free virtual = 36160
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 157a25a65
+Phase 4.3 Placer Reporting | Checksum: 1b6fcccef
 
-Time (s): cpu = 00:05:30 ; elapsed = 00:03:26 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5837 ; free virtual = 35256
+Time (s): cpu = 00:04:26 ; elapsed = 00:02:46 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 687 ; free virtual = 36164
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5838 ; free virtual = 35257
-Phase 4.4 Final Placement Cleanup | Checksum: 14203eeee
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 688 ; free virtual = 36164
+Phase 4.4 Final Placement Cleanup | Checksum: 1d9b30f38
 
-Time (s): cpu = 00:05:30 ; elapsed = 00:03:26 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5838 ; free virtual = 35257
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 14203eeee
+Time (s): cpu = 00:04:26 ; elapsed = 00:02:47 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 689 ; free virtual = 36165
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1d9b30f38
 
-Time (s): cpu = 00:05:31 ; elapsed = 00:03:27 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5839 ; free virtual = 35258
-Ending Placer Task | Checksum: 13bb5c6fb
+Time (s): cpu = 00:04:27 ; elapsed = 00:02:47 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 687 ; free virtual = 36163
+Ending Placer Task | Checksum: 1382d5d19
 
-Time (s): cpu = 00:05:31 ; elapsed = 00:03:27 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5960 ; free virtual = 35379
+Time (s): cpu = 00:04:27 ; elapsed = 00:02:47 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 798 ; free virtual = 36275
 INFO: [Common 17-83] Releasing license: Implementation
 75 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:05:39 ; elapsed = 00:03:35 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5959 ; free virtual = 35378
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5961 ; free virtual = 35380
+place_design: Time (s): cpu = 00:04:35 ; elapsed = 00:02:55 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 799 ; free virtual = 36276
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 800 ; free virtual = 36276
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5915 ; free virtual = 35364
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 765 ; free virtual = 36266
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5878 ; free virtual = 35377
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 729 ; free virtual = 36269
 INFO: [Common 17-1381] The checkpoint '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5931 ; free virtual = 35382
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 769 ; free virtual = 36272
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.43 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5901 ; free virtual = 35351
+report_io: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.45 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 740 ; free virtual = 36243
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.47 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5927 ; free virtual = 35379
+report_control_sets: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.43 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 765 ; free virtual = 36269
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu9eg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu9eg'
@@ -522,123 +522,126 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: a5071546 ConstDB: 0 ShapeSum: 4ff191f5 RouteDB: 46bd1fc0
+Checksum: PlaceDB: 4f7f27e9 ConstDB: 0 ShapeSum: c450c344 RouteDB: 245d71ec
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 17530f621
+Phase 1 Build RT Design | Checksum: 17db5d800
 
-Time (s): cpu = 00:01:43 ; elapsed = 00:01:19 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5704 ; free virtual = 35156
-Post Restoration Checksum: NetGraph: 9df7c0cf NumContArr: 5e8b7e5b Constraints: 8a3c5196 Timing: 0
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:18 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 649 ; free virtual = 36032
+Post Restoration Checksum: NetGraph: 9ca87c63 NumContArr: 6ac33199 Constraints: 741478de Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 186bf90c0
+Phase 2.1 Create Timer | Checksum: 17b8026da
 
-Time (s): cpu = 00:01:44 ; elapsed = 00:01:19 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5674 ; free virtual = 35126
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:19 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 619 ; free virtual = 36002
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 186bf90c0
+Phase 2.2 Fix Topology Constraints | Checksum: 17b8026da
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:20 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5614 ; free virtual = 35066
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:19 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 562 ; free virtual = 35945
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 186bf90c0
+Phase 2.3 Pre Route Cleanup | Checksum: 17b8026da
 
-Time (s): cpu = 00:01:45 ; elapsed = 00:01:20 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5613 ; free virtual = 35065
+Time (s): cpu = 00:01:42 ; elapsed = 00:01:19 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 561 ; free virtual = 35944
 
 Phase 2.4 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.4 Global Clock Net Routing | Checksum: 15998bad0
+Phase 2.4 Global Clock Net Routing | Checksum: 18548d223
 
-Time (s): cpu = 00:01:48 ; elapsed = 00:01:23 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5572 ; free virtual = 35024
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:23 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 524 ; free virtual = 35907
 
 Phase 2.5 Update Timing
-Phase 2.5 Update Timing | Checksum: 1b03a43a2
+Phase 2.5 Update Timing | Checksum: 2588301c2
 
-Time (s): cpu = 00:02:31 ; elapsed = 00:01:35 . Memory (MB): peak = 4719.207 ; gain = 0.000 ; free physical = 5538 ; free virtual = 34990
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.196  | TNS=0.000  | WHS=-0.047 | THS=-24.298|
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:32 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 504 ; free virtual = 35887
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.148  | TNS=0.000  | WHS=-0.062 | THS=-30.349|
 
-Phase 2 Router Initialization | Checksum: 21be7bc09
+Phase 2 Router Initialization | Checksum: 27a239521
 
-Time (s): cpu = 00:03:03 ; elapsed = 00:01:46 . Memory (MB): peak = 4724.828 ; gain = 5.621 ; free physical = 5511 ; free virtual = 34963
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:40 . Memory (MB): peak = 4643.133 ; gain = 0.000 ; free physical = 479 ; free virtual = 35862
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 2763844a3
+Phase 3 Initial Routing | Checksum: 2ca567776
 
-Time (s): cpu = 00:03:32 ; elapsed = 00:01:59 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5516 ; free virtual = 34969
+Time (s): cpu = 00:03:11 ; elapsed = 00:01:53 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 575 ; free virtual = 35860
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 11078
- Number of Nodes with overlaps = 817
- Number of Nodes with overlaps = 65
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 10042
+ Number of Nodes with overlaps = 916
+ Number of Nodes with overlaps = 137
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 7
  Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.507  | TNS=0.000  | WHS=-0.035 | THS=-0.938 |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.852  | TNS=0.000  | WHS=-0.011 | THS=-0.105 |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1c77e5efe
+Phase 4.1 Global Iteration 0 | Checksum: 2c2dddf80
 
-Time (s): cpu = 00:06:29 ; elapsed = 00:03:37 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5538 ; free virtual = 34992
+Time (s): cpu = 00:05:56 ; elapsed = 00:03:29 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 574 ; free virtual = 35860
 
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.507  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Phase 4.2 Additional Iteration for Hold
+Phase 4.2 Additional Iteration for Hold | Checksum: 20a23e353
 
-Phase 4.2 Global Iteration 1 | Checksum: 21267b575
+Time (s): cpu = 00:05:56 ; elapsed = 00:03:30 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 573 ; free virtual = 35859
+Phase 4 Rip-up And Reroute | Checksum: 20a23e353
 
-Time (s): cpu = 00:06:38 ; elapsed = 00:03:42 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5540 ; free virtual = 34994
-Phase 4 Rip-up And Reroute | Checksum: 21267b575
-
-Time (s): cpu = 00:06:38 ; elapsed = 00:03:42 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5537 ; free virtual = 34992
+Time (s): cpu = 00:05:57 ; elapsed = 00:03:30 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 574 ; free virtual = 35859
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 2c255f00f
+Phase 5.1.1 Update Timing | Checksum: 260e883fd
 
-Time (s): cpu = 00:06:57 ; elapsed = 00:03:49 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5540 ; free virtual = 34995
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.507  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+Time (s): cpu = 00:06:11 ; elapsed = 00:03:35 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 567 ; free virtual = 35853
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.852  | TNS=0.000  | WHS=0.010  | THS=0.000  |
 
-Phase 5.1 Delay CleanUp | Checksum: 2c255f00f
+Phase 5.1 Delay CleanUp | Checksum: 260e883fd
 
-Time (s): cpu = 00:06:58 ; elapsed = 00:03:49 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5540 ; free virtual = 34995
+Time (s): cpu = 00:06:12 ; elapsed = 00:03:35 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 567 ; free virtual = 35852
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 2c255f00f
+Phase 5.2 Clock Skew Optimization | Checksum: 260e883fd
 
-Time (s): cpu = 00:06:58 ; elapsed = 00:03:49 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5540 ; free virtual = 34995
-Phase 5 Delay and Skew Optimization | Checksum: 2c255f00f
+Time (s): cpu = 00:06:12 ; elapsed = 00:03:36 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 568 ; free virtual = 35854
+Phase 5 Delay and Skew Optimization | Checksum: 260e883fd
 
-Time (s): cpu = 00:06:58 ; elapsed = 00:03:49 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5539 ; free virtual = 34994
+Time (s): cpu = 00:06:12 ; elapsed = 00:03:36 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 574 ; free virtual = 35859
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1ef227e89
+Phase 6.1.1 Update Timing | Checksum: 2c7691dda
 
-Time (s): cpu = 00:07:13 ; elapsed = 00:03:55 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5528 ; free virtual = 34983
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.507  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+Time (s): cpu = 00:06:23 ; elapsed = 00:03:40 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 570 ; free virtual = 35856
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.852  | TNS=0.000  | WHS=0.010  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1e49be31b
+Phase 6.1 Hold Fix Iter | Checksum: 2436abfde
 
-Time (s): cpu = 00:07:13 ; elapsed = 00:03:55 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5527 ; free virtual = 34982
-Phase 6 Post Hold Fix | Checksum: 1e49be31b
+Time (s): cpu = 00:06:24 ; elapsed = 00:03:40 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 572 ; free virtual = 35858
+Phase 6 Post Hold Fix | Checksum: 2436abfde
 
-Time (s): cpu = 00:07:13 ; elapsed = 00:03:55 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5526 ; free virtual = 34981
+Time (s): cpu = 00:06:24 ; elapsed = 00:03:40 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 571 ; free virtual = 35856
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.59443 %
-  Global Horizontal Routing Utilization  = 2.65146 %
+  Global Vertical Routing Utilization    = 2.5172 %
+  Global Horizontal Routing Utilization  = 2.31394 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -647,71 +650,71 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 231b55a50
+Phase 7 Route finalize | Checksum: 231ef578c
 
-Time (s): cpu = 00:07:15 ; elapsed = 00:03:56 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5522 ; free virtual = 34977
+Time (s): cpu = 00:06:25 ; elapsed = 00:03:41 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 567 ; free virtual = 35852
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 231b55a50
+Phase 8 Verifying routed nets | Checksum: 231ef578c
 
-Time (s): cpu = 00:07:15 ; elapsed = 00:03:56 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5522 ; free virtual = 34977
+Time (s): cpu = 00:06:25 ; elapsed = 00:03:41 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 568 ; free virtual = 35854
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 231b55a50
+Phase 9 Depositing Routes | Checksum: 231ef578c
 
-Time (s): cpu = 00:07:20 ; elapsed = 00:04:01 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5528 ; free virtual = 34983
+Time (s): cpu = 00:06:29 ; elapsed = 00:03:45 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 562 ; free virtual = 35847
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=3.507  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=2.852  | TNS=0.000  | WHS=0.010  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 231b55a50
+Phase 10 Post Router Timing | Checksum: 231ef578c
 
-Time (s): cpu = 00:07:20 ; elapsed = 00:04:02 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5533 ; free virtual = 34988
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:46 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 571 ; free virtual = 35857
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:07:20 ; elapsed = 00:04:02 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5626 ; free virtual = 35081
+Time (s): cpu = 00:06:30 ; elapsed = 00:03:46 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 660 ; free virtual = 35945
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-94 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+93 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:07:31 ; elapsed = 00:04:09 . Memory (MB): peak = 4750.141 ; gain = 30.934 ; free physical = 5626 ; free virtual = 35081
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4750.141 ; gain = 0.000 ; free physical = 5624 ; free virtual = 35079
+route_design: Time (s): cpu = 00:06:39 ; elapsed = 00:03:53 . Memory (MB): peak = 4654.715 ; gain = 11.582 ; free physical = 660 ; free virtual = 35945
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4654.715 ; gain = 0.000 ; free physical = 661 ; free virtual = 35946
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4750.141 ; gain = 0.000 ; free physical = 5582 ; free virtual = 35066
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4654.715 ; gain = 0.000 ; free physical = 627 ; free virtual = 35935
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 4750.141 ; gain = 0.000 ; free physical = 5502 ; free virtual = 35059
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 4654.715 ; gain = 0.000 ; free physical = 573 ; free virtual = 35939
 INFO: [Common 17-1381] The checkpoint '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 4750.148 ; gain = 0.008 ; free physical = 5642 ; free virtual = 35126
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 4654.723 ; gain = 0.008 ; free physical = 636 ; free virtual = 35946
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 4838.184 ; gain = 88.035 ; free physical = 5599 ; free virtual = 35090
+report_drc: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 4742.758 ; gain = 88.035 ; free physical = 603 ; free virtual = 35911
 INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:01:02 ; elapsed = 00:00:20 . Memory (MB): peak = 4838.184 ; gain = 0.000 ; free physical = 5331 ; free virtual = 34824
+report_methodology: Time (s): cpu = 00:00:49 ; elapsed = 00:00:18 . Memory (MB): peak = 4742.758 ; gain = 0.000 ; free physical = 518 ; free virtual = 35701
 INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-106 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+105 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:38 ; elapsed = 00:00:17 . Memory (MB): peak = 4951.770 ; gain = 113.586 ; free physical = 5264 ; free virtual = 34770
+report_power: Time (s): cpu = 00:00:29 ; elapsed = 00:00:15 . Memory (MB): peak = 4805.836 ; gain = 63.078 ; free physical = 564 ; free virtual = 35634
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
@@ -770,10 +773,14 @@ WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batc
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
@@ -782,39 +789,22 @@ WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batc
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-2] Input pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -825,83 +815,42 @@ WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/ins
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/CARRYOUT[3:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-3] PREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/PATTERNDETECT is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-4] MREG Output pipelining: DSP design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPREG-7] DSP48E2_PregDynOpmodeZmuxP:: The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
 WARNING: [DRC DPREG-7] DSP48E2_PregDynOpmodeZmuxP:: The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-WARNING: [DRC DPREG-7] DSP48E2_PregDynOpmodeZmuxP:: The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
-WARNING: [DRC DPREG-7] DSP48E2_PregDynOpmodeZmuxP:: The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
 WARNING: [DRC RTSTAT-10] No routable loads: 30 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i... and (the first 15 of 30 listed).
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U3/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U4/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: design_1_i/batch_align2D_0/inst/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 115 Warnings, 28 Advisories
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 71 Warnings, 18 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -913,9 +862,9 @@ Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Oct 16 10:33:08 2019. For additional details about this file, please refer to the WebTalk help file at /cad/xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Oct 16 14:52:27 2019. For additional details about this file, please refer to the WebTalk help file at /cad/xilinx/Vivado/2018.3/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-184 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+173 Infos, 71 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:01:05 ; elapsed = 00:02:55 . Memory (MB): peak = 5044.465 ; gain = 92.695 ; free physical = 4943 ; free virtual = 35034
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 16 10:33:08 2019...
+write_bitstream: Time (s): cpu = 00:01:00 ; elapsed = 00:02:50 . Memory (MB): peak = 4910.531 ; gain = 104.695 ; free physical = 761 ; free virtual = 35435
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 16 14:52:28 2019...

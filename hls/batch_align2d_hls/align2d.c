@@ -1,14 +1,13 @@
 
 #include "align2d.h"
 
-#define PAR_BATCH
+//#define PAR_BATCH
 #define OPT_LOOP
-#define OPT_MEM
 
 
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	#pragma HLS INLINE
-	#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
+	//#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
 
 	// Jacobian vectors and Hessian matrix
 	float ref_patch_dx[PATCH_AREA];
@@ -16,9 +15,9 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	Matrix3f H = {0};
 
 	// Partition variable to increase the throughput
-	//#pragma HLS ARRAY_PARTITION variable=ref_patch_dx complete dim=1
-	//#pragma HLS ARRAY_PARTITION variable=ref_patch_dy complete dim=1
-	//#pragma HLS ARRAY_PARTITION variable=H complete dim=1
+	#pragma HLS ARRAY_PARTITION variable=ref_patch_dx complete dim=1
+	#pragma HLS ARRAY_PARTITION variable=ref_patch_dy complete dim=1
+	#pragma HLS ARRAY_PARTITION variable=H complete dim=1
 
 	// Compute Jacobians and Hessian
 	compute_hessian: for(int i = 0; i < PATCH_AREA; i++){

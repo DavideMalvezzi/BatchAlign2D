@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Wed Oct 16 13:29:04 2019
+# Process ID: 15826
+# Current directory: /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk/webtalk/webtalk.log
+# Journal file: /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

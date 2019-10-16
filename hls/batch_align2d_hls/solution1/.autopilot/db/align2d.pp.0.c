@@ -6292,10 +6292,9 @@ typedef float Matrix3f[9];
 
 
 
-
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
 #pragma HLS INLINE
-#pragma HLS FUNCTION_INSTANTIATE variable=&ref_patch_with_border
+
 
 
  float ref_patch_dx[64];
@@ -6303,9 +6302,9 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
  Matrix3f H = {0};
 
 
-
-
-
+#pragma HLS ARRAY_PARTITION variable=&ref_patch_dx complete dim=1
+#pragma HLS ARRAY_PARTITION variable=&ref_patch_dy complete dim=1
+#pragma HLS ARRAY_PARTITION variable=&H complete dim=1
 
 
  compute_hessian: for(int i = 0; i < 64; i++){
@@ -6438,12 +6437,12 @@ void batch_align2D(
 
  batch_loop: for(k = 0; k < 4; k++){
 
-#pragma HLS UNROLL
 
 
 
- compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
-# 175 "batch_align2d_hls/align2d.c"
+
+  compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
+# 174 "batch_align2d_hls/align2d.c"
   cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
  }
 

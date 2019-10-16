@@ -6292,10 +6292,9 @@ typedef float Matrix3f[9];
 
 
 
-
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
 _ssdm_InlineSelf(0, "");
-_ssdm_SpecFuncInstantiation(ref_patch_with_border, "");
+
 
 
  float ref_patch_dx[64];
@@ -6303,9 +6302,9 @@ _ssdm_SpecFuncInstantiation(ref_patch_with_border, "");
  Matrix3f H = {0};
 
 
-
-
-
+_ssdm_SpecArrayPartition( ref_patch_dx, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( ref_patch_dy, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( H, 1, "COMPLETE", 0, "");
 
 
  compute_hessian: for(int i = 0; i < 64; i++){
@@ -6438,12 +6437,12 @@ _ssdm_SpecArrayPartition( H_inv, 0, "COMPLETE", 0, "");
 
  batch_loop: for(k = 0; k < 4; k++){
 
-_ssdm_Unroll(0,0,0, "");
 
 
 
- compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
-# 175 "batch_align2d_hls/align2d.c"
+
+  compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
+# 174 "batch_align2d_hls/align2d.c"
   cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
  }
 

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="39" Path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ba18329234064353aed1a3866dcdd7d5"/>
+    <Option Name="Id" Val="e0a06f9a1a2a40ee80f838cc1c507414"/>
     <Option Name="Part" Val="xc7a35tiftg256-1L"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -74,13 +74,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/ip/batch_align2D_ap_fmul_0_max_dsp_32/batch_align2D_ap_fmul_0_max_dsp_32.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/batch_align2D_ap_fsub_2_full_dsp_32/batch_align2D_ap_fsub_2_full_dsp_32.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
