@@ -151,10 +151,7 @@ int main()
 
 			// Start and wait for FPGA to finish
 			XBatch_align2d_Start(&XBA);
-			while(!XBatch_align2d_IsDone(&XBA)){
-				print("Waiting XBA");
-				sleep(1);
-			};
+			while(!XBatch_align2d_IsDone(&XBA));
 
 			// Invalidate the cache so the data is read from the RAM
 			Xil_DCacheInvalidate();

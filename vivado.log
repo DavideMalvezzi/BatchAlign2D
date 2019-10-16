@@ -2,32 +2,27 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Oct 16 15:41:26 2019
-# Process ID: 110518
-# Current directory: /home/dmalvezzi/batch_align2d
+# Start of session at: Wed Oct 16 16:08:49 2019
+# Process ID: 3758
+# Current directory: /home/davide/Desktop/BatchAlign2D
 # Command line: vivado
-# Log file: /home/dmalvezzi/batch_align2d/vivado.log
-# Journal file: /home/dmalvezzi/batch_align2d/vivado.jou
+# Log file: /home/davide/Desktop/BatchAlign2D/vivado.log
+# Journal file: /home/davide/Desktop/BatchAlign2D/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.xpr
+open_project /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.xpr
+INFO: [Project 1-313] Project file moved from '/home/dmalvezzi/batch_align2d/design/batch_align2d_design' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/impl'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 6745.113 ; gain = 204.473 ; free physical = 4679 ; free virtual = 39487
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property STEPS.OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-reset_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 24
-[Wed Oct 16 15:44:06 2019] Launched impl_1...
-Run output will be captured here: /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/runme.log
-file copy -force /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1_wrapper.sysdef /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf
-
-launch_sdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/davide/Desktop/BatchAlign2D/hls/batch_align2d_hls/solution1/impl'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:19 . Memory (MB): peak = 6397.195 ; gain = 107.258 ; free physical = 1146 ; free virtual = 7387
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/davide/Desktop/BatchAlign2D/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 16 16:13:40 2019...
