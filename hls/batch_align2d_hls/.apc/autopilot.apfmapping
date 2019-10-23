@@ -5,5 +5,7 @@
     <originFiles name="align2d.h" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/align2d.h"/>
     <originFiles name="align2d.c" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/align2d.c"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="test.c" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/test.c"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -22,12 +22,12 @@
 #define MAX_IMG_W	752
 #define MAX_IMG_H	480
 #define IMG_LEN	(MAX_IMG_H * MAX_IMG_W)
-#define PYR_SIZE  (int)(MAX_IMG_H * MAX_IMG_W * (1 + 0.25f + 0.0625f))
+#define PYR_SIZE  ((int)(MAX_IMG_H * MAX_IMG_W * (1 + 0.25f + 0.0625)))
 typedef struct PyrImage{
 	uint8 data[PYR_SIZE];
-	uint16 cols;
-	uint16 rows;
-	uint16 step;
+	int cols;
+	int rows;
+	int step;
 }PyrImage;
 
 // Patch size

@@ -6266,10 +6266,10 @@ typedef unsigned int __attribute__ ((bitwidth(64))) uint64;
 
 
 typedef struct PyrImage{
- uint8 data[(int)(480 * 752 * (1 + 0.25f + 0.0625f))];
- uint16 cols;
- uint16 rows;
- uint16 step;
+ uint8 data[((int)(480 * 752 * (1 + 0.25f + 0.0625)))];
+ int cols;
+ int rows;
+ int step;
 }PyrImage;
 
 
@@ -6286,6 +6286,22 @@ typedef float Vector2f[2];
 typedef float Vector3f[3];
 typedef float Matrix3f[9];
 # 12 "batch_align2d_hls/align2d.h" 2
+
+
+
+
+void batch_align2D(
+   volatile uint8* pyr_data_ptr,
+   uint16 img_w,
+   uint16 img_h,
+   volatile PatchBorder* ref_patch_with_border_ptr,
+   volatile Vector2f* cur_px_estimate_ptr,
+   uint128 levels,
+   uint64* converged,
+   int n_iter,
+   uint1 transfer_pyr,
+   Matrix3f* inv_out
+);
 # 3 "batch_align2d_hls/align2d.c" 2
 
 
@@ -6407,7 +6423,7 @@ void batch_align2D(
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 
- static uint8 pyr_data[(int)(480 * 752 * (1 + 0.25f + 0.0625f))];
+ static uint8 pyr_data[((int)(480 * 752 * (1 + 0.25f + 0.0625)))];
  static PatchBorder ref_patch_with_border[4];
  static Vector2f cur_px_estimate[4];
 

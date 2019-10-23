@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1 opened at Wed Oct 23 10:36:10 CEST 2019
+INFO-FLOW: Workspace /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1 opened at Wed Oct 23 13:36:38 CEST 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -96,7 +96,7 @@ Execute     config_interface -m_axi_addr64=1
 Execute     config_interface -m_axi_offset=slave 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 0.34 sec.
+Command   open_solution done; 0.31 sec.
 Execute   set_part xczu9eg-ffvb1156-2-i -tool vivado 
 Execute     add_library xilinx/zynquplus/zynquplus:xczu9eg:-ffvb1156:-2-i 
 Execute       get_default_platform 
@@ -154,18 +154,18 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 #define bool _Bool
         ^
 1 warning generated.
-Command       clang done; 1.82 sec.
+Command       clang done; 1.89 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c std=gnu89 
 INFO-FLOW: exec /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c  -fno-limit-debug-info -gcc-toolchain "/cad/xilinx/Vivado/2018.3/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad/xilinx/Vivado/2018.3/common/technology/autopilot" -I "/cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c"  -o "/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /cad/xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /cad/xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad/xilinx/Vivado/2018.3/common/technology/autopilot -I /cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.81 sec.
+Command       clang done; 1.79 sec.
 INFO-FLOW: Done: GCC PP time: 3.7 seconds per iteration
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c std=gnu89 -directive=/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.15 sec.
+Command       tidy_31 done; 0.14 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c std=gnu89 -directive=/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0
@@ -173,40 +173,40 @@ Execute       get_config_dataflow -strict_mode
 Execute       ap_eval exec -ignorestderr /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.align2d.pp.0.c.diag.yml /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -- -std=gnu99 -fhls -ferror-limit=0 -fstrict-dataflow > /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.align2d.pp.0.c.out.log 2> /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.align2d.pp.0.c.err.log 
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c std=gnu89 
 Execute         ap_eval exec -ignorestderr /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/tidy-3.1.align2d.pp.0.c.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/tidy-3.1.align2d.pp.0.c.out.log 2> /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/tidy-3.1.align2d.pp.0.c.err.log 
-Command         ap_eval done; 0.19 sec.
+Command         ap_eval done; 0.16 sec.
 Execute         ap_eval exec -ignorestderr /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pp.0.c -- -std=gnu89 -fhls -ferror-limit=0 > /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.align2d.pp.0.c.out.log 2> /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.align2d.pp.0.c.err.log 
-Command       tidy_31 done; 0.29 sec.
+Command       tidy_31 done; 0.27 sec.
 INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pragma.1.c std=gnu89 
 INFO-FLOW: exec /cad/xilinx/Vivado/2018.3/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pragma.1.c -- -std=gnu89 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.18 sec.
+Command       tidy_31 done; 0.19 sec.
 Execute       get_default_platform 
 INFO-FLOW: Processing labels
 Execute       clang -src /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pragma.2.c  -fno-limit-debug-info -gcc-toolchain /cad/xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad/xilinx/Vivado/2018.3/common/technology/autopilot" -I "/cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.bc" 
 INFO-FLOW: exec /cad/xilinx/Vivado/2018.3/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /cad/xilinx/Vivado/2018.3/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad/xilinx/Vivado/2018.3/common/technology/autopilot -I /cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.bc
-Command       clang done; 1.76 sec.
+Command       clang done; 1.84 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/align2d.g.bc -hls-opt -except-internalize batch_align2D -L/cad/xilinx/Vivado/2018.3/lnx64/lib -lhlsm -lhlsmc++ -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 0.89 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 533.410 ; gain = 4.242 ; free physical = 5259 ; free virtual = 61513
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 533.410 ; gain = 4.242 ; free physical = 5260 ; free virtual = 61514
+Command       llvm-ld done; 1 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 13986 ; free virtual = 71918
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 13986 ; free virtual = 71918
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.pp.bc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/cad/xilinx/Vivado/2018.3/lnx64/lib -lfloatconversion -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 0.86 sec.
+Command         llvm-ld done; 0.95 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top batch_align2D -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.0.bc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 533.410 ; gain = 4.242 ; free physical = 5258 ; free virtual = 61511
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 13982 ; free virtual = 71915
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.1.bc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 533.410 ; gain = 4.242 ; free physical = 5259 ; free virtual = 61513
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 13979 ; free virtual = 71911
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.g.1.bc to /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -235,12 +235,12 @@ WARNING: [ANALYSIS 214-31] The program may have out of bound access of array var
 WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cur_px_estimate_ptr' in function 'batch_align2D' (batch_align2d_hls/align2d.c:139:2).
 WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'inv_out' in function 'batch_align2D' (batch_align2d_hls/align2d.c:182:2).
 WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'cur_px_estimate_ptr' in function 'batch_align2D' (batch_align2d_hls/align2d.c:185:2).
-Command         transform done; 4.16 sec.
+Command         transform done; 4.29 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.8floatP.i4' into 'batch_align2D' (batch_align2d_hls/align2d.c:185).
-Command         transform done; 21.33 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 661.297 ; gain = 132.129 ; free physical = 5150 ; free virtual = 61406
+Command         transform done; 21.25 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 661.301 ; gain = 132.129 ; free physical = 13905 ; free virtual = 71840
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.o.2.bc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [XFORM 203-631] Renaming function 'compute_inverse_hessian' to 'compute_inverse_hess' (batch_align2d_hls/align2d.c:23:42)
@@ -249,11 +249,11 @@ INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative leng
 INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 8 on port 'pos' (batch_align2d_hls/align2d.c:139:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 36 on port 'debug' (batch_align2d_hls/align2d.c:182:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 8 on port 'pos' (batch_align2d_hls/align2d.c:185:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-Command         transform done; 35.87 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 661.297 ; gain = 132.129 ; free physical = 5126 ; free virtual = 61390
+Command         transform done; 35.2 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 661.301 ; gain = 132.129 ; free physical = 13888 ; free virtual = 71831
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 62.4 sec.
-Command     elaborate done; 69.62 sec.
+Command       opt_and_import_c done; 61.91 sec.
+Command     elaborate done; 69.34 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -297,10 +297,10 @@ WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
    between 'fadd' operation ('tmp_62', batch_align2d_hls/align2d.c:44) and 'fadd' operation ('tmp_62', batch_align2d_hls/align2d.c:44).
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 4, Depth = 12.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.79 sec.
-INFO: [HLS 200-111]  Elapsed time: 74.71 seconds; current allocated memory: 125.558 MB.
+Command       schedule done; 0.78 sec.
+INFO: [HLS 200-111]  Elapsed time: 74.33 seconds; current allocated memory: 125.599 MB.
 Execute       report -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.verbose.sched.rpt -verbose -f 
-Command       report done; 0.34 sec.
+Command       report done; 0.3 sec.
 Execute       db_write -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.sched.adb -f 
 INFO-FLOW: Finish scheduling compute_inverse_hess.
 Execute       set_default_model compute_inverse_hess 
@@ -314,11 +314,10 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command       bind done; 0.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 127.372 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 127.416 MB.
 Execute       report -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.verbose.bind.rpt -verbose -f 
 Command       report done; 0.46 sec.
 Execute       db_write -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.bind.adb -f 
-Command       db_write done; 0.13 sec.
 INFO-FLOW: Finish binding compute_inverse_hess.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'batch_align2D' 
@@ -337,13 +336,13 @@ INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-61] Pipelining loop 'memcpy.cur_px_estimate_ptr.batch_align2D.cur_px_estimate.gep'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 3.63 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.22 seconds; current allocated memory: 137.967 MB.
+Command       schedule done; 4.16 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.73 seconds; current allocated memory: 138.011 MB.
 Execute       report -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.verbose.sched.rpt -verbose -f 
 INFO: [HLS 200-434] Only 5 loops out of a total 6 loops have been pipelined in this design.
-Command       report done; 1.43 sec.
+Command       report done; 1.47 sec.
 Execute       db_write -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.sched.adb -f 
-Command       db_write done; 1.25 sec.
+Command       db_write done; 1.28 sec.
 INFO-FLOW: Finish scheduling batch_align2D.
 Execute       set_default_model batch_align2D 
 Execute       bind -model batch_align2D 
@@ -355,12 +354,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 4.45 sec.
-INFO: [HLS 200-111]  Elapsed time: 7.13 seconds; current allocated memory: 144.940 MB.
+Command       bind done; 4.29 sec.
+INFO: [HLS 200-111]  Elapsed time: 7.04 seconds; current allocated memory: 145.000 MB.
 Execute       report -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.verbose.bind.rpt -verbose -f 
-Command       report done; 2.57 sec.
+Command       report done; 2.53 sec.
 Execute       db_write -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.bind.adb -f 
-Command       db_write done; 1.42 sec.
+Command       db_write done; 1.43 sec.
 INFO-FLOW: Finish binding batch_align2D.
 Execute       get_model_list batch_align2D -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -380,8 +379,8 @@ INFO: [RTGEN 206-100] Generating core module 'batch_align2D_fsub_32ns_32ns_32_4_
 INFO: [RTGEN 206-100] Generating core module 'batch_align2D_mux_1007_8_1_1': 4 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'batch_align2D_sitofp_32s_32_3_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_inverse_hess'.
-Command       create_rtl_model done; 0.14 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.15 seconds; current allocated memory: 148.404 MB.
+Command       create_rtl_model done; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.09 seconds; current allocated memory: 148.455 MB.
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.rtl_wrap.cfg.tcl 
 Execute       gen_rtl compute_inverse_hess -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/systemc/compute_inverse_hess -synmodules compute_inverse_hess batch_align2D 
 Execute       gen_rtl compute_inverse_hess -style xilinx -f -lang vhdl -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/vhdl/compute_inverse_hess 
@@ -390,9 +389,9 @@ Execute       gen_tb_info compute_inverse_hess -o /home/dmalvezzi/batch_align2d/
 Execute       report -model compute_inverse_hess -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/report/compute_inverse_hess_csynth.rpt -f 
 Execute       report -model compute_inverse_hess -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/report/compute_inverse_hess_csynth.xml -f -x 
 Execute       report -model compute_inverse_hess -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.verbose.rpt -verbose -f 
-Command       report done; 0.54 sec.
+Command       report done; 0.55 sec.
 Execute       db_write -model compute_inverse_hess -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.adb -f 
-Command       db_write done; 0.19 sec.
+Command       db_write done; 0.2 sec.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'batch_align2D' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -830,28 +829,28 @@ INFO: [RTGEN 206-100] Generating core module 'batch_align2D_mux_366_32_1_1': 1 i
 INFO: [RTGEN 206-100] Generating core module 'batch_align2D_mux_42_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'batch_align2D_sitofp_32ns_32_3_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'batch_align2D'.
-Command       create_rtl_model done; 5.13 sec.
-INFO: [HLS 200-111]  Elapsed time: 6.21 seconds; current allocated memory: 167.933 MB.
+Command       create_rtl_model done; 5.25 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.33 seconds; current allocated memory: 167.962 MB.
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.rtl_wrap.cfg.tcl 
 Execute       gen_rtl batch_align2D -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/systemc/batch_align2D -synmodules compute_inverse_hess batch_align2D 
 Execute       gen_rtl batch_align2D -istop -style xilinx -f -lang vhdl -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/vhdl/batch_align2D 
-Command       gen_rtl done; 0.96 sec.
+Command       gen_rtl done; 0.92 sec.
 Execute       gen_rtl batch_align2D -istop -style xilinx -f -lang vlog -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/verilog/batch_align2D 
-Command       gen_rtl done; 0.47 sec.
+Command       gen_rtl done; 0.48 sec.
 Execute       export_constraint_db -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.constraint.tcl -f -tool general 
 Execute       report -model batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.design.xml -verbose -f -dv 
-Command       report done; 1.04 sec.
+Command       report done; 1.03 sec.
 Execute       report -model batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.sdaccel.xml -verbose -f -sdaccel 
-Command       report done; 1.4 sec.
+Command       report done; 1.46 sec.
 Execute       gen_tb_info batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D -p /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db 
 Execute       report -model batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/report/batch_align2D_csynth.rpt -f 
 Command       report done; 0.5 sec.
 Execute       report -model batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/syn/report/batch_align2D_csynth.xml -f -x 
-Command       report done; 0.44 sec.
+Command       report done; 0.45 sec.
 Execute       report -model batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.verbose.rpt -verbose -f 
-Command       report done; 3.22 sec.
+Command       report done; 3.08 sec.
 Execute       db_write -model batch_align2D -o /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.adb -f 
-Command       db_write done; 1.82 sec.
+Command       db_write done; 1.92 sec.
 Execute       sc_get_clocks batch_align2D 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain batch_align2D 
@@ -950,7 +949,7 @@ Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip
 Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
 Command           ap_source done; 0.13 sec.
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.14 sec.
+Command         ap_source done; 0.13 sec.
 Command       ap_source done; 0.14 sec.
 Execute       source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
 Execute         source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
@@ -960,7 +959,7 @@ Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solutio
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.compgen.tcl 
-Command       ap_source done; 0.23 sec.
+Command       ap_source done; 0.21 sec.
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.compgen.tcl 
 INFO: [RTMG 210-278] Implementing memory 'batch_align2D_pyr_data_ram (RAM)' using block RAMs with power-on initialization.
 Execute         source ./ctrl.slave.tcl 
@@ -969,7 +968,7 @@ Execute         source ./ctrl.slave.tcl
 Execute         source ./param.slave.tcl 
 Execute         is_m_axi_addr64 
 Execute         is_m_axi_addr64 
-Command       ap_source done; 0.49 sec.
+Command       ap_source done; 0.52 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl
@@ -993,12 +992,11 @@ Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/in
 Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
 Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
 Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source done; 0.11 sec.
 Execute             source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source done; 0.17 sec.
+Command           ap_source done; 0.13 sec.
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.17 sec.
-Command       ap_source done; 0.17 sec.
+Command         ap_source done; 0.14 sec.
+Command       ap_source done; 0.14 sec.
 Execute       source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
 Execute         source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=batch_align2D xml_exists=0
@@ -1011,7 +1009,6 @@ INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.compgen.tcl 
-Command       ap_source done; 0.14 sec.
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute       source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
@@ -1052,18 +1049,17 @@ Execute       get_config_sdx -profile
 Execute       ::config_rtl 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:42 ; elapsed = 00:01:51 . Memory (MB): peak = 759.312 ; gain = 230.145 ; free physical = 4972 ; free virtual = 61248
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:43 ; elapsed = 00:01:51 . Memory (MB): peak = 759.316 ; gain = 230.145 ; free physical = 13735 ; free virtual = 71690
 INFO: [SYSC 207-301] Generating SystemC RTL for batch_align2D.
 INFO: [VHDL 208-304] Generating VHDL RTL for batch_align2D.
 INFO: [VLOG 209-307] Generating Verilog RTL for batch_align2D.
-Command     autosyn done; 40.96 sec.
+Command     autosyn done; 40.98 sec.
 Execute     get_part 
 Execute     get_config_export -sdx_tcl 
-Command   csynth_design done; 110.61 sec.
-Command ap_source done; 111.03 sec.
+Command   csynth_design done; 110.34 sec.
+Command ap_source done; 110.73 sec.
 Execute cleanup_all 
-Command cleanup_all done; 0.12 sec.
-INFO-FLOW: Workspace /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1 opened at Wed Oct 23 10:38:13 CEST 2019
+INFO-FLOW: Workspace /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1 opened at Wed Oct 23 13:39:49 CEST 2019
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -1111,12 +1107,11 @@ Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/inte
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.11 sec.
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.16 sec.
+Command         ap_source done; 0.14 sec.
 Execute         source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.16 sec.
-Command     ap_source done; 0.16 sec.
+Command       ap_source done; 0.15 sec.
+Command     ap_source done; 0.15 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib /cad/xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7 
 Execute       source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
@@ -1162,7 +1157,7 @@ Execute     config_interface -m_axi_addr64=1
 Execute     config_interface -m_axi_offset=slave 
 Execute     config_interface -register_io=off 
 Execute     config_interface -trim_dangling_port=0 
-Command   open_solution done; 0.34 sec.
+Command   open_solution done; 0.32 sec.
 Execute   export_design -rtl verilog -format ip_catalog 
 Execute     get_config_export -acc 
 Execute     get_config_export -clock_margin 
@@ -1213,11 +1208,12 @@ Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/inte
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.12 sec.
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.15 sec.
+Command         ap_source done; 0.17 sec.
 Execute         source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.15 sec.
-Command     ap_source done; 0.15 sec.
+Command       ap_source done; 0.18 sec.
+Command     ap_source done; 0.18 sec.
 Execute     source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
 Execute       source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -1251,8 +1247,8 @@ Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/x
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
 Command         ap_source done; 0.13 sec.
 Execute         source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.13 sec.
-Command     ap_source done; 0.13 sec.
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
 Execute     source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
 Execute       source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=batch_align2D xml_exists=1
@@ -1265,6 +1261,7 @@ INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
 Execute     source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute     source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/compute_inverse_hess.compgen.tcl 
+Command     ap_source done; 0.12 sec.
 Execute     source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/batch_align2D.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute     source /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/.autopilot/db/global.setting.tcl 
@@ -1341,13 +1338,13 @@ Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/d
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
 Execute           source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
-Command         ap_source done; 0.14 sec.
+Command         ap_source done; 0.13 sec.
 Execute         source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.15 sec.
-Command     ap_source done; 0.15 sec.
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
 Execute     source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
 Execute       source /cad/xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
 INFO-FLOW: DBG:CMD:     exec /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/impl/ip/pack.sh
-Command   export_design done; 32.71 sec.
-Command ap_source done; 33.06 sec.
+Command   export_design done; 32.92 sec.
+Command ap_source done; 33.25 sec.
 Execute cleanup_all 

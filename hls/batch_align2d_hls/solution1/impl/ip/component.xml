@@ -2952,7 +2952,7 @@ format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type imm
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>130061c3</spirit:value>
+            <spirit:value>f2dc7296</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2971,7 +2971,7 @@ format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type imm
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>de4895f1</spirit:value>
+            <spirit:value>601b4ae2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2990,7 +2990,7 @@ format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type imm
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bf4e75a5</spirit:value>
+            <spirit:value>85cc1abb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3009,7 +3009,7 @@ format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type imm
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2a899832</spirit:value>
+            <spirit:value>f14710e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3023,7 +3023,7 @@ format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type imm
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>27bcb645</spirit:value>
+            <spirit:value>e95ee0d1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -8253,15 +8253,15 @@ format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type imm
       </xilinx:taxonomies>
       <xilinx:displayName>Batch_align2d</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1910231038</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-10-23T08:38:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1910231339</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-10-23T11:40:22Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5b1a6785"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="a4a74c62"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="2fee7216"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a7582984"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="efb5576e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="89b5f1f3"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="07087e10"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="0582fbf8"/>

@@ -1332,3 +1332,17 @@ con
 10:11:59 INFO  : 
 10:12:00 INFO  : Updating hardware inferred compiler options for batch_align2d_sdk.
 10:12:00 INFO  : Clearing existing target manager status.
+14:23:38 INFO  : Registering command handlers for SDK TCF services
+14:23:40 INFO  : Launching XSCT server: xsct -n -interactive /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/temp_xsdb_launch_script.tcl
+14:23:44 INFO  : XSCT server has started successfully.
+14:23:44 INFO  : Successfully done setting XSCT server connection channel  
+14:23:50 INFO  : Successfully done setting SDK workspace  
+14:23:50 INFO  : Processing command line option -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf.
+14:23:50 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+14:24:04 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1571833283000,  Project:1571817437000
+14:24:04 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf.
+14:24:05 INFO  : Copied contents of /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+14:24:20 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:24:23 INFO  : 
+14:24:24 INFO  : Updating hardware inferred compiler options for batch_align2d_sdk.
+14:24:24 INFO  : Clearing existing target manager status.

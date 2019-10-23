@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 23 10:39:50 2019" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 23 13:41:17 2019" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:zcu102:part0:3.2" DEVICE="xczu9eg" NAME="bd_afc3" PACKAGE="ffvb1156" SPEEDGRADE="-2"/>
 

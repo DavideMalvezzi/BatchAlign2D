@@ -4206,3 +4206,6 @@ Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_1/src
 make -C psu_cortexa53_0/libsrc/wdtps_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
 Compiling wdtps
 Finished building libraries
+14:24:05 **** Auto Build of configuration Debug for project batch_align2d_sdk ****
+make all 
+make: Nothing to be done for `all'.

@@ -1,0 +1,30 @@
+INFO: [HLS 200-10] Running '/cad/xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dmalvezzi' on host 'compute.eees.dei.unibo.it' (Linux_x86_64 version 3.10.0-957.21.3.el7.x86_64) on Wed Oct 23 13:31:03 CEST 2019
+INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
+INFO: [HLS 200-10] In directory '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/csim/build'
+In file included from ../../test.c:2:
+In file included from ../../../align2d.h:11:
+In file included from ../../../datatypes.h:18:
+In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_cint.h:83:
+In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/autopilot_apint.h:57:
+/cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/autopilot_dt.h:133:13: warning: 'bool' macro redefined
+#    define bool uint1
+            ^
+/cad/xilinx/Vivado/2018.3/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdbool.h:31:9: note: previous definition is here
+#define bool _Bool
+        ^
+1 warning generated.
+In file included from ../../test.c:2:
+In file included from ../../../align2d.h:11:
+In file included from ../../../datatypes.h:18:
+In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_cint.h:83:
+In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/autopilot_apint.h:57:
+/cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/autopilot_dt.h:133:13: warning: 'bool' macro redefined
+#    define bool uint1
+            ^
+/cad/xilinx/Vivado/2018.3/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdbool.h:31:9: note: previous definition is here
+#define bool _Bool
+        ^
+1 warning generated.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dmalvezzi/1325461571830263419958
+INFO: [APCC 202-1] APCC is done.
