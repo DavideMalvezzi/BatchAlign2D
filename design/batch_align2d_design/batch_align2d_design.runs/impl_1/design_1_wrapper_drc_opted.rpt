@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Oct 23 09:40:03 2019
+| Date         : Wed Oct 23 11:02:08 2019
 | Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
 | Design       : design_1_wrapper
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 588
+             Violations found: 580
 +----------+----------+---------------------------------------------------------------------+------------+
 | Rule     | Severity | Description                                                         | Violations |
 +----------+----------+---------------------------------------------------------------------+------------+
-| DPIP-2   | Warning  | Input pipelining                                                    | 198        |
+| DPIP-2   | Warning  | Input pipelining                                                    | 190        |
 | DPOP-3   | Warning  | PREG Output pipelining                                              | 171        |
 | DPOP-4   | Warning  | MREG Output pipelining                                              | 89         |
 | DPREG-7  | Warning  | DSP48E2_PregDynOpmodeZmuxP:                                         | 17         |
@@ -40,32 +40,32 @@ Table of Contents
 -----------------
 DPIP-2#1 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#2 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#3 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#4 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#5 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#6 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#7 Warning
@@ -300,747 +300,707 @@ Related violations: <none>
 
 DPIP-2#53 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4660/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4660/tmp_53_reg_2637_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#54 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4660/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4660/tmp_53_reg_2637_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#55 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#56 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#57 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#58 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#59 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#60 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#61 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#62 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#63 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#64 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#65 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#66 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#67 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#68 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#69 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#70 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#71 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#72 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#73 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#74 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#75 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#76 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#77 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#78 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#79 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#80 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#81 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#82 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#83 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#84 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#85 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#86 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#87 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#88 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#89 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#90 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#91 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#92 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#93 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#94 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#95 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#96 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#97 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#98 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#99 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#100 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#101 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/tmp_53_reg_2637_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#102 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4764/tmp_53_reg_2637_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#103 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#104 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#105 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#106 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#107 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#108 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#109 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#110 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#111 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#112 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#113 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#114 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#115 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#116 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#117 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#118 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#119 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#120 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#121 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#122 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#123 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#124 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#125 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#126 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#127 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#128 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#129 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#130 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#131 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#132 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#133 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#134 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#135 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#136 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#137 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#138 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#139 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#140 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#141 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#142 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#143 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#144 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#145 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#146 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#147 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#148 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#149 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/tmp_53_reg_2637_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#150 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4868/tmp_53_reg_2637_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#151 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#152 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#153 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#154 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#155 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#156 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U1/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#157 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#158 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#159 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#160 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#161 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#162 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1_U2/batch_align2D_ap_faddfsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#163 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#164 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#165 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#166 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U10/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#167 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#168 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#169 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#170 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U5/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#171 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#172 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#173 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#174 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U6/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#175 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#176 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#177 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#178 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U7/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#179 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#180 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#181 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#182 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U8/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#183 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#184 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1_U9/batch_align2D_ap_fmul_0_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#185 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#186 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#187 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#188 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#189 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-2#190 Warning
 Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U3/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#191 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#192 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#193 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#194 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#195 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#196 Warning
-Input pipelining  
 DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1_U4/batch_align2D_ap_fsub_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#197 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/tmp_53_reg_2637_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-2#198 Warning
-Input pipelining  
-DSP design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/tmp_53_reg_2637_reg input design_1_i/batch_align2D_0/inst/grp_compute_inverse_hess_fu_4972/tmp_53_reg_2637_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-3#1 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/PATTERNDETECT is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#2 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#3 Warning
 PREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP output design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-3#4 Warning
@@ -1885,7 +1845,7 @@ Related violations: <none>
 
 DPOP-4#1 Warning
 MREG Output pipelining  
-DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP multiplier stage design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-4#2 Warning
@@ -2330,7 +2290,7 @@ Related violations: <none>
 
 DPREG-7#1 Warning
 DSP48E2_PregDynOpmodeZmuxP:  
-The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
+The DSP48E2 cell design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
 Related violations: <none>
 
 DPREG-7#2 Warning
@@ -2415,7 +2375,7 @@ Related violations: <none>
 
 AVAL-155#1 Advisory
 enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND  
-design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U129/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
+design_1_i/batch_align2D_0/inst/batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1_U128/batch_align2D_ap_fadd_2_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 Related violations: <none>
 
 AVAL-155#2 Advisory

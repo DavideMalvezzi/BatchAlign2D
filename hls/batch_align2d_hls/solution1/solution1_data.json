@@ -31,7 +31,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "840",
+    "Latency": "842",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -2528,10 +2528,10 @@
     "Metrics": {
       "compute_inverse_hess": {
         "Latency": {
-          "LatencyBest": "296",
-          "LatencyAvg": "296",
-          "LatencyWorst": "296",
-          "PipelineII": "296",
+          "LatencyBest": "298",
+          "LatencyAvg": "298",
+          "LatencyWorst": "298",
+          "PipelineII": "298",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -2543,26 +2543,26 @@
         "Loops": [{
             "Name": "compute_hessian",
             "TripCount": "64",
-            "Latency": "261",
+            "Latency": "263",
             "PipelineII": "4",
-            "PipelineDepth": "10"
+            "PipelineDepth": "12"
           }],
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "26",
-          "FF": "5683",
-          "LUT": "8436",
+          "FF": "5369",
+          "LUT": "7933",
           "URAM": "0"
         }
       },
       "batch_align2D": {
         "Latency": {
-          "LatencyBest": "840",
-          "LatencyAvg": "237725",
-          "LatencyWorst": "474609",
-          "PipelineIIMin": "841",
-          "PipelineIIMax": "474610",
-          "PipelineII": "841 ~ 474610",
+          "LatencyBest": "842",
+          "LatencyAvg": "237727",
+          "LatencyWorst": "474611",
+          "PipelineIIMin": "843",
+          "PipelineIIMax": "474612",
+          "PipelineII": "843 ~ 474612",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -2618,8 +2618,8 @@
         "Area": {
           "BRAM_18K": "240",
           "DSP48E": "106",
-          "FF": "37562",
-          "LUT": "46223",
+          "FF": "36306",
+          "LUT": "44211",
           "URAM": "0"
         }
       }
@@ -2635,7 +2635,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-10-23 09:13:28 CEST",
+    "Time": "2019-10-23 10:38:00 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.3"
   }

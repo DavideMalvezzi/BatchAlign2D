@@ -10,8 +10,8 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	//#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
 
 	// Jacobian vectors and Hessian matrix
-	int ref_patch_dx[PATCH_AREA];
-	int ref_patch_dy[PATCH_AREA];
+	float ref_patch_dx[PATCH_AREA];
+	float ref_patch_dy[PATCH_AREA];
 	Matrix3f H = {0};
 
 	// Partition variable to increase the throughput

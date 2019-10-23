@@ -6297,8 +6297,8 @@ _ssdm_InlineSelf(2, "");
 
 
 
- int ref_patch_dx[64];
- int ref_patch_dy[64];
+ float ref_patch_dx[64];
+ float ref_patch_dy[64];
  Matrix3f H = {0};
 
 

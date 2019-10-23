@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Oct 23 09:13:46 2019
-# Process ID: 127192
+# Start of session at: Wed Oct 23 10:38:18 2019
+# Process ID: 21047
 # Current directory: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/impl/ip/vivado.log
@@ -14,7 +14,6 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fadd_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1446.328 ; gain = 63.762 ; free physical = 14729 ; free virtual = 55448
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'batch_align2D_ap_fadd_2_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_ap_fadd_2_full_dsp_32'...
 WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_faddfsub_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
@@ -35,4 +34,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_ap_
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 23 09:14:32 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 23 10:38:46 2019...

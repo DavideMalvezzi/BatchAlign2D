@@ -6297,8 +6297,8 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 
 
 
- int ref_patch_dx[64];
- int ref_patch_dy[64];
+ float ref_patch_dx[64];
+ float ref_patch_dy[64];
  Matrix3f H = {0};
 
 
