@@ -328,7 +328,7 @@ output wire m_axi_rready;
     .C_READ_ACCEPTANCE(32),
     .C_WRITE_ACCEPTANCE(32),
     .C_NUM_READ_OUTSTANDING(16),
-    .C_NUM_WRITE_OUTSTANDING(16),
+    .C_NUM_WRITE_OUTSTANDING(0),
     .C_SINGLE_ISSUING(0)
   ) inst (
     .mep_identifier(2'H0),

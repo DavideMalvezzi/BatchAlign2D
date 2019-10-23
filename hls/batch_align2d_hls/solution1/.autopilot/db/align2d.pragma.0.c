@@ -6294,11 +6294,11 @@ typedef float Matrix3f[9];
 
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
 #pragma HLS INLINE off
-#pragma HLS FUNCTION_INSTANTIATE variable=&ref_patch_with_border
 
 
- float ref_patch_dx[64];
- float ref_patch_dy[64];
+
+ int ref_patch_dx[64];
+ int ref_patch_dy[64];
  Matrix3f H = {0};
 
 
@@ -6309,11 +6309,11 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 
  compute_hessian: for(int i = 0; i < 64; i++){
 
+#pragma HLS PIPELINE
 
 
 
-
-  int y = i / 8;
+ int y = i / 8;
   int x = i % 8;
 
 
@@ -6392,8 +6392,8 @@ void batch_align2D(
 ){
 
 
-#pragma HLS INTERFACE m_axi depth=1 port=&pyr_data_ptr offset=slave bundle=pyr
-#pragma HLS INTERFACE m_axi depth=64 port=&ref_patch_with_border_ptr offset=slave bundle=patches
+#pragma HLS INTERFACE m_axi depth=64 port=&pyr_data_ptr offset=slave bundle=pyr num_write_outstanding=0
+#pragma HLS INTERFACE m_axi depth=64 port=&ref_patch_with_border_ptr offset=slave bundle=patches num_write_outstanding=0
 #pragma HLS INTERFACE m_axi depth=64 port=&cur_px_estimate_ptr offset=slave bundle=pos
 #pragma HLS INTERFACE m_axi depth=64 port=&inv_out offset=slave bundle=debug
 
@@ -6418,6 +6418,7 @@ void batch_align2D(
 
 
 
+
  if(transfer_pyr){
   memcpy(pyr_data, (const uint8*)pyr_data_ptr, sizeof(pyr_data));
  }
@@ -6438,8 +6439,16 @@ void batch_align2D(
  batch_loop: for(k = 0; k < 4; k++){
 
 #pragma HLS UNROLL
-# 174 "batch_align2d_hls/align2d.c"
- cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
+
+
+
+ compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
+# 175 "batch_align2d_hls/align2d.c"
+ }
+
+ for(k = 0; k < 4; k++){
+
+  cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
  }
 
  memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));

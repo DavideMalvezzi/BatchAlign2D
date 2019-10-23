@@ -2,27 +2,27 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -y 110 -defaultsOSRD
-preplace inst rst_ps8_0_99M -pg 1 -lvl 1 -y 320 -defaultsOSRD
-preplace inst ps8_0_axi_periph -pg 1 -lvl 2 -y 190 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 4 -y 220 -defaultsOSRD
-preplace inst batch_align2D_0 -pg 1 -lvl 3 -y 210 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -y 200 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 1 -y 470 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 2 -y 280 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -y 150 -defaultsOSRD
+preplace inst batch_align2D_0 -pg 1 -lvl 3 -y 140 -defaultsOSRD
 preplace netloc batch_align2D_0_m_axi_pos_r 1 3 1 N
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 20 210 660 370 970 320 1340J
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 30 90 680 100 1010 250 1320J
 preplace netloc batch_align2D_0_m_axi_debug 1 3 1 N
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 1 N
-preplace netloc axi_smc_M00_AXI 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1630
-preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 3 670 360 980 310 1350J
+preplace netloc axi_smc_M00_AXI 1 0 5 20 40 NJ 40 NJ 40 NJ 40 1610
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 3 690 110 990 240 1330J
 preplace netloc batch_align2D_0_m_axi_pyr 1 3 1 N
-preplace netloc ps8_0_axi_periph_M01_AXI 1 2 1 N
-preplace netloc ps8_0_axi_periph_M00_AXI 1 2 1 N
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 2 30 220 650
+preplace netloc ps8_0_axi_periph_M01_AXI 1 2 1 1020
+preplace netloc ps8_0_axi_periph_M00_AXI 1 2 1 1000
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 2 40 100 670
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 1 1 N
 preplace netloc batch_align2D_0_m_axi_patches 1 3 1 N
-levelinfo -pg 1 0 340 820 1160 1490 1650 -top 0 -bot 420
+levelinfo -pg 1 0 360 840 1170 1470 1660 -top 0 -bot 570
 "
 }
 {
-   "da_axi4_cnt":"15",
+   "da_axi4_cnt":"18",
    "da_zynq_ultra_ps_e_cnt":"2"
 }

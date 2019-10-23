@@ -1,6 +1,6 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 1
+set id 129
 set name batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1
 set corename simcore_fadd
 set op fadd
@@ -91,7 +91,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 2
+set id 130
 set name batch_align2D_sitofp_32ns_32_3_1
 set corename simcore_sitofp
 set op sitofp
@@ -173,7 +173,92 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 3
+set id 131
+set name batch_align2D_mux_42_32_1_1
+set corename simcore_mux
+set op mux
+set stage_num 1
+set max_latency -1
+set registered_input 1
+set din0_width 32
+set din0_signed 0
+set din1_width 32
+set din1_signed 0
+set din2_width 32
+set din2_signed 0
+set din3_width 32
+set din3_signed 0
+set din4_width 2
+set din4_signed 0
+set dout_width 32
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ap_gen_simcore_mux] == "ap_gen_simcore_mux"} {
+eval "ap_gen_simcore_mux { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    din0_width ${din0_width} \
+    din0_signed ${din0_signed} \
+    din1_width ${din1_width} \
+    din1_signed ${din1_signed} \
+    din2_width ${din2_width} \
+    din2_signed ${din2_signed} \
+    din3_width ${din3_width} \
+    din3_signed ${din3_signed} \
+    din4_width ${din4_width} \
+    din4_signed ${din4_signed} \
+    dout_width ${dout_width} \
+}"
+} else {
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_mux, check your AutoPilot builtin lib"
+}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ${name}
+}
+
+
+set op mux
+set corename MuxnS
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_pipemux] == "::AESL_LIB_VIRTEX::xil_gen_pipemux"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_pipemux { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    stage_num ${stage_num} \
+    max_latency ${max_latency} \
+    registered_input ${registered_input} \
+    din0_width ${din0_width} \
+    din0_signed ${din0_signed} \
+    din1_width ${din1_width} \
+    din1_signed ${din1_signed} \
+    din2_width ${din2_width} \
+    din2_signed ${din2_signed} \
+    din3_width ${din3_width} \
+    din3_signed ${din3_signed} \
+    din4_width ${din4_width} \
+    din4_signed ${din4_signed} \
+    dout_width ${dout_width} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your platform lib"
+}
+}
+
+
+set id 132
 set name batch_align2D_mux_366_32_1_1
 set corename simcore_mux
 set op mux
@@ -451,7 +536,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 # Memory (RAM/ROM)  definition:
-set ID 7
+set ID 137
 set hasByteEnable 0
 set MemName batch_align2D_pyr_data
 set CoreName ap_simcore_mem
@@ -587,7 +672,7 @@ inv_out {
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 8 \
+			id 138 \
 			corename batch_align2D_ctrl_axilite \
 			name batch_align2D_ctrl_s_axi \
 			ports {$port_ctrl} \
@@ -659,7 +744,7 @@ transfer_pyr {
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 9 \
+			id 139 \
 			corename batch_align2D_param_axilite \
 			name batch_align2D_param_s_axi \
 			ports {$port_param} \
@@ -679,7 +764,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 10 \
+    id 140 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -700,7 +785,28 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 11 \
+    id 141 \
+    corename {m_axi} \
+    op interface \
+    max_latency -1 \ 
+    delay_budget 8.75 \ 
+    is_flushable 0 \ 
+    name {batch_align2D_patches_m_axi} \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'patches'"
+}
+}
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler batch_align2D_patches_m_axi
+}
+
+# Native M_AXI:
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
+eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
+    id 142 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
@@ -721,7 +827,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
 eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
-    id 12 \
+    id 143 \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 

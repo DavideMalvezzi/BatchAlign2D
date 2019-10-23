@@ -1409,7 +1409,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
+   CONFIG.NUM_OUTSTANDING {0} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {172} \
    CONFIG.S00_NUM_BYTES {4} \
@@ -1459,7 +1459,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
+   CONFIG.NUM_OUTSTANDING {0} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {9} \
    CONFIG.S00_NUM_BYTES {16} \
@@ -1561,7 +1561,7 @@ proc create_hier_cell_s01_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
+   CONFIG.NUM_OUTSTANDING {0} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {160} \
    CONFIG.S00_NUM_BYTES {4} \
@@ -1659,7 +1659,7 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_MSC {1} \
    CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_SEG {4} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
    CONFIG.SEG000_BASE_ADDR {0x0000000000000000} \
@@ -1718,7 +1718,7 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_READ_THREADS {1} \
    CONFIG.NUM_SEG {4} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    CONFIG.NUM_WRITE_THREADS {1} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
@@ -1748,7 +1748,7 @@ proc create_hier_cell_s01_entry_pipeline { parentCell nameHier } {
    CONFIG.MEP_IDENTIFIER {1} \
    CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.NUM_READ_OUTSTANDING {16} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
    CONFIG.SEP_ROUTE_WIDTH {1} \
@@ -1901,7 +1901,7 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
+   CONFIG.NUM_OUTSTANDING {0} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {172} \
    CONFIG.S00_NUM_BYTES {4} \
@@ -1951,7 +1951,7 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
+   CONFIG.NUM_OUTSTANDING {0} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {9} \
    CONFIG.S00_NUM_BYTES {16} \
@@ -2053,7 +2053,7 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
+   CONFIG.NUM_OUTSTANDING {0} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {160} \
    CONFIG.S00_NUM_BYTES {4} \
@@ -2151,7 +2151,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_MSC {1} \
    CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_SEG {4} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
    CONFIG.SEG000_BASE_ADDR {0x0000000000000000} \
@@ -2210,7 +2210,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_READ_THREADS {1} \
    CONFIG.NUM_SEG {4} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    CONFIG.NUM_WRITE_THREADS {1} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
@@ -2240,7 +2240,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.MEP_IDENTIFIER {0} \
    CONFIG.MEP_IDENTIFIER_WIDTH {2} \
    CONFIG.NUM_READ_OUTSTANDING {16} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    CONFIG.RDATA_WIDTH {32} \
    CONFIG.READ_WRITE_MODE {READ_WRITE} \
    CONFIG.SEP_ROUTE_WIDTH {1} \
@@ -2796,12 +2796,12 @@ proc create_root_design { parentCell } {
   set S00_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI ]
   set_property -dict [ list \
    CONFIG.NUM_READ_OUTSTANDING {16} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    ] $S00_AXI
   set S01_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S01_AXI ]
   set_property -dict [ list \
    CONFIG.NUM_READ_OUTSTANDING {16} \
-   CONFIG.NUM_WRITE_OUTSTANDING {16} \
+   CONFIG.NUM_WRITE_OUTSTANDING {0} \
    ] $S01_AXI
   set S02_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S02_AXI ]
   set_property -dict [ list \

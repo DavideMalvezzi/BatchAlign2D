@@ -14,19 +14,24 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 #define bool _Bool
         ^
 1 warning generated."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 31990 ; free virtual = 63188"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 31988 ; free virtual = 63186"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 15182 ; free virtual = 55698"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 15182 ; free virtual = 55698"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 31992 ; free virtual = 63190"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 15182 ; free virtual = 55698"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 31993 ; free virtual = 63192"/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;batch_loop&apos; (batch_align2d_hls/align2d.c:151) in function &apos;batch_align2D&apos; completely with a factor of 4."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 15178 ; free virtual = 55695"/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;batch_loop&apos; (batch_align2d_hls/align2d.c:152) in function &apos;batch_align2D&apos; completely with a factor of 4."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;ref_patch_with_border&apos;  in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;cur_px_estimate&apos;  in dimension 1 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H_inv&apos; (batch_align2d_hls/align2d.c:144) in dimension 1 completely."/>
-	<Message severity="WARNING" prefix="[XFORM 203-104]" key="XFORM_PARTITION_VAR_INDEX_118" tag="ARRAY,SDX_ARRAY" content="Completely partitioning array &apos;ref_patch_with_border&apos;  accessed through non-constant indices on dimension 1 (batch_align2d_hls/align2d.c:137:2), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H_inv&apos;  in dimension 1 completely."/>
+	<Message severity="WARNING" prefix="[XFORM 203-104]" key="XFORM_PARTITION_VAR_INDEX_118" tag="ARRAY,SDX_ARRAY" content="Completely partitioning array &apos;ref_patch_dx&apos; (batch_align2d_hls/align2d.c:13) accessed through non-constant indices on dimension 1 (batch_align2d_hls/align2d.c:33:3), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;ref_patch_dx&apos; (batch_align2d_hls/align2d.c:13) in dimension 1 completely."/>
+	<Message severity="WARNING" prefix="[XFORM 203-104]" key="XFORM_PARTITION_VAR_INDEX_118" tag="ARRAY,SDX_ARRAY" content="Completely partitioning array &apos;ref_patch_dy&apos; (batch_align2d_hls/align2d.c:14) accessed through non-constant indices on dimension 1 (batch_align2d_hls/align2d.c:34:3), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;ref_patch_dy&apos; (batch_align2d_hls/align2d.c:14) in dimension 1 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H&apos; (batch_align2d_hls/align2d.c:15) in dimension 1 completely."/>
+	<Message severity="WARNING" prefix="[XFORM 203-104]" key="XFORM_PARTITION_VAR_INDEX_118" tag="ARRAY,SDX_ARRAY" content="Completely partitioning array &apos;ref_patch_with_border&apos;  accessed through non-constant indices on dimension 1 (batch_align2d_hls/align2d.c:138:2), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;ref_patch_with_border&apos;  in dimension 2 completely."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H_inv&apos; (batch_align2d_hls/align2d.c:144) in dimension 2 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H_inv&apos;  in dimension 2 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;cur_px_estimate.0&apos; completely based on array size."/>
 	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;cur_px_estimate.1&apos; completely based on array size."/>
 	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_115" tag="" content="Automatically partitioning small array &apos;cur_px_estimate.2&apos; completely based on array size."/>
@@ -35,39 +40,76 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;cur_px_estimate.1&apos; in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;cur_px_estimate.2&apos; in dimension 1 completely."/>
 	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;cur_px_estimate.3&apos; in dimension 1 completely."/>
-	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;cur_px_estimate_ptr&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:138:2)."/>
-	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;inv_out&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:177:2)."/>
-	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;cur_px_estimate_ptr&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:180:2)."/>
-	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.8floatP.i4&apos; into &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:180)."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 669.301 ; gain = 140.129 ; free physical = 31968 ; free virtual = 63167"/>
-	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst read of a total cumulative length 473760 on port &apos;pyr&apos; (batch_align2d_hls/align2d.c:135:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
-	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst read of a total cumulative length 8 on port &apos;pos&apos; (batch_align2d_hls/align2d.c:138:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
-	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst write of a total cumulative length 36 on port &apos;debug&apos; (batch_align2d_hls/align2d.c:177:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
-	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst write of a total cumulative length 8 on port &apos;pos&apos; (batch_align2d_hls/align2d.c:180:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 669.301 ; gain = 140.129 ; free physical = 31978 ; free virtual = 63177"/>
+	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;ref_patch_with_border_ptr&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:138:2)."/>
+	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;cur_px_estimate_ptr&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:139:2)."/>
+	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;inv_out&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:182:2)."/>
+	<Message severity="WARNING" prefix="[ANALYSIS 214-31]" key="ANALYSIS_ARRAY_ACCESS_OUTBOUND_179" tag="" content="The program may have out of bound access of array variable &apos;cur_px_estimate_ptr&apos; in function &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:185:2)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;aesl_mux_load.8floatP.i4&apos; into &apos;batch_align2D&apos; (batch_align2d_hls/align2d.c:185)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 661.301 ; gain = 132.129 ; free physical = 15118 ; free virtual = 55637"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;compute_inverse_hessian&apos; to &apos;compute_inverse_hess&apos; (batch_align2d_hls/align2d.c:23:42)"/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst read of a total cumulative length 400 on port &apos;patches&apos; (batch_align2d_hls/align2d.c:138:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst read of a total cumulative length 473760 on port &apos;pyr&apos; (batch_align2d_hls/align2d.c:136:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst read of a total cumulative length 8 on port &apos;pos&apos; (batch_align2d_hls/align2d.c:139:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst write of a total cumulative length 36 on port &apos;debug&apos; (batch_align2d_hls/align2d.c:182:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,SDX_AXI" content="Inferring multiple bus burst write of a total cumulative length 8 on port &apos;pos&apos; (batch_align2d_hls/align2d.c:185:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 661.301 ; gain = 132.129 ; free physical = 15089 ; free virtual = 55608"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;batch_align2D&apos; ..."/>
 	<Message severity="WARNING" prefix="[SYN 201-107]" key="SYN_PORT_NAME_ILLEGAL_593" tag="" content="Renaming port name &apos;batch_align2D/pos&apos; to &apos;batch_align2D/pos_r&apos; to avoid the conflict with HDL keywords or other object names."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;compute_inverse_hess&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;compute_hessian&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_34" tag="LOOP,SDX_LOOP,SCHEDULE" content="Unable to enforce a carried constraint (II = 1)
+   between &apos;fadd&apos; operation (&apos;tmp_65&apos;, batch_align2d_hls/align2d.c:44) and &apos;fadd&apos; operation (&apos;tmp_65&apos;, batch_align2d_hls/align2d.c:44)."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_34" tag="LOOP,SDX_LOOP,SCHEDULE" content="Unable to enforce a carried constraint (II = 2)
+   between &apos;fadd&apos; operation (&apos;tmp_65&apos;, batch_align2d_hls/align2d.c:44) and &apos;fadd&apos; operation (&apos;tmp_65&apos;, batch_align2d_hls/align2d.c:44)."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_34" tag="LOOP,SDX_LOOP,SCHEDULE" content="Unable to enforce a carried constraint (II = 3)
+   between &apos;fadd&apos; operation (&apos;tmp_65&apos;, batch_align2d_hls/align2d.c:44) and &apos;fadd&apos; operation (&apos;tmp_65&apos;, batch_align2d_hls/align2d.c:44)."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 4, Depth = 10."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 74.88 seconds; current allocated memory: 125.736 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.57 seconds; current allocated memory: 127.605 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;batch_align2D&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;memcpy..pyr_data_ptr&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;memcpy.batch_align2D.cur_px_estimate.gep2.cur_px_estimate_ptr&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;memcpy..ref_patch_with_border_ptr&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;memcpy.batch_align2D.cur_px_estimate.gep3.cur_px_estimate_ptr&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;memcpy.inv_out.&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;memcpy.cur_px_estimate_ptr.batch_align2D.cur_px_estimate.gep&apos;."/>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 10.28 seconds; current allocated memory: 66.460 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 4.7 seconds; current allocated memory: 138.216 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-434]" key="HLS 200-434" tag="SDX" content="Only 5 loops out of a total 6 loops have been pipelined in this design."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.37 seconds; current allocated memory: 67.439 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 7.35 seconds; current allocated memory: 145.190 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;compute_inverse_hess&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_faddfsub_32ns_32ns_32_4_full_dsp_1&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_fdiv_32ns_32ns_32_8_1&apos;: 6 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_fmul_32ns_32ns_32_2_max_dsp_1&apos;: 6 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_fsub_32ns_32ns_32_4_full_dsp_1&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_mux_1007_8_1_1&apos;: 4 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_sitofp_32s_32_3_1&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;compute_inverse_hess&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 4.38 seconds; current allocated memory: 148.728 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;batch_align2D&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
@@ -86,6 +128,406 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;batch_align2D/transfer_pyr&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;batch_align2D/inv_out&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;batch_align2D&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_399&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_400&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_411&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_422&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_433&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_444&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_455&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_466&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_477&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_488&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_401&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_402&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_403&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_404&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_405&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_406&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_407&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_408&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_409&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_410&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_412&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_413&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_414&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_415&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_416&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_417&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_418&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_419&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_420&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_421&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_423&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_424&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_425&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_426&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_427&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_428&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_429&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_430&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_431&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_432&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_434&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_435&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_436&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_437&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_438&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_439&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_440&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_441&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_442&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_443&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_445&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_446&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_447&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_448&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_449&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_450&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_451&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_452&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_453&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_454&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_456&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_457&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_458&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_459&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_460&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_461&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_462&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_463&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_464&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_465&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_467&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_468&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_469&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_470&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_471&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_472&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_473&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_474&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_475&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_476&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_478&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_479&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_480&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_481&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_482&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_483&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_484&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_485&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_486&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_487&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_489&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_490&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_491&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_492&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_493&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_494&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_495&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_496&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_497&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_498&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_499&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_500&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_511&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_522&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_533&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_544&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_555&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_566&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_577&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_588&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_501&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_502&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_503&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_504&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_505&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_506&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_507&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_508&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_509&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_510&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_512&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_513&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_514&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_515&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_516&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_517&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_518&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_519&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_520&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_521&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_523&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_524&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_525&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_526&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_527&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_528&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_529&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_530&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_531&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_532&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_534&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_535&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_536&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_537&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_538&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_539&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_540&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_541&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_542&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_543&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_545&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_546&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_547&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_548&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_549&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_550&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_551&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_552&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_553&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_554&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_556&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_557&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_558&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_559&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_560&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_561&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_562&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_563&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_564&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_565&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_567&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_568&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_569&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_570&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_571&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_572&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_573&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_574&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_575&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_576&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_578&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_579&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_580&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_581&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_582&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_583&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_584&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_585&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_586&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_587&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_589&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_590&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_591&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_592&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_593&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_594&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_595&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_596&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_597&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_598&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_599&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_600&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_611&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_622&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_633&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_644&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_655&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_666&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_677&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_688&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_601&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_602&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_603&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_604&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_605&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_606&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_607&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_608&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_609&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_610&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_612&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_613&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_614&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_615&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_616&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_617&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_618&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_619&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_620&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_621&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_623&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_624&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_625&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_626&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_627&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_628&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_629&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_630&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_631&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_632&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_634&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_635&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_636&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_637&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_638&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_639&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_640&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_641&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_642&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_643&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_645&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_646&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_647&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_648&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_649&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_650&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_651&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_652&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_653&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_654&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_656&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_657&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_658&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_659&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_660&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_661&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_662&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_663&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_664&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_665&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_667&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_668&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_669&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_670&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_671&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_672&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_673&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_674&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_675&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_676&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_678&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_679&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_680&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_681&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_682&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_683&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_684&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_685&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_686&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_687&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_689&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_690&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_691&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_692&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_693&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_694&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_695&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_696&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_697&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_698&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_99&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_98&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_87&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_76&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_65&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_54&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_43&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_32&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_21&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_10&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_97&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_96&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_95&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_94&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_93&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_92&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_91&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_90&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_89&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_88&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_86&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_85&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_84&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_83&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_82&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_81&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_80&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_79&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_78&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_77&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_75&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_74&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_73&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_72&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_71&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_70&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_69&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_68&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_67&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_66&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_64&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_63&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_62&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_61&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_60&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_59&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_58&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_57&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_56&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_55&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_53&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_52&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_51&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_50&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_49&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_48&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_47&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_46&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_45&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_44&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_42&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_41&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_40&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_39&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_38&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_37&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_36&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_35&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_34&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_33&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_31&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_30&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_29&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_28&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_27&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_26&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_25&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_24&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_23&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_22&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_20&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_19&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_18&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_17&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_16&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_15&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_14&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_13&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_12&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_11&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_9&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_8&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_7&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_6&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_5&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_4&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_3&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_2&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde_1&apos; is power-on initialization."/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;ref_patch_with_borde&apos; is power-on initialization."/>
 	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;cur_px_estimate_3_1&apos; is power-on initialization."/>
 	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;cur_px_estimate_0_0&apos; is power-on initialization."/>
 	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;cur_px_estimate_0_1&apos; is power-on initialization."/>
@@ -96,137 +538,17 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_861" tag="" content="Register &apos;cur_px_estimate_3_0&apos; is power-on initialization."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;return&apos;, &apos;pyr_data_ptr&apos;, &apos;ref_patch_with_border_ptr&apos;, &apos;cur_px_estimate_ptr&apos; and &apos;inv_out&apos; to AXI-Lite port ctrl."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;img_w&apos;, &apos;img_h&apos;, &apos;levels&apos;, &apos;converged&apos;, &apos;n_iter&apos; and &apos;transfer_pyr&apos; to AXI-Lite port param."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWVALID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWVALID&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWREADY&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWADDR&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWADDR&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWID&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWLEN&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWLEN&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWSIZE&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWSIZE&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWBURST&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWBURST&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWLOCK&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWLOCK&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWCACHE&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWCACHE&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWPROT&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWPROT&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWQOS&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWQOS&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWREGION&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWREGION&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_AWUSER&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_AWUSER&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WVALID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_WVALID&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WREADY&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WDATA&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_WDATA&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WSTRB&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_WSTRB&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WLAST&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_WLAST&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_WID&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_WUSER&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_WUSER&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARVALID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARVALID&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARREADY&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARADDR&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARADDR&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARID&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARLEN&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARLEN&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARSIZE&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARSIZE&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARBURST&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARBURST&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARLOCK&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARLOCK&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARCACHE&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARCACHE&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARPROT&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARPROT&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARQOS&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARQOS&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARREGION&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARREGION&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_ARUSER&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_ARUSER&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RVALID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RREADY&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_RREADY&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RDATA&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RLAST&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RUSER&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_RRESP&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_BVALID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_BREADY&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_739" tag="" content="Setting dangling out port &apos;batch_align2D/m_axi_patches_BREADY&apos; to 0."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_BRESP&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_BID&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
-	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_738" tag="" content="Port &apos;batch_align2D/m_axi_patches_BUSER&apos; has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to."/>
+	<Message severity="INFO" prefix="[RTGEN 206-104]" key="RTGEN_104_852" tag="" content="Estimated max fanout for &apos;batch_align2D&apos; is 6400 from HDL expression: ((ap_sig_ioackin_patches_ARREADY == 1&apos;b1) &amp; (1&apos;b1 == ap_CS_fsm_state12))"/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_fadd_32ns_32ns_32_4_full_dsp_1&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_mux_366_32_1_1&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_mux_42_32_1_1&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;batch_align2D_sitofp_32ns_32_3_1&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;batch_align2D&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.6 seconds; current allocated memory: 70.262 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 6.5 seconds; current allocated memory: 168.317 MB."/>
 	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1792" tag="" content="Implementing memory &apos;batch_align2D_pyr_data_ram (RAM)&apos; using block RAMs with power-on initialization."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 669.301 ; gain = 140.129 ; free physical = 31937 ; free virtual = 63123"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:01:44 ; elapsed = 00:01:53 . Memory (MB): peak = 759.316 ; gain = 230.145 ; free physical = 14824 ; free virtual = 55400"/>
 	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for batch_align2D."/>
 	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for batch_align2D."/>
 	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for batch_align2D."/>
-	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 14.65 seconds; peak allocated memory: 70.262 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 113.44 seconds; peak allocated memory: 168.317 MB."/>
 </Messages>

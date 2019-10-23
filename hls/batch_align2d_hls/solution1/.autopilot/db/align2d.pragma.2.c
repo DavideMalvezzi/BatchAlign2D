@@ -6294,11 +6294,11 @@ typedef float Matrix3f[9];
 
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
 _ssdm_InlineSelf(2, "");
-_ssdm_SpecFuncInstantiation(ref_patch_with_border, "");
 
 
- float ref_patch_dx[64];
- float ref_patch_dy[64];
+
+ int ref_patch_dx[64];
+ int ref_patch_dy[64];
  Matrix3f H = {0};
 
 
@@ -6309,11 +6309,11 @@ _ssdm_SpecArrayPartition( H, 1, "COMPLETE", 0, "");
 
  compute_hessian: for(int i = 0; i < 64; i++){
 
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 
 
 
-
-  int y = i / 8;
+ int y = i / 8;
   int x = i % 8;
 
 
@@ -6392,8 +6392,8 @@ void batch_align2D(
 ){
 
 
-_ssdm_op_SpecInterface(pyr_data_ptr, "m_axi", 0, 0, "", 0, 1, "pyr", "slave", "", 16, 16, 16, 16, "", "");
-_ssdm_op_SpecInterface(ref_patch_with_border_ptr, "m_axi", 0, 0, "", 0, 64, "patches", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(pyr_data_ptr, "m_axi", 0, 0, "", 0, 64, "pyr", "slave", "", 16, 0, 16, 16, "", "");
+_ssdm_op_SpecInterface(ref_patch_with_border_ptr, "m_axi", 0, 0, "", 0, 64, "patches", "slave", "", 16, 0, 16, 16, "", "");
 _ssdm_op_SpecInterface(cur_px_estimate_ptr, "m_axi", 0, 0, "", 0, 64, "pos", "slave", "", 16, 16, 16, 16, "", "");
 _ssdm_op_SpecInterface(inv_out, "m_axi", 0, 0, "", 0, 64, "debug", "slave", "", 16, 16, 16, 16, "", "");
 
@@ -6418,6 +6418,7 @@ _ssdm_SpecArrayPartition( &cur_px_estimate, 1, "COMPLETE", 0, "");
 
 
 
+
  if(transfer_pyr){
   memcpy(pyr_data, (const uint8*)pyr_data_ptr, sizeof(pyr_data));
  }
@@ -6438,8 +6439,16 @@ _ssdm_SpecArrayPartition( H_inv, 0, "COMPLETE", 0, "");
  batch_loop: for(k = 0; k < 4; k++){
 
 _ssdm_Unroll(0,0,0, "");
-# 174 "batch_align2d_hls/align2d.c"
- cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
+
+
+
+ compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
+# 175 "batch_align2d_hls/align2d.c"
+ }
+
+ for(k = 0; k < 4; k++){
+
+  cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
  }
 
  memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));

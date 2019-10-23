@@ -129,7 +129,7 @@ output wire [171 : 0] m_sc_payld;
     .C_M_PIPELINE(0),
     .C_M_SEND_PIPELINE(1),
     .C_S_LATENCY(0),
-    .C_NUM_OUTSTANDING(16),
+    .C_NUM_OUTSTANDING(0),
     .C_ACLK_RELATIONSHIP(1),
     .C_ACLKEN_CONVERSION(0)
   ) inst (

@@ -7,11 +7,11 @@
 
 void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	#pragma HLS INLINE off
-	#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
+	//#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
 
 	// Jacobian vectors and Hessian matrix
-	float ref_patch_dx[PATCH_AREA];
-	float ref_patch_dy[PATCH_AREA];
+	int ref_patch_dx[PATCH_AREA];
+	int ref_patch_dy[PATCH_AREA];
 	Matrix3f H = {0};
 
 	// Partition variable to increase the throughput
@@ -22,7 +22,7 @@ void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){
 	// Compute Jacobians and Hessian
 	compute_hessian: for(int i = 0; i < PATCH_AREA; i++){
 		#ifdef OPT_LOOP
-			//#pragma HLS PIPELINE
+			#pragma HLS PIPELINE
 		#endif
 
 		// Get pixel position
@@ -105,8 +105,8 @@ void batch_align2D(
 ){
 	// Define m_axi ports
 	// For better performance set the latency and read/write parameter
-	#pragma HLS INTERFACE m_axi depth=1 port=pyr_data_ptr offset=slave bundle=pyr
-	#pragma HLS INTERFACE m_axi depth=64 port=ref_patch_with_border_ptr offset=slave bundle=patches
+	#pragma HLS INTERFACE m_axi depth=64 port=pyr_data_ptr offset=slave bundle=pyr num_write_outstanding=0
+	#pragma HLS INTERFACE m_axi depth=64 port=ref_patch_with_border_ptr offset=slave bundle=patches num_write_outstanding=0
 	#pragma HLS INTERFACE m_axi depth=64 port=cur_px_estimate_ptr offset=slave bundle=pos
 	#pragma HLS INTERFACE m_axi depth=64 port=inv_out offset=slave bundle=debug
 
@@ -131,6 +131,7 @@ void batch_align2D(
 	// Burst copy data from RAM to FPGA
 	// The pyramid is copied only if the pointer is not NULL, so we can copy only once per set of patch
 	// then it will be stored into a static variable
+
 	if(transfer_pyr){
 		memcpy(pyr_data, 			(const uint8*)pyr_data_ptr, 					sizeof(pyr_data));
 	}
@@ -154,7 +155,7 @@ void batch_align2D(
 		#endif
 
 		// Compute the inverse Hessian matrix for the patch
-		//compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
+		compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
 
 		// Get image level pointer
 		/*
@@ -170,6 +171,10 @@ void batch_align2D(
 		uint16 cur_img_rows = img_h / (1 << level);
 		 */
 
+
+	}
+
+	for(k = 0; k < BATCH_SIZE; k++){
 		// Just to not remove useless code
 		cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
 	}
