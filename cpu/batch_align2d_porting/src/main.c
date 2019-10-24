@@ -8,17 +8,31 @@
  * this software and related documentation outside the terms of the EULA
  * is strictly prohibited.
  */
+
+ // compilazione:
+ // gcc align2d.c  main.c  utils.c -lm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-
 #include "align2d.h"
+
+void check_correctness(Test* tests, int num_tests) {
+	for (int i = 0 ; i < num_tests ; i++) {
+		// checking correctness
+		// se e' corretto per il singolo, e' corretto per tutto il batch, anche se cosi' facendo
+		// escludo parallelizzazioni che avvengono a livello di batch (quindi tra piu' patch dello stesso batch)
+		align2D_debug(tests[i].pyr,  tests[i].level, tests[i].ref_patch_with_border,
+		 	tests[i].ref_patch, tests[i].cur_px_estimate, tests[i].n_iter, tests[i]);
+	}
+}
 
 int main(int argc, char **argv)
 {
-
-	Test tests[BATCH_SIZE];
+	const int MAX_NUM_TESTS = 100;
+	Test* tests = (Test*)malloc(sizeof(Test)*MAX_NUM_TESTS);
+	//Test tests[MAX_NUM_TESTS];
 	char buff[32];
 
 	PyrImage pyr;
@@ -29,9 +43,16 @@ int main(int argc, char **argv)
 	int n_iter = 10;
 	bool converged[BATCH_SIZE];
 
-	for(int k = 0; k < 10; k++){
+	printf("Starting main program\n");
+
+	// Load the whole dataset before
+	load_tests("../../machine_hall_tests/100_tests_easy_machine_hall_01.bin", tests, MAX_NUM_TESTS, 0);
+
+	check_correctness(tests, MAX_NUM_TESTS);
+
+	for(int k = 0; k < 1; k++){
 		// Load test extracted from the svo
-		load_tests("/home/davide/svo-workspace/rpg_svo/svo/bin/test.bin", tests, BATCH_SIZE, BATCH_SIZE * k);
+		//load_tests("/home/davide/svo-workspace/rpg_svo/svo/bin/test.bin", tests, BATCH_SIZE, BATCH_SIZE * k);
 
 		//Save img pyramid on file to test if the image is correctly saved into the pyramid structure
 		/*
@@ -57,7 +78,11 @@ int main(int argc, char **argv)
 
 		// Run test to see if the result of the batch_align2D function are the same as the one
 		// extracted from the original svo
-		for(int i = 0; i < BATCH_SIZE; i++){
+		// testo per tutti quelli all'interno di una batch
+
+
+		for(int i = 0; i < BATCH_SIZE; i++) {
+			/*
 			// Print test data
 			printf("id %d rows %d  cols %d step %d level %d ", tests[i].id, tests[i].pyr.rows, tests[i].pyr.cols, tests[i].pyr.step, tests[i].level);
 			printf("max_it %d computed %d converged %d ", tests[i].n_iter, tests[i].last_iter+1, tests[i].converged);
@@ -71,12 +96,28 @@ int main(int argc, char **argv)
 			memcpy(cur_px_estimate[i], tests[i].cur_px_estimate, sizeof(Vector2f));
 
 			// Run the batch_align2D
-			batch_align2D(pyr, levels, ref_patch_with_border, ref_patch, cur_px_estimate, n_iter, converged);
+			// batch_align2D(pyr, levels, ref_patch_with_border, ref_patch, cur_px_estimate, n_iter, converged);
 
+			*/
 		}
 		printf("\n");
 
 	}
 
+	free(tests);
+
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//

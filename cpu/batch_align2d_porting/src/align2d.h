@@ -27,6 +27,16 @@ void batch_align2D(
 			bool converged[BATCH_SIZE]
 );
 
+void align2D_debug(
+			PyrImage pyr,						// Image pyramid
+			int levels,							// Patch level of the pyramid
+			PatchBorder ref_patch_with_border,	// Patch with exterior border
+			Patch ref_patch,					// Patch
+			Vector2f cur_px_estimate,			// Initial position of the patch
+			int n_iter,							// Max number of iterations
+			Test groundTruth
+);
+
 //Batch
 typedef struct Batch{
 	PyrImage pyr;

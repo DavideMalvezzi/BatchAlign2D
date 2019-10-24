@@ -1,6 +1,6 @@
 
 #include "utils.h"
-
+#include <stdlib.h>
 
 void load_tests(char* filename, Test* tests, int n, int skip){
 	FILE* f = fopen(filename, "rb");
@@ -13,15 +13,6 @@ void load_tests(char* filename, Test* tests, int n, int skip){
 	fseek(f, skip * sizeof(Test), SEEK_SET);
 	fread(tests, sizeof(Test), n, f);
 	fclose(f);
-}
-
-void print_matrix(Matrix3f m){
-  for(int y = 0; y < 3; y++){
-	  for(int x= 0; x < 3; x++){
-		  printf("%f ", m[x + y * 3]);
-	  }
-	  printf("\n");
-  }
 }
 
 void save_img(char* filename, Image img){
@@ -91,4 +82,34 @@ void save_patch_with_border(char* filename, PatchBorder img){
 		fprintf(pgmimg, "\n");
 	}
 	fclose(pgmimg);
+}
+
+void print_matrix(Matrix3f m){
+  for(int y = 0; y < 3; y++){
+	  for(int x= 0; x < 3; x++){
+		  printf("%f ", m[x + y * 3]);
+	  }
+	  printf("\n");
+  }
+}
+
+void print_vector(Vector2f a) {
+	printf("Vector2f v1:%f v2:%f\n", a[0], a[1]);
+}
+
+int matrix3f_areEqual(Matrix3f a, Matrix3f b, float tol) {
+	for(int y = 0; y < 3; y++){
+  	  for(int x= 0; x < 3; x++){
+  		  if (abs(a[x + y * 3] - b[x + y * 3]) > tol)
+		  	return 0;
+  	  }
+    }
+	return 1;
+}
+
+int vector2f_areEqual(Vector2f a, Vector2f b, float tol) {
+	if (abs(a[0] - b[0]) > tol ||
+		abs(a[1] - b[1]) > tol	)
+		return 0;
+	return 1;
 }

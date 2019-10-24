@@ -27,6 +27,10 @@ typedef struct Image{
 }Image;
 
 // Image pyramid struct
+
+// Definire cosi' le SIZE da il seguente errore perche' non e' una costante
+// ben definita con il cast dell'int, da sistemare
+// datatypes.h:32:2: warning: variably modified ‘data’ at file scope
 #define PYR_SIZE  (int)(MAX_IMG_H * MAX_IMG_W * (1 + 0.25f + 0.0625))
 typedef struct PyrImage{
 	uint8_t data[PYR_SIZE];
@@ -48,8 +52,10 @@ typedef float 	Matrix3f[9];
 
 // Test
 typedef struct Test{
+	int test_id;							// test unique identifier
+
 	// Input params
-	int id;
+	int id;									// frame_id
 	int level;
 	PyrImage pyr;
 	PatchBorder ref_patch_with_border;
