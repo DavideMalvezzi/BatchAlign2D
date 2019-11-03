@@ -12,16 +12,17 @@
 
 // Patches batch size
 #define BATCH_SIZE	4
+#define MIN_SQUARED_UPDATE (0.03 * 0.03)
 
 void batch_align2D(
-			volatile uint8* pyr_data_ptr,
-			uint16 img_w,
-			uint16 img_h,
-			volatile PatchBorder* ref_patch_with_border_ptr,
+			volatile const uint8* pyr_data_ptr,
+			const uint16 img_w,
+			const uint16 img_h,
+			volatile const PatchBorder* ref_patch_with_border_ptr,
 			volatile Vector2f* cur_px_estimate_ptr,
-			uint128 levels,
+			const uint128 levels,
 			uint64* converged,
-			int n_iter,
+			const int n_iter,
 			bool transfer_pyr,
 			Matrix3f* inv_out
 );

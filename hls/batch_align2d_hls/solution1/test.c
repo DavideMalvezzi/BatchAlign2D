@@ -79,6 +79,7 @@ int main(){
 			//printf("hessian \n"); print_matrix(tests[i].hessian);
 			printf("inv_hessian \n"); print_matrix(tests[i].inverse_hessian);
 			printf("inv_hessian \n"); print_matrix(H_inv[i]);
+			printf("final pos %f %f \n", tests[i].cur_px_estimate[0], tests[i].cur_px_estimate[1]);
 			printf("\n");
 	}
 

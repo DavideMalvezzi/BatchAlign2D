@@ -6290,15 +6290,16 @@ typedef float Matrix3f[9];
 
 
 
+
 void batch_align2D(
-   volatile uint8* pyr_data_ptr,
-   uint16 img_w,
-   uint16 img_h,
-   volatile PatchBorder* ref_patch_with_border_ptr,
+   volatile const uint8* pyr_data_ptr,
+   const uint16 img_w,
+   const uint16 img_h,
+   volatile const PatchBorder* ref_patch_with_border_ptr,
    volatile Vector2f* cur_px_estimate_ptr,
-   uint128 levels,
+   const uint128 levels,
    uint64* converged,
-   int n_iter,
+   const int n_iter,
    uint1 transfer_pyr,
    Matrix3f* inv_out
 );
@@ -6308,18 +6309,14 @@ void batch_align2D(
 
 
 
-void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
+void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv, float* ref_patch_dx, float* ref_patch_dy){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
 _ssdm_InlineSelf(2, "");
 
 
 
- float ref_patch_dx[64];
- float ref_patch_dy[64];
  Matrix3f H = {0};
 
 
-_ssdm_SpecArrayPartition( ref_patch_dx, 1, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( ref_patch_dy, 1, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( H, 1, "COMPLETE", 0, "");
 
 
@@ -6384,8 +6381,9 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 }
 
 
-void matrix_vector_mul(Matrix3f m, Vector3f v, Vector3f res){_ssdm_SpecArrayDimSize(m, 9);_ssdm_SpecArrayDimSize(v, 3);_ssdm_SpecArrayDimSize(res, 3);
- for(int i = 0; i < 3; i++){
+void matrix_vector_mul(const Matrix3f m, const Vector3f v, Vector3f res){_ssdm_SpecArrayDimSize(m, 9);_ssdm_SpecArrayDimSize(v, 3);_ssdm_SpecArrayDimSize(res, 3);
+_ssdm_InlineSelf(0, "");
+ mv_mul:for(int i = 0; i < 3; i++){
   res[i] = 0;
   for(int j = 0; j < 3; j++){
    res[i] += m[i * 3 + j] * v[j];
@@ -6393,16 +6391,103 @@ void matrix_vector_mul(Matrix3f m, Vector3f v, Vector3f res){_ssdm_SpecArrayDimS
  }
 }
 
+void gauss_newton_optim(const uint8* img, const uint16 img_w, const uint16 img_h,
+  const Matrix3f H_inv, const float* dx, const float* dy,
+  const PatchBorder patch, Vector2f cur_px_estimate, const int n_iter){_ssdm_SpecArrayDimSize(H_inv, 9);_ssdm_SpecArrayDimSize(patch, 100);_ssdm_SpecArrayDimSize(cur_px_estimate, 2);
+_ssdm_InlineSelf(2, "");
+
+ uint1 converged = 0;
+ float mean_diff = 0;
+
+
+ float u = cur_px_estimate[0];
+ float v = cur_px_estimate[1];
+
+
+ Vector3f update = {0};
+ Vector3f Jres;
+
+ int u_r, v_r;
+ float subpix_x, subpix_y;
+ float wTL, wTR, wBL, wBR;
+ uint8_t* it;
+ float search_pixel, res;
+
+ gn_iter: for(int iter = 0; iter < 10; iter++){
+
+
+  u_r = floorf(u);
+  v_r = floorf(v);
+
+
+  if(u_r < 4 || v_r < 4 || u_r >= img_w - 4 || v_r >= img_h - 4){
+
+  }
+
+
+  if((sizeof (u) == sizeof (float) ? __isnanf (u) : sizeof (u) == sizeof (double) ? __isnan (u) : __isnanl (u)) || (sizeof (v) == sizeof (float) ? __isnanf (v) : sizeof (v) == sizeof (double) ? __isnan (v) : __isnanl (v))) {
+
+  }
+
+
+  subpix_x = u - u_r;
+  subpix_y = v - v_r;
+  wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
+  wTR = subpix_x * (1.0 - subpix_y);
+  wBL = (1.0 - subpix_x) * subpix_y;
+  wBR = subpix_x * subpix_y;
+
+
+  Jres[0] = 0;
+  Jres[1] = 0;
+  Jres[2] = 0;
+
+
+  compute_err: for(int y = 0; y < 8; y++){
+   it = (uint8_t*) img + (v_r + y - 4) * img_w + u_r - 4;
+   for(int x = 0; x < 8; x++, it++){
+    search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[img_w] + wBR * it[img_w + 1];
+    res = search_pixel - patch[(y + 1) * (8 + 2) + x + 1] + mean_diff;
+
+    Jres[0] -= res * dx[y * 8 + x];
+    Jres[1] -= res * dy[y * 8 + x];
+    Jres[2] -= res;
+   }
+  }
+
+
+  matrix_vector_mul(H_inv, Jres, update);
+
+
+  u += update[0] / 2;
+  v += update[1] / 2;
+  mean_diff += update[2];
+
+
+  if(update[0] * update[0] + update[1] * update[1] < (0.03 * 0.03)) {
+   converged = 1;
+
+  }
+ }
+
+
+ cur_px_estimate[0] = u;
+ cur_px_estimate[1] = v;
+
+
+
+}
+
 
 void batch_align2D(
-   volatile uint8* pyr_data_ptr,
-   uint16 img_w,
-   uint16 img_h,
-   volatile PatchBorder* ref_patch_with_border_ptr,
+   volatile const uint8* pyr_data_ptr,
+   const uint16 img_w,
+   const uint16 img_h,
+   volatile const PatchBorder* ref_patch_with_border_ptr,
    volatile Vector2f* cur_px_estimate_ptr,
-   uint128 levels,
+   const uint128 levels,
    uint64* converged,
-   int n_iter,
+   const int n_iter,
    uint1 transfer_pyr,
    Matrix3f* inv_out
 ){
@@ -6434,9 +6519,8 @@ _ssdm_SpecArrayPartition( &cur_px_estimate, 1, "COMPLETE", 0, "");
 
 
 
-
  if(transfer_pyr){
-  memcpy(pyr_data, (const uint8*)pyr_data_ptr, sizeof(pyr_data));
+  memcpy(pyr_data, (const uint8*)pyr_data_ptr, ((int)(480 * 752 * (1 + 0.25f + 0.0625))));
  }
  memcpy(ref_patch_with_border, (const PatchBorder*)ref_patch_with_border_ptr, sizeof(ref_patch_with_border));
  memcpy(cur_px_estimate, (const Vector2f*)cur_px_estimate_ptr, sizeof(cur_px_estimate));
@@ -6445,26 +6529,41 @@ _ssdm_SpecArrayPartition( &cur_px_estimate, 1, "COMPLETE", 0, "");
  (*converged) = 0;
 
 
+ float ref_patch_dx[4][64];
+ float ref_patch_dy[4][64];
+
+
  Matrix3f H_inv[4];
 
 
+_ssdm_SpecArrayPartition( ref_patch_dx, 0, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( ref_patch_dy, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( H_inv, 0, "COMPLETE", 0, "");
 
  int k;
 
- batch_loop: for(k = 0; k < 4; k++){
+ init_loop: for(k = 0; k < 4; k++){
 
 _ssdm_Unroll(0,0,0, "");
 
 
 
- compute_inverse_hessian(ref_patch_with_border[k], H_inv[k]);
-# 175 "batch_align2d_hls/align2d.c"
+ compute_inverse_hessian(ref_patch_with_border[k], H_inv[k], ref_patch_dx[k], ref_patch_dy[k]);
  }
 
- for(k = 0; k < 4; k++){
+ optim_loop: for(k = 0; k < 4; k++){
 
-  cur_px_estimate_ptr[k][0] = H_inv[k][0] + pyr_data[k];
+_ssdm_Unroll(0,0,0, "");
+_ssdm_SpecDependence( &pyr_data, 0, 0, -1, 0, 1);
+_ssdm_SpecDependence( img_w, 0, 0, -1, 0, 1);
+_ssdm_SpecDependence( img_h, 0, 0, -1, 0, 1);
+_ssdm_SpecDependence( n_iter, 0, 0, -1, 0, 1);
+# 273 "batch_align2d_hls/align2d.c"
+ gauss_newton_optim(ref_patch_with_border[k], img_w, img_h,
+    H_inv[k], ref_patch_dx[k], ref_patch_dx[k],
+    ref_patch_with_border[k], cur_px_estimate[k],
+    n_iter
+  );
  }
 
  memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));

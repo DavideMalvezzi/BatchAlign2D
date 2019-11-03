@@ -21,11 +21,11 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>842</Best-caseLatency>
-<Average-caseLatency>237727</Average-caseLatency>
-<Worst-caseLatency>474611</Worst-caseLatency>
-<Interval-min>843</Interval-min>
-<Interval-max>474612</Interval-max>
+<Best-caseLatency>41674</Best-caseLatency>
+<Average-caseLatency>278559</Average-caseLatency>
+<Worst-caseLatency>515443</Worst-caseLatency>
+<Interval-min>41675</Interval-min>
+<Interval-max>515444</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <memcpy..pyr_data_ptr>
@@ -42,15 +42,10 @@
 </memcpy..ref_patch_with_border_ptr>
 <memcpy.batch_align2D.cur_px_estimate.gep3.cur_px_estimate_ptr>
 <TripCount>8</TripCount>
-<Latency>8</Latency>
+<Latency>9</Latency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>2</PipelineDepth>
+<PipelineDepth>3</PipelineDepth>
 </memcpy.batch_align2D.cur_px_estimate.gep3.cur_px_estimate_ptr>
-<Loop4>
-<TripCount>4</TripCount>
-<Latency>60</Latency>
-<IterationLatency>15</IterationLatency>
-</Loop4>
 <memcpy.inv_out.>
 <TripCount>36</TripCount>
 <Latency>36</Latency>
@@ -69,9 +64,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>240</BRAM_18K>
-<DSP48E>106</DSP48E>
-<FF>36306</FF>
-<LUT>44211</LUT>
+<DSP48E>246</DSP48E>
+<FF>65076</FF>
+<LUT>74568</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

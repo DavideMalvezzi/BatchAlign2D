@@ -59,8 +59,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/dmalvezzi/batch_align2d/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
@@ -94,8 +92,6 @@
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/dmalvezzi/batch_align2d/hls"/>
                                     									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/systemc/include"/>
                                     								
@@ -160,6 +156,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.50655260.1480329139" name="test.c" rcbsApplicability="disable" resourcePath="testbench/test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.729147058.666102557">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.729147058.666102557" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.729147058">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.1714586643" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.800557273" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/dmalvezzi/batch_align2d/hls"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/systemc/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.2101560509" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1048912546" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						
@@ -231,8 +257,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/dmalvezzi/batch_align2d/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
@@ -256,8 +280,6 @@
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/dmalvezzi/batch_align2d/hls"/>
                                     									
                                     <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/systemc/include"/>
                                     								
@@ -312,6 +334,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1623693045.2079571041" name="test.c" rcbsApplicability="disable" resourcePath="testbench/test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1302221582.15486245">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1302221582.15486245" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1302221582">
+                            							
+                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.1192170462" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
+                            							
+                            <option id="gnu.c.compiler.option.include.paths.1885677640" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/dmalvezzi/batch_align2d/hls"/>
+                                								
+                                <listOptionValue builtIn="false" value="/cad/xilinx/Vivado/2018.3/lnx64/tools/systemc/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.c.compiler.option.misc.other.627687826" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1381664515" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						

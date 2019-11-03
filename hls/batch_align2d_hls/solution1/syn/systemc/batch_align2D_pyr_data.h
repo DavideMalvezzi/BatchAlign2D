@@ -1,5 +1,5 @@
 // ==============================================================
-// File generated on Wed Oct 23 13:38:26 CEST 2019
+// File generated on Sat Oct 26 12:54:51 CEST 2019
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -30,7 +30,6 @@ struct batch_align2D_pyr_data_ram : public sc_core::sc_module {
 //output_reg = 0
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in <sc_logic> ce0;
-sc_core::sc_out <sc_lv<DataWidth> > q0;
 sc_core::sc_in<sc_logic> we0;
 sc_core::sc_in<sc_lv<DataWidth> > d0;
 sc_core::sc_in<sc_logic> reset;
@@ -60,16 +59,7 @@ void prc_write_0()
            if(address0.read().is_01() && address0.read().to_uint()<AddressRange)
            {
               ram[address0.read().to_uint()] = d0.read(); 
-              q0 = d0.read();
            }
-           else
-              q0 = sc_lv<DataWidth>();
-        }
-        else {
-            if(address0.read().is_01() && address0.read().to_uint()<AddressRange)
-              q0 = ram[address0.read().to_uint()];
-            else
-              q0 = sc_lv<DataWidth>();
         }
     }
 }
@@ -87,7 +77,6 @@ static const unsigned AddressWidth = 19;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;
-sc_core::sc_out <sc_lv<DataWidth> > q0;
 sc_core::sc_in<sc_logic> we0;
 sc_core::sc_in<sc_lv<DataWidth> > d0;
 sc_core::sc_in<sc_logic> reset;
@@ -101,7 +90,6 @@ SC_CTOR(batch_align2D_pyr_data) {
 meminst = new batch_align2D_pyr_data_ram("batch_align2D_pyr_data_ram");
 meminst->address0(address0);
 meminst->ce0(ce0);
-meminst->q0(q0);
 meminst->we0(we0);
 meminst->d0(d0);
 

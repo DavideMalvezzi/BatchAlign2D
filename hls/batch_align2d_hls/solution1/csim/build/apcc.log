@@ -1,8 +1,8 @@
 INFO: [HLS 200-10] Running '/cad/xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'dmalvezzi' on host 'compute.eees.dei.unibo.it' (Linux_x86_64 version 3.10.0-957.21.3.el7.x86_64) on Wed Oct 23 13:31:03 CEST 2019
+INFO: [HLS 200-10] For user 'dmalvezzi' on host 'compute.eees.dei.unibo.it' (Linux_x86_64 version 3.10.0-957.21.3.el7.x86_64) on Fri Oct 25 15:46:36 CEST 2019
 INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
 INFO: [HLS 200-10] In directory '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/csim/build'
-In file included from ../../test.c:2:
+In file included from ../../../align2d.c:2:
 In file included from ../../../align2d.h:11:
 In file included from ../../../datatypes.h:18:
 In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_cint.h:83:
@@ -14,7 +14,7 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 #define bool _Bool
         ^
 1 warning generated.
-In file included from ../../test.c:2:
+In file included from ../../../align2d.c:2:
 In file included from ../../../align2d.h:11:
 In file included from ../../../datatypes.h:18:
 In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/ap_cint.h:83:
@@ -26,5 +26,5 @@ In file included from /cad/xilinx/Vivado/2018.3/common/technology/autopilot/etc/
 #define bool _Bool
         ^
 1 warning generated.
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dmalvezzi/1325461571830263419958
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dmalvezzi/153361572011196190837
 INFO: [APCC 202-1] APCC is done.

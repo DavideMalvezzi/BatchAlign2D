@@ -6,9 +6,9 @@
     </Simulation>
     <files xmlns="">
         <file name="../solution1/test.c" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="batch_align2d_hls/align2d.c" sc="0" tb="false" cflags="" blackbox="false"/>
-        <file name="batch_align2d_hls/align2d.h" sc="0" tb="false" cflags="" blackbox="false"/>
         <file name="batch_align2d_hls/datatypes.h" sc="0" tb="false" cflags="" blackbox="false"/>
+        <file name="batch_align2d_hls/align2d.h" sc="0" tb="false" cflags="" blackbox="false"/>
+        <file name="batch_align2d_hls/align2d.c" sc="0" tb="false" cflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

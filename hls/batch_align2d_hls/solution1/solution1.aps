@@ -2,12 +2,6 @@
     <checksum>
         <value string="false"/>
     </checksum>
-    <downStreamTool>
-        <DownStreamTool name="vivado"/>
-    </downStreamTool>
-    <clockList>
-        <clock default="false" name="default" period="10"/>
-    </clockList>
     <config>
         <schedule model="batch_align2D"/>
         <config_compile blackbox="" no_signed_zeros="0" unsafe_math_optimizations="0"/>
@@ -15,7 +9,7 @@
         <config_interface clock_enable="0" expose_global="0" m_axi_addr64="1" m_axi_offset="slave" register_io="off" trim_dangling_port="0"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf boardInfo="ZYNQ UltraScale+ ZCU102 Evaluation Platform (xczu9eg-ffvb1156-2-i) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf boardInfo="ZYNQ UltraScale+ ZCU102 Evaluation Platform (xczu9eg-ffvb1156-2-i) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
             <Platform>xilinx/zynquplus/zynquplus_fpv7</Platform>
             <customLibs/>
@@ -47,7 +41,7 @@
         </UIAutoSimConf>
     </UIConfigurations>
     <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="" driver_input_dir="" display_name="" taxonomy=""/>
+        <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
@@ -73,5 +67,11 @@
         <library name="DefaultPlatform" value="xilinx/zynquplus/zynquplus"/>
         <library name="DefaultPlatform" value="xilinx/zynquplus/zynquplus_fpv7"/>
     </libraryList>
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock default="false" name="default" period="10"/>
+    </clockList>
 </solution>
 

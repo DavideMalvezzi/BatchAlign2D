@@ -5,10 +5,10 @@
 ############################################################
 open_project batch_align2d_hls
 set_top batch_align2D
-add_files batch_align2d_hls/datatypes.h
-add_files batch_align2d_hls/align2d.h
 add_files batch_align2d_hls/align2d.c
-add_files -tb batch_align2d_hls/solution1/test.c
+add_files batch_align2d_hls/align2d.h
+add_files batch_align2d_hls/datatypes.h
+add_files -tb batch_align2d_hls/solution1/test.c -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xczu9eg-ffvb1156-2-i} -tool vivado
 create_clock -period 10 -name default

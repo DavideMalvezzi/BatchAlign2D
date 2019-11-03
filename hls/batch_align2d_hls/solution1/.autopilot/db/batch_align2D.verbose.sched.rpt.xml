@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'batch_align2D'" level="0">
-<item name = "Date">Wed Oct 23 13:37:57 2019
+<item name = "Date">Sat Oct 26 12:53:41 2019
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">batch_align2d_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">842, 474611, 842, 474611, none</column>
+<column name="">41674, 515443, 41674, 515443, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -37,8 +37,7 @@
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- memcpy..pyr_data_ptr">473761, 473761, 3, 1, 1, 473760, yes</column>
 <column name="- memcpy..ref_patch_with_border_ptr">401, 401, 3, 1, 1, 400, yes</column>
-<column name="- memcpy.batch_align2D.cur_px_estimate.gep3.cur_px_estimate_ptr">8, 8, 2, 1, 1, 8, yes</column>
-<column name="- Loop 4">60, 60, 15, -, -, 4, no</column>
+<column name="- memcpy.batch_align2D.cur_px_estimate.gep3.cur_px_estimate_ptr">9, 9, 3, 1, 1, 8, yes</column>
 <column name="- memcpy.inv_out.">36, 36, 2, 1, 1, 36, yes</column>
 <column name="- memcpy.cur_px_estimate_ptr.batch_align2D.cur_px_estimate.gep">8, 8, 2, 1, 1, 8, yes</column>
 </table>
