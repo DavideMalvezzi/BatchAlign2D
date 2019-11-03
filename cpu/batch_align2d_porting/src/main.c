@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h> 	// sqrt
 
 #include "align2d.h"
 
@@ -26,6 +27,34 @@ void check_correctness(Test* tests, int num_tests) {
 		align2D_debug(tests[i].pyr,  tests[i].level, tests[i].ref_patch_with_border,
 		 	tests[i].ref_patch, tests[i].cur_px_estimate, tests[i].n_iter, tests[i]);
 	}
+}
+
+// Si controlla il massimo spostamento tra pixel corrente e pixel finale
+// per avere un idea di quanto grande prender le finestre
+void check_max_distance(Test* tests, int num_tests) {
+
+	double max_distance = 0;
+	float max_dist_ip_x, max_dist_ip_y;
+	float max_dist_fp_x, max_dist_fp_y;
+	for (int i = 0 ; i < num_tests ; i++) {
+		float ip_x = tests[i].cur_px_estimate[0]; // initial pixel
+		float ip_y = tests[i].cur_px_estimate[1];
+		float fp_x = tests[i].final_cur_px_estimate[0];	// final pixel
+		float fp_y = tests[i].final_cur_px_estimate[1];
+		// per farlo calcolo la distanza tra punto finale e punto corrente
+		double distance = sqrt( (ip_x-fp_x)*(ip_x-fp_x) + (ip_y-fp_y)*(ip_y-fp_y) );
+		if (distance > max_distance) {
+			max_distance = distance;
+			max_dist_ip_x = ip_x;
+			max_dist_ip_y = ip_y;
+			max_dist_fp_x = fp_x;
+			max_dist_fp_y = fp_y;
+		}
+	}
+
+	printf("La massima distanza è %f e i punti sono:\n", max_distance);
+	printf("Punto iniziale (%f, %f)\n", max_dist_ip_x, max_dist_ip_y );
+	printf("Punto finale (%f, %f):\n", max_dist_fp_x, max_dist_fp_y );
 }
 
 int main(int argc, char **argv)
@@ -48,7 +77,8 @@ int main(int argc, char **argv)
 	// Load the whole dataset before
 	load_tests("../../machine_hall_tests/100_tests_easy_machine_hall_01.bin", tests, MAX_NUM_TESTS, 0);
 
-	check_correctness(tests, MAX_NUM_TESTS);
+	//check_correctness(tests, MAX_NUM_TESTS);
+	check_max_distance(tests, MAX_NUM_TESTS);
 
 	for(int k = 0; k < 1; k++){
 		// Load test extracted from the svo
@@ -86,7 +116,7 @@ int main(int argc, char **argv)
 			// Print test data
 			printf("id %d rows %d  cols %d step %d level %d ", tests[i].id, tests[i].pyr.rows, tests[i].pyr.cols, tests[i].pyr.step, tests[i].level);
 			printf("max_it %d computed %d converged %d ", tests[i].n_iter, tests[i].last_iter+1, tests[i].converged);
-			printf("\nfinal_pos %f %f \n", tests[i].final_cur_px_estimate[0],  tests[i].final_cur_px_estimate[1]);
+			printf("\nfinal_pos %f %f \n", tests[i].final_cur_px_estimate,  tests[i].final_cur_px_estimate[1]);
 
 			// Copy the test date into the input structures
 			pyr = tests[i].pyr;
@@ -103,6 +133,7 @@ int main(int argc, char **argv)
 		printf("\n");
 
 	}
+
 
 	free(tests);
 
