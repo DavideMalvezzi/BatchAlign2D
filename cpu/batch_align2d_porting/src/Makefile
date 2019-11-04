@@ -11,7 +11,7 @@ main.o: main.c align2d.o
 align2d.o: align2d.c datatypes.h utils.o
 	gcc -c align2d.c
 
-utils.o: utils.c datatypes.h
+utils.o: utils.c datatypes.h align2d.c
 	gcc -c utils.c
 
 .PHONY: clean

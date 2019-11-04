@@ -19,52 +19,63 @@
 
 #include "align2d.h"
 
-void check_correctness(Test* tests, int num_tests) {
-	for (int i = 0 ; i < num_tests ; i++) {
-		// checking correctness
-		// se e' corretto per il singolo, e' corretto per tutto il batch, anche se cosi' facendo
-		// escludo parallelizzazioni che avvengono a livello di batch (quindi tra piu' patch dello stesso batch)
-		align2D_debug(tests[i].pyr,  tests[i].level, tests[i].ref_patch_with_border,
-		 	tests[i].ref_patch, tests[i].cur_px_estimate, tests[i].n_iter, tests[i]);
-	}
-}
-
-// Si controlla il massimo spostamento tra pixel corrente e pixel finale
-// per avere un idea di quanto grande prender le finestre
-void check_max_distance(Test* tests, int num_tests) {
-
-	double max_distance = 0;
-	float max_dist_ip_x, max_dist_ip_y;
-	float max_dist_fp_x, max_dist_fp_y;
-	for (int i = 0 ; i < num_tests ; i++) {
-		float ip_x = tests[i].cur_px_estimate[0]; // initial pixel
-		float ip_y = tests[i].cur_px_estimate[1];
-		float fp_x = tests[i].final_cur_px_estimate[0];	// final pixel
-		float fp_y = tests[i].final_cur_px_estimate[1];
-		// per farlo calcolo la distanza tra punto finale e punto corrente
-		double distance = sqrt( (ip_x-fp_x)*(ip_x-fp_x) + (ip_y-fp_y)*(ip_y-fp_y) );
-		if (distance > max_distance) {
-			max_distance = distance;
-			max_dist_ip_x = ip_x;
-			max_dist_ip_y = ip_y;
-			max_dist_fp_x = fp_x;
-			max_dist_fp_y = fp_y;
-		}
-	}
-
-	printf("La massima distanza è %f e i punti sono:\n", max_distance);
-	printf("Punto iniziale (%f, %f)\n", max_dist_ip_x, max_dist_ip_y );
-	printf("Punto finale (%f, %f):\n", max_dist_fp_x, max_dist_fp_y );
-}
-
 int main(int argc, char **argv)
 {
-	const int MAX_NUM_TESTS = 100;
-	Test* tests = (Test*)malloc(sizeof(Test)*MAX_NUM_TESTS);
-	//Test tests[MAX_NUM_TESTS];
-	char buff[32];
+	// L'allocazione su ARM è permessa (Xilinx SDK)
 
-	PyrImage pyr;
+	// Il numero di num tests possiamo far finta sia il numero di feature
+	// trovate all'interno di un frame
+
+	const int num_tests = 100; // Possiamo anche per convenienteza fare un multiplo di batch
+	Test* tests = (Test*)malloc(sizeof(Test)*num_tests);
+
+	PyrRegion batch_pyrRegion[BATCH_SIZE];
+
+	printf("Starting main program\n");
+
+	// Load the whole dataset before
+	load_tests("../../machine_hall_tests/100_tests_easy_machine_hall_01.bin", tests, num_tests, 0);
+
+	//check_correctness(tests, num_tests);
+	//check_max_distance(tests, num_tests);
+	//check_max_distance_by_levels(tests, num_tests);
+	//check_max_horizontal_vertical_distance_by_levels(tests, num_tests);
+
+	// Qui stiamo praticamente facendo finta che il dataset appartenga allo stesso FRAME
+	// la cosa ci interessa solamente a livello computazionale quindi non ha importanza
+
+	//check_correctness(tests, 1);
+	check_correctness_pyrRegion(tests, num_tests);	
+
+	/*
+	int num_batches = ceil(num_tests / BATCH_SIZE);
+	int last_batch = num_tests % BATCH_SIZE;
+	for (int i = 0 ; i < num_batches ; i++) {
+		if (i != (num_batches - 1)) {
+			// Prepare batches
+			prepareBatches(batch_pyrRegion, tests, num_tests, i*BATCH_SIZE, (i+1)*BATCH_SIZE);
+
+		} else { // nel caso sia l'ultimo batch
+			if (last_batch == 0) // se non ci sono dei rimanenti esco
+				break;
+			// altrimenti processo gli ultimi
+			prepareBatches(batch_pyrRegion, tests, num_tests, i*BATCH_SIZE, num_tests);
+
+		}
+
+	}
+	*/
+
+	free(tests);
+
+	return 0;
+}
+
+#ifdef ROBA_DI_MALVEZ_CANCELLAMI_SE_NON_TI_SERVO
+
+void roba_di_malvez_cancellami_se_non_ti_servo() {
+
+	PyrRegion pyrRegion[BATCH_SIZE];
 	int levels[BATCH_SIZE];
 	PatchBorder ref_patch_with_border[BATCH_SIZE];
 	Patch ref_patch[BATCH_SIZE];
@@ -72,14 +83,7 @@ int main(int argc, char **argv)
 	int n_iter = 10;
 	bool converged[BATCH_SIZE];
 
-	printf("Starting main program\n");
-
-	// Load the whole dataset before
-	load_tests("../../machine_hall_tests/100_tests_easy_machine_hall_01.bin", tests, MAX_NUM_TESTS, 0);
-
-	//check_correctness(tests, MAX_NUM_TESTS);
-	check_max_distance(tests, MAX_NUM_TESTS);
-
+	char buff[32];
 	for(int k = 0; k < 1; k++){
 		// Load test extracted from the svo
 		//load_tests("/home/davide/svo-workspace/rpg_svo/svo/bin/test.bin", tests, BATCH_SIZE, BATCH_SIZE * k);
@@ -133,13 +137,9 @@ int main(int argc, char **argv)
 		printf("\n");
 
 	}
-
-
-	free(tests);
-
-	return 0;
 }
 
+#endif
 
 
 
