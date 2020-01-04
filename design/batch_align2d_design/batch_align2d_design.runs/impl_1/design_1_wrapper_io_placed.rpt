@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Wed Oct 23 14:10:46 2019
+| Date                      : Sat Jan  4 21:14:43 2020
 | Host                      : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -840,7 +840,7 @@ Table of Contents
 | K21        |                          |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | K22        | DPAUX_DP_AUX_DATA_OE     |                  | PS_MIO29_501                       | PSS IO        | LVCMOS18    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | K23        | PMU_GPO[4]               |                  | PS_MIO36_501                       | PSS IO        | LVCMOS18    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
-| K24        | SD1_SDIO1_BUS_POW        |                  | PS_MIO43_501                       | PSS IO        | LVCMOS18    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
+| K24        | GPIO1_GPIO1[43]          |                  | PS_MIO43_501                       | PSS IO        | LVCMOS18    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | K25        | SD1_SDIO1_DATA_OUT[3]    |                  | PS_MIO49_501                       | PSS IO        | LVCMOS18    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | K26        |                          |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | K27        |                          |                  | GND                                | GND           |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |

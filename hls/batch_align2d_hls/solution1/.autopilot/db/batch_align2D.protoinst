@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"batch_align2D": {
-			"proto_instances": {
-			}
-		}
-	}
-}

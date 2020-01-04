@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"batch_align2D_region": {
+			"proto_instances": {
+			}
+		}
+	}
+}

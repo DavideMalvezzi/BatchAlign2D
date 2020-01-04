@@ -135,9 +135,7 @@
 # 1 "batch_align2d_hls/align2d.h" 1
 # 11 "batch_align2d_hls/align2d.h"
 # 1 "batch_align2d_hls/datatypes.h" 1
-# 12 "batch_align2d_hls/datatypes.h"
-# 1 "/cad/xilinx/Vivado/2018.3/lnx64/tools/clang/bin/../lib/clang/3.1/include/stdbool.h" 1 3
-# 13 "batch_align2d_hls/datatypes.h" 2
+# 13 "batch_align2d_hls/datatypes.h"
 # 1 "/usr/include/inttypes.h" 1 3 4
 # 25 "/usr/include/inttypes.h" 3 4
 # 1 "/usr/include/features.h" 1 3 4
@@ -6261,27 +6259,18 @@ typedef unsigned int __attribute__ ((bitwidth(64))) uint64;
 
 
 
-
-
-
-
-typedef struct PyrImage{
- uint8 data[((int)(480 * 752 * (1 + 0.25f + 0.0625)))];
- int cols;
- int rows;
- int step;
-}PyrImage;
-
-
-
-
-
-
-
-typedef uint8 Patch[8 * 8];
+typedef struct PyrRegion{
+ uint8 data[32*32];
+ uint8 cols;
+ uint8 rows;
+ uint8 fcoord_x;
+ uint8 fcoord_y;
+}PyrRegion;
+# 37 "batch_align2d_hls/datatypes.h"
 typedef uint8 PatchBorder[(8 + 2) * (8 + 2)];
 
 
+typedef uint8 Vector2d[2];
 typedef float Vector2f[2];
 typedef float Vector3f[3];
 typedef float Matrix3f[9];
@@ -6291,26 +6280,27 @@ typedef float Matrix3f[9];
 
 
 
-void batch_align2D(
-   volatile const uint8* pyr_data_ptr,
-   const uint16 img_w,
-   const uint16 img_h,
-   volatile const PatchBorder* ref_patch_with_border_ptr,
-   volatile Vector2f* cur_px_estimate_ptr,
-   const uint128 levels,
-   uint64* converged,
+void batch_align2D_region(
+
+   volatile const uint8* myRegion_data_ptr,
+
+
+
+
+   volatile const Vector2d* myReagion_fcoord_ptr,
+
+   volatile const PatchBorder* my_ref_patch_with_border_ptr,
+   volatile Vector2f* my_cur_px_estimate_ptr,
+   uint64* my_converged,
    const int n_iter,
-   uint1 transfer_pyr,
-   Matrix3f* inv_out
+
+   Matrix3f* my_inv_out,
+   float* my_debug_array_ptr
 );
 # 3 "batch_align2d_hls/align2d.c" 2
-
-
-
-
-
-void compute_inverse_hessian(PatchBorder ref_patch_with_border, Matrix3f H_inv, float* ref_patch_dx, float* ref_patch_dy){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
-_ssdm_InlineSelf(2, "");
+# 12 "batch_align2d_hls/align2d.c"
+void compute_inverse_hessian(const PatchBorder ref_patch_with_border, Matrix3f H_inv, float* ref_patch_dx, float* ref_patch_dy){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
+_ssdm_InlineSelf(0, "");
 
 
 
@@ -6384,192 +6374,229 @@ _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
 void matrix_vector_mul(const Matrix3f m, const Vector3f v, Vector3f res){_ssdm_SpecArrayDimSize(m, 9);_ssdm_SpecArrayDimSize(v, 3);_ssdm_SpecArrayDimSize(res, 3);
 _ssdm_InlineSelf(0, "");
  mv_mul:for(int i = 0; i < 3; i++){
-  res[i] = 0;
+
+_ssdm_Unroll(1, 0, 3, "");
+_ssdm_SpecArrayPartition( m, 0, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( v, 0, "COMPLETE", 0, "");
+
+ res[i] = 0;
   for(int j = 0; j < 3; j++){
    res[i] += m[i * 3 + j] * v[j];
   }
  }
 }
 
-void gauss_newton_optim(const uint8* img, const uint16 img_w, const uint16 img_h,
-  const Matrix3f H_inv, const float* dx, const float* dy,
-  const PatchBorder patch, Vector2f cur_px_estimate, const int n_iter){_ssdm_SpecArrayDimSize(H_inv, 9);_ssdm_SpecArrayDimSize(patch, 100);_ssdm_SpecArrayDimSize(cur_px_estimate, 2);
-_ssdm_InlineSelf(2, "");
+
+
+
+
+
+void gauss_newton_optim_region(
+  const uint8* pyr_region_data,
+  const Vector2d f_coord,
+  const Matrix3f Hinv,
+  const float* ref_patch_dx,
+  const float* ref_patch_dy,
+  const PatchBorder ref_patch_with_border,
+  Vector2f cur_px_estimate,
+  const int n_iter
+  ){_ssdm_SpecArrayDimSize(f_coord, 2);_ssdm_SpecArrayDimSize(Hinv, 9);_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(cur_px_estimate, 2);
+_ssdm_InlineSelf(0, "");
 
  uint1 converged = 0;
  float mean_diff = 0;
 
 
- float u = cur_px_estimate[0];
- float v = cur_px_estimate[1];
+ float px = f_coord[0] + (cur_px_estimate[0] - (int)cur_px_estimate[0]);
+ float py = f_coord[1] + (cur_px_estimate[1] - (int)cur_px_estimate[1]);
+
+ uint8 px_r;
+ uint8 py_r;
 
 
- Vector3f update = {0};
+ Vector3f update;
+ update[0] = 0;
+ update[1] = 0;
+ update[2] = 0;
  Vector3f Jres;
 
- int u_r, v_r;
+ uint8* it;
+ int pos;
+ float search_pixel, res;
  float subpix_x, subpix_y;
  float wTL, wTR, wBL, wBR;
- uint8_t* it;
- float search_pixel, res;
+# 154 "batch_align2d_hls/align2d.c"
+ int iter = 0;
+ gn_iter: for(iter = 0; iter < n_iter; iter++){
+# 167 "batch_align2d_hls/align2d.c"
+  px_r = floorf(px);
+  py_r = floorf(py);
 
- gn_iter: for(int iter = 0; iter < 10; iter++){
+  if(px_r < 4 || py_r < 4||
+    px_r >= 32 - 4 || py_r >= 32 - 4){
+   break;
+  }
 
-
-  u_r = floorf(u);
-  v_r = floorf(v);
-
-
-  if(u_r < 4 || v_r < 4 || u_r >= img_w - 4 || v_r >= img_h - 4){
-
+  if((sizeof (px) == sizeof (float) ? __isnanf (px) : sizeof (px) == sizeof (double) ? __isnan (px) : __isnanl (px)) || (sizeof (py) == sizeof (float) ? __isnanf (py) : sizeof (py) == sizeof (double) ? __isnan (py) : __isnanl (py))) {
+   converged = 0;
+   break;
   }
 
 
-  if((sizeof (u) == sizeof (float) ? __isnanf (u) : sizeof (u) == sizeof (double) ? __isnan (u) : __isnanl (u)) || (sizeof (v) == sizeof (float) ? __isnanf (v) : sizeof (v) == sizeof (double) ? __isnan (v) : __isnanl (v))) {
-
-  }
 
 
-  subpix_x = u - u_r;
-  subpix_y = v - v_r;
+
+
+  subpix_x = px - px_r;
+  subpix_y = py - py_r;
   wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
   wTR = subpix_x * (1.0 - subpix_y);
   wBL = (1.0 - subpix_x) * subpix_y;
   wBR = subpix_x * subpix_y;
 
 
+  pos = 0;
   Jres[0] = 0;
   Jres[1] = 0;
   Jres[2] = 0;
 
 
-  compute_err: for(int y = 0; y < 8; y++){
-   it = (uint8_t*) img + (v_r + y - 4) * img_w + u_r - 4;
-   for(int x = 0; x < 8; x++, it++){
-    search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[img_w] + wBR * it[img_w + 1];
-    res = search_pixel - patch[(y + 1) * (8 + 2) + x + 1] + mean_diff;
+  compute_err: for(int y = 0; y < 8; ++y) {
+   it = (uint8*) pyr_region_data + (py_r + y - 4 ) * 32 + px_r - 4;
 
-    Jres[0] -= res * dx[y * 8 + x];
-    Jres[1] -= res * dy[y * 8 + x];
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+
+ for(int x = 0; x < 8; ++x, ++it, ++pos){
+
+_ssdm_op_SpecPipeline(1, 1, 1, 0, "");
+
+ search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[32] + wBR * it[32 + 1];
+    res = search_pixel - ref_patch_with_border[(y + 1) * (8 +2) + 1 + x] + mean_diff;
+
+    Jres[0] -= res * ref_patch_dx[pos];
+    Jres[1] -= res * ref_patch_dy[pos];
     Jres[2] -= res;
    }
+
+
+
+
   }
 
+  Jres[0] /= 2;
+  Jres[1] /= 2;
 
-  matrix_vector_mul(H_inv, Jres, update);
-
-
-  u += update[0] / 2;
-  v += update[1] / 2;
+  matrix_vector_mul(Hinv, Jres, update);
+# 244 "batch_align2d_hls/align2d.c"
+  px += update[0];
+  py += update[1];
   mean_diff += update[2];
 
-
   if(update[0] * update[0] + update[1] * update[1] < (0.03 * 0.03)) {
-   converged = 1;
-
+    converged = 1;
+    break;
   }
+
+
+
+
  }
 
-
- cur_px_estimate[0] = u;
- cur_px_estimate[1] = v;
-
-
-
+ cur_px_estimate[0] += px;
+ cur_px_estimate[1] += py;
+# 273 "batch_align2d_hls/align2d.c"
 }
 
+void batch_align2D_region(
+   volatile const uint8* myRegion_data_ptr,
+   volatile const Vector2d* myRegion_fcoord_ptr,
 
-void batch_align2D(
-   volatile const uint8* pyr_data_ptr,
-   const uint16 img_w,
-   const uint16 img_h,
-   volatile const PatchBorder* ref_patch_with_border_ptr,
-   volatile Vector2f* cur_px_estimate_ptr,
-   const uint128 levels,
-   uint64* converged,
+   volatile const PatchBorder* my_ref_patch_with_border_ptr,
+   volatile Vector2f* my_cur_px_estimate_ptr,
+   uint64* my_converged,
    const int n_iter,
-   uint1 transfer_pyr,
-   Matrix3f* inv_out
+
+   Matrix3f* my_inv_out,
+   float* my_debug_array_ptr
 ){
 
 
-_ssdm_op_SpecInterface(pyr_data_ptr, "m_axi", 0, 0, "", 0, 64, "pyr", "slave", "", 16, 0, 16, 16, "", "");
-_ssdm_op_SpecInterface(ref_patch_with_border_ptr, "m_axi", 0, 0, "", 0, 64, "patches", "slave", "", 16, 0, 16, 16, "", "");
-_ssdm_op_SpecInterface(cur_px_estimate_ptr, "m_axi", 0, 0, "", 0, 64, "pos", "slave", "", 16, 16, 16, 16, "", "");
-_ssdm_op_SpecInterface(inv_out, "m_axi", 0, 0, "", 0, 64, "debug", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(myRegion_data_ptr, "m_axi", 0, 0, "", 0, 64, "my_region_data", "slave", "", 16, 0, 16, 16, "", "");
+_ssdm_op_SpecInterface(myRegion_fcoord_ptr, "m_axi", 0, 0, "", 0, 64, "my_region_fcoord", "slave", "", 16, 0, 16, 16, "", "");
+_ssdm_op_SpecInterface(my_ref_patch_with_border_ptr, "m_axi", 0, 0, "", 0, 64, "my_patches", "slave", "", 16, 0, 16, 16, "", "");
+_ssdm_op_SpecInterface(my_cur_px_estimate_ptr, "m_axi", 0, 0, "", 0, 64, "my_pos", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(my_inv_out, "m_axi", 0, 0, "", 0, 64, "my_debug", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(my_debug_array_ptr, "m_axi", 0, 0, "", 0, 64, "my_debug_array", "slave", "", 16, 16, 16, 16, "", "");
 
 
-_ssdm_op_SpecInterface(img_w, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(img_h, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(levels, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(converged, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(my_converged, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(n_iter, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(transfer_pyr, "s_axilite", 0, 0, "", 0, 0, "param", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "ctrl", "", "", 0, 0, 0, 0, "", "");
 
 
- static uint8 pyr_data[((int)(480 * 752 * (1 + 0.25f + 0.0625)))];
- static PatchBorder ref_patch_with_border[4];
- static Vector2f cur_px_estimate[4];
+ static float debug_array[8][100];
 
 
-_ssdm_SpecArrayPartition( &ref_patch_with_border, 0, "COMPLETE", 0, "");
-_ssdm_SpecArrayPartition( &cur_px_estimate, 1, "COMPLETE", 0, "");
+ static uint8 pyr_region_data[8][32*32];
+ static Vector2d pyr_region_fcoord[8];
+ static PatchBorder ref_patch_with_border[8];
+ static Vector2f cur_px_estimate[8];
 
 
+_ssdm_SpecArrayPartition( &pyr_region_data, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( &pyr_region_fcoord, 0, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( &ref_patch_with_border, 1, "COMPLETE", 0, "");
+_ssdm_SpecArrayPartition( &cur_px_estimate, 0, "COMPLETE", 0, "");
 
 
- if(transfer_pyr){
-  memcpy(pyr_data, (const uint8*)pyr_data_ptr, ((int)(480 * 752 * (1 + 0.25f + 0.0625))));
- }
- memcpy(ref_patch_with_border, (const PatchBorder*)ref_patch_with_border_ptr, sizeof(ref_patch_with_border));
- memcpy(cur_px_estimate, (const Vector2f*)cur_px_estimate_ptr, sizeof(cur_px_estimate));
+ memcpy(pyr_region_data, (const uint8*)myRegion_data_ptr, sizeof(pyr_region_data));
+ memcpy(pyr_region_fcoord, (const Vector2d*)myRegion_fcoord_ptr, sizeof(pyr_region_fcoord));
+ memcpy(ref_patch_with_border, (const PatchBorder*)my_ref_patch_with_border_ptr, sizeof(ref_patch_with_border));
+ memcpy(cur_px_estimate, (const Vector2f*)my_cur_px_estimate_ptr, sizeof(cur_px_estimate));
 
 
- (*converged) = 0;
+ (*my_converged) = 0;
 
 
- float ref_patch_dx[4][64];
- float ref_patch_dy[4][64];
+ float ref_patch_dx[8][64];
+ float ref_patch_dy[8][64];
 
 
- Matrix3f H_inv[4];
+ Matrix3f H_inv[8];
 
 
 _ssdm_SpecArrayPartition( ref_patch_dx, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( ref_patch_dy, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( H_inv, 0, "COMPLETE", 0, "");
+# 346 "batch_align2d_hls/align2d.c"
+ int k = 0;
 
- int k;
 
- init_loop: for(k = 0; k < 4; k++){
+ init_loop: for(k = 0; k < 8; k++){
 
 _ssdm_Unroll(0,0,0, "");
 
 
 
  compute_inverse_hessian(ref_patch_with_border[k], H_inv[k], ref_patch_dx[k], ref_patch_dy[k]);
- }
-
- optim_loop: for(k = 0; k < 4; k++){
-
-_ssdm_Unroll(0,0,0, "");
-_ssdm_SpecDependence( &pyr_data, 0, 0, -1, 0, 1);
-_ssdm_SpecDependence( img_w, 0, 0, -1, 0, 1);
-_ssdm_SpecDependence( img_h, 0, 0, -1, 0, 1);
-_ssdm_SpecDependence( n_iter, 0, 0, -1, 0, 1);
-# 273 "batch_align2d_hls/align2d.c"
- gauss_newton_optim(ref_patch_with_border[k], img_w, img_h,
-    H_inv[k], ref_patch_dx[k], ref_patch_dx[k],
+# 366 "batch_align2d_hls/align2d.c"
+  gauss_newton_optim_region(
+    pyr_region_data[k], pyr_region_fcoord[k],
+    H_inv[k], ref_patch_dx[k], ref_patch_dy[k],
     ref_patch_with_border[k], cur_px_estimate[k],
-    n_iter
+    10
   );
  }
+# 383 "batch_align2d_hls/align2d.c"
+ memcpy((Vector2f*)my_cur_px_estimate_ptr, cur_px_estimate, sizeof(cur_px_estimate));
 
- memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));
+
+ memcpy(my_inv_out, H_inv, sizeof(H_inv));
 
 
- memcpy((Vector2f*)cur_px_estimate_ptr, cur_px_estimate, sizeof(cur_px_estimate));
+
+
+
 
  return;
 }

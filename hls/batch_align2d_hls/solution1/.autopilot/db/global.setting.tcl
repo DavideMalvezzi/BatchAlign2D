@@ -1,6 +1,6 @@
 
-set TopModule "batch_align2D"
-set ClockPeriod 10
+set TopModule "batch_align2D_region"
+set ClockPeriod 5
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
@@ -13,7 +13,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
+set HasDSPModule 0
 set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1

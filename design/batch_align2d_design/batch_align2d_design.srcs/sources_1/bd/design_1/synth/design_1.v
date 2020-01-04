@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Wed Oct 23 13:41:06 2019
+//Date        : Sat Jan  4 20:28:33 2020
 //Host        : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,210 +9,276 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=18,da_zynq_ultra_ps_e_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=34,da_board_cnt=1,da_clkrst_cnt=2,da_zynq_ultra_ps_e_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    ();
 
-  wire [48:0]axi_smc_M00_AXI_ARADDR;
-  wire [1:0]axi_smc_M00_AXI_ARBURST;
-  wire [3:0]axi_smc_M00_AXI_ARCACHE;
-  wire [7:0]axi_smc_M00_AXI_ARLEN;
-  wire [0:0]axi_smc_M00_AXI_ARLOCK;
-  wire [2:0]axi_smc_M00_AXI_ARPROT;
-  wire [3:0]axi_smc_M00_AXI_ARQOS;
-  wire axi_smc_M00_AXI_ARREADY;
-  wire [2:0]axi_smc_M00_AXI_ARSIZE;
-  wire axi_smc_M00_AXI_ARVALID;
-  wire [48:0]axi_smc_M00_AXI_AWADDR;
-  wire [1:0]axi_smc_M00_AXI_AWBURST;
-  wire [3:0]axi_smc_M00_AXI_AWCACHE;
-  wire [7:0]axi_smc_M00_AXI_AWLEN;
-  wire [0:0]axi_smc_M00_AXI_AWLOCK;
-  wire [2:0]axi_smc_M00_AXI_AWPROT;
-  wire [3:0]axi_smc_M00_AXI_AWQOS;
-  wire axi_smc_M00_AXI_AWREADY;
-  wire [2:0]axi_smc_M00_AXI_AWSIZE;
-  wire axi_smc_M00_AXI_AWVALID;
-  wire axi_smc_M00_AXI_BREADY;
-  wire [1:0]axi_smc_M00_AXI_BRESP;
-  wire axi_smc_M00_AXI_BVALID;
-  wire [127:0]axi_smc_M00_AXI_RDATA;
-  wire axi_smc_M00_AXI_RLAST;
-  wire axi_smc_M00_AXI_RREADY;
-  wire [1:0]axi_smc_M00_AXI_RRESP;
-  wire axi_smc_M00_AXI_RVALID;
-  wire [127:0]axi_smc_M00_AXI_WDATA;
-  wire axi_smc_M00_AXI_WLAST;
-  wire axi_smc_M00_AXI_WREADY;
-  wire [15:0]axi_smc_M00_AXI_WSTRB;
-  wire axi_smc_M00_AXI_WVALID;
-  wire [63:0]batch_align2D_0_m_axi_debug_ARADDR;
-  wire [1:0]batch_align2D_0_m_axi_debug_ARBURST;
-  wire [3:0]batch_align2D_0_m_axi_debug_ARCACHE;
-  wire [7:0]batch_align2D_0_m_axi_debug_ARLEN;
-  wire [1:0]batch_align2D_0_m_axi_debug_ARLOCK;
-  wire [2:0]batch_align2D_0_m_axi_debug_ARPROT;
-  wire [3:0]batch_align2D_0_m_axi_debug_ARQOS;
-  wire batch_align2D_0_m_axi_debug_ARREADY;
-  wire [2:0]batch_align2D_0_m_axi_debug_ARSIZE;
-  wire batch_align2D_0_m_axi_debug_ARVALID;
-  wire [63:0]batch_align2D_0_m_axi_debug_AWADDR;
-  wire [1:0]batch_align2D_0_m_axi_debug_AWBURST;
-  wire [3:0]batch_align2D_0_m_axi_debug_AWCACHE;
-  wire [7:0]batch_align2D_0_m_axi_debug_AWLEN;
-  wire [1:0]batch_align2D_0_m_axi_debug_AWLOCK;
-  wire [2:0]batch_align2D_0_m_axi_debug_AWPROT;
-  wire [3:0]batch_align2D_0_m_axi_debug_AWQOS;
-  wire batch_align2D_0_m_axi_debug_AWREADY;
-  wire [2:0]batch_align2D_0_m_axi_debug_AWSIZE;
-  wire batch_align2D_0_m_axi_debug_AWVALID;
-  wire batch_align2D_0_m_axi_debug_BREADY;
-  wire [1:0]batch_align2D_0_m_axi_debug_BRESP;
-  wire batch_align2D_0_m_axi_debug_BVALID;
-  wire [31:0]batch_align2D_0_m_axi_debug_RDATA;
-  wire batch_align2D_0_m_axi_debug_RLAST;
-  wire batch_align2D_0_m_axi_debug_RREADY;
-  wire [1:0]batch_align2D_0_m_axi_debug_RRESP;
-  wire batch_align2D_0_m_axi_debug_RVALID;
-  wire [31:0]batch_align2D_0_m_axi_debug_WDATA;
-  wire batch_align2D_0_m_axi_debug_WLAST;
-  wire batch_align2D_0_m_axi_debug_WREADY;
-  wire [3:0]batch_align2D_0_m_axi_debug_WSTRB;
-  wire batch_align2D_0_m_axi_debug_WVALID;
-  wire [63:0]batch_align2D_0_m_axi_patches_ARADDR;
-  wire [1:0]batch_align2D_0_m_axi_patches_ARBURST;
-  wire [3:0]batch_align2D_0_m_axi_patches_ARCACHE;
-  wire [7:0]batch_align2D_0_m_axi_patches_ARLEN;
-  wire [1:0]batch_align2D_0_m_axi_patches_ARLOCK;
-  wire [2:0]batch_align2D_0_m_axi_patches_ARPROT;
-  wire [3:0]batch_align2D_0_m_axi_patches_ARQOS;
-  wire batch_align2D_0_m_axi_patches_ARREADY;
-  wire [2:0]batch_align2D_0_m_axi_patches_ARSIZE;
-  wire batch_align2D_0_m_axi_patches_ARVALID;
-  wire [63:0]batch_align2D_0_m_axi_patches_AWADDR;
-  wire [1:0]batch_align2D_0_m_axi_patches_AWBURST;
-  wire [3:0]batch_align2D_0_m_axi_patches_AWCACHE;
-  wire [7:0]batch_align2D_0_m_axi_patches_AWLEN;
-  wire [1:0]batch_align2D_0_m_axi_patches_AWLOCK;
-  wire [2:0]batch_align2D_0_m_axi_patches_AWPROT;
-  wire [3:0]batch_align2D_0_m_axi_patches_AWQOS;
-  wire batch_align2D_0_m_axi_patches_AWREADY;
-  wire [2:0]batch_align2D_0_m_axi_patches_AWSIZE;
-  wire batch_align2D_0_m_axi_patches_AWVALID;
-  wire batch_align2D_0_m_axi_patches_BREADY;
-  wire [1:0]batch_align2D_0_m_axi_patches_BRESP;
-  wire batch_align2D_0_m_axi_patches_BVALID;
-  wire [31:0]batch_align2D_0_m_axi_patches_RDATA;
-  wire batch_align2D_0_m_axi_patches_RLAST;
-  wire batch_align2D_0_m_axi_patches_RREADY;
-  wire [1:0]batch_align2D_0_m_axi_patches_RRESP;
-  wire batch_align2D_0_m_axi_patches_RVALID;
-  wire [31:0]batch_align2D_0_m_axi_patches_WDATA;
-  wire batch_align2D_0_m_axi_patches_WLAST;
-  wire batch_align2D_0_m_axi_patches_WREADY;
-  wire [3:0]batch_align2D_0_m_axi_patches_WSTRB;
-  wire batch_align2D_0_m_axi_patches_WVALID;
-  wire [63:0]batch_align2D_0_m_axi_pos_r_ARADDR;
-  wire [1:0]batch_align2D_0_m_axi_pos_r_ARBURST;
-  wire [3:0]batch_align2D_0_m_axi_pos_r_ARCACHE;
-  wire [7:0]batch_align2D_0_m_axi_pos_r_ARLEN;
-  wire [1:0]batch_align2D_0_m_axi_pos_r_ARLOCK;
-  wire [2:0]batch_align2D_0_m_axi_pos_r_ARPROT;
-  wire [3:0]batch_align2D_0_m_axi_pos_r_ARQOS;
-  wire batch_align2D_0_m_axi_pos_r_ARREADY;
-  wire [2:0]batch_align2D_0_m_axi_pos_r_ARSIZE;
-  wire batch_align2D_0_m_axi_pos_r_ARVALID;
-  wire [63:0]batch_align2D_0_m_axi_pos_r_AWADDR;
-  wire [1:0]batch_align2D_0_m_axi_pos_r_AWBURST;
-  wire [3:0]batch_align2D_0_m_axi_pos_r_AWCACHE;
-  wire [7:0]batch_align2D_0_m_axi_pos_r_AWLEN;
-  wire [1:0]batch_align2D_0_m_axi_pos_r_AWLOCK;
-  wire [2:0]batch_align2D_0_m_axi_pos_r_AWPROT;
-  wire [3:0]batch_align2D_0_m_axi_pos_r_AWQOS;
-  wire batch_align2D_0_m_axi_pos_r_AWREADY;
-  wire [2:0]batch_align2D_0_m_axi_pos_r_AWSIZE;
-  wire batch_align2D_0_m_axi_pos_r_AWVALID;
-  wire batch_align2D_0_m_axi_pos_r_BREADY;
-  wire [1:0]batch_align2D_0_m_axi_pos_r_BRESP;
-  wire batch_align2D_0_m_axi_pos_r_BVALID;
-  wire [31:0]batch_align2D_0_m_axi_pos_r_RDATA;
-  wire batch_align2D_0_m_axi_pos_r_RLAST;
-  wire batch_align2D_0_m_axi_pos_r_RREADY;
-  wire [1:0]batch_align2D_0_m_axi_pos_r_RRESP;
-  wire batch_align2D_0_m_axi_pos_r_RVALID;
-  wire [31:0]batch_align2D_0_m_axi_pos_r_WDATA;
-  wire batch_align2D_0_m_axi_pos_r_WLAST;
-  wire batch_align2D_0_m_axi_pos_r_WREADY;
-  wire [3:0]batch_align2D_0_m_axi_pos_r_WSTRB;
-  wire batch_align2D_0_m_axi_pos_r_WVALID;
-  wire [63:0]batch_align2D_0_m_axi_pyr_ARADDR;
-  wire [1:0]batch_align2D_0_m_axi_pyr_ARBURST;
-  wire [3:0]batch_align2D_0_m_axi_pyr_ARCACHE;
-  wire [7:0]batch_align2D_0_m_axi_pyr_ARLEN;
-  wire [1:0]batch_align2D_0_m_axi_pyr_ARLOCK;
-  wire [2:0]batch_align2D_0_m_axi_pyr_ARPROT;
-  wire [3:0]batch_align2D_0_m_axi_pyr_ARQOS;
-  wire batch_align2D_0_m_axi_pyr_ARREADY;
-  wire [2:0]batch_align2D_0_m_axi_pyr_ARSIZE;
-  wire batch_align2D_0_m_axi_pyr_ARVALID;
-  wire [63:0]batch_align2D_0_m_axi_pyr_AWADDR;
-  wire [1:0]batch_align2D_0_m_axi_pyr_AWBURST;
-  wire [3:0]batch_align2D_0_m_axi_pyr_AWCACHE;
-  wire [7:0]batch_align2D_0_m_axi_pyr_AWLEN;
-  wire [1:0]batch_align2D_0_m_axi_pyr_AWLOCK;
-  wire [2:0]batch_align2D_0_m_axi_pyr_AWPROT;
-  wire [3:0]batch_align2D_0_m_axi_pyr_AWQOS;
-  wire batch_align2D_0_m_axi_pyr_AWREADY;
-  wire [2:0]batch_align2D_0_m_axi_pyr_AWSIZE;
-  wire batch_align2D_0_m_axi_pyr_AWVALID;
-  wire batch_align2D_0_m_axi_pyr_BREADY;
-  wire [1:0]batch_align2D_0_m_axi_pyr_BRESP;
-  wire batch_align2D_0_m_axi_pyr_BVALID;
-  wire [31:0]batch_align2D_0_m_axi_pyr_RDATA;
-  wire batch_align2D_0_m_axi_pyr_RLAST;
-  wire batch_align2D_0_m_axi_pyr_RREADY;
-  wire [1:0]batch_align2D_0_m_axi_pyr_RRESP;
-  wire batch_align2D_0_m_axi_pyr_RVALID;
-  wire [31:0]batch_align2D_0_m_axi_pyr_WDATA;
-  wire batch_align2D_0_m_axi_pyr_WLAST;
-  wire batch_align2D_0_m_axi_pyr_WREADY;
-  wire [3:0]batch_align2D_0_m_axi_pyr_WSTRB;
-  wire batch_align2D_0_m_axi_pyr_WVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_ARADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_ARBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_ARCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_debug_ARLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_ARLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_ARPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_ARQOS;
+  wire batch_align2D_region_0_m_axi_my_debug_ARREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_ARSIZE;
+  wire batch_align2D_region_0_m_axi_my_debug_ARVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_AWADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_AWBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_AWCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_debug_AWLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_AWLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_AWPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_AWQOS;
+  wire batch_align2D_region_0_m_axi_my_debug_AWREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_AWSIZE;
+  wire batch_align2D_region_0_m_axi_my_debug_AWVALID;
+  wire batch_align2D_region_0_m_axi_my_debug_BREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_BRESP;
+  wire batch_align2D_region_0_m_axi_my_debug_BVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_RDATA;
+  wire batch_align2D_region_0_m_axi_my_debug_RLAST;
+  wire batch_align2D_region_0_m_axi_my_debug_RREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_RRESP;
+  wire batch_align2D_region_0_m_axi_my_debug_RVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_WDATA;
+  wire batch_align2D_region_0_m_axi_my_debug_WLAST;
+  wire batch_align2D_region_0_m_axi_my_debug_WREADY;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_WSTRB;
+  wire batch_align2D_region_0_m_axi_my_debug_WVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_array_ARADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_array_ARBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_array_ARCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_debug_array_ARLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_array_ARLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_array_ARPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_array_ARQOS;
+  wire batch_align2D_region_0_m_axi_my_debug_array_ARREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_array_ARSIZE;
+  wire batch_align2D_region_0_m_axi_my_debug_array_ARVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_array_AWADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_array_AWBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_array_AWCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_debug_array_AWLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_array_AWLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_array_AWPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_array_AWQOS;
+  wire batch_align2D_region_0_m_axi_my_debug_array_AWREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_debug_array_AWSIZE;
+  wire batch_align2D_region_0_m_axi_my_debug_array_AWVALID;
+  wire batch_align2D_region_0_m_axi_my_debug_array_BREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_array_BRESP;
+  wire batch_align2D_region_0_m_axi_my_debug_array_BVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_array_RDATA;
+  wire batch_align2D_region_0_m_axi_my_debug_array_RLAST;
+  wire batch_align2D_region_0_m_axi_my_debug_array_RREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_debug_array_RRESP;
+  wire batch_align2D_region_0_m_axi_my_debug_array_RVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_debug_array_WDATA;
+  wire batch_align2D_region_0_m_axi_my_debug_array_WLAST;
+  wire batch_align2D_region_0_m_axi_my_debug_array_WREADY;
+  wire [3:0]batch_align2D_region_0_m_axi_my_debug_array_WSTRB;
+  wire batch_align2D_region_0_m_axi_my_debug_array_WVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_patches_ARADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_patches_ARBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_patches_ARCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_patches_ARLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_patches_ARLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_patches_ARPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_patches_ARQOS;
+  wire batch_align2D_region_0_m_axi_my_patches_ARREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_patches_ARSIZE;
+  wire batch_align2D_region_0_m_axi_my_patches_ARVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_patches_AWADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_patches_AWBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_patches_AWCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_patches_AWLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_patches_AWLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_patches_AWPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_patches_AWQOS;
+  wire batch_align2D_region_0_m_axi_my_patches_AWREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_patches_AWSIZE;
+  wire batch_align2D_region_0_m_axi_my_patches_AWVALID;
+  wire batch_align2D_region_0_m_axi_my_patches_BREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_patches_BRESP;
+  wire batch_align2D_region_0_m_axi_my_patches_BVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_patches_RDATA;
+  wire batch_align2D_region_0_m_axi_my_patches_RLAST;
+  wire batch_align2D_region_0_m_axi_my_patches_RREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_patches_RRESP;
+  wire batch_align2D_region_0_m_axi_my_patches_RVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_patches_WDATA;
+  wire batch_align2D_region_0_m_axi_my_patches_WLAST;
+  wire batch_align2D_region_0_m_axi_my_patches_WREADY;
+  wire [3:0]batch_align2D_region_0_m_axi_my_patches_WSTRB;
+  wire batch_align2D_region_0_m_axi_my_patches_WVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_pos_ARADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_pos_ARBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_pos_ARCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_pos_ARLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_pos_ARLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_pos_ARPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_pos_ARQOS;
+  wire batch_align2D_region_0_m_axi_my_pos_ARREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_pos_ARSIZE;
+  wire batch_align2D_region_0_m_axi_my_pos_ARVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_pos_AWADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_pos_AWBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_pos_AWCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_pos_AWLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_pos_AWLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_pos_AWPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_pos_AWQOS;
+  wire batch_align2D_region_0_m_axi_my_pos_AWREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_pos_AWSIZE;
+  wire batch_align2D_region_0_m_axi_my_pos_AWVALID;
+  wire batch_align2D_region_0_m_axi_my_pos_BREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_pos_BRESP;
+  wire batch_align2D_region_0_m_axi_my_pos_BVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_pos_RDATA;
+  wire batch_align2D_region_0_m_axi_my_pos_RLAST;
+  wire batch_align2D_region_0_m_axi_my_pos_RREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_pos_RRESP;
+  wire batch_align2D_region_0_m_axi_my_pos_RVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_pos_WDATA;
+  wire batch_align2D_region_0_m_axi_my_pos_WLAST;
+  wire batch_align2D_region_0_m_axi_my_pos_WREADY;
+  wire [3:0]batch_align2D_region_0_m_axi_my_pos_WSTRB;
+  wire batch_align2D_region_0_m_axi_my_pos_WVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_data_ARADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_data_ARBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_data_ARCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_region_data_ARLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_data_ARLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_data_ARPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_data_ARQOS;
+  wire batch_align2D_region_0_m_axi_my_region_data_ARREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_data_ARSIZE;
+  wire batch_align2D_region_0_m_axi_my_region_data_ARVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_data_AWADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_data_AWBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_data_AWCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_region_data_AWLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_data_AWLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_data_AWPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_data_AWQOS;
+  wire batch_align2D_region_0_m_axi_my_region_data_AWREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_data_AWSIZE;
+  wire batch_align2D_region_0_m_axi_my_region_data_AWVALID;
+  wire batch_align2D_region_0_m_axi_my_region_data_BREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_data_BRESP;
+  wire batch_align2D_region_0_m_axi_my_region_data_BVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_data_RDATA;
+  wire batch_align2D_region_0_m_axi_my_region_data_RLAST;
+  wire batch_align2D_region_0_m_axi_my_region_data_RREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_data_RRESP;
+  wire batch_align2D_region_0_m_axi_my_region_data_RVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_data_WDATA;
+  wire batch_align2D_region_0_m_axi_my_region_data_WLAST;
+  wire batch_align2D_region_0_m_axi_my_region_data_WREADY;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_data_WSTRB;
+  wire batch_align2D_region_0_m_axi_my_region_data_WVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARQOS;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_ARREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_fcoord_ARSIZE;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_ARVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWADDR;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWBURST;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWCACHE;
+  wire [7:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWLEN;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWLOCK;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWPROT;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWQOS;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_AWREADY;
+  wire [2:0]batch_align2D_region_0_m_axi_my_region_fcoord_AWSIZE;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_AWVALID;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_BREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_fcoord_BRESP;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_BVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_fcoord_RDATA;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_RLAST;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_RREADY;
+  wire [1:0]batch_align2D_region_0_m_axi_my_region_fcoord_RRESP;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_RVALID;
+  wire [31:0]batch_align2D_region_0_m_axi_my_region_fcoord_WDATA;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_WLAST;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_WREADY;
+  wire [3:0]batch_align2D_region_0_m_axi_my_region_fcoord_WSTRB;
+  wire batch_align2D_region_0_m_axi_my_region_fcoord_WVALID;
   wire [39:0]ps8_0_axi_periph_M00_AXI_ARADDR;
   wire ps8_0_axi_periph_M00_AXI_ARREADY;
-  wire ps8_0_axi_periph_M00_AXI_ARVALID;
+  wire [0:0]ps8_0_axi_periph_M00_AXI_ARVALID;
   wire [39:0]ps8_0_axi_periph_M00_AXI_AWADDR;
   wire ps8_0_axi_periph_M00_AXI_AWREADY;
-  wire ps8_0_axi_periph_M00_AXI_AWVALID;
-  wire ps8_0_axi_periph_M00_AXI_BREADY;
+  wire [0:0]ps8_0_axi_periph_M00_AXI_AWVALID;
+  wire [0:0]ps8_0_axi_periph_M00_AXI_BREADY;
   wire [1:0]ps8_0_axi_periph_M00_AXI_BRESP;
   wire ps8_0_axi_periph_M00_AXI_BVALID;
   wire [31:0]ps8_0_axi_periph_M00_AXI_RDATA;
-  wire ps8_0_axi_periph_M00_AXI_RREADY;
+  wire [0:0]ps8_0_axi_periph_M00_AXI_RREADY;
   wire [1:0]ps8_0_axi_periph_M00_AXI_RRESP;
   wire ps8_0_axi_periph_M00_AXI_RVALID;
   wire [31:0]ps8_0_axi_periph_M00_AXI_WDATA;
   wire ps8_0_axi_periph_M00_AXI_WREADY;
   wire [3:0]ps8_0_axi_periph_M00_AXI_WSTRB;
-  wire ps8_0_axi_periph_M00_AXI_WVALID;
+  wire [0:0]ps8_0_axi_periph_M00_AXI_WVALID;
   wire [39:0]ps8_0_axi_periph_M01_AXI_ARADDR;
   wire ps8_0_axi_periph_M01_AXI_ARREADY;
-  wire ps8_0_axi_periph_M01_AXI_ARVALID;
+  wire [0:0]ps8_0_axi_periph_M01_AXI_ARVALID;
   wire [39:0]ps8_0_axi_periph_M01_AXI_AWADDR;
   wire ps8_0_axi_periph_M01_AXI_AWREADY;
-  wire ps8_0_axi_periph_M01_AXI_AWVALID;
-  wire ps8_0_axi_periph_M01_AXI_BREADY;
+  wire [0:0]ps8_0_axi_periph_M01_AXI_AWVALID;
+  wire [0:0]ps8_0_axi_periph_M01_AXI_BREADY;
   wire [1:0]ps8_0_axi_periph_M01_AXI_BRESP;
   wire ps8_0_axi_periph_M01_AXI_BVALID;
   wire [31:0]ps8_0_axi_periph_M01_AXI_RDATA;
-  wire ps8_0_axi_periph_M01_AXI_RREADY;
+  wire [0:0]ps8_0_axi_periph_M01_AXI_RREADY;
   wire [1:0]ps8_0_axi_periph_M01_AXI_RRESP;
   wire ps8_0_axi_periph_M01_AXI_RVALID;
   wire [31:0]ps8_0_axi_periph_M01_AXI_WDATA;
   wire ps8_0_axi_periph_M01_AXI_WREADY;
   wire [3:0]ps8_0_axi_periph_M01_AXI_WSTRB;
-  wire ps8_0_axi_periph_M01_AXI_WVALID;
-  wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
+  wire [0:0]ps8_0_axi_periph_M01_AXI_WVALID;
+  wire [0:0]rst_ps8_0_96M_peripheral_aresetn;
+  wire [48:0]smartconnect_0_M00_AXI_ARADDR;
+  wire [1:0]smartconnect_0_M00_AXI_ARBURST;
+  wire [3:0]smartconnect_0_M00_AXI_ARCACHE;
+  wire [7:0]smartconnect_0_M00_AXI_ARLEN;
+  wire [0:0]smartconnect_0_M00_AXI_ARLOCK;
+  wire [2:0]smartconnect_0_M00_AXI_ARPROT;
+  wire [3:0]smartconnect_0_M00_AXI_ARQOS;
+  wire smartconnect_0_M00_AXI_ARREADY;
+  wire [2:0]smartconnect_0_M00_AXI_ARSIZE;
+  wire smartconnect_0_M00_AXI_ARVALID;
+  wire [48:0]smartconnect_0_M00_AXI_AWADDR;
+  wire [1:0]smartconnect_0_M00_AXI_AWBURST;
+  wire [3:0]smartconnect_0_M00_AXI_AWCACHE;
+  wire [7:0]smartconnect_0_M00_AXI_AWLEN;
+  wire [0:0]smartconnect_0_M00_AXI_AWLOCK;
+  wire [2:0]smartconnect_0_M00_AXI_AWPROT;
+  wire [3:0]smartconnect_0_M00_AXI_AWQOS;
+  wire smartconnect_0_M00_AXI_AWREADY;
+  wire [2:0]smartconnect_0_M00_AXI_AWSIZE;
+  wire smartconnect_0_M00_AXI_AWVALID;
+  wire smartconnect_0_M00_AXI_BREADY;
+  wire [1:0]smartconnect_0_M00_AXI_BRESP;
+  wire smartconnect_0_M00_AXI_BVALID;
+  wire [127:0]smartconnect_0_M00_AXI_RDATA;
+  wire smartconnect_0_M00_AXI_RLAST;
+  wire smartconnect_0_M00_AXI_RREADY;
+  wire [1:0]smartconnect_0_M00_AXI_RRESP;
+  wire smartconnect_0_M00_AXI_RVALID;
+  wire [127:0]smartconnect_0_M00_AXI_WDATA;
+  wire smartconnect_0_M00_AXI_WLAST;
+  wire smartconnect_0_M00_AXI_WREADY;
+  wire [15:0]smartconnect_0_M00_AXI_WSTRB;
+  wire smartconnect_0_M00_AXI_WVALID;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE;
@@ -290,309 +356,207 @@ module design_1
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  design_1_axi_smc_0 axi_smc
-       (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
-        .M00_AXI_arburst(axi_smc_M00_AXI_ARBURST),
-        .M00_AXI_arcache(axi_smc_M00_AXI_ARCACHE),
-        .M00_AXI_arlen(axi_smc_M00_AXI_ARLEN),
-        .M00_AXI_arlock(axi_smc_M00_AXI_ARLOCK),
-        .M00_AXI_arprot(axi_smc_M00_AXI_ARPROT),
-        .M00_AXI_arqos(axi_smc_M00_AXI_ARQOS),
-        .M00_AXI_arready(axi_smc_M00_AXI_ARREADY),
-        .M00_AXI_arsize(axi_smc_M00_AXI_ARSIZE),
-        .M00_AXI_arvalid(axi_smc_M00_AXI_ARVALID),
-        .M00_AXI_awaddr(axi_smc_M00_AXI_AWADDR),
-        .M00_AXI_awburst(axi_smc_M00_AXI_AWBURST),
-        .M00_AXI_awcache(axi_smc_M00_AXI_AWCACHE),
-        .M00_AXI_awlen(axi_smc_M00_AXI_AWLEN),
-        .M00_AXI_awlock(axi_smc_M00_AXI_AWLOCK),
-        .M00_AXI_awprot(axi_smc_M00_AXI_AWPROT),
-        .M00_AXI_awqos(axi_smc_M00_AXI_AWQOS),
-        .M00_AXI_awready(axi_smc_M00_AXI_AWREADY),
-        .M00_AXI_awsize(axi_smc_M00_AXI_AWSIZE),
-        .M00_AXI_awvalid(axi_smc_M00_AXI_AWVALID),
-        .M00_AXI_bready(axi_smc_M00_AXI_BREADY),
-        .M00_AXI_bresp(axi_smc_M00_AXI_BRESP),
-        .M00_AXI_bvalid(axi_smc_M00_AXI_BVALID),
-        .M00_AXI_rdata(axi_smc_M00_AXI_RDATA),
-        .M00_AXI_rlast(axi_smc_M00_AXI_RLAST),
-        .M00_AXI_rready(axi_smc_M00_AXI_RREADY),
-        .M00_AXI_rresp(axi_smc_M00_AXI_RRESP),
-        .M00_AXI_rvalid(axi_smc_M00_AXI_RVALID),
-        .M00_AXI_wdata(axi_smc_M00_AXI_WDATA),
-        .M00_AXI_wlast(axi_smc_M00_AXI_WLAST),
-        .M00_AXI_wready(axi_smc_M00_AXI_WREADY),
-        .M00_AXI_wstrb(axi_smc_M00_AXI_WSTRB),
-        .M00_AXI_wvalid(axi_smc_M00_AXI_WVALID),
-        .S00_AXI_araddr(batch_align2D_0_m_axi_pyr_ARADDR),
-        .S00_AXI_arburst(batch_align2D_0_m_axi_pyr_ARBURST),
-        .S00_AXI_arcache(batch_align2D_0_m_axi_pyr_ARCACHE),
-        .S00_AXI_arlen(batch_align2D_0_m_axi_pyr_ARLEN),
-        .S00_AXI_arlock(batch_align2D_0_m_axi_pyr_ARLOCK[0]),
-        .S00_AXI_arprot(batch_align2D_0_m_axi_pyr_ARPROT),
-        .S00_AXI_arqos(batch_align2D_0_m_axi_pyr_ARQOS),
-        .S00_AXI_arready(batch_align2D_0_m_axi_pyr_ARREADY),
-        .S00_AXI_arsize(batch_align2D_0_m_axi_pyr_ARSIZE),
-        .S00_AXI_arvalid(batch_align2D_0_m_axi_pyr_ARVALID),
-        .S00_AXI_awaddr(batch_align2D_0_m_axi_pyr_AWADDR),
-        .S00_AXI_awburst(batch_align2D_0_m_axi_pyr_AWBURST),
-        .S00_AXI_awcache(batch_align2D_0_m_axi_pyr_AWCACHE),
-        .S00_AXI_awlen(batch_align2D_0_m_axi_pyr_AWLEN),
-        .S00_AXI_awlock(batch_align2D_0_m_axi_pyr_AWLOCK[0]),
-        .S00_AXI_awprot(batch_align2D_0_m_axi_pyr_AWPROT),
-        .S00_AXI_awqos(batch_align2D_0_m_axi_pyr_AWQOS),
-        .S00_AXI_awready(batch_align2D_0_m_axi_pyr_AWREADY),
-        .S00_AXI_awsize(batch_align2D_0_m_axi_pyr_AWSIZE),
-        .S00_AXI_awvalid(batch_align2D_0_m_axi_pyr_AWVALID),
-        .S00_AXI_bready(batch_align2D_0_m_axi_pyr_BREADY),
-        .S00_AXI_bresp(batch_align2D_0_m_axi_pyr_BRESP),
-        .S00_AXI_bvalid(batch_align2D_0_m_axi_pyr_BVALID),
-        .S00_AXI_rdata(batch_align2D_0_m_axi_pyr_RDATA),
-        .S00_AXI_rlast(batch_align2D_0_m_axi_pyr_RLAST),
-        .S00_AXI_rready(batch_align2D_0_m_axi_pyr_RREADY),
-        .S00_AXI_rresp(batch_align2D_0_m_axi_pyr_RRESP),
-        .S00_AXI_rvalid(batch_align2D_0_m_axi_pyr_RVALID),
-        .S00_AXI_wdata(batch_align2D_0_m_axi_pyr_WDATA),
-        .S00_AXI_wlast(batch_align2D_0_m_axi_pyr_WLAST),
-        .S00_AXI_wready(batch_align2D_0_m_axi_pyr_WREADY),
-        .S00_AXI_wstrb(batch_align2D_0_m_axi_pyr_WSTRB),
-        .S00_AXI_wvalid(batch_align2D_0_m_axi_pyr_WVALID),
-        .S01_AXI_araddr(batch_align2D_0_m_axi_patches_ARADDR),
-        .S01_AXI_arburst(batch_align2D_0_m_axi_patches_ARBURST),
-        .S01_AXI_arcache(batch_align2D_0_m_axi_patches_ARCACHE),
-        .S01_AXI_arlen(batch_align2D_0_m_axi_patches_ARLEN),
-        .S01_AXI_arlock(batch_align2D_0_m_axi_patches_ARLOCK[0]),
-        .S01_AXI_arprot(batch_align2D_0_m_axi_patches_ARPROT),
-        .S01_AXI_arqos(batch_align2D_0_m_axi_patches_ARQOS),
-        .S01_AXI_arready(batch_align2D_0_m_axi_patches_ARREADY),
-        .S01_AXI_arsize(batch_align2D_0_m_axi_patches_ARSIZE),
-        .S01_AXI_arvalid(batch_align2D_0_m_axi_patches_ARVALID),
-        .S01_AXI_awaddr(batch_align2D_0_m_axi_patches_AWADDR),
-        .S01_AXI_awburst(batch_align2D_0_m_axi_patches_AWBURST),
-        .S01_AXI_awcache(batch_align2D_0_m_axi_patches_AWCACHE),
-        .S01_AXI_awlen(batch_align2D_0_m_axi_patches_AWLEN),
-        .S01_AXI_awlock(batch_align2D_0_m_axi_patches_AWLOCK[0]),
-        .S01_AXI_awprot(batch_align2D_0_m_axi_patches_AWPROT),
-        .S01_AXI_awqos(batch_align2D_0_m_axi_patches_AWQOS),
-        .S01_AXI_awready(batch_align2D_0_m_axi_patches_AWREADY),
-        .S01_AXI_awsize(batch_align2D_0_m_axi_patches_AWSIZE),
-        .S01_AXI_awvalid(batch_align2D_0_m_axi_patches_AWVALID),
-        .S01_AXI_bready(batch_align2D_0_m_axi_patches_BREADY),
-        .S01_AXI_bresp(batch_align2D_0_m_axi_patches_BRESP),
-        .S01_AXI_bvalid(batch_align2D_0_m_axi_patches_BVALID),
-        .S01_AXI_rdata(batch_align2D_0_m_axi_patches_RDATA),
-        .S01_AXI_rlast(batch_align2D_0_m_axi_patches_RLAST),
-        .S01_AXI_rready(batch_align2D_0_m_axi_patches_RREADY),
-        .S01_AXI_rresp(batch_align2D_0_m_axi_patches_RRESP),
-        .S01_AXI_rvalid(batch_align2D_0_m_axi_patches_RVALID),
-        .S01_AXI_wdata(batch_align2D_0_m_axi_patches_WDATA),
-        .S01_AXI_wlast(batch_align2D_0_m_axi_patches_WLAST),
-        .S01_AXI_wready(batch_align2D_0_m_axi_patches_WREADY),
-        .S01_AXI_wstrb(batch_align2D_0_m_axi_patches_WSTRB),
-        .S01_AXI_wvalid(batch_align2D_0_m_axi_patches_WVALID),
-        .S02_AXI_araddr(batch_align2D_0_m_axi_pos_r_ARADDR),
-        .S02_AXI_arburst(batch_align2D_0_m_axi_pos_r_ARBURST),
-        .S02_AXI_arcache(batch_align2D_0_m_axi_pos_r_ARCACHE),
-        .S02_AXI_arlen(batch_align2D_0_m_axi_pos_r_ARLEN),
-        .S02_AXI_arlock(batch_align2D_0_m_axi_pos_r_ARLOCK[0]),
-        .S02_AXI_arprot(batch_align2D_0_m_axi_pos_r_ARPROT),
-        .S02_AXI_arqos(batch_align2D_0_m_axi_pos_r_ARQOS),
-        .S02_AXI_arready(batch_align2D_0_m_axi_pos_r_ARREADY),
-        .S02_AXI_arsize(batch_align2D_0_m_axi_pos_r_ARSIZE),
-        .S02_AXI_arvalid(batch_align2D_0_m_axi_pos_r_ARVALID),
-        .S02_AXI_awaddr(batch_align2D_0_m_axi_pos_r_AWADDR),
-        .S02_AXI_awburst(batch_align2D_0_m_axi_pos_r_AWBURST),
-        .S02_AXI_awcache(batch_align2D_0_m_axi_pos_r_AWCACHE),
-        .S02_AXI_awlen(batch_align2D_0_m_axi_pos_r_AWLEN),
-        .S02_AXI_awlock(batch_align2D_0_m_axi_pos_r_AWLOCK[0]),
-        .S02_AXI_awprot(batch_align2D_0_m_axi_pos_r_AWPROT),
-        .S02_AXI_awqos(batch_align2D_0_m_axi_pos_r_AWQOS),
-        .S02_AXI_awready(batch_align2D_0_m_axi_pos_r_AWREADY),
-        .S02_AXI_awsize(batch_align2D_0_m_axi_pos_r_AWSIZE),
-        .S02_AXI_awvalid(batch_align2D_0_m_axi_pos_r_AWVALID),
-        .S02_AXI_bready(batch_align2D_0_m_axi_pos_r_BREADY),
-        .S02_AXI_bresp(batch_align2D_0_m_axi_pos_r_BRESP),
-        .S02_AXI_bvalid(batch_align2D_0_m_axi_pos_r_BVALID),
-        .S02_AXI_rdata(batch_align2D_0_m_axi_pos_r_RDATA),
-        .S02_AXI_rlast(batch_align2D_0_m_axi_pos_r_RLAST),
-        .S02_AXI_rready(batch_align2D_0_m_axi_pos_r_RREADY),
-        .S02_AXI_rresp(batch_align2D_0_m_axi_pos_r_RRESP),
-        .S02_AXI_rvalid(batch_align2D_0_m_axi_pos_r_RVALID),
-        .S02_AXI_wdata(batch_align2D_0_m_axi_pos_r_WDATA),
-        .S02_AXI_wlast(batch_align2D_0_m_axi_pos_r_WLAST),
-        .S02_AXI_wready(batch_align2D_0_m_axi_pos_r_WREADY),
-        .S02_AXI_wstrb(batch_align2D_0_m_axi_pos_r_WSTRB),
-        .S02_AXI_wvalid(batch_align2D_0_m_axi_pos_r_WVALID),
-        .S03_AXI_araddr(batch_align2D_0_m_axi_debug_ARADDR),
-        .S03_AXI_arburst(batch_align2D_0_m_axi_debug_ARBURST),
-        .S03_AXI_arcache(batch_align2D_0_m_axi_debug_ARCACHE),
-        .S03_AXI_arlen(batch_align2D_0_m_axi_debug_ARLEN),
-        .S03_AXI_arlock(batch_align2D_0_m_axi_debug_ARLOCK[0]),
-        .S03_AXI_arprot(batch_align2D_0_m_axi_debug_ARPROT),
-        .S03_AXI_arqos(batch_align2D_0_m_axi_debug_ARQOS),
-        .S03_AXI_arready(batch_align2D_0_m_axi_debug_ARREADY),
-        .S03_AXI_arsize(batch_align2D_0_m_axi_debug_ARSIZE),
-        .S03_AXI_arvalid(batch_align2D_0_m_axi_debug_ARVALID),
-        .S03_AXI_awaddr(batch_align2D_0_m_axi_debug_AWADDR),
-        .S03_AXI_awburst(batch_align2D_0_m_axi_debug_AWBURST),
-        .S03_AXI_awcache(batch_align2D_0_m_axi_debug_AWCACHE),
-        .S03_AXI_awlen(batch_align2D_0_m_axi_debug_AWLEN),
-        .S03_AXI_awlock(batch_align2D_0_m_axi_debug_AWLOCK[0]),
-        .S03_AXI_awprot(batch_align2D_0_m_axi_debug_AWPROT),
-        .S03_AXI_awqos(batch_align2D_0_m_axi_debug_AWQOS),
-        .S03_AXI_awready(batch_align2D_0_m_axi_debug_AWREADY),
-        .S03_AXI_awsize(batch_align2D_0_m_axi_debug_AWSIZE),
-        .S03_AXI_awvalid(batch_align2D_0_m_axi_debug_AWVALID),
-        .S03_AXI_bready(batch_align2D_0_m_axi_debug_BREADY),
-        .S03_AXI_bresp(batch_align2D_0_m_axi_debug_BRESP),
-        .S03_AXI_bvalid(batch_align2D_0_m_axi_debug_BVALID),
-        .S03_AXI_rdata(batch_align2D_0_m_axi_debug_RDATA),
-        .S03_AXI_rlast(batch_align2D_0_m_axi_debug_RLAST),
-        .S03_AXI_rready(batch_align2D_0_m_axi_debug_RREADY),
-        .S03_AXI_rresp(batch_align2D_0_m_axi_debug_RRESP),
-        .S03_AXI_rvalid(batch_align2D_0_m_axi_debug_RVALID),
-        .S03_AXI_wdata(batch_align2D_0_m_axi_debug_WDATA),
-        .S03_AXI_wlast(batch_align2D_0_m_axi_debug_WLAST),
-        .S03_AXI_wready(batch_align2D_0_m_axi_debug_WREADY),
-        .S03_AXI_wstrb(batch_align2D_0_m_axi_debug_WSTRB),
-        .S03_AXI_wvalid(batch_align2D_0_m_axi_debug_WVALID),
-        .aclk(zynq_ultra_ps_e_0_pl_clk0),
-        .aresetn(rst_ps8_0_99M_peripheral_aresetn));
-  design_1_batch_align2D_0_0 batch_align2D_0
+  design_1_batch_align2D_region_0_1 batch_align2D_region_0
        (.ap_clk(zynq_ultra_ps_e_0_pl_clk0),
-        .ap_rst_n(rst_ps8_0_99M_peripheral_aresetn),
-        .m_axi_debug_ARADDR(batch_align2D_0_m_axi_debug_ARADDR),
-        .m_axi_debug_ARBURST(batch_align2D_0_m_axi_debug_ARBURST),
-        .m_axi_debug_ARCACHE(batch_align2D_0_m_axi_debug_ARCACHE),
-        .m_axi_debug_ARLEN(batch_align2D_0_m_axi_debug_ARLEN),
-        .m_axi_debug_ARLOCK(batch_align2D_0_m_axi_debug_ARLOCK),
-        .m_axi_debug_ARPROT(batch_align2D_0_m_axi_debug_ARPROT),
-        .m_axi_debug_ARQOS(batch_align2D_0_m_axi_debug_ARQOS),
-        .m_axi_debug_ARREADY(batch_align2D_0_m_axi_debug_ARREADY),
-        .m_axi_debug_ARSIZE(batch_align2D_0_m_axi_debug_ARSIZE),
-        .m_axi_debug_ARVALID(batch_align2D_0_m_axi_debug_ARVALID),
-        .m_axi_debug_AWADDR(batch_align2D_0_m_axi_debug_AWADDR),
-        .m_axi_debug_AWBURST(batch_align2D_0_m_axi_debug_AWBURST),
-        .m_axi_debug_AWCACHE(batch_align2D_0_m_axi_debug_AWCACHE),
-        .m_axi_debug_AWLEN(batch_align2D_0_m_axi_debug_AWLEN),
-        .m_axi_debug_AWLOCK(batch_align2D_0_m_axi_debug_AWLOCK),
-        .m_axi_debug_AWPROT(batch_align2D_0_m_axi_debug_AWPROT),
-        .m_axi_debug_AWQOS(batch_align2D_0_m_axi_debug_AWQOS),
-        .m_axi_debug_AWREADY(batch_align2D_0_m_axi_debug_AWREADY),
-        .m_axi_debug_AWSIZE(batch_align2D_0_m_axi_debug_AWSIZE),
-        .m_axi_debug_AWVALID(batch_align2D_0_m_axi_debug_AWVALID),
-        .m_axi_debug_BREADY(batch_align2D_0_m_axi_debug_BREADY),
-        .m_axi_debug_BRESP(batch_align2D_0_m_axi_debug_BRESP),
-        .m_axi_debug_BVALID(batch_align2D_0_m_axi_debug_BVALID),
-        .m_axi_debug_RDATA(batch_align2D_0_m_axi_debug_RDATA),
-        .m_axi_debug_RLAST(batch_align2D_0_m_axi_debug_RLAST),
-        .m_axi_debug_RREADY(batch_align2D_0_m_axi_debug_RREADY),
-        .m_axi_debug_RRESP(batch_align2D_0_m_axi_debug_RRESP),
-        .m_axi_debug_RVALID(batch_align2D_0_m_axi_debug_RVALID),
-        .m_axi_debug_WDATA(batch_align2D_0_m_axi_debug_WDATA),
-        .m_axi_debug_WLAST(batch_align2D_0_m_axi_debug_WLAST),
-        .m_axi_debug_WREADY(batch_align2D_0_m_axi_debug_WREADY),
-        .m_axi_debug_WSTRB(batch_align2D_0_m_axi_debug_WSTRB),
-        .m_axi_debug_WVALID(batch_align2D_0_m_axi_debug_WVALID),
-        .m_axi_patches_ARADDR(batch_align2D_0_m_axi_patches_ARADDR),
-        .m_axi_patches_ARBURST(batch_align2D_0_m_axi_patches_ARBURST),
-        .m_axi_patches_ARCACHE(batch_align2D_0_m_axi_patches_ARCACHE),
-        .m_axi_patches_ARLEN(batch_align2D_0_m_axi_patches_ARLEN),
-        .m_axi_patches_ARLOCK(batch_align2D_0_m_axi_patches_ARLOCK),
-        .m_axi_patches_ARPROT(batch_align2D_0_m_axi_patches_ARPROT),
-        .m_axi_patches_ARQOS(batch_align2D_0_m_axi_patches_ARQOS),
-        .m_axi_patches_ARREADY(batch_align2D_0_m_axi_patches_ARREADY),
-        .m_axi_patches_ARSIZE(batch_align2D_0_m_axi_patches_ARSIZE),
-        .m_axi_patches_ARVALID(batch_align2D_0_m_axi_patches_ARVALID),
-        .m_axi_patches_AWADDR(batch_align2D_0_m_axi_patches_AWADDR),
-        .m_axi_patches_AWBURST(batch_align2D_0_m_axi_patches_AWBURST),
-        .m_axi_patches_AWCACHE(batch_align2D_0_m_axi_patches_AWCACHE),
-        .m_axi_patches_AWLEN(batch_align2D_0_m_axi_patches_AWLEN),
-        .m_axi_patches_AWLOCK(batch_align2D_0_m_axi_patches_AWLOCK),
-        .m_axi_patches_AWPROT(batch_align2D_0_m_axi_patches_AWPROT),
-        .m_axi_patches_AWQOS(batch_align2D_0_m_axi_patches_AWQOS),
-        .m_axi_patches_AWREADY(batch_align2D_0_m_axi_patches_AWREADY),
-        .m_axi_patches_AWSIZE(batch_align2D_0_m_axi_patches_AWSIZE),
-        .m_axi_patches_AWVALID(batch_align2D_0_m_axi_patches_AWVALID),
-        .m_axi_patches_BREADY(batch_align2D_0_m_axi_patches_BREADY),
-        .m_axi_patches_BRESP(batch_align2D_0_m_axi_patches_BRESP),
-        .m_axi_patches_BVALID(batch_align2D_0_m_axi_patches_BVALID),
-        .m_axi_patches_RDATA(batch_align2D_0_m_axi_patches_RDATA),
-        .m_axi_patches_RLAST(batch_align2D_0_m_axi_patches_RLAST),
-        .m_axi_patches_RREADY(batch_align2D_0_m_axi_patches_RREADY),
-        .m_axi_patches_RRESP(batch_align2D_0_m_axi_patches_RRESP),
-        .m_axi_patches_RVALID(batch_align2D_0_m_axi_patches_RVALID),
-        .m_axi_patches_WDATA(batch_align2D_0_m_axi_patches_WDATA),
-        .m_axi_patches_WLAST(batch_align2D_0_m_axi_patches_WLAST),
-        .m_axi_patches_WREADY(batch_align2D_0_m_axi_patches_WREADY),
-        .m_axi_patches_WSTRB(batch_align2D_0_m_axi_patches_WSTRB),
-        .m_axi_patches_WVALID(batch_align2D_0_m_axi_patches_WVALID),
-        .m_axi_pos_r_ARADDR(batch_align2D_0_m_axi_pos_r_ARADDR),
-        .m_axi_pos_r_ARBURST(batch_align2D_0_m_axi_pos_r_ARBURST),
-        .m_axi_pos_r_ARCACHE(batch_align2D_0_m_axi_pos_r_ARCACHE),
-        .m_axi_pos_r_ARLEN(batch_align2D_0_m_axi_pos_r_ARLEN),
-        .m_axi_pos_r_ARLOCK(batch_align2D_0_m_axi_pos_r_ARLOCK),
-        .m_axi_pos_r_ARPROT(batch_align2D_0_m_axi_pos_r_ARPROT),
-        .m_axi_pos_r_ARQOS(batch_align2D_0_m_axi_pos_r_ARQOS),
-        .m_axi_pos_r_ARREADY(batch_align2D_0_m_axi_pos_r_ARREADY),
-        .m_axi_pos_r_ARSIZE(batch_align2D_0_m_axi_pos_r_ARSIZE),
-        .m_axi_pos_r_ARVALID(batch_align2D_0_m_axi_pos_r_ARVALID),
-        .m_axi_pos_r_AWADDR(batch_align2D_0_m_axi_pos_r_AWADDR),
-        .m_axi_pos_r_AWBURST(batch_align2D_0_m_axi_pos_r_AWBURST),
-        .m_axi_pos_r_AWCACHE(batch_align2D_0_m_axi_pos_r_AWCACHE),
-        .m_axi_pos_r_AWLEN(batch_align2D_0_m_axi_pos_r_AWLEN),
-        .m_axi_pos_r_AWLOCK(batch_align2D_0_m_axi_pos_r_AWLOCK),
-        .m_axi_pos_r_AWPROT(batch_align2D_0_m_axi_pos_r_AWPROT),
-        .m_axi_pos_r_AWQOS(batch_align2D_0_m_axi_pos_r_AWQOS),
-        .m_axi_pos_r_AWREADY(batch_align2D_0_m_axi_pos_r_AWREADY),
-        .m_axi_pos_r_AWSIZE(batch_align2D_0_m_axi_pos_r_AWSIZE),
-        .m_axi_pos_r_AWVALID(batch_align2D_0_m_axi_pos_r_AWVALID),
-        .m_axi_pos_r_BREADY(batch_align2D_0_m_axi_pos_r_BREADY),
-        .m_axi_pos_r_BRESP(batch_align2D_0_m_axi_pos_r_BRESP),
-        .m_axi_pos_r_BVALID(batch_align2D_0_m_axi_pos_r_BVALID),
-        .m_axi_pos_r_RDATA(batch_align2D_0_m_axi_pos_r_RDATA),
-        .m_axi_pos_r_RLAST(batch_align2D_0_m_axi_pos_r_RLAST),
-        .m_axi_pos_r_RREADY(batch_align2D_0_m_axi_pos_r_RREADY),
-        .m_axi_pos_r_RRESP(batch_align2D_0_m_axi_pos_r_RRESP),
-        .m_axi_pos_r_RVALID(batch_align2D_0_m_axi_pos_r_RVALID),
-        .m_axi_pos_r_WDATA(batch_align2D_0_m_axi_pos_r_WDATA),
-        .m_axi_pos_r_WLAST(batch_align2D_0_m_axi_pos_r_WLAST),
-        .m_axi_pos_r_WREADY(batch_align2D_0_m_axi_pos_r_WREADY),
-        .m_axi_pos_r_WSTRB(batch_align2D_0_m_axi_pos_r_WSTRB),
-        .m_axi_pos_r_WVALID(batch_align2D_0_m_axi_pos_r_WVALID),
-        .m_axi_pyr_ARADDR(batch_align2D_0_m_axi_pyr_ARADDR),
-        .m_axi_pyr_ARBURST(batch_align2D_0_m_axi_pyr_ARBURST),
-        .m_axi_pyr_ARCACHE(batch_align2D_0_m_axi_pyr_ARCACHE),
-        .m_axi_pyr_ARLEN(batch_align2D_0_m_axi_pyr_ARLEN),
-        .m_axi_pyr_ARLOCK(batch_align2D_0_m_axi_pyr_ARLOCK),
-        .m_axi_pyr_ARPROT(batch_align2D_0_m_axi_pyr_ARPROT),
-        .m_axi_pyr_ARQOS(batch_align2D_0_m_axi_pyr_ARQOS),
-        .m_axi_pyr_ARREADY(batch_align2D_0_m_axi_pyr_ARREADY),
-        .m_axi_pyr_ARSIZE(batch_align2D_0_m_axi_pyr_ARSIZE),
-        .m_axi_pyr_ARVALID(batch_align2D_0_m_axi_pyr_ARVALID),
-        .m_axi_pyr_AWADDR(batch_align2D_0_m_axi_pyr_AWADDR),
-        .m_axi_pyr_AWBURST(batch_align2D_0_m_axi_pyr_AWBURST),
-        .m_axi_pyr_AWCACHE(batch_align2D_0_m_axi_pyr_AWCACHE),
-        .m_axi_pyr_AWLEN(batch_align2D_0_m_axi_pyr_AWLEN),
-        .m_axi_pyr_AWLOCK(batch_align2D_0_m_axi_pyr_AWLOCK),
-        .m_axi_pyr_AWPROT(batch_align2D_0_m_axi_pyr_AWPROT),
-        .m_axi_pyr_AWQOS(batch_align2D_0_m_axi_pyr_AWQOS),
-        .m_axi_pyr_AWREADY(batch_align2D_0_m_axi_pyr_AWREADY),
-        .m_axi_pyr_AWSIZE(batch_align2D_0_m_axi_pyr_AWSIZE),
-        .m_axi_pyr_AWVALID(batch_align2D_0_m_axi_pyr_AWVALID),
-        .m_axi_pyr_BREADY(batch_align2D_0_m_axi_pyr_BREADY),
-        .m_axi_pyr_BRESP(batch_align2D_0_m_axi_pyr_BRESP),
-        .m_axi_pyr_BVALID(batch_align2D_0_m_axi_pyr_BVALID),
-        .m_axi_pyr_RDATA(batch_align2D_0_m_axi_pyr_RDATA),
-        .m_axi_pyr_RLAST(batch_align2D_0_m_axi_pyr_RLAST),
-        .m_axi_pyr_RREADY(batch_align2D_0_m_axi_pyr_RREADY),
-        .m_axi_pyr_RRESP(batch_align2D_0_m_axi_pyr_RRESP),
-        .m_axi_pyr_RVALID(batch_align2D_0_m_axi_pyr_RVALID),
-        .m_axi_pyr_WDATA(batch_align2D_0_m_axi_pyr_WDATA),
-        .m_axi_pyr_WLAST(batch_align2D_0_m_axi_pyr_WLAST),
-        .m_axi_pyr_WREADY(batch_align2D_0_m_axi_pyr_WREADY),
-        .m_axi_pyr_WSTRB(batch_align2D_0_m_axi_pyr_WSTRB),
-        .m_axi_pyr_WVALID(batch_align2D_0_m_axi_pyr_WVALID),
+        .ap_rst_n(rst_ps8_0_96M_peripheral_aresetn),
+        .m_axi_my_debug_ARADDR(batch_align2D_region_0_m_axi_my_debug_ARADDR),
+        .m_axi_my_debug_ARBURST(batch_align2D_region_0_m_axi_my_debug_ARBURST),
+        .m_axi_my_debug_ARCACHE(batch_align2D_region_0_m_axi_my_debug_ARCACHE),
+        .m_axi_my_debug_ARLEN(batch_align2D_region_0_m_axi_my_debug_ARLEN),
+        .m_axi_my_debug_ARLOCK(batch_align2D_region_0_m_axi_my_debug_ARLOCK),
+        .m_axi_my_debug_ARPROT(batch_align2D_region_0_m_axi_my_debug_ARPROT),
+        .m_axi_my_debug_ARQOS(batch_align2D_region_0_m_axi_my_debug_ARQOS),
+        .m_axi_my_debug_ARREADY(batch_align2D_region_0_m_axi_my_debug_ARREADY),
+        .m_axi_my_debug_ARSIZE(batch_align2D_region_0_m_axi_my_debug_ARSIZE),
+        .m_axi_my_debug_ARVALID(batch_align2D_region_0_m_axi_my_debug_ARVALID),
+        .m_axi_my_debug_AWADDR(batch_align2D_region_0_m_axi_my_debug_AWADDR),
+        .m_axi_my_debug_AWBURST(batch_align2D_region_0_m_axi_my_debug_AWBURST),
+        .m_axi_my_debug_AWCACHE(batch_align2D_region_0_m_axi_my_debug_AWCACHE),
+        .m_axi_my_debug_AWLEN(batch_align2D_region_0_m_axi_my_debug_AWLEN),
+        .m_axi_my_debug_AWLOCK(batch_align2D_region_0_m_axi_my_debug_AWLOCK),
+        .m_axi_my_debug_AWPROT(batch_align2D_region_0_m_axi_my_debug_AWPROT),
+        .m_axi_my_debug_AWQOS(batch_align2D_region_0_m_axi_my_debug_AWQOS),
+        .m_axi_my_debug_AWREADY(batch_align2D_region_0_m_axi_my_debug_AWREADY),
+        .m_axi_my_debug_AWSIZE(batch_align2D_region_0_m_axi_my_debug_AWSIZE),
+        .m_axi_my_debug_AWVALID(batch_align2D_region_0_m_axi_my_debug_AWVALID),
+        .m_axi_my_debug_BREADY(batch_align2D_region_0_m_axi_my_debug_BREADY),
+        .m_axi_my_debug_BRESP(batch_align2D_region_0_m_axi_my_debug_BRESP),
+        .m_axi_my_debug_BVALID(batch_align2D_region_0_m_axi_my_debug_BVALID),
+        .m_axi_my_debug_RDATA(batch_align2D_region_0_m_axi_my_debug_RDATA),
+        .m_axi_my_debug_RLAST(batch_align2D_region_0_m_axi_my_debug_RLAST),
+        .m_axi_my_debug_RREADY(batch_align2D_region_0_m_axi_my_debug_RREADY),
+        .m_axi_my_debug_RRESP(batch_align2D_region_0_m_axi_my_debug_RRESP),
+        .m_axi_my_debug_RVALID(batch_align2D_region_0_m_axi_my_debug_RVALID),
+        .m_axi_my_debug_WDATA(batch_align2D_region_0_m_axi_my_debug_WDATA),
+        .m_axi_my_debug_WLAST(batch_align2D_region_0_m_axi_my_debug_WLAST),
+        .m_axi_my_debug_WREADY(batch_align2D_region_0_m_axi_my_debug_WREADY),
+        .m_axi_my_debug_WSTRB(batch_align2D_region_0_m_axi_my_debug_WSTRB),
+        .m_axi_my_debug_WVALID(batch_align2D_region_0_m_axi_my_debug_WVALID),
+        .m_axi_my_debug_array_ARADDR(batch_align2D_region_0_m_axi_my_debug_array_ARADDR),
+        .m_axi_my_debug_array_ARBURST(batch_align2D_region_0_m_axi_my_debug_array_ARBURST),
+        .m_axi_my_debug_array_ARCACHE(batch_align2D_region_0_m_axi_my_debug_array_ARCACHE),
+        .m_axi_my_debug_array_ARLEN(batch_align2D_region_0_m_axi_my_debug_array_ARLEN),
+        .m_axi_my_debug_array_ARLOCK(batch_align2D_region_0_m_axi_my_debug_array_ARLOCK),
+        .m_axi_my_debug_array_ARPROT(batch_align2D_region_0_m_axi_my_debug_array_ARPROT),
+        .m_axi_my_debug_array_ARQOS(batch_align2D_region_0_m_axi_my_debug_array_ARQOS),
+        .m_axi_my_debug_array_ARREADY(batch_align2D_region_0_m_axi_my_debug_array_ARREADY),
+        .m_axi_my_debug_array_ARSIZE(batch_align2D_region_0_m_axi_my_debug_array_ARSIZE),
+        .m_axi_my_debug_array_ARVALID(batch_align2D_region_0_m_axi_my_debug_array_ARVALID),
+        .m_axi_my_debug_array_AWADDR(batch_align2D_region_0_m_axi_my_debug_array_AWADDR),
+        .m_axi_my_debug_array_AWBURST(batch_align2D_region_0_m_axi_my_debug_array_AWBURST),
+        .m_axi_my_debug_array_AWCACHE(batch_align2D_region_0_m_axi_my_debug_array_AWCACHE),
+        .m_axi_my_debug_array_AWLEN(batch_align2D_region_0_m_axi_my_debug_array_AWLEN),
+        .m_axi_my_debug_array_AWLOCK(batch_align2D_region_0_m_axi_my_debug_array_AWLOCK),
+        .m_axi_my_debug_array_AWPROT(batch_align2D_region_0_m_axi_my_debug_array_AWPROT),
+        .m_axi_my_debug_array_AWQOS(batch_align2D_region_0_m_axi_my_debug_array_AWQOS),
+        .m_axi_my_debug_array_AWREADY(batch_align2D_region_0_m_axi_my_debug_array_AWREADY),
+        .m_axi_my_debug_array_AWSIZE(batch_align2D_region_0_m_axi_my_debug_array_AWSIZE),
+        .m_axi_my_debug_array_AWVALID(batch_align2D_region_0_m_axi_my_debug_array_AWVALID),
+        .m_axi_my_debug_array_BREADY(batch_align2D_region_0_m_axi_my_debug_array_BREADY),
+        .m_axi_my_debug_array_BRESP(batch_align2D_region_0_m_axi_my_debug_array_BRESP),
+        .m_axi_my_debug_array_BVALID(batch_align2D_region_0_m_axi_my_debug_array_BVALID),
+        .m_axi_my_debug_array_RDATA(batch_align2D_region_0_m_axi_my_debug_array_RDATA),
+        .m_axi_my_debug_array_RLAST(batch_align2D_region_0_m_axi_my_debug_array_RLAST),
+        .m_axi_my_debug_array_RREADY(batch_align2D_region_0_m_axi_my_debug_array_RREADY),
+        .m_axi_my_debug_array_RRESP(batch_align2D_region_0_m_axi_my_debug_array_RRESP),
+        .m_axi_my_debug_array_RVALID(batch_align2D_region_0_m_axi_my_debug_array_RVALID),
+        .m_axi_my_debug_array_WDATA(batch_align2D_region_0_m_axi_my_debug_array_WDATA),
+        .m_axi_my_debug_array_WLAST(batch_align2D_region_0_m_axi_my_debug_array_WLAST),
+        .m_axi_my_debug_array_WREADY(batch_align2D_region_0_m_axi_my_debug_array_WREADY),
+        .m_axi_my_debug_array_WSTRB(batch_align2D_region_0_m_axi_my_debug_array_WSTRB),
+        .m_axi_my_debug_array_WVALID(batch_align2D_region_0_m_axi_my_debug_array_WVALID),
+        .m_axi_my_patches_ARADDR(batch_align2D_region_0_m_axi_my_patches_ARADDR),
+        .m_axi_my_patches_ARBURST(batch_align2D_region_0_m_axi_my_patches_ARBURST),
+        .m_axi_my_patches_ARCACHE(batch_align2D_region_0_m_axi_my_patches_ARCACHE),
+        .m_axi_my_patches_ARLEN(batch_align2D_region_0_m_axi_my_patches_ARLEN),
+        .m_axi_my_patches_ARLOCK(batch_align2D_region_0_m_axi_my_patches_ARLOCK),
+        .m_axi_my_patches_ARPROT(batch_align2D_region_0_m_axi_my_patches_ARPROT),
+        .m_axi_my_patches_ARQOS(batch_align2D_region_0_m_axi_my_patches_ARQOS),
+        .m_axi_my_patches_ARREADY(batch_align2D_region_0_m_axi_my_patches_ARREADY),
+        .m_axi_my_patches_ARSIZE(batch_align2D_region_0_m_axi_my_patches_ARSIZE),
+        .m_axi_my_patches_ARVALID(batch_align2D_region_0_m_axi_my_patches_ARVALID),
+        .m_axi_my_patches_AWADDR(batch_align2D_region_0_m_axi_my_patches_AWADDR),
+        .m_axi_my_patches_AWBURST(batch_align2D_region_0_m_axi_my_patches_AWBURST),
+        .m_axi_my_patches_AWCACHE(batch_align2D_region_0_m_axi_my_patches_AWCACHE),
+        .m_axi_my_patches_AWLEN(batch_align2D_region_0_m_axi_my_patches_AWLEN),
+        .m_axi_my_patches_AWLOCK(batch_align2D_region_0_m_axi_my_patches_AWLOCK),
+        .m_axi_my_patches_AWPROT(batch_align2D_region_0_m_axi_my_patches_AWPROT),
+        .m_axi_my_patches_AWQOS(batch_align2D_region_0_m_axi_my_patches_AWQOS),
+        .m_axi_my_patches_AWREADY(batch_align2D_region_0_m_axi_my_patches_AWREADY),
+        .m_axi_my_patches_AWSIZE(batch_align2D_region_0_m_axi_my_patches_AWSIZE),
+        .m_axi_my_patches_AWVALID(batch_align2D_region_0_m_axi_my_patches_AWVALID),
+        .m_axi_my_patches_BREADY(batch_align2D_region_0_m_axi_my_patches_BREADY),
+        .m_axi_my_patches_BRESP(batch_align2D_region_0_m_axi_my_patches_BRESP),
+        .m_axi_my_patches_BVALID(batch_align2D_region_0_m_axi_my_patches_BVALID),
+        .m_axi_my_patches_RDATA(batch_align2D_region_0_m_axi_my_patches_RDATA),
+        .m_axi_my_patches_RLAST(batch_align2D_region_0_m_axi_my_patches_RLAST),
+        .m_axi_my_patches_RREADY(batch_align2D_region_0_m_axi_my_patches_RREADY),
+        .m_axi_my_patches_RRESP(batch_align2D_region_0_m_axi_my_patches_RRESP),
+        .m_axi_my_patches_RVALID(batch_align2D_region_0_m_axi_my_patches_RVALID),
+        .m_axi_my_patches_WDATA(batch_align2D_region_0_m_axi_my_patches_WDATA),
+        .m_axi_my_patches_WLAST(batch_align2D_region_0_m_axi_my_patches_WLAST),
+        .m_axi_my_patches_WREADY(batch_align2D_region_0_m_axi_my_patches_WREADY),
+        .m_axi_my_patches_WSTRB(batch_align2D_region_0_m_axi_my_patches_WSTRB),
+        .m_axi_my_patches_WVALID(batch_align2D_region_0_m_axi_my_patches_WVALID),
+        .m_axi_my_pos_ARADDR(batch_align2D_region_0_m_axi_my_pos_ARADDR),
+        .m_axi_my_pos_ARBURST(batch_align2D_region_0_m_axi_my_pos_ARBURST),
+        .m_axi_my_pos_ARCACHE(batch_align2D_region_0_m_axi_my_pos_ARCACHE),
+        .m_axi_my_pos_ARLEN(batch_align2D_region_0_m_axi_my_pos_ARLEN),
+        .m_axi_my_pos_ARLOCK(batch_align2D_region_0_m_axi_my_pos_ARLOCK),
+        .m_axi_my_pos_ARPROT(batch_align2D_region_0_m_axi_my_pos_ARPROT),
+        .m_axi_my_pos_ARQOS(batch_align2D_region_0_m_axi_my_pos_ARQOS),
+        .m_axi_my_pos_ARREADY(batch_align2D_region_0_m_axi_my_pos_ARREADY),
+        .m_axi_my_pos_ARSIZE(batch_align2D_region_0_m_axi_my_pos_ARSIZE),
+        .m_axi_my_pos_ARVALID(batch_align2D_region_0_m_axi_my_pos_ARVALID),
+        .m_axi_my_pos_AWADDR(batch_align2D_region_0_m_axi_my_pos_AWADDR),
+        .m_axi_my_pos_AWBURST(batch_align2D_region_0_m_axi_my_pos_AWBURST),
+        .m_axi_my_pos_AWCACHE(batch_align2D_region_0_m_axi_my_pos_AWCACHE),
+        .m_axi_my_pos_AWLEN(batch_align2D_region_0_m_axi_my_pos_AWLEN),
+        .m_axi_my_pos_AWLOCK(batch_align2D_region_0_m_axi_my_pos_AWLOCK),
+        .m_axi_my_pos_AWPROT(batch_align2D_region_0_m_axi_my_pos_AWPROT),
+        .m_axi_my_pos_AWQOS(batch_align2D_region_0_m_axi_my_pos_AWQOS),
+        .m_axi_my_pos_AWREADY(batch_align2D_region_0_m_axi_my_pos_AWREADY),
+        .m_axi_my_pos_AWSIZE(batch_align2D_region_0_m_axi_my_pos_AWSIZE),
+        .m_axi_my_pos_AWVALID(batch_align2D_region_0_m_axi_my_pos_AWVALID),
+        .m_axi_my_pos_BREADY(batch_align2D_region_0_m_axi_my_pos_BREADY),
+        .m_axi_my_pos_BRESP(batch_align2D_region_0_m_axi_my_pos_BRESP),
+        .m_axi_my_pos_BVALID(batch_align2D_region_0_m_axi_my_pos_BVALID),
+        .m_axi_my_pos_RDATA(batch_align2D_region_0_m_axi_my_pos_RDATA),
+        .m_axi_my_pos_RLAST(batch_align2D_region_0_m_axi_my_pos_RLAST),
+        .m_axi_my_pos_RREADY(batch_align2D_region_0_m_axi_my_pos_RREADY),
+        .m_axi_my_pos_RRESP(batch_align2D_region_0_m_axi_my_pos_RRESP),
+        .m_axi_my_pos_RVALID(batch_align2D_region_0_m_axi_my_pos_RVALID),
+        .m_axi_my_pos_WDATA(batch_align2D_region_0_m_axi_my_pos_WDATA),
+        .m_axi_my_pos_WLAST(batch_align2D_region_0_m_axi_my_pos_WLAST),
+        .m_axi_my_pos_WREADY(batch_align2D_region_0_m_axi_my_pos_WREADY),
+        .m_axi_my_pos_WSTRB(batch_align2D_region_0_m_axi_my_pos_WSTRB),
+        .m_axi_my_pos_WVALID(batch_align2D_region_0_m_axi_my_pos_WVALID),
+        .m_axi_my_region_data_ARADDR(batch_align2D_region_0_m_axi_my_region_data_ARADDR),
+        .m_axi_my_region_data_ARBURST(batch_align2D_region_0_m_axi_my_region_data_ARBURST),
+        .m_axi_my_region_data_ARCACHE(batch_align2D_region_0_m_axi_my_region_data_ARCACHE),
+        .m_axi_my_region_data_ARLEN(batch_align2D_region_0_m_axi_my_region_data_ARLEN),
+        .m_axi_my_region_data_ARLOCK(batch_align2D_region_0_m_axi_my_region_data_ARLOCK),
+        .m_axi_my_region_data_ARPROT(batch_align2D_region_0_m_axi_my_region_data_ARPROT),
+        .m_axi_my_region_data_ARQOS(batch_align2D_region_0_m_axi_my_region_data_ARQOS),
+        .m_axi_my_region_data_ARREADY(batch_align2D_region_0_m_axi_my_region_data_ARREADY),
+        .m_axi_my_region_data_ARSIZE(batch_align2D_region_0_m_axi_my_region_data_ARSIZE),
+        .m_axi_my_region_data_ARVALID(batch_align2D_region_0_m_axi_my_region_data_ARVALID),
+        .m_axi_my_region_data_AWADDR(batch_align2D_region_0_m_axi_my_region_data_AWADDR),
+        .m_axi_my_region_data_AWBURST(batch_align2D_region_0_m_axi_my_region_data_AWBURST),
+        .m_axi_my_region_data_AWCACHE(batch_align2D_region_0_m_axi_my_region_data_AWCACHE),
+        .m_axi_my_region_data_AWLEN(batch_align2D_region_0_m_axi_my_region_data_AWLEN),
+        .m_axi_my_region_data_AWLOCK(batch_align2D_region_0_m_axi_my_region_data_AWLOCK),
+        .m_axi_my_region_data_AWPROT(batch_align2D_region_0_m_axi_my_region_data_AWPROT),
+        .m_axi_my_region_data_AWQOS(batch_align2D_region_0_m_axi_my_region_data_AWQOS),
+        .m_axi_my_region_data_AWREADY(batch_align2D_region_0_m_axi_my_region_data_AWREADY),
+        .m_axi_my_region_data_AWSIZE(batch_align2D_region_0_m_axi_my_region_data_AWSIZE),
+        .m_axi_my_region_data_AWVALID(batch_align2D_region_0_m_axi_my_region_data_AWVALID),
+        .m_axi_my_region_data_BREADY(batch_align2D_region_0_m_axi_my_region_data_BREADY),
+        .m_axi_my_region_data_BRESP(batch_align2D_region_0_m_axi_my_region_data_BRESP),
+        .m_axi_my_region_data_BVALID(batch_align2D_region_0_m_axi_my_region_data_BVALID),
+        .m_axi_my_region_data_RDATA(batch_align2D_region_0_m_axi_my_region_data_RDATA),
+        .m_axi_my_region_data_RLAST(batch_align2D_region_0_m_axi_my_region_data_RLAST),
+        .m_axi_my_region_data_RREADY(batch_align2D_region_0_m_axi_my_region_data_RREADY),
+        .m_axi_my_region_data_RRESP(batch_align2D_region_0_m_axi_my_region_data_RRESP),
+        .m_axi_my_region_data_RVALID(batch_align2D_region_0_m_axi_my_region_data_RVALID),
+        .m_axi_my_region_data_WDATA(batch_align2D_region_0_m_axi_my_region_data_WDATA),
+        .m_axi_my_region_data_WLAST(batch_align2D_region_0_m_axi_my_region_data_WLAST),
+        .m_axi_my_region_data_WREADY(batch_align2D_region_0_m_axi_my_region_data_WREADY),
+        .m_axi_my_region_data_WSTRB(batch_align2D_region_0_m_axi_my_region_data_WSTRB),
+        .m_axi_my_region_data_WVALID(batch_align2D_region_0_m_axi_my_region_data_WVALID),
+        .m_axi_my_region_fcoord_ARADDR(batch_align2D_region_0_m_axi_my_region_fcoord_ARADDR),
+        .m_axi_my_region_fcoord_ARBURST(batch_align2D_region_0_m_axi_my_region_fcoord_ARBURST),
+        .m_axi_my_region_fcoord_ARCACHE(batch_align2D_region_0_m_axi_my_region_fcoord_ARCACHE),
+        .m_axi_my_region_fcoord_ARLEN(batch_align2D_region_0_m_axi_my_region_fcoord_ARLEN),
+        .m_axi_my_region_fcoord_ARLOCK(batch_align2D_region_0_m_axi_my_region_fcoord_ARLOCK),
+        .m_axi_my_region_fcoord_ARPROT(batch_align2D_region_0_m_axi_my_region_fcoord_ARPROT),
+        .m_axi_my_region_fcoord_ARQOS(batch_align2D_region_0_m_axi_my_region_fcoord_ARQOS),
+        .m_axi_my_region_fcoord_ARREADY(batch_align2D_region_0_m_axi_my_region_fcoord_ARREADY),
+        .m_axi_my_region_fcoord_ARSIZE(batch_align2D_region_0_m_axi_my_region_fcoord_ARSIZE),
+        .m_axi_my_region_fcoord_ARVALID(batch_align2D_region_0_m_axi_my_region_fcoord_ARVALID),
+        .m_axi_my_region_fcoord_AWADDR(batch_align2D_region_0_m_axi_my_region_fcoord_AWADDR),
+        .m_axi_my_region_fcoord_AWBURST(batch_align2D_region_0_m_axi_my_region_fcoord_AWBURST),
+        .m_axi_my_region_fcoord_AWCACHE(batch_align2D_region_0_m_axi_my_region_fcoord_AWCACHE),
+        .m_axi_my_region_fcoord_AWLEN(batch_align2D_region_0_m_axi_my_region_fcoord_AWLEN),
+        .m_axi_my_region_fcoord_AWLOCK(batch_align2D_region_0_m_axi_my_region_fcoord_AWLOCK),
+        .m_axi_my_region_fcoord_AWPROT(batch_align2D_region_0_m_axi_my_region_fcoord_AWPROT),
+        .m_axi_my_region_fcoord_AWQOS(batch_align2D_region_0_m_axi_my_region_fcoord_AWQOS),
+        .m_axi_my_region_fcoord_AWREADY(batch_align2D_region_0_m_axi_my_region_fcoord_AWREADY),
+        .m_axi_my_region_fcoord_AWSIZE(batch_align2D_region_0_m_axi_my_region_fcoord_AWSIZE),
+        .m_axi_my_region_fcoord_AWVALID(batch_align2D_region_0_m_axi_my_region_fcoord_AWVALID),
+        .m_axi_my_region_fcoord_BREADY(batch_align2D_region_0_m_axi_my_region_fcoord_BREADY),
+        .m_axi_my_region_fcoord_BRESP(batch_align2D_region_0_m_axi_my_region_fcoord_BRESP),
+        .m_axi_my_region_fcoord_BVALID(batch_align2D_region_0_m_axi_my_region_fcoord_BVALID),
+        .m_axi_my_region_fcoord_RDATA(batch_align2D_region_0_m_axi_my_region_fcoord_RDATA),
+        .m_axi_my_region_fcoord_RLAST(batch_align2D_region_0_m_axi_my_region_fcoord_RLAST),
+        .m_axi_my_region_fcoord_RREADY(batch_align2D_region_0_m_axi_my_region_fcoord_RREADY),
+        .m_axi_my_region_fcoord_RRESP(batch_align2D_region_0_m_axi_my_region_fcoord_RRESP),
+        .m_axi_my_region_fcoord_RVALID(batch_align2D_region_0_m_axi_my_region_fcoord_RVALID),
+        .m_axi_my_region_fcoord_WDATA(batch_align2D_region_0_m_axi_my_region_fcoord_WDATA),
+        .m_axi_my_region_fcoord_WLAST(batch_align2D_region_0_m_axi_my_region_fcoord_WLAST),
+        .m_axi_my_region_fcoord_WREADY(batch_align2D_region_0_m_axi_my_region_fcoord_WREADY),
+        .m_axi_my_region_fcoord_WSTRB(batch_align2D_region_0_m_axi_my_region_fcoord_WSTRB),
+        .m_axi_my_region_fcoord_WVALID(batch_align2D_region_0_m_axi_my_region_fcoord_WVALID),
         .s_axi_ctrl_ARADDR(ps8_0_axi_periph_M00_AXI_ARADDR[5:0]),
         .s_axi_ctrl_ARREADY(ps8_0_axi_periph_M00_AXI_ARREADY),
         .s_axi_ctrl_ARVALID(ps8_0_axi_periph_M00_AXI_ARVALID),
@@ -610,10 +574,10 @@ module design_1
         .s_axi_ctrl_WREADY(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_ctrl_WSTRB(ps8_0_axi_periph_M00_AXI_WSTRB),
         .s_axi_ctrl_WVALID(ps8_0_axi_periph_M00_AXI_WVALID),
-        .s_axi_param_ARADDR(ps8_0_axi_periph_M01_AXI_ARADDR[6:0]),
+        .s_axi_param_ARADDR(ps8_0_axi_periph_M01_AXI_ARADDR[5:0]),
         .s_axi_param_ARREADY(ps8_0_axi_periph_M01_AXI_ARREADY),
         .s_axi_param_ARVALID(ps8_0_axi_periph_M01_AXI_ARVALID),
-        .s_axi_param_AWADDR(ps8_0_axi_periph_M01_AXI_AWADDR[6:0]),
+        .s_axi_param_AWADDR(ps8_0_axi_periph_M01_AXI_AWADDR[5:0]),
         .s_axi_param_AWREADY(ps8_0_axi_periph_M01_AXI_AWREADY),
         .s_axi_param_AWVALID(ps8_0_axi_periph_M01_AXI_AWVALID),
         .s_axi_param_BREADY(ps8_0_axi_periph_M01_AXI_BREADY),
@@ -627,11 +591,11 @@ module design_1
         .s_axi_param_WREADY(ps8_0_axi_periph_M01_AXI_WREADY),
         .s_axi_param_WSTRB(ps8_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_param_WVALID(ps8_0_axi_periph_M01_AXI_WVALID));
-  design_1_ps8_0_axi_periph_0 ps8_0_axi_periph
+  design_1_ps8_0_axi_periph_1 ps8_0_axi_periph
        (.ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .ARESETN(rst_ps8_0_99M_peripheral_aresetn),
+        .ARESETN(rst_ps8_0_96M_peripheral_aresetn),
         .M00_ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .M00_ARESETN(rst_ps8_0_99M_peripheral_aresetn),
+        .M00_ARESETN(rst_ps8_0_96M_peripheral_aresetn),
         .M00_AXI_araddr(ps8_0_axi_periph_M00_AXI_ARADDR),
         .M00_AXI_arready(ps8_0_axi_periph_M00_AXI_ARREADY),
         .M00_AXI_arvalid(ps8_0_axi_periph_M00_AXI_ARVALID),
@@ -650,7 +614,7 @@ module design_1
         .M00_AXI_wstrb(ps8_0_axi_periph_M00_AXI_WSTRB),
         .M00_AXI_wvalid(ps8_0_axi_periph_M00_AXI_WVALID),
         .M01_ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .M01_ARESETN(rst_ps8_0_99M_peripheral_aresetn),
+        .M01_ARESETN(rst_ps8_0_96M_peripheral_aresetn),
         .M01_AXI_araddr(ps8_0_axi_periph_M01_AXI_ARADDR),
         .M01_AXI_arready(ps8_0_axi_periph_M01_AXI_ARREADY),
         .M01_AXI_arvalid(ps8_0_axi_periph_M01_AXI_ARVALID),
@@ -669,7 +633,7 @@ module design_1
         .M01_AXI_wstrb(ps8_0_axi_periph_M01_AXI_WSTRB),
         .M01_AXI_wvalid(ps8_0_axi_periph_M01_AXI_WVALID),
         .S00_ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .S00_ARESETN(rst_ps8_0_99M_peripheral_aresetn),
+        .S00_ARESETN(rst_ps8_0_96M_peripheral_aresetn),
         .S00_AXI_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .S00_AXI_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),
         .S00_AXI_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE),
@@ -708,7 +672,7 @@ module design_1
         .S00_AXI_wstrb(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WSTRB),
         .S00_AXI_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WVALID),
         .S01_ACLK(zynq_ultra_ps_e_0_pl_clk0),
-        .S01_ARESETN(rst_ps8_0_99M_peripheral_aresetn),
+        .S01_ARESETN(rst_ps8_0_96M_peripheral_aresetn),
         .S01_AXI_araddr(zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_ARADDR),
         .S01_AXI_arburst(zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_ARBURST),
         .S01_AXI_arcache(zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_ARCACHE),
@@ -746,14 +710,248 @@ module design_1
         .S01_AXI_wready(zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_WREADY),
         .S01_AXI_wstrb(zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_WSTRB),
         .S01_AXI_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_WVALID));
-  design_1_rst_ps8_0_99M_0 rst_ps8_0_99M
+  design_1_rst_ps8_0_96M_0 rst_ps8_0_96M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
         .ext_reset_in(zynq_ultra_ps_e_0_pl_resetn0),
         .mb_debug_sys_rst(1'b0),
-        .peripheral_aresetn(rst_ps8_0_99M_peripheral_aresetn),
+        .peripheral_aresetn(rst_ps8_0_96M_peripheral_aresetn),
         .slowest_sync_clk(zynq_ultra_ps_e_0_pl_clk0));
-  design_1_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
+  design_1_smartconnect_0_0 smartconnect_0
+       (.M00_AXI_araddr(smartconnect_0_M00_AXI_ARADDR),
+        .M00_AXI_arburst(smartconnect_0_M00_AXI_ARBURST),
+        .M00_AXI_arcache(smartconnect_0_M00_AXI_ARCACHE),
+        .M00_AXI_arlen(smartconnect_0_M00_AXI_ARLEN),
+        .M00_AXI_arlock(smartconnect_0_M00_AXI_ARLOCK),
+        .M00_AXI_arprot(smartconnect_0_M00_AXI_ARPROT),
+        .M00_AXI_arqos(smartconnect_0_M00_AXI_ARQOS),
+        .M00_AXI_arready(smartconnect_0_M00_AXI_ARREADY),
+        .M00_AXI_arsize(smartconnect_0_M00_AXI_ARSIZE),
+        .M00_AXI_arvalid(smartconnect_0_M00_AXI_ARVALID),
+        .M00_AXI_awaddr(smartconnect_0_M00_AXI_AWADDR),
+        .M00_AXI_awburst(smartconnect_0_M00_AXI_AWBURST),
+        .M00_AXI_awcache(smartconnect_0_M00_AXI_AWCACHE),
+        .M00_AXI_awlen(smartconnect_0_M00_AXI_AWLEN),
+        .M00_AXI_awlock(smartconnect_0_M00_AXI_AWLOCK),
+        .M00_AXI_awprot(smartconnect_0_M00_AXI_AWPROT),
+        .M00_AXI_awqos(smartconnect_0_M00_AXI_AWQOS),
+        .M00_AXI_awready(smartconnect_0_M00_AXI_AWREADY),
+        .M00_AXI_awsize(smartconnect_0_M00_AXI_AWSIZE),
+        .M00_AXI_awvalid(smartconnect_0_M00_AXI_AWVALID),
+        .M00_AXI_bready(smartconnect_0_M00_AXI_BREADY),
+        .M00_AXI_bresp(smartconnect_0_M00_AXI_BRESP),
+        .M00_AXI_bvalid(smartconnect_0_M00_AXI_BVALID),
+        .M00_AXI_rdata(smartconnect_0_M00_AXI_RDATA),
+        .M00_AXI_rlast(smartconnect_0_M00_AXI_RLAST),
+        .M00_AXI_rready(smartconnect_0_M00_AXI_RREADY),
+        .M00_AXI_rresp(smartconnect_0_M00_AXI_RRESP),
+        .M00_AXI_rvalid(smartconnect_0_M00_AXI_RVALID),
+        .M00_AXI_wdata(smartconnect_0_M00_AXI_WDATA),
+        .M00_AXI_wlast(smartconnect_0_M00_AXI_WLAST),
+        .M00_AXI_wready(smartconnect_0_M00_AXI_WREADY),
+        .M00_AXI_wstrb(smartconnect_0_M00_AXI_WSTRB),
+        .M00_AXI_wvalid(smartconnect_0_M00_AXI_WVALID),
+        .S00_AXI_araddr(batch_align2D_region_0_m_axi_my_region_data_ARADDR),
+        .S00_AXI_arburst(batch_align2D_region_0_m_axi_my_region_data_ARBURST),
+        .S00_AXI_arcache(batch_align2D_region_0_m_axi_my_region_data_ARCACHE),
+        .S00_AXI_arlen(batch_align2D_region_0_m_axi_my_region_data_ARLEN),
+        .S00_AXI_arlock(batch_align2D_region_0_m_axi_my_region_data_ARLOCK[0]),
+        .S00_AXI_arprot(batch_align2D_region_0_m_axi_my_region_data_ARPROT),
+        .S00_AXI_arqos(batch_align2D_region_0_m_axi_my_region_data_ARQOS),
+        .S00_AXI_arready(batch_align2D_region_0_m_axi_my_region_data_ARREADY),
+        .S00_AXI_arsize(batch_align2D_region_0_m_axi_my_region_data_ARSIZE),
+        .S00_AXI_arvalid(batch_align2D_region_0_m_axi_my_region_data_ARVALID),
+        .S00_AXI_awaddr(batch_align2D_region_0_m_axi_my_region_data_AWADDR),
+        .S00_AXI_awburst(batch_align2D_region_0_m_axi_my_region_data_AWBURST),
+        .S00_AXI_awcache(batch_align2D_region_0_m_axi_my_region_data_AWCACHE),
+        .S00_AXI_awlen(batch_align2D_region_0_m_axi_my_region_data_AWLEN),
+        .S00_AXI_awlock(batch_align2D_region_0_m_axi_my_region_data_AWLOCK[0]),
+        .S00_AXI_awprot(batch_align2D_region_0_m_axi_my_region_data_AWPROT),
+        .S00_AXI_awqos(batch_align2D_region_0_m_axi_my_region_data_AWQOS),
+        .S00_AXI_awready(batch_align2D_region_0_m_axi_my_region_data_AWREADY),
+        .S00_AXI_awsize(batch_align2D_region_0_m_axi_my_region_data_AWSIZE),
+        .S00_AXI_awvalid(batch_align2D_region_0_m_axi_my_region_data_AWVALID),
+        .S00_AXI_bready(batch_align2D_region_0_m_axi_my_region_data_BREADY),
+        .S00_AXI_bresp(batch_align2D_region_0_m_axi_my_region_data_BRESP),
+        .S00_AXI_bvalid(batch_align2D_region_0_m_axi_my_region_data_BVALID),
+        .S00_AXI_rdata(batch_align2D_region_0_m_axi_my_region_data_RDATA),
+        .S00_AXI_rlast(batch_align2D_region_0_m_axi_my_region_data_RLAST),
+        .S00_AXI_rready(batch_align2D_region_0_m_axi_my_region_data_RREADY),
+        .S00_AXI_rresp(batch_align2D_region_0_m_axi_my_region_data_RRESP),
+        .S00_AXI_rvalid(batch_align2D_region_0_m_axi_my_region_data_RVALID),
+        .S00_AXI_wdata(batch_align2D_region_0_m_axi_my_region_data_WDATA),
+        .S00_AXI_wlast(batch_align2D_region_0_m_axi_my_region_data_WLAST),
+        .S00_AXI_wready(batch_align2D_region_0_m_axi_my_region_data_WREADY),
+        .S00_AXI_wstrb(batch_align2D_region_0_m_axi_my_region_data_WSTRB),
+        .S00_AXI_wvalid(batch_align2D_region_0_m_axi_my_region_data_WVALID),
+        .S01_AXI_araddr(batch_align2D_region_0_m_axi_my_region_fcoord_ARADDR),
+        .S01_AXI_arburst(batch_align2D_region_0_m_axi_my_region_fcoord_ARBURST),
+        .S01_AXI_arcache(batch_align2D_region_0_m_axi_my_region_fcoord_ARCACHE),
+        .S01_AXI_arlen(batch_align2D_region_0_m_axi_my_region_fcoord_ARLEN),
+        .S01_AXI_arlock(batch_align2D_region_0_m_axi_my_region_fcoord_ARLOCK[0]),
+        .S01_AXI_arprot(batch_align2D_region_0_m_axi_my_region_fcoord_ARPROT),
+        .S01_AXI_arqos(batch_align2D_region_0_m_axi_my_region_fcoord_ARQOS),
+        .S01_AXI_arready(batch_align2D_region_0_m_axi_my_region_fcoord_ARREADY),
+        .S01_AXI_arsize(batch_align2D_region_0_m_axi_my_region_fcoord_ARSIZE),
+        .S01_AXI_arvalid(batch_align2D_region_0_m_axi_my_region_fcoord_ARVALID),
+        .S01_AXI_awaddr(batch_align2D_region_0_m_axi_my_region_fcoord_AWADDR),
+        .S01_AXI_awburst(batch_align2D_region_0_m_axi_my_region_fcoord_AWBURST),
+        .S01_AXI_awcache(batch_align2D_region_0_m_axi_my_region_fcoord_AWCACHE),
+        .S01_AXI_awlen(batch_align2D_region_0_m_axi_my_region_fcoord_AWLEN),
+        .S01_AXI_awlock(batch_align2D_region_0_m_axi_my_region_fcoord_AWLOCK[0]),
+        .S01_AXI_awprot(batch_align2D_region_0_m_axi_my_region_fcoord_AWPROT),
+        .S01_AXI_awqos(batch_align2D_region_0_m_axi_my_region_fcoord_AWQOS),
+        .S01_AXI_awready(batch_align2D_region_0_m_axi_my_region_fcoord_AWREADY),
+        .S01_AXI_awsize(batch_align2D_region_0_m_axi_my_region_fcoord_AWSIZE),
+        .S01_AXI_awvalid(batch_align2D_region_0_m_axi_my_region_fcoord_AWVALID),
+        .S01_AXI_bready(batch_align2D_region_0_m_axi_my_region_fcoord_BREADY),
+        .S01_AXI_bresp(batch_align2D_region_0_m_axi_my_region_fcoord_BRESP),
+        .S01_AXI_bvalid(batch_align2D_region_0_m_axi_my_region_fcoord_BVALID),
+        .S01_AXI_rdata(batch_align2D_region_0_m_axi_my_region_fcoord_RDATA),
+        .S01_AXI_rlast(batch_align2D_region_0_m_axi_my_region_fcoord_RLAST),
+        .S01_AXI_rready(batch_align2D_region_0_m_axi_my_region_fcoord_RREADY),
+        .S01_AXI_rresp(batch_align2D_region_0_m_axi_my_region_fcoord_RRESP),
+        .S01_AXI_rvalid(batch_align2D_region_0_m_axi_my_region_fcoord_RVALID),
+        .S01_AXI_wdata(batch_align2D_region_0_m_axi_my_region_fcoord_WDATA),
+        .S01_AXI_wlast(batch_align2D_region_0_m_axi_my_region_fcoord_WLAST),
+        .S01_AXI_wready(batch_align2D_region_0_m_axi_my_region_fcoord_WREADY),
+        .S01_AXI_wstrb(batch_align2D_region_0_m_axi_my_region_fcoord_WSTRB),
+        .S01_AXI_wvalid(batch_align2D_region_0_m_axi_my_region_fcoord_WVALID),
+        .S02_AXI_araddr(batch_align2D_region_0_m_axi_my_patches_ARADDR),
+        .S02_AXI_arburst(batch_align2D_region_0_m_axi_my_patches_ARBURST),
+        .S02_AXI_arcache(batch_align2D_region_0_m_axi_my_patches_ARCACHE),
+        .S02_AXI_arlen(batch_align2D_region_0_m_axi_my_patches_ARLEN),
+        .S02_AXI_arlock(batch_align2D_region_0_m_axi_my_patches_ARLOCK[0]),
+        .S02_AXI_arprot(batch_align2D_region_0_m_axi_my_patches_ARPROT),
+        .S02_AXI_arqos(batch_align2D_region_0_m_axi_my_patches_ARQOS),
+        .S02_AXI_arready(batch_align2D_region_0_m_axi_my_patches_ARREADY),
+        .S02_AXI_arsize(batch_align2D_region_0_m_axi_my_patches_ARSIZE),
+        .S02_AXI_arvalid(batch_align2D_region_0_m_axi_my_patches_ARVALID),
+        .S02_AXI_awaddr(batch_align2D_region_0_m_axi_my_patches_AWADDR),
+        .S02_AXI_awburst(batch_align2D_region_0_m_axi_my_patches_AWBURST),
+        .S02_AXI_awcache(batch_align2D_region_0_m_axi_my_patches_AWCACHE),
+        .S02_AXI_awlen(batch_align2D_region_0_m_axi_my_patches_AWLEN),
+        .S02_AXI_awlock(batch_align2D_region_0_m_axi_my_patches_AWLOCK[0]),
+        .S02_AXI_awprot(batch_align2D_region_0_m_axi_my_patches_AWPROT),
+        .S02_AXI_awqos(batch_align2D_region_0_m_axi_my_patches_AWQOS),
+        .S02_AXI_awready(batch_align2D_region_0_m_axi_my_patches_AWREADY),
+        .S02_AXI_awsize(batch_align2D_region_0_m_axi_my_patches_AWSIZE),
+        .S02_AXI_awvalid(batch_align2D_region_0_m_axi_my_patches_AWVALID),
+        .S02_AXI_bready(batch_align2D_region_0_m_axi_my_patches_BREADY),
+        .S02_AXI_bresp(batch_align2D_region_0_m_axi_my_patches_BRESP),
+        .S02_AXI_bvalid(batch_align2D_region_0_m_axi_my_patches_BVALID),
+        .S02_AXI_rdata(batch_align2D_region_0_m_axi_my_patches_RDATA),
+        .S02_AXI_rlast(batch_align2D_region_0_m_axi_my_patches_RLAST),
+        .S02_AXI_rready(batch_align2D_region_0_m_axi_my_patches_RREADY),
+        .S02_AXI_rresp(batch_align2D_region_0_m_axi_my_patches_RRESP),
+        .S02_AXI_rvalid(batch_align2D_region_0_m_axi_my_patches_RVALID),
+        .S02_AXI_wdata(batch_align2D_region_0_m_axi_my_patches_WDATA),
+        .S02_AXI_wlast(batch_align2D_region_0_m_axi_my_patches_WLAST),
+        .S02_AXI_wready(batch_align2D_region_0_m_axi_my_patches_WREADY),
+        .S02_AXI_wstrb(batch_align2D_region_0_m_axi_my_patches_WSTRB),
+        .S02_AXI_wvalid(batch_align2D_region_0_m_axi_my_patches_WVALID),
+        .S03_AXI_araddr(batch_align2D_region_0_m_axi_my_pos_ARADDR),
+        .S03_AXI_arburst(batch_align2D_region_0_m_axi_my_pos_ARBURST),
+        .S03_AXI_arcache(batch_align2D_region_0_m_axi_my_pos_ARCACHE),
+        .S03_AXI_arlen(batch_align2D_region_0_m_axi_my_pos_ARLEN),
+        .S03_AXI_arlock(batch_align2D_region_0_m_axi_my_pos_ARLOCK[0]),
+        .S03_AXI_arprot(batch_align2D_region_0_m_axi_my_pos_ARPROT),
+        .S03_AXI_arqos(batch_align2D_region_0_m_axi_my_pos_ARQOS),
+        .S03_AXI_arready(batch_align2D_region_0_m_axi_my_pos_ARREADY),
+        .S03_AXI_arsize(batch_align2D_region_0_m_axi_my_pos_ARSIZE),
+        .S03_AXI_arvalid(batch_align2D_region_0_m_axi_my_pos_ARVALID),
+        .S03_AXI_awaddr(batch_align2D_region_0_m_axi_my_pos_AWADDR),
+        .S03_AXI_awburst(batch_align2D_region_0_m_axi_my_pos_AWBURST),
+        .S03_AXI_awcache(batch_align2D_region_0_m_axi_my_pos_AWCACHE),
+        .S03_AXI_awlen(batch_align2D_region_0_m_axi_my_pos_AWLEN),
+        .S03_AXI_awlock(batch_align2D_region_0_m_axi_my_pos_AWLOCK[0]),
+        .S03_AXI_awprot(batch_align2D_region_0_m_axi_my_pos_AWPROT),
+        .S03_AXI_awqos(batch_align2D_region_0_m_axi_my_pos_AWQOS),
+        .S03_AXI_awready(batch_align2D_region_0_m_axi_my_pos_AWREADY),
+        .S03_AXI_awsize(batch_align2D_region_0_m_axi_my_pos_AWSIZE),
+        .S03_AXI_awvalid(batch_align2D_region_0_m_axi_my_pos_AWVALID),
+        .S03_AXI_bready(batch_align2D_region_0_m_axi_my_pos_BREADY),
+        .S03_AXI_bresp(batch_align2D_region_0_m_axi_my_pos_BRESP),
+        .S03_AXI_bvalid(batch_align2D_region_0_m_axi_my_pos_BVALID),
+        .S03_AXI_rdata(batch_align2D_region_0_m_axi_my_pos_RDATA),
+        .S03_AXI_rlast(batch_align2D_region_0_m_axi_my_pos_RLAST),
+        .S03_AXI_rready(batch_align2D_region_0_m_axi_my_pos_RREADY),
+        .S03_AXI_rresp(batch_align2D_region_0_m_axi_my_pos_RRESP),
+        .S03_AXI_rvalid(batch_align2D_region_0_m_axi_my_pos_RVALID),
+        .S03_AXI_wdata(batch_align2D_region_0_m_axi_my_pos_WDATA),
+        .S03_AXI_wlast(batch_align2D_region_0_m_axi_my_pos_WLAST),
+        .S03_AXI_wready(batch_align2D_region_0_m_axi_my_pos_WREADY),
+        .S03_AXI_wstrb(batch_align2D_region_0_m_axi_my_pos_WSTRB),
+        .S03_AXI_wvalid(batch_align2D_region_0_m_axi_my_pos_WVALID),
+        .S04_AXI_araddr(batch_align2D_region_0_m_axi_my_debug_ARADDR),
+        .S04_AXI_arburst(batch_align2D_region_0_m_axi_my_debug_ARBURST),
+        .S04_AXI_arcache(batch_align2D_region_0_m_axi_my_debug_ARCACHE),
+        .S04_AXI_arlen(batch_align2D_region_0_m_axi_my_debug_ARLEN),
+        .S04_AXI_arlock(batch_align2D_region_0_m_axi_my_debug_ARLOCK[0]),
+        .S04_AXI_arprot(batch_align2D_region_0_m_axi_my_debug_ARPROT),
+        .S04_AXI_arqos(batch_align2D_region_0_m_axi_my_debug_ARQOS),
+        .S04_AXI_arready(batch_align2D_region_0_m_axi_my_debug_ARREADY),
+        .S04_AXI_arsize(batch_align2D_region_0_m_axi_my_debug_ARSIZE),
+        .S04_AXI_arvalid(batch_align2D_region_0_m_axi_my_debug_ARVALID),
+        .S04_AXI_awaddr(batch_align2D_region_0_m_axi_my_debug_AWADDR),
+        .S04_AXI_awburst(batch_align2D_region_0_m_axi_my_debug_AWBURST),
+        .S04_AXI_awcache(batch_align2D_region_0_m_axi_my_debug_AWCACHE),
+        .S04_AXI_awlen(batch_align2D_region_0_m_axi_my_debug_AWLEN),
+        .S04_AXI_awlock(batch_align2D_region_0_m_axi_my_debug_AWLOCK[0]),
+        .S04_AXI_awprot(batch_align2D_region_0_m_axi_my_debug_AWPROT),
+        .S04_AXI_awqos(batch_align2D_region_0_m_axi_my_debug_AWQOS),
+        .S04_AXI_awready(batch_align2D_region_0_m_axi_my_debug_AWREADY),
+        .S04_AXI_awsize(batch_align2D_region_0_m_axi_my_debug_AWSIZE),
+        .S04_AXI_awvalid(batch_align2D_region_0_m_axi_my_debug_AWVALID),
+        .S04_AXI_bready(batch_align2D_region_0_m_axi_my_debug_BREADY),
+        .S04_AXI_bresp(batch_align2D_region_0_m_axi_my_debug_BRESP),
+        .S04_AXI_bvalid(batch_align2D_region_0_m_axi_my_debug_BVALID),
+        .S04_AXI_rdata(batch_align2D_region_0_m_axi_my_debug_RDATA),
+        .S04_AXI_rlast(batch_align2D_region_0_m_axi_my_debug_RLAST),
+        .S04_AXI_rready(batch_align2D_region_0_m_axi_my_debug_RREADY),
+        .S04_AXI_rresp(batch_align2D_region_0_m_axi_my_debug_RRESP),
+        .S04_AXI_rvalid(batch_align2D_region_0_m_axi_my_debug_RVALID),
+        .S04_AXI_wdata(batch_align2D_region_0_m_axi_my_debug_WDATA),
+        .S04_AXI_wlast(batch_align2D_region_0_m_axi_my_debug_WLAST),
+        .S04_AXI_wready(batch_align2D_region_0_m_axi_my_debug_WREADY),
+        .S04_AXI_wstrb(batch_align2D_region_0_m_axi_my_debug_WSTRB),
+        .S04_AXI_wvalid(batch_align2D_region_0_m_axi_my_debug_WVALID),
+        .S05_AXI_araddr(batch_align2D_region_0_m_axi_my_debug_array_ARADDR),
+        .S05_AXI_arburst(batch_align2D_region_0_m_axi_my_debug_array_ARBURST),
+        .S05_AXI_arcache(batch_align2D_region_0_m_axi_my_debug_array_ARCACHE),
+        .S05_AXI_arlen(batch_align2D_region_0_m_axi_my_debug_array_ARLEN),
+        .S05_AXI_arlock(batch_align2D_region_0_m_axi_my_debug_array_ARLOCK[0]),
+        .S05_AXI_arprot(batch_align2D_region_0_m_axi_my_debug_array_ARPROT),
+        .S05_AXI_arqos(batch_align2D_region_0_m_axi_my_debug_array_ARQOS),
+        .S05_AXI_arready(batch_align2D_region_0_m_axi_my_debug_array_ARREADY),
+        .S05_AXI_arsize(batch_align2D_region_0_m_axi_my_debug_array_ARSIZE),
+        .S05_AXI_arvalid(batch_align2D_region_0_m_axi_my_debug_array_ARVALID),
+        .S05_AXI_awaddr(batch_align2D_region_0_m_axi_my_debug_array_AWADDR),
+        .S05_AXI_awburst(batch_align2D_region_0_m_axi_my_debug_array_AWBURST),
+        .S05_AXI_awcache(batch_align2D_region_0_m_axi_my_debug_array_AWCACHE),
+        .S05_AXI_awlen(batch_align2D_region_0_m_axi_my_debug_array_AWLEN),
+        .S05_AXI_awlock(batch_align2D_region_0_m_axi_my_debug_array_AWLOCK[0]),
+        .S05_AXI_awprot(batch_align2D_region_0_m_axi_my_debug_array_AWPROT),
+        .S05_AXI_awqos(batch_align2D_region_0_m_axi_my_debug_array_AWQOS),
+        .S05_AXI_awready(batch_align2D_region_0_m_axi_my_debug_array_AWREADY),
+        .S05_AXI_awsize(batch_align2D_region_0_m_axi_my_debug_array_AWSIZE),
+        .S05_AXI_awvalid(batch_align2D_region_0_m_axi_my_debug_array_AWVALID),
+        .S05_AXI_bready(batch_align2D_region_0_m_axi_my_debug_array_BREADY),
+        .S05_AXI_bresp(batch_align2D_region_0_m_axi_my_debug_array_BRESP),
+        .S05_AXI_bvalid(batch_align2D_region_0_m_axi_my_debug_array_BVALID),
+        .S05_AXI_rdata(batch_align2D_region_0_m_axi_my_debug_array_RDATA),
+        .S05_AXI_rlast(batch_align2D_region_0_m_axi_my_debug_array_RLAST),
+        .S05_AXI_rready(batch_align2D_region_0_m_axi_my_debug_array_RREADY),
+        .S05_AXI_rresp(batch_align2D_region_0_m_axi_my_debug_array_RRESP),
+        .S05_AXI_rvalid(batch_align2D_region_0_m_axi_my_debug_array_RVALID),
+        .S05_AXI_wdata(batch_align2D_region_0_m_axi_my_debug_array_WDATA),
+        .S05_AXI_wlast(batch_align2D_region_0_m_axi_my_debug_array_WLAST),
+        .S05_AXI_wready(batch_align2D_region_0_m_axi_my_debug_array_WREADY),
+        .S05_AXI_wstrb(batch_align2D_region_0_m_axi_my_debug_array_WSTRB),
+        .S05_AXI_wvalid(batch_align2D_region_0_m_axi_my_debug_array_WVALID),
+        .aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .aresetn(rst_ps8_0_96M_peripheral_aresetn));
+  design_1_zynq_ultra_ps_e_0_1 zynq_ultra_ps_e_0
        (.maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .maxigp0_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),
         .maxigp0_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE),
@@ -833,47 +1031,47 @@ module design_1
         .pl_clk0(zynq_ultra_ps_e_0_pl_clk0),
         .pl_ps_irq0(1'b0),
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0),
-        .saxigp2_araddr(axi_smc_M00_AXI_ARADDR),
-        .saxigp2_arburst(axi_smc_M00_AXI_ARBURST),
-        .saxigp2_arcache(axi_smc_M00_AXI_ARCACHE),
+        .saxigp2_araddr(smartconnect_0_M00_AXI_ARADDR),
+        .saxigp2_arburst(smartconnect_0_M00_AXI_ARBURST),
+        .saxigp2_arcache(smartconnect_0_M00_AXI_ARCACHE),
         .saxigp2_arid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .saxigp2_arlen(axi_smc_M00_AXI_ARLEN),
-        .saxigp2_arlock(axi_smc_M00_AXI_ARLOCK),
-        .saxigp2_arprot(axi_smc_M00_AXI_ARPROT),
-        .saxigp2_arqos(axi_smc_M00_AXI_ARQOS),
-        .saxigp2_arready(axi_smc_M00_AXI_ARREADY),
-        .saxigp2_arsize(axi_smc_M00_AXI_ARSIZE),
+        .saxigp2_arlen(smartconnect_0_M00_AXI_ARLEN),
+        .saxigp2_arlock(smartconnect_0_M00_AXI_ARLOCK),
+        .saxigp2_arprot(smartconnect_0_M00_AXI_ARPROT),
+        .saxigp2_arqos(smartconnect_0_M00_AXI_ARQOS),
+        .saxigp2_arready(smartconnect_0_M00_AXI_ARREADY),
+        .saxigp2_arsize(smartconnect_0_M00_AXI_ARSIZE),
         .saxigp2_aruser(1'b0),
-        .saxigp2_arvalid(axi_smc_M00_AXI_ARVALID),
-        .saxigp2_awaddr(axi_smc_M00_AXI_AWADDR),
-        .saxigp2_awburst(axi_smc_M00_AXI_AWBURST),
-        .saxigp2_awcache(axi_smc_M00_AXI_AWCACHE),
+        .saxigp2_arvalid(smartconnect_0_M00_AXI_ARVALID),
+        .saxigp2_awaddr(smartconnect_0_M00_AXI_AWADDR),
+        .saxigp2_awburst(smartconnect_0_M00_AXI_AWBURST),
+        .saxigp2_awcache(smartconnect_0_M00_AXI_AWCACHE),
         .saxigp2_awid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .saxigp2_awlen(axi_smc_M00_AXI_AWLEN),
-        .saxigp2_awlock(axi_smc_M00_AXI_AWLOCK),
-        .saxigp2_awprot(axi_smc_M00_AXI_AWPROT),
-        .saxigp2_awqos(axi_smc_M00_AXI_AWQOS),
-        .saxigp2_awready(axi_smc_M00_AXI_AWREADY),
-        .saxigp2_awsize(axi_smc_M00_AXI_AWSIZE),
+        .saxigp2_awlen(smartconnect_0_M00_AXI_AWLEN),
+        .saxigp2_awlock(smartconnect_0_M00_AXI_AWLOCK),
+        .saxigp2_awprot(smartconnect_0_M00_AXI_AWPROT),
+        .saxigp2_awqos(smartconnect_0_M00_AXI_AWQOS),
+        .saxigp2_awready(smartconnect_0_M00_AXI_AWREADY),
+        .saxigp2_awsize(smartconnect_0_M00_AXI_AWSIZE),
         .saxigp2_awuser(1'b0),
-        .saxigp2_awvalid(axi_smc_M00_AXI_AWVALID),
-        .saxigp2_bready(axi_smc_M00_AXI_BREADY),
-        .saxigp2_bresp(axi_smc_M00_AXI_BRESP),
-        .saxigp2_bvalid(axi_smc_M00_AXI_BVALID),
-        .saxigp2_rdata(axi_smc_M00_AXI_RDATA),
-        .saxigp2_rlast(axi_smc_M00_AXI_RLAST),
-        .saxigp2_rready(axi_smc_M00_AXI_RREADY),
-        .saxigp2_rresp(axi_smc_M00_AXI_RRESP),
-        .saxigp2_rvalid(axi_smc_M00_AXI_RVALID),
-        .saxigp2_wdata(axi_smc_M00_AXI_WDATA),
-        .saxigp2_wlast(axi_smc_M00_AXI_WLAST),
-        .saxigp2_wready(axi_smc_M00_AXI_WREADY),
-        .saxigp2_wstrb(axi_smc_M00_AXI_WSTRB),
-        .saxigp2_wvalid(axi_smc_M00_AXI_WVALID),
+        .saxigp2_awvalid(smartconnect_0_M00_AXI_AWVALID),
+        .saxigp2_bready(smartconnect_0_M00_AXI_BREADY),
+        .saxigp2_bresp(smartconnect_0_M00_AXI_BRESP),
+        .saxigp2_bvalid(smartconnect_0_M00_AXI_BVALID),
+        .saxigp2_rdata(smartconnect_0_M00_AXI_RDATA),
+        .saxigp2_rlast(smartconnect_0_M00_AXI_RLAST),
+        .saxigp2_rready(smartconnect_0_M00_AXI_RREADY),
+        .saxigp2_rresp(smartconnect_0_M00_AXI_RRESP),
+        .saxigp2_rvalid(smartconnect_0_M00_AXI_RVALID),
+        .saxigp2_wdata(smartconnect_0_M00_AXI_WDATA),
+        .saxigp2_wlast(smartconnect_0_M00_AXI_WLAST),
+        .saxigp2_wready(smartconnect_0_M00_AXI_WREADY),
+        .saxigp2_wstrb(smartconnect_0_M00_AXI_WSTRB),
+        .saxigp2_wvalid(smartconnect_0_M00_AXI_WVALID),
         .saxihp0_fpd_aclk(zynq_ultra_ps_e_0_pl_clk0));
 endmodule
 
-module design_1_ps8_0_axi_periph_0
+module design_1_ps8_0_axi_periph_1
    (ACLK,
     ARESETN,
     M00_ACLK,
@@ -997,41 +1195,41 @@ module design_1_ps8_0_axi_periph_0
   input M00_ACLK;
   input M00_ARESETN;
   output [39:0]M00_AXI_araddr;
-  input M00_AXI_arready;
-  output M00_AXI_arvalid;
+  input [0:0]M00_AXI_arready;
+  output [0:0]M00_AXI_arvalid;
   output [39:0]M00_AXI_awaddr;
-  input M00_AXI_awready;
-  output M00_AXI_awvalid;
-  output M00_AXI_bready;
+  input [0:0]M00_AXI_awready;
+  output [0:0]M00_AXI_awvalid;
+  output [0:0]M00_AXI_bready;
   input [1:0]M00_AXI_bresp;
-  input M00_AXI_bvalid;
+  input [0:0]M00_AXI_bvalid;
   input [31:0]M00_AXI_rdata;
-  output M00_AXI_rready;
+  output [0:0]M00_AXI_rready;
   input [1:0]M00_AXI_rresp;
-  input M00_AXI_rvalid;
+  input [0:0]M00_AXI_rvalid;
   output [31:0]M00_AXI_wdata;
-  input M00_AXI_wready;
+  input [0:0]M00_AXI_wready;
   output [3:0]M00_AXI_wstrb;
-  output M00_AXI_wvalid;
+  output [0:0]M00_AXI_wvalid;
   input M01_ACLK;
   input M01_ARESETN;
   output [39:0]M01_AXI_araddr;
-  input M01_AXI_arready;
-  output M01_AXI_arvalid;
+  input [0:0]M01_AXI_arready;
+  output [0:0]M01_AXI_arvalid;
   output [39:0]M01_AXI_awaddr;
-  input M01_AXI_awready;
-  output M01_AXI_awvalid;
-  output M01_AXI_bready;
+  input [0:0]M01_AXI_awready;
+  output [0:0]M01_AXI_awvalid;
+  output [0:0]M01_AXI_bready;
   input [1:0]M01_AXI_bresp;
-  input M01_AXI_bvalid;
+  input [0:0]M01_AXI_bvalid;
   input [31:0]M01_AXI_rdata;
-  output M01_AXI_rready;
+  output [0:0]M01_AXI_rready;
   input [1:0]M01_AXI_rresp;
-  input M01_AXI_rvalid;
+  input [0:0]M01_AXI_rvalid;
   output [31:0]M01_AXI_wdata;
-  input M01_AXI_wready;
+  input [0:0]M01_AXI_wready;
   output [3:0]M01_AXI_wstrb;
-  output M01_AXI_wvalid;
+  output [0:0]M01_AXI_wvalid;
   input S00_ACLK;
   input S00_ARESETN;
   input [39:0]S00_AXI_araddr;
@@ -1039,7 +1237,7 @@ module design_1_ps8_0_axi_periph_0
   input [3:0]S00_AXI_arcache;
   input [15:0]S00_AXI_arid;
   input [7:0]S00_AXI_arlen;
-  input S00_AXI_arlock;
+  input [0:0]S00_AXI_arlock;
   input [2:0]S00_AXI_arprot;
   input [3:0]S00_AXI_arqos;
   output S00_AXI_arready;
@@ -1050,7 +1248,7 @@ module design_1_ps8_0_axi_periph_0
   input [3:0]S00_AXI_awcache;
   input [15:0]S00_AXI_awid;
   input [7:0]S00_AXI_awlen;
-  input S00_AXI_awlock;
+  input [0:0]S00_AXI_awlock;
   input [2:0]S00_AXI_awprot;
   input [3:0]S00_AXI_awqos;
   output S00_AXI_awready;
@@ -1078,7 +1276,7 @@ module design_1_ps8_0_axi_periph_0
   input [3:0]S01_AXI_arcache;
   input [15:0]S01_AXI_arid;
   input [7:0]S01_AXI_arlen;
-  input S01_AXI_arlock;
+  input [0:0]S01_AXI_arlock;
   input [2:0]S01_AXI_arprot;
   input [3:0]S01_AXI_arqos;
   output S01_AXI_arready;
@@ -1089,7 +1287,7 @@ module design_1_ps8_0_axi_periph_0
   input [3:0]S01_AXI_awcache;
   input [15:0]S01_AXI_awid;
   input [7:0]S01_AXI_awlen;
-  input S01_AXI_awlock;
+  input [0:0]S01_AXI_awlock;
   input [2:0]S01_AXI_awprot;
   input [3:0]S01_AXI_awqos;
   output S01_AXI_awready;
@@ -1112,39 +1310,39 @@ module design_1_ps8_0_axi_periph_0
   input S01_AXI_wvalid;
 
   wire [39:0]m00_couplers_to_ps8_0_axi_periph_ARADDR;
-  wire m00_couplers_to_ps8_0_axi_periph_ARREADY;
-  wire m00_couplers_to_ps8_0_axi_periph_ARVALID;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_ARREADY;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_ARVALID;
   wire [39:0]m00_couplers_to_ps8_0_axi_periph_AWADDR;
-  wire m00_couplers_to_ps8_0_axi_periph_AWREADY;
-  wire m00_couplers_to_ps8_0_axi_periph_AWVALID;
-  wire m00_couplers_to_ps8_0_axi_periph_BREADY;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_AWREADY;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_AWVALID;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_BREADY;
   wire [1:0]m00_couplers_to_ps8_0_axi_periph_BRESP;
-  wire m00_couplers_to_ps8_0_axi_periph_BVALID;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_BVALID;
   wire [31:0]m00_couplers_to_ps8_0_axi_periph_RDATA;
-  wire m00_couplers_to_ps8_0_axi_periph_RREADY;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_RREADY;
   wire [1:0]m00_couplers_to_ps8_0_axi_periph_RRESP;
-  wire m00_couplers_to_ps8_0_axi_periph_RVALID;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_RVALID;
   wire [31:0]m00_couplers_to_ps8_0_axi_periph_WDATA;
-  wire m00_couplers_to_ps8_0_axi_periph_WREADY;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_WREADY;
   wire [3:0]m00_couplers_to_ps8_0_axi_periph_WSTRB;
-  wire m00_couplers_to_ps8_0_axi_periph_WVALID;
+  wire [0:0]m00_couplers_to_ps8_0_axi_periph_WVALID;
   wire [39:0]m01_couplers_to_ps8_0_axi_periph_ARADDR;
-  wire m01_couplers_to_ps8_0_axi_periph_ARREADY;
-  wire m01_couplers_to_ps8_0_axi_periph_ARVALID;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_ARREADY;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_ARVALID;
   wire [39:0]m01_couplers_to_ps8_0_axi_periph_AWADDR;
-  wire m01_couplers_to_ps8_0_axi_periph_AWREADY;
-  wire m01_couplers_to_ps8_0_axi_periph_AWVALID;
-  wire m01_couplers_to_ps8_0_axi_periph_BREADY;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_AWREADY;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_AWVALID;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_BREADY;
   wire [1:0]m01_couplers_to_ps8_0_axi_periph_BRESP;
-  wire m01_couplers_to_ps8_0_axi_periph_BVALID;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_BVALID;
   wire [31:0]m01_couplers_to_ps8_0_axi_periph_RDATA;
-  wire m01_couplers_to_ps8_0_axi_periph_RREADY;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_RREADY;
   wire [1:0]m01_couplers_to_ps8_0_axi_periph_RRESP;
-  wire m01_couplers_to_ps8_0_axi_periph_RVALID;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_RVALID;
   wire [31:0]m01_couplers_to_ps8_0_axi_periph_WDATA;
-  wire m01_couplers_to_ps8_0_axi_periph_WREADY;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_WREADY;
   wire [3:0]m01_couplers_to_ps8_0_axi_periph_WSTRB;
-  wire m01_couplers_to_ps8_0_axi_periph_WVALID;
+  wire [0:0]m01_couplers_to_ps8_0_axi_periph_WVALID;
   wire ps8_0_axi_periph_ACLK_net;
   wire ps8_0_axi_periph_ARESETN_net;
   wire [39:0]ps8_0_axi_periph_to_s00_couplers_ARADDR;
@@ -1152,7 +1350,7 @@ module design_1_ps8_0_axi_periph_0
   wire [3:0]ps8_0_axi_periph_to_s00_couplers_ARCACHE;
   wire [15:0]ps8_0_axi_periph_to_s00_couplers_ARID;
   wire [7:0]ps8_0_axi_periph_to_s00_couplers_ARLEN;
-  wire ps8_0_axi_periph_to_s00_couplers_ARLOCK;
+  wire [0:0]ps8_0_axi_periph_to_s00_couplers_ARLOCK;
   wire [2:0]ps8_0_axi_periph_to_s00_couplers_ARPROT;
   wire [3:0]ps8_0_axi_periph_to_s00_couplers_ARQOS;
   wire ps8_0_axi_periph_to_s00_couplers_ARREADY;
@@ -1163,7 +1361,7 @@ module design_1_ps8_0_axi_periph_0
   wire [3:0]ps8_0_axi_periph_to_s00_couplers_AWCACHE;
   wire [15:0]ps8_0_axi_periph_to_s00_couplers_AWID;
   wire [7:0]ps8_0_axi_periph_to_s00_couplers_AWLEN;
-  wire ps8_0_axi_periph_to_s00_couplers_AWLOCK;
+  wire [0:0]ps8_0_axi_periph_to_s00_couplers_AWLOCK;
   wire [2:0]ps8_0_axi_periph_to_s00_couplers_AWPROT;
   wire [3:0]ps8_0_axi_periph_to_s00_couplers_AWQOS;
   wire ps8_0_axi_periph_to_s00_couplers_AWREADY;
@@ -1189,7 +1387,7 @@ module design_1_ps8_0_axi_periph_0
   wire [3:0]ps8_0_axi_periph_to_s01_couplers_ARCACHE;
   wire [15:0]ps8_0_axi_periph_to_s01_couplers_ARID;
   wire [7:0]ps8_0_axi_periph_to_s01_couplers_ARLEN;
-  wire ps8_0_axi_periph_to_s01_couplers_ARLOCK;
+  wire [0:0]ps8_0_axi_periph_to_s01_couplers_ARLOCK;
   wire [2:0]ps8_0_axi_periph_to_s01_couplers_ARPROT;
   wire [3:0]ps8_0_axi_periph_to_s01_couplers_ARQOS;
   wire ps8_0_axi_periph_to_s01_couplers_ARREADY;
@@ -1200,7 +1398,7 @@ module design_1_ps8_0_axi_periph_0
   wire [3:0]ps8_0_axi_periph_to_s01_couplers_AWCACHE;
   wire [15:0]ps8_0_axi_periph_to_s01_couplers_AWID;
   wire [7:0]ps8_0_axi_periph_to_s01_couplers_AWLEN;
-  wire ps8_0_axi_periph_to_s01_couplers_AWLOCK;
+  wire [0:0]ps8_0_axi_periph_to_s01_couplers_AWLOCK;
   wire [2:0]ps8_0_axi_periph_to_s01_couplers_AWPROT;
   wire [3:0]ps8_0_axi_periph_to_s01_couplers_AWQOS;
   wire ps8_0_axi_periph_to_s01_couplers_AWREADY;
@@ -1260,58 +1458,58 @@ module design_1_ps8_0_axi_periph_0
   wire [3:0]s01_couplers_to_xbar_WSTRB;
   wire s01_couplers_to_xbar_WVALID;
   wire [39:0]xbar_to_m00_couplers_ARADDR;
-  wire xbar_to_m00_couplers_ARREADY;
+  wire [0:0]xbar_to_m00_couplers_ARREADY;
   wire [0:0]xbar_to_m00_couplers_ARVALID;
   wire [39:0]xbar_to_m00_couplers_AWADDR;
-  wire xbar_to_m00_couplers_AWREADY;
+  wire [0:0]xbar_to_m00_couplers_AWREADY;
   wire [0:0]xbar_to_m00_couplers_AWVALID;
   wire [0:0]xbar_to_m00_couplers_BREADY;
   wire [1:0]xbar_to_m00_couplers_BRESP;
-  wire xbar_to_m00_couplers_BVALID;
+  wire [0:0]xbar_to_m00_couplers_BVALID;
   wire [31:0]xbar_to_m00_couplers_RDATA;
   wire [0:0]xbar_to_m00_couplers_RREADY;
   wire [1:0]xbar_to_m00_couplers_RRESP;
-  wire xbar_to_m00_couplers_RVALID;
+  wire [0:0]xbar_to_m00_couplers_RVALID;
   wire [31:0]xbar_to_m00_couplers_WDATA;
-  wire xbar_to_m00_couplers_WREADY;
+  wire [0:0]xbar_to_m00_couplers_WREADY;
   wire [3:0]xbar_to_m00_couplers_WSTRB;
   wire [0:0]xbar_to_m00_couplers_WVALID;
   wire [79:40]xbar_to_m01_couplers_ARADDR;
-  wire xbar_to_m01_couplers_ARREADY;
+  wire [0:0]xbar_to_m01_couplers_ARREADY;
   wire [1:1]xbar_to_m01_couplers_ARVALID;
   wire [79:40]xbar_to_m01_couplers_AWADDR;
-  wire xbar_to_m01_couplers_AWREADY;
+  wire [0:0]xbar_to_m01_couplers_AWREADY;
   wire [1:1]xbar_to_m01_couplers_AWVALID;
   wire [1:1]xbar_to_m01_couplers_BREADY;
   wire [1:0]xbar_to_m01_couplers_BRESP;
-  wire xbar_to_m01_couplers_BVALID;
+  wire [0:0]xbar_to_m01_couplers_BVALID;
   wire [31:0]xbar_to_m01_couplers_RDATA;
   wire [1:1]xbar_to_m01_couplers_RREADY;
   wire [1:0]xbar_to_m01_couplers_RRESP;
-  wire xbar_to_m01_couplers_RVALID;
+  wire [0:0]xbar_to_m01_couplers_RVALID;
   wire [63:32]xbar_to_m01_couplers_WDATA;
-  wire xbar_to_m01_couplers_WREADY;
+  wire [0:0]xbar_to_m01_couplers_WREADY;
   wire [7:4]xbar_to_m01_couplers_WSTRB;
   wire [1:1]xbar_to_m01_couplers_WVALID;
 
   assign M00_AXI_araddr[39:0] = m00_couplers_to_ps8_0_axi_periph_ARADDR;
-  assign M00_AXI_arvalid = m00_couplers_to_ps8_0_axi_periph_ARVALID;
+  assign M00_AXI_arvalid[0] = m00_couplers_to_ps8_0_axi_periph_ARVALID;
   assign M00_AXI_awaddr[39:0] = m00_couplers_to_ps8_0_axi_periph_AWADDR;
-  assign M00_AXI_awvalid = m00_couplers_to_ps8_0_axi_periph_AWVALID;
-  assign M00_AXI_bready = m00_couplers_to_ps8_0_axi_periph_BREADY;
-  assign M00_AXI_rready = m00_couplers_to_ps8_0_axi_periph_RREADY;
+  assign M00_AXI_awvalid[0] = m00_couplers_to_ps8_0_axi_periph_AWVALID;
+  assign M00_AXI_bready[0] = m00_couplers_to_ps8_0_axi_periph_BREADY;
+  assign M00_AXI_rready[0] = m00_couplers_to_ps8_0_axi_periph_RREADY;
   assign M00_AXI_wdata[31:0] = m00_couplers_to_ps8_0_axi_periph_WDATA;
   assign M00_AXI_wstrb[3:0] = m00_couplers_to_ps8_0_axi_periph_WSTRB;
-  assign M00_AXI_wvalid = m00_couplers_to_ps8_0_axi_periph_WVALID;
+  assign M00_AXI_wvalid[0] = m00_couplers_to_ps8_0_axi_periph_WVALID;
   assign M01_AXI_araddr[39:0] = m01_couplers_to_ps8_0_axi_periph_ARADDR;
-  assign M01_AXI_arvalid = m01_couplers_to_ps8_0_axi_periph_ARVALID;
+  assign M01_AXI_arvalid[0] = m01_couplers_to_ps8_0_axi_periph_ARVALID;
   assign M01_AXI_awaddr[39:0] = m01_couplers_to_ps8_0_axi_periph_AWADDR;
-  assign M01_AXI_awvalid = m01_couplers_to_ps8_0_axi_periph_AWVALID;
-  assign M01_AXI_bready = m01_couplers_to_ps8_0_axi_periph_BREADY;
-  assign M01_AXI_rready = m01_couplers_to_ps8_0_axi_periph_RREADY;
+  assign M01_AXI_awvalid[0] = m01_couplers_to_ps8_0_axi_periph_AWVALID;
+  assign M01_AXI_bready[0] = m01_couplers_to_ps8_0_axi_periph_BREADY;
+  assign M01_AXI_rready[0] = m01_couplers_to_ps8_0_axi_periph_RREADY;
   assign M01_AXI_wdata[31:0] = m01_couplers_to_ps8_0_axi_periph_WDATA;
   assign M01_AXI_wstrb[3:0] = m01_couplers_to_ps8_0_axi_periph_WSTRB;
-  assign M01_AXI_wvalid = m01_couplers_to_ps8_0_axi_periph_WVALID;
+  assign M01_AXI_wvalid[0] = m01_couplers_to_ps8_0_axi_periph_WVALID;
   assign S00_AXI_arready = ps8_0_axi_periph_to_s00_couplers_ARREADY;
   assign S00_AXI_awready = ps8_0_axi_periph_to_s00_couplers_AWREADY;
   assign S00_AXI_bid[15:0] = ps8_0_axi_periph_to_s00_couplers_BID;
@@ -1334,22 +1532,22 @@ module design_1_ps8_0_axi_periph_0
   assign S01_AXI_rresp[1:0] = ps8_0_axi_periph_to_s01_couplers_RRESP;
   assign S01_AXI_rvalid = ps8_0_axi_periph_to_s01_couplers_RVALID;
   assign S01_AXI_wready = ps8_0_axi_periph_to_s01_couplers_WREADY;
-  assign m00_couplers_to_ps8_0_axi_periph_ARREADY = M00_AXI_arready;
-  assign m00_couplers_to_ps8_0_axi_periph_AWREADY = M00_AXI_awready;
+  assign m00_couplers_to_ps8_0_axi_periph_ARREADY = M00_AXI_arready[0];
+  assign m00_couplers_to_ps8_0_axi_periph_AWREADY = M00_AXI_awready[0];
   assign m00_couplers_to_ps8_0_axi_periph_BRESP = M00_AXI_bresp[1:0];
-  assign m00_couplers_to_ps8_0_axi_periph_BVALID = M00_AXI_bvalid;
+  assign m00_couplers_to_ps8_0_axi_periph_BVALID = M00_AXI_bvalid[0];
   assign m00_couplers_to_ps8_0_axi_periph_RDATA = M00_AXI_rdata[31:0];
   assign m00_couplers_to_ps8_0_axi_periph_RRESP = M00_AXI_rresp[1:0];
-  assign m00_couplers_to_ps8_0_axi_periph_RVALID = M00_AXI_rvalid;
-  assign m00_couplers_to_ps8_0_axi_periph_WREADY = M00_AXI_wready;
-  assign m01_couplers_to_ps8_0_axi_periph_ARREADY = M01_AXI_arready;
-  assign m01_couplers_to_ps8_0_axi_periph_AWREADY = M01_AXI_awready;
+  assign m00_couplers_to_ps8_0_axi_periph_RVALID = M00_AXI_rvalid[0];
+  assign m00_couplers_to_ps8_0_axi_periph_WREADY = M00_AXI_wready[0];
+  assign m01_couplers_to_ps8_0_axi_periph_ARREADY = M01_AXI_arready[0];
+  assign m01_couplers_to_ps8_0_axi_periph_AWREADY = M01_AXI_awready[0];
   assign m01_couplers_to_ps8_0_axi_periph_BRESP = M01_AXI_bresp[1:0];
-  assign m01_couplers_to_ps8_0_axi_periph_BVALID = M01_AXI_bvalid;
+  assign m01_couplers_to_ps8_0_axi_periph_BVALID = M01_AXI_bvalid[0];
   assign m01_couplers_to_ps8_0_axi_periph_RDATA = M01_AXI_rdata[31:0];
   assign m01_couplers_to_ps8_0_axi_periph_RRESP = M01_AXI_rresp[1:0];
-  assign m01_couplers_to_ps8_0_axi_periph_RVALID = M01_AXI_rvalid;
-  assign m01_couplers_to_ps8_0_axi_periph_WREADY = M01_AXI_wready;
+  assign m01_couplers_to_ps8_0_axi_periph_RVALID = M01_AXI_rvalid[0];
+  assign m01_couplers_to_ps8_0_axi_periph_WREADY = M01_AXI_wready[0];
   assign ps8_0_axi_periph_ACLK_net = ACLK;
   assign ps8_0_axi_periph_ARESETN_net = ARESETN;
   assign ps8_0_axi_periph_to_s00_couplers_ARADDR = S00_AXI_araddr[39:0];
@@ -1357,7 +1555,7 @@ module design_1_ps8_0_axi_periph_0
   assign ps8_0_axi_periph_to_s00_couplers_ARCACHE = S00_AXI_arcache[3:0];
   assign ps8_0_axi_periph_to_s00_couplers_ARID = S00_AXI_arid[15:0];
   assign ps8_0_axi_periph_to_s00_couplers_ARLEN = S00_AXI_arlen[7:0];
-  assign ps8_0_axi_periph_to_s00_couplers_ARLOCK = S00_AXI_arlock;
+  assign ps8_0_axi_periph_to_s00_couplers_ARLOCK = S00_AXI_arlock[0];
   assign ps8_0_axi_periph_to_s00_couplers_ARPROT = S00_AXI_arprot[2:0];
   assign ps8_0_axi_periph_to_s00_couplers_ARQOS = S00_AXI_arqos[3:0];
   assign ps8_0_axi_periph_to_s00_couplers_ARSIZE = S00_AXI_arsize[2:0];
@@ -1367,7 +1565,7 @@ module design_1_ps8_0_axi_periph_0
   assign ps8_0_axi_periph_to_s00_couplers_AWCACHE = S00_AXI_awcache[3:0];
   assign ps8_0_axi_periph_to_s00_couplers_AWID = S00_AXI_awid[15:0];
   assign ps8_0_axi_periph_to_s00_couplers_AWLEN = S00_AXI_awlen[7:0];
-  assign ps8_0_axi_periph_to_s00_couplers_AWLOCK = S00_AXI_awlock;
+  assign ps8_0_axi_periph_to_s00_couplers_AWLOCK = S00_AXI_awlock[0];
   assign ps8_0_axi_periph_to_s00_couplers_AWPROT = S00_AXI_awprot[2:0];
   assign ps8_0_axi_periph_to_s00_couplers_AWQOS = S00_AXI_awqos[3:0];
   assign ps8_0_axi_periph_to_s00_couplers_AWSIZE = S00_AXI_awsize[2:0];
@@ -1383,7 +1581,7 @@ module design_1_ps8_0_axi_periph_0
   assign ps8_0_axi_periph_to_s01_couplers_ARCACHE = S01_AXI_arcache[3:0];
   assign ps8_0_axi_periph_to_s01_couplers_ARID = S01_AXI_arid[15:0];
   assign ps8_0_axi_periph_to_s01_couplers_ARLEN = S01_AXI_arlen[7:0];
-  assign ps8_0_axi_periph_to_s01_couplers_ARLOCK = S01_AXI_arlock;
+  assign ps8_0_axi_periph_to_s01_couplers_ARLOCK = S01_AXI_arlock[0];
   assign ps8_0_axi_periph_to_s01_couplers_ARPROT = S01_AXI_arprot[2:0];
   assign ps8_0_axi_periph_to_s01_couplers_ARQOS = S01_AXI_arqos[3:0];
   assign ps8_0_axi_periph_to_s01_couplers_ARSIZE = S01_AXI_arsize[2:0];
@@ -1393,7 +1591,7 @@ module design_1_ps8_0_axi_periph_0
   assign ps8_0_axi_periph_to_s01_couplers_AWCACHE = S01_AXI_awcache[3:0];
   assign ps8_0_axi_periph_to_s01_couplers_AWID = S01_AXI_awid[15:0];
   assign ps8_0_axi_periph_to_s01_couplers_AWLEN = S01_AXI_awlen[7:0];
-  assign ps8_0_axi_periph_to_s01_couplers_AWLOCK = S01_AXI_awlock;
+  assign ps8_0_axi_periph_to_s01_couplers_AWLOCK = S01_AXI_awlock[0];
   assign ps8_0_axi_periph_to_s01_couplers_AWPROT = S01_AXI_awprot[2:0];
   assign ps8_0_axi_periph_to_s01_couplers_AWQOS = S01_AXI_awqos[3:0];
   assign ps8_0_axi_periph_to_s01_couplers_AWSIZE = S01_AXI_awsize[2:0];
@@ -1604,7 +1802,7 @@ module design_1_ps8_0_axi_periph_0
         .S_AXI_wready(ps8_0_axi_periph_to_s01_couplers_WREADY),
         .S_AXI_wstrb(ps8_0_axi_periph_to_s01_couplers_WSTRB),
         .S_AXI_wvalid(ps8_0_axi_periph_to_s01_couplers_WVALID));
-  design_1_xbar_0 xbar
+  design_1_xbar_1 xbar
        (.aclk(ps8_0_axi_periph_ACLK_net),
         .aresetn(ps8_0_axi_periph_ARESETN_net),
         .m_axi_araddr({xbar_to_m01_couplers_ARADDR,xbar_to_m00_couplers_ARADDR}),
@@ -1687,94 +1885,94 @@ module m00_couplers_imp_QJIMLI
   input M_ACLK;
   input M_ARESETN;
   output [39:0]M_AXI_araddr;
-  input M_AXI_arready;
-  output M_AXI_arvalid;
+  input [0:0]M_AXI_arready;
+  output [0:0]M_AXI_arvalid;
   output [39:0]M_AXI_awaddr;
-  input M_AXI_awready;
-  output M_AXI_awvalid;
-  output M_AXI_bready;
+  input [0:0]M_AXI_awready;
+  output [0:0]M_AXI_awvalid;
+  output [0:0]M_AXI_bready;
   input [1:0]M_AXI_bresp;
-  input M_AXI_bvalid;
+  input [0:0]M_AXI_bvalid;
   input [31:0]M_AXI_rdata;
-  output M_AXI_rready;
+  output [0:0]M_AXI_rready;
   input [1:0]M_AXI_rresp;
-  input M_AXI_rvalid;
+  input [0:0]M_AXI_rvalid;
   output [31:0]M_AXI_wdata;
-  input M_AXI_wready;
+  input [0:0]M_AXI_wready;
   output [3:0]M_AXI_wstrb;
-  output M_AXI_wvalid;
+  output [0:0]M_AXI_wvalid;
   input S_ACLK;
   input S_ARESETN;
   input [39:0]S_AXI_araddr;
-  output S_AXI_arready;
-  input S_AXI_arvalid;
+  output [0:0]S_AXI_arready;
+  input [0:0]S_AXI_arvalid;
   input [39:0]S_AXI_awaddr;
-  output S_AXI_awready;
-  input S_AXI_awvalid;
-  input S_AXI_bready;
+  output [0:0]S_AXI_awready;
+  input [0:0]S_AXI_awvalid;
+  input [0:0]S_AXI_bready;
   output [1:0]S_AXI_bresp;
-  output S_AXI_bvalid;
+  output [0:0]S_AXI_bvalid;
   output [31:0]S_AXI_rdata;
-  input S_AXI_rready;
+  input [0:0]S_AXI_rready;
   output [1:0]S_AXI_rresp;
-  output S_AXI_rvalid;
+  output [0:0]S_AXI_rvalid;
   input [31:0]S_AXI_wdata;
-  output S_AXI_wready;
+  output [0:0]S_AXI_wready;
   input [3:0]S_AXI_wstrb;
-  input S_AXI_wvalid;
+  input [0:0]S_AXI_wvalid;
 
   wire [39:0]m00_couplers_to_m00_couplers_ARADDR;
-  wire m00_couplers_to_m00_couplers_ARREADY;
-  wire m00_couplers_to_m00_couplers_ARVALID;
+  wire [0:0]m00_couplers_to_m00_couplers_ARREADY;
+  wire [0:0]m00_couplers_to_m00_couplers_ARVALID;
   wire [39:0]m00_couplers_to_m00_couplers_AWADDR;
-  wire m00_couplers_to_m00_couplers_AWREADY;
-  wire m00_couplers_to_m00_couplers_AWVALID;
-  wire m00_couplers_to_m00_couplers_BREADY;
+  wire [0:0]m00_couplers_to_m00_couplers_AWREADY;
+  wire [0:0]m00_couplers_to_m00_couplers_AWVALID;
+  wire [0:0]m00_couplers_to_m00_couplers_BREADY;
   wire [1:0]m00_couplers_to_m00_couplers_BRESP;
-  wire m00_couplers_to_m00_couplers_BVALID;
+  wire [0:0]m00_couplers_to_m00_couplers_BVALID;
   wire [31:0]m00_couplers_to_m00_couplers_RDATA;
-  wire m00_couplers_to_m00_couplers_RREADY;
+  wire [0:0]m00_couplers_to_m00_couplers_RREADY;
   wire [1:0]m00_couplers_to_m00_couplers_RRESP;
-  wire m00_couplers_to_m00_couplers_RVALID;
+  wire [0:0]m00_couplers_to_m00_couplers_RVALID;
   wire [31:0]m00_couplers_to_m00_couplers_WDATA;
-  wire m00_couplers_to_m00_couplers_WREADY;
+  wire [0:0]m00_couplers_to_m00_couplers_WREADY;
   wire [3:0]m00_couplers_to_m00_couplers_WSTRB;
-  wire m00_couplers_to_m00_couplers_WVALID;
+  wire [0:0]m00_couplers_to_m00_couplers_WVALID;
 
   assign M_AXI_araddr[39:0] = m00_couplers_to_m00_couplers_ARADDR;
-  assign M_AXI_arvalid = m00_couplers_to_m00_couplers_ARVALID;
+  assign M_AXI_arvalid[0] = m00_couplers_to_m00_couplers_ARVALID;
   assign M_AXI_awaddr[39:0] = m00_couplers_to_m00_couplers_AWADDR;
-  assign M_AXI_awvalid = m00_couplers_to_m00_couplers_AWVALID;
-  assign M_AXI_bready = m00_couplers_to_m00_couplers_BREADY;
-  assign M_AXI_rready = m00_couplers_to_m00_couplers_RREADY;
+  assign M_AXI_awvalid[0] = m00_couplers_to_m00_couplers_AWVALID;
+  assign M_AXI_bready[0] = m00_couplers_to_m00_couplers_BREADY;
+  assign M_AXI_rready[0] = m00_couplers_to_m00_couplers_RREADY;
   assign M_AXI_wdata[31:0] = m00_couplers_to_m00_couplers_WDATA;
   assign M_AXI_wstrb[3:0] = m00_couplers_to_m00_couplers_WSTRB;
-  assign M_AXI_wvalid = m00_couplers_to_m00_couplers_WVALID;
-  assign S_AXI_arready = m00_couplers_to_m00_couplers_ARREADY;
-  assign S_AXI_awready = m00_couplers_to_m00_couplers_AWREADY;
+  assign M_AXI_wvalid[0] = m00_couplers_to_m00_couplers_WVALID;
+  assign S_AXI_arready[0] = m00_couplers_to_m00_couplers_ARREADY;
+  assign S_AXI_awready[0] = m00_couplers_to_m00_couplers_AWREADY;
   assign S_AXI_bresp[1:0] = m00_couplers_to_m00_couplers_BRESP;
-  assign S_AXI_bvalid = m00_couplers_to_m00_couplers_BVALID;
+  assign S_AXI_bvalid[0] = m00_couplers_to_m00_couplers_BVALID;
   assign S_AXI_rdata[31:0] = m00_couplers_to_m00_couplers_RDATA;
   assign S_AXI_rresp[1:0] = m00_couplers_to_m00_couplers_RRESP;
-  assign S_AXI_rvalid = m00_couplers_to_m00_couplers_RVALID;
-  assign S_AXI_wready = m00_couplers_to_m00_couplers_WREADY;
+  assign S_AXI_rvalid[0] = m00_couplers_to_m00_couplers_RVALID;
+  assign S_AXI_wready[0] = m00_couplers_to_m00_couplers_WREADY;
   assign m00_couplers_to_m00_couplers_ARADDR = S_AXI_araddr[39:0];
-  assign m00_couplers_to_m00_couplers_ARREADY = M_AXI_arready;
-  assign m00_couplers_to_m00_couplers_ARVALID = S_AXI_arvalid;
+  assign m00_couplers_to_m00_couplers_ARREADY = M_AXI_arready[0];
+  assign m00_couplers_to_m00_couplers_ARVALID = S_AXI_arvalid[0];
   assign m00_couplers_to_m00_couplers_AWADDR = S_AXI_awaddr[39:0];
-  assign m00_couplers_to_m00_couplers_AWREADY = M_AXI_awready;
-  assign m00_couplers_to_m00_couplers_AWVALID = S_AXI_awvalid;
-  assign m00_couplers_to_m00_couplers_BREADY = S_AXI_bready;
+  assign m00_couplers_to_m00_couplers_AWREADY = M_AXI_awready[0];
+  assign m00_couplers_to_m00_couplers_AWVALID = S_AXI_awvalid[0];
+  assign m00_couplers_to_m00_couplers_BREADY = S_AXI_bready[0];
   assign m00_couplers_to_m00_couplers_BRESP = M_AXI_bresp[1:0];
-  assign m00_couplers_to_m00_couplers_BVALID = M_AXI_bvalid;
+  assign m00_couplers_to_m00_couplers_BVALID = M_AXI_bvalid[0];
   assign m00_couplers_to_m00_couplers_RDATA = M_AXI_rdata[31:0];
-  assign m00_couplers_to_m00_couplers_RREADY = S_AXI_rready;
+  assign m00_couplers_to_m00_couplers_RREADY = S_AXI_rready[0];
   assign m00_couplers_to_m00_couplers_RRESP = M_AXI_rresp[1:0];
-  assign m00_couplers_to_m00_couplers_RVALID = M_AXI_rvalid;
+  assign m00_couplers_to_m00_couplers_RVALID = M_AXI_rvalid[0];
   assign m00_couplers_to_m00_couplers_WDATA = S_AXI_wdata[31:0];
-  assign m00_couplers_to_m00_couplers_WREADY = M_AXI_wready;
+  assign m00_couplers_to_m00_couplers_WREADY = M_AXI_wready[0];
   assign m00_couplers_to_m00_couplers_WSTRB = S_AXI_wstrb[3:0];
-  assign m00_couplers_to_m00_couplers_WVALID = S_AXI_wvalid;
+  assign m00_couplers_to_m00_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
 module m01_couplers_imp_1D3SAH3
@@ -1819,94 +2017,94 @@ module m01_couplers_imp_1D3SAH3
   input M_ACLK;
   input M_ARESETN;
   output [39:0]M_AXI_araddr;
-  input M_AXI_arready;
-  output M_AXI_arvalid;
+  input [0:0]M_AXI_arready;
+  output [0:0]M_AXI_arvalid;
   output [39:0]M_AXI_awaddr;
-  input M_AXI_awready;
-  output M_AXI_awvalid;
-  output M_AXI_bready;
+  input [0:0]M_AXI_awready;
+  output [0:0]M_AXI_awvalid;
+  output [0:0]M_AXI_bready;
   input [1:0]M_AXI_bresp;
-  input M_AXI_bvalid;
+  input [0:0]M_AXI_bvalid;
   input [31:0]M_AXI_rdata;
-  output M_AXI_rready;
+  output [0:0]M_AXI_rready;
   input [1:0]M_AXI_rresp;
-  input M_AXI_rvalid;
+  input [0:0]M_AXI_rvalid;
   output [31:0]M_AXI_wdata;
-  input M_AXI_wready;
+  input [0:0]M_AXI_wready;
   output [3:0]M_AXI_wstrb;
-  output M_AXI_wvalid;
+  output [0:0]M_AXI_wvalid;
   input S_ACLK;
   input S_ARESETN;
   input [39:0]S_AXI_araddr;
-  output S_AXI_arready;
-  input S_AXI_arvalid;
+  output [0:0]S_AXI_arready;
+  input [0:0]S_AXI_arvalid;
   input [39:0]S_AXI_awaddr;
-  output S_AXI_awready;
-  input S_AXI_awvalid;
-  input S_AXI_bready;
+  output [0:0]S_AXI_awready;
+  input [0:0]S_AXI_awvalid;
+  input [0:0]S_AXI_bready;
   output [1:0]S_AXI_bresp;
-  output S_AXI_bvalid;
+  output [0:0]S_AXI_bvalid;
   output [31:0]S_AXI_rdata;
-  input S_AXI_rready;
+  input [0:0]S_AXI_rready;
   output [1:0]S_AXI_rresp;
-  output S_AXI_rvalid;
+  output [0:0]S_AXI_rvalid;
   input [31:0]S_AXI_wdata;
-  output S_AXI_wready;
+  output [0:0]S_AXI_wready;
   input [3:0]S_AXI_wstrb;
-  input S_AXI_wvalid;
+  input [0:0]S_AXI_wvalid;
 
   wire [39:0]m01_couplers_to_m01_couplers_ARADDR;
-  wire m01_couplers_to_m01_couplers_ARREADY;
-  wire m01_couplers_to_m01_couplers_ARVALID;
+  wire [0:0]m01_couplers_to_m01_couplers_ARREADY;
+  wire [0:0]m01_couplers_to_m01_couplers_ARVALID;
   wire [39:0]m01_couplers_to_m01_couplers_AWADDR;
-  wire m01_couplers_to_m01_couplers_AWREADY;
-  wire m01_couplers_to_m01_couplers_AWVALID;
-  wire m01_couplers_to_m01_couplers_BREADY;
+  wire [0:0]m01_couplers_to_m01_couplers_AWREADY;
+  wire [0:0]m01_couplers_to_m01_couplers_AWVALID;
+  wire [0:0]m01_couplers_to_m01_couplers_BREADY;
   wire [1:0]m01_couplers_to_m01_couplers_BRESP;
-  wire m01_couplers_to_m01_couplers_BVALID;
+  wire [0:0]m01_couplers_to_m01_couplers_BVALID;
   wire [31:0]m01_couplers_to_m01_couplers_RDATA;
-  wire m01_couplers_to_m01_couplers_RREADY;
+  wire [0:0]m01_couplers_to_m01_couplers_RREADY;
   wire [1:0]m01_couplers_to_m01_couplers_RRESP;
-  wire m01_couplers_to_m01_couplers_RVALID;
+  wire [0:0]m01_couplers_to_m01_couplers_RVALID;
   wire [31:0]m01_couplers_to_m01_couplers_WDATA;
-  wire m01_couplers_to_m01_couplers_WREADY;
+  wire [0:0]m01_couplers_to_m01_couplers_WREADY;
   wire [3:0]m01_couplers_to_m01_couplers_WSTRB;
-  wire m01_couplers_to_m01_couplers_WVALID;
+  wire [0:0]m01_couplers_to_m01_couplers_WVALID;
 
   assign M_AXI_araddr[39:0] = m01_couplers_to_m01_couplers_ARADDR;
-  assign M_AXI_arvalid = m01_couplers_to_m01_couplers_ARVALID;
+  assign M_AXI_arvalid[0] = m01_couplers_to_m01_couplers_ARVALID;
   assign M_AXI_awaddr[39:0] = m01_couplers_to_m01_couplers_AWADDR;
-  assign M_AXI_awvalid = m01_couplers_to_m01_couplers_AWVALID;
-  assign M_AXI_bready = m01_couplers_to_m01_couplers_BREADY;
-  assign M_AXI_rready = m01_couplers_to_m01_couplers_RREADY;
+  assign M_AXI_awvalid[0] = m01_couplers_to_m01_couplers_AWVALID;
+  assign M_AXI_bready[0] = m01_couplers_to_m01_couplers_BREADY;
+  assign M_AXI_rready[0] = m01_couplers_to_m01_couplers_RREADY;
   assign M_AXI_wdata[31:0] = m01_couplers_to_m01_couplers_WDATA;
   assign M_AXI_wstrb[3:0] = m01_couplers_to_m01_couplers_WSTRB;
-  assign M_AXI_wvalid = m01_couplers_to_m01_couplers_WVALID;
-  assign S_AXI_arready = m01_couplers_to_m01_couplers_ARREADY;
-  assign S_AXI_awready = m01_couplers_to_m01_couplers_AWREADY;
+  assign M_AXI_wvalid[0] = m01_couplers_to_m01_couplers_WVALID;
+  assign S_AXI_arready[0] = m01_couplers_to_m01_couplers_ARREADY;
+  assign S_AXI_awready[0] = m01_couplers_to_m01_couplers_AWREADY;
   assign S_AXI_bresp[1:0] = m01_couplers_to_m01_couplers_BRESP;
-  assign S_AXI_bvalid = m01_couplers_to_m01_couplers_BVALID;
+  assign S_AXI_bvalid[0] = m01_couplers_to_m01_couplers_BVALID;
   assign S_AXI_rdata[31:0] = m01_couplers_to_m01_couplers_RDATA;
   assign S_AXI_rresp[1:0] = m01_couplers_to_m01_couplers_RRESP;
-  assign S_AXI_rvalid = m01_couplers_to_m01_couplers_RVALID;
-  assign S_AXI_wready = m01_couplers_to_m01_couplers_WREADY;
+  assign S_AXI_rvalid[0] = m01_couplers_to_m01_couplers_RVALID;
+  assign S_AXI_wready[0] = m01_couplers_to_m01_couplers_WREADY;
   assign m01_couplers_to_m01_couplers_ARADDR = S_AXI_araddr[39:0];
-  assign m01_couplers_to_m01_couplers_ARREADY = M_AXI_arready;
-  assign m01_couplers_to_m01_couplers_ARVALID = S_AXI_arvalid;
+  assign m01_couplers_to_m01_couplers_ARREADY = M_AXI_arready[0];
+  assign m01_couplers_to_m01_couplers_ARVALID = S_AXI_arvalid[0];
   assign m01_couplers_to_m01_couplers_AWADDR = S_AXI_awaddr[39:0];
-  assign m01_couplers_to_m01_couplers_AWREADY = M_AXI_awready;
-  assign m01_couplers_to_m01_couplers_AWVALID = S_AXI_awvalid;
-  assign m01_couplers_to_m01_couplers_BREADY = S_AXI_bready;
+  assign m01_couplers_to_m01_couplers_AWREADY = M_AXI_awready[0];
+  assign m01_couplers_to_m01_couplers_AWVALID = S_AXI_awvalid[0];
+  assign m01_couplers_to_m01_couplers_BREADY = S_AXI_bready[0];
   assign m01_couplers_to_m01_couplers_BRESP = M_AXI_bresp[1:0];
-  assign m01_couplers_to_m01_couplers_BVALID = M_AXI_bvalid;
+  assign m01_couplers_to_m01_couplers_BVALID = M_AXI_bvalid[0];
   assign m01_couplers_to_m01_couplers_RDATA = M_AXI_rdata[31:0];
-  assign m01_couplers_to_m01_couplers_RREADY = S_AXI_rready;
+  assign m01_couplers_to_m01_couplers_RREADY = S_AXI_rready[0];
   assign m01_couplers_to_m01_couplers_RRESP = M_AXI_rresp[1:0];
-  assign m01_couplers_to_m01_couplers_RVALID = M_AXI_rvalid;
+  assign m01_couplers_to_m01_couplers_RVALID = M_AXI_rvalid[0];
   assign m01_couplers_to_m01_couplers_WDATA = S_AXI_wdata[31:0];
-  assign m01_couplers_to_m01_couplers_WREADY = M_AXI_wready;
+  assign m01_couplers_to_m01_couplers_WREADY = M_AXI_wready[0];
   assign m01_couplers_to_m01_couplers_WSTRB = S_AXI_wstrb[3:0];
-  assign m01_couplers_to_m01_couplers_WVALID = S_AXI_wvalid;
+  assign m01_couplers_to_m01_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
 module s00_couplers_imp_1A7ZMW4
@@ -1998,7 +2196,7 @@ module s00_couplers_imp_1A7ZMW4
   input [3:0]S_AXI_arcache;
   input [15:0]S_AXI_arid;
   input [7:0]S_AXI_arlen;
-  input S_AXI_arlock;
+  input [0:0]S_AXI_arlock;
   input [2:0]S_AXI_arprot;
   input [3:0]S_AXI_arqos;
   output S_AXI_arready;
@@ -2009,7 +2207,7 @@ module s00_couplers_imp_1A7ZMW4
   input [3:0]S_AXI_awcache;
   input [15:0]S_AXI_awid;
   input [7:0]S_AXI_awlen;
-  input S_AXI_awlock;
+  input [0:0]S_AXI_awlock;
   input [2:0]S_AXI_awprot;
   input [3:0]S_AXI_awqos;
   output S_AXI_awready;
@@ -2092,7 +2290,7 @@ module s00_couplers_imp_1A7ZMW4
   wire [3:0]s00_couplers_to_auto_ds_ARCACHE;
   wire [15:0]s00_couplers_to_auto_ds_ARID;
   wire [7:0]s00_couplers_to_auto_ds_ARLEN;
-  wire s00_couplers_to_auto_ds_ARLOCK;
+  wire [0:0]s00_couplers_to_auto_ds_ARLOCK;
   wire [2:0]s00_couplers_to_auto_ds_ARPROT;
   wire [3:0]s00_couplers_to_auto_ds_ARQOS;
   wire s00_couplers_to_auto_ds_ARREADY;
@@ -2103,7 +2301,7 @@ module s00_couplers_imp_1A7ZMW4
   wire [3:0]s00_couplers_to_auto_ds_AWCACHE;
   wire [15:0]s00_couplers_to_auto_ds_AWID;
   wire [7:0]s00_couplers_to_auto_ds_AWLEN;
-  wire s00_couplers_to_auto_ds_AWLOCK;
+  wire [0:0]s00_couplers_to_auto_ds_AWLOCK;
   wire [2:0]s00_couplers_to_auto_ds_AWPROT;
   wire [3:0]s00_couplers_to_auto_ds_AWQOS;
   wire s00_couplers_to_auto_ds_AWREADY;
@@ -2162,7 +2360,7 @@ module s00_couplers_imp_1A7ZMW4
   assign s00_couplers_to_auto_ds_ARCACHE = S_AXI_arcache[3:0];
   assign s00_couplers_to_auto_ds_ARID = S_AXI_arid[15:0];
   assign s00_couplers_to_auto_ds_ARLEN = S_AXI_arlen[7:0];
-  assign s00_couplers_to_auto_ds_ARLOCK = S_AXI_arlock;
+  assign s00_couplers_to_auto_ds_ARLOCK = S_AXI_arlock[0];
   assign s00_couplers_to_auto_ds_ARPROT = S_AXI_arprot[2:0];
   assign s00_couplers_to_auto_ds_ARQOS = S_AXI_arqos[3:0];
   assign s00_couplers_to_auto_ds_ARSIZE = S_AXI_arsize[2:0];
@@ -2172,7 +2370,7 @@ module s00_couplers_imp_1A7ZMW4
   assign s00_couplers_to_auto_ds_AWCACHE = S_AXI_awcache[3:0];
   assign s00_couplers_to_auto_ds_AWID = S_AXI_awid[15:0];
   assign s00_couplers_to_auto_ds_AWLEN = S_AXI_awlen[7:0];
-  assign s00_couplers_to_auto_ds_AWLOCK = S_AXI_awlock;
+  assign s00_couplers_to_auto_ds_AWLOCK = S_AXI_awlock[0];
   assign s00_couplers_to_auto_ds_AWPROT = S_AXI_awprot[2:0];
   assign s00_couplers_to_auto_ds_AWQOS = S_AXI_awqos[3:0];
   assign s00_couplers_to_auto_ds_AWSIZE = S_AXI_awsize[2:0];
@@ -2183,7 +2381,7 @@ module s00_couplers_imp_1A7ZMW4
   assign s00_couplers_to_auto_ds_WLAST = S_AXI_wlast;
   assign s00_couplers_to_auto_ds_WSTRB = S_AXI_wstrb[15:0];
   assign s00_couplers_to_auto_ds_WVALID = S_AXI_wvalid;
-  design_1_auto_ds_0 auto_ds
+  design_1_auto_ds_2 auto_ds
        (.m_axi_araddr(auto_ds_to_auto_pc_ARADDR),
         .m_axi_arburst(auto_ds_to_auto_pc_ARBURST),
         .m_axi_arcache(auto_ds_to_auto_pc_ARCACHE),
@@ -2260,7 +2458,7 @@ module s00_couplers_imp_1A7ZMW4
         .s_axi_wready(s00_couplers_to_auto_ds_WREADY),
         .s_axi_wstrb(s00_couplers_to_auto_ds_WSTRB),
         .s_axi_wvalid(s00_couplers_to_auto_ds_WVALID));
-  design_1_auto_pc_0 auto_pc
+  design_1_auto_pc_2 auto_pc
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(auto_pc_to_s00_couplers_ARADDR),
@@ -2408,7 +2606,7 @@ module s01_couplers_imp_KGUFR9
   input [3:0]S_AXI_arcache;
   input [15:0]S_AXI_arid;
   input [7:0]S_AXI_arlen;
-  input S_AXI_arlock;
+  input [0:0]S_AXI_arlock;
   input [2:0]S_AXI_arprot;
   input [3:0]S_AXI_arqos;
   output S_AXI_arready;
@@ -2419,7 +2617,7 @@ module s01_couplers_imp_KGUFR9
   input [3:0]S_AXI_awcache;
   input [15:0]S_AXI_awid;
   input [7:0]S_AXI_awlen;
-  input S_AXI_awlock;
+  input [0:0]S_AXI_awlock;
   input [2:0]S_AXI_awprot;
   input [3:0]S_AXI_awqos;
   output S_AXI_awready;
@@ -2502,7 +2700,7 @@ module s01_couplers_imp_KGUFR9
   wire [3:0]s01_couplers_to_auto_ds_ARCACHE;
   wire [15:0]s01_couplers_to_auto_ds_ARID;
   wire [7:0]s01_couplers_to_auto_ds_ARLEN;
-  wire s01_couplers_to_auto_ds_ARLOCK;
+  wire [0:0]s01_couplers_to_auto_ds_ARLOCK;
   wire [2:0]s01_couplers_to_auto_ds_ARPROT;
   wire [3:0]s01_couplers_to_auto_ds_ARQOS;
   wire s01_couplers_to_auto_ds_ARREADY;
@@ -2513,7 +2711,7 @@ module s01_couplers_imp_KGUFR9
   wire [3:0]s01_couplers_to_auto_ds_AWCACHE;
   wire [15:0]s01_couplers_to_auto_ds_AWID;
   wire [7:0]s01_couplers_to_auto_ds_AWLEN;
-  wire s01_couplers_to_auto_ds_AWLOCK;
+  wire [0:0]s01_couplers_to_auto_ds_AWLOCK;
   wire [2:0]s01_couplers_to_auto_ds_AWPROT;
   wire [3:0]s01_couplers_to_auto_ds_AWQOS;
   wire s01_couplers_to_auto_ds_AWREADY;
@@ -2572,7 +2770,7 @@ module s01_couplers_imp_KGUFR9
   assign s01_couplers_to_auto_ds_ARCACHE = S_AXI_arcache[3:0];
   assign s01_couplers_to_auto_ds_ARID = S_AXI_arid[15:0];
   assign s01_couplers_to_auto_ds_ARLEN = S_AXI_arlen[7:0];
-  assign s01_couplers_to_auto_ds_ARLOCK = S_AXI_arlock;
+  assign s01_couplers_to_auto_ds_ARLOCK = S_AXI_arlock[0];
   assign s01_couplers_to_auto_ds_ARPROT = S_AXI_arprot[2:0];
   assign s01_couplers_to_auto_ds_ARQOS = S_AXI_arqos[3:0];
   assign s01_couplers_to_auto_ds_ARSIZE = S_AXI_arsize[2:0];
@@ -2582,7 +2780,7 @@ module s01_couplers_imp_KGUFR9
   assign s01_couplers_to_auto_ds_AWCACHE = S_AXI_awcache[3:0];
   assign s01_couplers_to_auto_ds_AWID = S_AXI_awid[15:0];
   assign s01_couplers_to_auto_ds_AWLEN = S_AXI_awlen[7:0];
-  assign s01_couplers_to_auto_ds_AWLOCK = S_AXI_awlock;
+  assign s01_couplers_to_auto_ds_AWLOCK = S_AXI_awlock[0];
   assign s01_couplers_to_auto_ds_AWPROT = S_AXI_awprot[2:0];
   assign s01_couplers_to_auto_ds_AWQOS = S_AXI_awqos[3:0];
   assign s01_couplers_to_auto_ds_AWSIZE = S_AXI_awsize[2:0];
@@ -2593,7 +2791,7 @@ module s01_couplers_imp_KGUFR9
   assign s01_couplers_to_auto_ds_WLAST = S_AXI_wlast;
   assign s01_couplers_to_auto_ds_WSTRB = S_AXI_wstrb[15:0];
   assign s01_couplers_to_auto_ds_WVALID = S_AXI_wvalid;
-  design_1_auto_ds_1 auto_ds
+  design_1_auto_ds_3 auto_ds
        (.m_axi_araddr(auto_ds_to_auto_pc_ARADDR),
         .m_axi_arburst(auto_ds_to_auto_pc_ARBURST),
         .m_axi_arcache(auto_ds_to_auto_pc_ARCACHE),
@@ -2670,7 +2868,7 @@ module s01_couplers_imp_KGUFR9
         .s_axi_wready(s01_couplers_to_auto_ds_WREADY),
         .s_axi_wstrb(s01_couplers_to_auto_ds_WSTRB),
         .s_axi_wvalid(s01_couplers_to_auto_ds_WVALID));
-  design_1_auto_pc_1 auto_pc
+  design_1_auto_pc_3 auto_pc
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(auto_pc_to_s01_couplers_ARADDR),
