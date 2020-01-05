@@ -38,7 +38,7 @@
     "ClockPeriod": "5",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "17184",
+    "Latency": "41660",
     "Uncertainty": "0.625"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
@@ -68,8 +68,6 @@
       "impl\/vhdl\/batch_align2D_region_fsub_32ns_32ns_32_5_no_dsp_1.vhd",
       "impl\/vhdl\/batch_align2D_region_fsub_32ns_32ns_32_7_full_dsp_1.vhd",
       "impl\/vhdl\/batch_align2D_region_mux_32_32_1_1.vhd",
-      "impl\/vhdl\/batch_align2D_region_mux_727_32_1_1.vhd",
-      "impl\/vhdl\/batch_align2D_region_my_debug_m_axi.vhd",
       "impl\/vhdl\/batch_align2D_region_my_patches_m_axi.vhd",
       "impl\/vhdl\/batch_align2D_region_my_pos_m_axi.vhd",
       "impl\/vhdl\/batch_align2D_region_my_region_data_m_axi.vhd",
@@ -98,8 +96,6 @@
       "impl\/verilog\/batch_align2D_region_fsub_32ns_32ns_32_5_no_dsp_1.v",
       "impl\/verilog\/batch_align2D_region_fsub_32ns_32ns_32_7_full_dsp_1.v",
       "impl\/verilog\/batch_align2D_region_mux_32_32_1_1.v",
-      "impl\/verilog\/batch_align2D_region_mux_727_32_1_1.v",
-      "impl\/verilog\/batch_align2D_region_my_debug_m_axi.v",
       "impl\/verilog\/batch_align2D_region_my_patches_m_axi.v",
       "impl\/verilog\/batch_align2D_region_my_pos_m_axi.v",
       "impl\/verilog\/batch_align2D_region_my_region_data_m_axi.v",
@@ -3094,7 +3090,7 @@
       "statusOffset": "24",
       "handshakeRef": "ap_vld",
       "Object": "param",
-      "firstOutLatency": "33"
+      "firstOutLatency": "35"
     },
     "n_iter": {
       "interfaceRef": "s_axi_param",
@@ -3135,27 +3131,27 @@
       "Instances": [
         {
           "ModuleName": "generic_floor_float_s",
-          "InstanceName": "grp_generic_floor_float_s_fu_10044"
+          "InstanceName": "grp_generic_floor_float_s_fu_10386"
         },
         {
           "ModuleName": "generic_floor_float_s",
-          "InstanceName": "grp_generic_floor_float_s_fu_10052"
+          "InstanceName": "grp_generic_floor_float_s_fu_10394"
         },
         {
           "ModuleName": "p_hls_fptosi_float_i",
-          "InstanceName": "grp_p_hls_fptosi_float_i_fu_10074"
+          "InstanceName": "grp_p_hls_fptosi_float_i_fu_10416"
         },
         {
           "ModuleName": "p_hls_fptosi_float_i",
-          "InstanceName": "grp_p_hls_fptosi_float_i_fu_10079"
+          "InstanceName": "grp_p_hls_fptosi_float_i_fu_10421"
         },
         {
           "ModuleName": "p_hls_fptoui_float_i",
-          "InstanceName": "grp_p_hls_fptoui_float_i_fu_10084"
+          "InstanceName": "grp_p_hls_fptoui_float_i_fu_10426"
         },
         {
           "ModuleName": "p_hls_fptoui_float_i",
-          "InstanceName": "grp_p_hls_fptoui_float_i_fu_10089"
+          "InstanceName": "grp_p_hls_fptoui_float_i_fu_10431"
         }
       ]
     },
@@ -3228,12 +3224,12 @@
       },
       "batch_align2D_region": {
         "Latency": {
-          "LatencyBest": "17184",
-          "LatencyAvg": "32416",
-          "LatencyWorst": "51664",
-          "PipelineIIMin": "17185",
-          "PipelineIIMax": "51665",
-          "PipelineII": "17185 ~ 51665",
+          "LatencyBest": "41660",
+          "LatencyAvg": "49324",
+          "LatencyWorst": "57244",
+          "PipelineIIMin": "41661",
+          "PipelineIIMax": "57245",
+          "PipelineII": "41661 ~ 57245",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -3245,17 +3241,17 @@
         "Loops": [
           {
             "Name": "memcpy..myRegion_data_ptr",
-            "TripCount": "8192",
-            "Latency": "8193",
+            "TripCount": "32768",
+            "Latency": "32769",
             "PipelineII": "1",
             "PipelineDepth": "3"
           },
           {
             "Name": "memcpy..myRegion_fcoord_ptr",
             "TripCount": "16",
-            "Latency": "16",
+            "Latency": "18",
             "PipelineII": "1",
-            "PipelineDepth": "2"
+            "PipelineDepth": "3"
           },
           {
             "Name": "memcpy..my_ref_patch_with_border_ptr",
@@ -3281,11 +3277,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3327,11 +3325,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3373,11 +3373,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3419,11 +3421,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3465,11 +3469,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3511,11 +3517,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3557,11 +3565,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3603,11 +3613,13 @@
           {
             "Name": "gn_iter",
             "TripCount": "",
-            "LatencyMin": "473",
-            "LatencyMax": "4783",
-            "Latency": "473 ~ 4783",
+            "LatencyMin": "470",
+            "LatencyMax": "2418",
+            "Latency": "470 ~ 2418",
             "PipelineII": "",
-            "PipelineDepth": "473",
+            "PipelineDepthMin": "470",
+            "PipelineDepthMax": "473",
+            "PipelineDepth": "470 ~ 473",
             "Loops": [
               {
                 "Name": "compute_err",
@@ -3645,20 +3657,13 @@
             "Latency": "16",
             "PipelineII": "1",
             "PipelineDepth": "2"
-          },
-          {
-            "Name": "memcpy.my_inv_out.",
-            "TripCount": "72",
-            "Latency": "72",
-            "PipelineII": "1",
-            "PipelineDepth": "2"
           }
         ],
         "Area": {
-          "BRAM_18K": "18",
-          "DSP48E": "71",
-          "FF": "70220",
-          "LUT": "72554",
+          "BRAM_18K": "24",
+          "DSP48E": "65",
+          "FF": "68739",
+          "LUT": "72414",
           "URAM": "0"
         }
       }
@@ -3674,7 +3679,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2020-01-04 20:14:06 CET",
+    "Time": "2020-01-05 20:39:51 CET",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.3"
   }

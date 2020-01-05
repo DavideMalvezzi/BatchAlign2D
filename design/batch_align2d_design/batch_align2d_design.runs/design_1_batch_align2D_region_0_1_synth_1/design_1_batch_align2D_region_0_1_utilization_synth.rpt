@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Jan  4 20:53:19 2020
+| Date         : Sun Jan  5 21:04:02 2020
 | Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command      : report_utilization -file design_1_batch_align2D_region_0_1_utilization_synth.rpt -pb design_1_batch_align2D_region_0_1_utilization_synth.pb
 | Design       : design_1_batch_align2D_region_0_1
@@ -31,17 +31,17 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| CLB LUTs*                  | 51234 |     0 |    274080 | 18.69 |
-|   LUT as Logic             | 50311 |     0 |    274080 | 18.36 |
-|   LUT as Memory            |   923 |     0 |    144000 |  0.64 |
+| CLB LUTs*                  | 51602 |     0 |    274080 | 18.83 |
+|   LUT as Logic             | 50717 |     0 |    274080 | 18.50 |
+|   LUT as Memory            |   885 |     0 |    144000 |  0.61 |
 |     LUT as Distributed RAM |   384 |     0 |           |       |
-|     LUT as Shift Register  |   539 |     0 |           |       |
-| CLB Registers              | 64819 |     0 |    548160 | 11.82 |
-|   Register as Flip Flop    | 64819 |     0 |    548160 | 11.82 |
+|     LUT as Shift Register  |   501 |     0 |           |       |
+| CLB Registers              | 63519 |     0 |    548160 | 11.59 |
+|   Register as Flip Flop    | 63519 |     0 |    548160 | 11.59 |
 |   Register as Latch        |     0 |     0 |    548160 |  0.00 |
-| CARRY8                     |  1024 |     0 |     34260 |  2.99 |
-| F7 Muxes                   |  1457 |     0 |    137040 |  1.06 |
-| F8 Muxes                   |   162 |     0 |     68520 |  0.24 |
+| CARRY8                     |  1011 |     0 |     34260 |  2.95 |
+| F7 Muxes                   |    95 |     0 |    137040 |  0.07 |
+| F8 Muxes                   |     3 |     0 |     68520 | <0.01 |
 | F9 Muxes                   |     0 |     0 |     34260 |  0.00 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -61,8 +61,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 25    |          Yes |         Set |            - |
-| 64794 |          Yes |       Reset |            - |
+| 24    |          Yes |         Set |            - |
+| 63495 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -72,10 +72,11 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |    7 |     0 |       912 |  0.77 |
-|   RAMB36/FIFO*    |    0 |     0 |       912 |  0.00 |
-|   RAMB18          |   14 |     0 |      1824 |  0.77 |
-|     RAMB18E2 only |   14 |       |           |       |
+| Block RAM Tile    | 10.5 |     0 |       912 |  1.15 |
+|   RAMB36/FIFO*    |    8 |     0 |       912 |  0.88 |
+|     RAMB36E2 only |    8 |       |           |       |
+|   RAMB18          |    5 |     0 |      1824 |  0.27 |
+|     RAMB18E2 only |    5 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
@@ -86,8 +87,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   71 |     0 |      2520 |  2.82 |
-|   DSP48E2 only |   71 |       |           |       |
+| DSPs           |   65 |     0 |      2520 |  2.58 |
+|   DSP48E2 only |   65 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -156,22 +157,23 @@ Table of Contents
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| FDRE     | 64794 |            Register |
-| LUT6     | 29735 |                 CLB |
-| LUT3     |  8964 |                 CLB |
-| LUT5     |  7885 |                 CLB |
-| LUT4     |  4774 |                 CLB |
-| LUT2     |  2802 |                 CLB |
-| MUXF7    |  1457 |                 CLB |
-| CARRY8   |  1024 |                 CLB |
-| SRL16E   |   539 |                 CLB |
+| FDRE     | 63495 |            Register |
+| LUT6     | 30368 |                 CLB |
+| LUT3     |  8269 |                 CLB |
+| LUT5     |  7856 |                 CLB |
+| LUT4     |  4743 |                 CLB |
+| LUT2     |  2826 |                 CLB |
+| CARRY8   |  1011 |                 CLB |
+| SRL16E   |   501 |                 CLB |
 | RAMD32   |   256 |                 CLB |
-| LUT1     |   239 |                 CLB |
-| MUXF8    |   162 |                 CLB |
+| LUT1     |   241 |                 CLB |
 | RAMD64E  |   128 |                 CLB |
-| DSP48E2  |    71 |          Arithmetic |
-| FDSE     |    25 |            Register |
-| RAMB18E2 |    14 |           Block Ram |
+| MUXF7    |    95 |                 CLB |
+| DSP48E2  |    65 |          Arithmetic |
+| FDSE     |    24 |            Register |
+| RAMB36E2 |     8 |           Block Ram |
+| RAMB18E2 |     5 |           Block Ram |
+| MUXF8    |     3 |                 CLB |
 +----------+-------+---------------------+
 
 

@@ -11,8 +11,8 @@ preplace netloc batch_align2D_region_0_m_axi_my_region_fcoord 1 3 1 N
 preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 10 370 1360 370 1680 350 2120
 preplace netloc batch_align2D_region_0_m_axi_my_patches 1 3 1 N
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 1 1340
-preplace netloc smartconnect_0_M00_AXI 1 0 5 10 30 N 30 N 30 N 30 2410
 preplace netloc ps8_0_axi_periph_M01_AXI 1 2 1 N
+preplace netloc smartconnect_0_M00_AXI 1 0 5 10 30 N 30 N 30 N 30 2410
 preplace netloc ps8_0_axi_periph_M00_AXI 1 2 1 N
 preplace netloc batch_align2D_region_0_m_axi_my_pos 1 3 1 N
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 2 20 380 1340

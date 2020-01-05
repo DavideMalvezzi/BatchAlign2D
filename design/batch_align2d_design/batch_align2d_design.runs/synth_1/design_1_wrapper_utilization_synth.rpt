@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sat Jan  4 20:57:13 2020
+| Date         : Sun Jan  5 21:07:58 2020
 | Host         : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -198,10 +198,10 @@ Table of Contents
 | design_1_smartconnect_0_0         |    1 |
 | design_1_rst_ps8_0_96M_0          |    1 |
 | design_1_batch_align2D_region_0_1 |    1 |
-| design_1_auto_pc_3                |    1 |
-| design_1_auto_pc_2                |    1 |
-| design_1_auto_ds_3                |    1 |
-| design_1_auto_ds_2                |    1 |
+| design_1_auto_pc_1                |    1 |
+| design_1_auto_pc_0                |    1 |
+| design_1_auto_ds_1                |    1 |
+| design_1_auto_ds_0                |    1 |
 +-----------------------------------+------+
 
 

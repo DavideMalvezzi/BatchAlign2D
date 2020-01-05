@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Sat Jan  4 20:53:19 2020
+// Date        : Sun Jan  5 21:04:02 2020
 // Host        : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 // Command     : write_verilog -force -mode synth_stub
 //               /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.srcs/sources_1/bd/design_1/ip/design_1_batch_align2D_region_0_1/design_1_batch_align2D_region_0_1_stub.v

@@ -1,5 +1,5 @@
 -- ==============================================================
--- File generated on Sat Jan 04 20:14:48 CET 2020
+-- File generated on Sun Jan 05 20:40:07 CET 2020
 -- Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 -- SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 -- IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity batch_align2D_region_fptrunc_64ns_32_1_1 is
     generic (
-        ID         : integer := 26;
+        ID         : integer := 24;
         NUM_STAGE  : integer := 1;
         din0_WIDTH : integer := 64;
         dout_WIDTH : integer := 32

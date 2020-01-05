@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'batch_align2D_region'" level="0">
-<item name = "Date">Sat Jan  4 20:10:53 2020
+<item name = "Date">Sun Jan  5 20:36:35 2020
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">batch_align2d_hls</item>
@@ -24,77 +24,76 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">17184, 51664, 17184, 51664, none</column>
+<column name="">41660, 57244, 41660, 57244, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_generic_floor_float_s_fu_10044">generic_floor_float_s, 1, 1, 1, 1, none</column>
-<column name="grp_generic_floor_float_s_fu_10052">generic_floor_float_s, 1, 1, 1, 1, none</column>
-<column name="grp_p_hls_fptosi_float_i_fu_10074">p_hls_fptosi_float_i, 0, 0, 0, 0, none</column>
-<column name="grp_p_hls_fptosi_float_i_fu_10079">p_hls_fptosi_float_i, 0, 0, 0, 0, none</column>
-<column name="grp_p_hls_fptoui_float_i_fu_10084">p_hls_fptoui_float_i, 0, 0, 0, 0, none</column>
-<column name="grp_p_hls_fptoui_float_i_fu_10089">p_hls_fptoui_float_i, 0, 0, 0, 0, none</column>
+<column name="grp_generic_floor_float_s_fu_10386">generic_floor_float_s, 1, 1, 1, 1, none</column>
+<column name="grp_generic_floor_float_s_fu_10394">generic_floor_float_s, 1, 1, 1, 1, none</column>
+<column name="grp_p_hls_fptosi_float_i_fu_10416">p_hls_fptosi_float_i, 0, 0, 0, 0, none</column>
+<column name="grp_p_hls_fptosi_float_i_fu_10421">p_hls_fptosi_float_i, 0, 0, 0, 0, none</column>
+<column name="grp_p_hls_fptoui_float_i_fu_10426">p_hls_fptoui_float_i, 0, 0, 0, 0, none</column>
+<column name="grp_p_hls_fptoui_float_i_fu_10431">p_hls_fptoui_float_i, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- memcpy..myRegion_data_ptr">8193, 8193, 3, 1, 1, 8192, yes</column>
-<column name="- memcpy..myRegion_fcoord_ptr">16, 16, 2, 1, 1, 16, yes</column>
+<column name="- memcpy..myRegion_data_ptr">32769, 32769, 3, 1, 1, 32768, yes</column>
+<column name="- memcpy..myRegion_fcoord_ptr">18, 18, 3, 1, 1, 16, yes</column>
 <column name="- memcpy..my_ref_patch_with_border_ptr">801, 801, 3, 1, 1, 800, yes</column>
 <column name="- memcpy.batch_align2D_region.cur_px_estimate.gep2.my_cur_px_estimate_ptr">17, 17, 3, 1, 1, 16, yes</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- compute_hessian">461, 461, 21, 7, 1, 64, yes</column>
-<column name="- gn_iter">473, 4783, 473, -, -, 1 ~ 10, no</column>
+<column name="- gn_iter">470, 2418, 470 ~ 473, -, -, 1 ~ 5, no</column>
 <column name=" + compute_err">310, 310, 87, 32, 1, 8, yes</column>
 <column name=" + gn_iter.2">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.3">36, 36, 12, -, -, 3, no</column>
 <column name=" + gn_iter.4">36, 36, 12, -, -, 3, no</column>
 <column name="- memcpy.my_cur_px_estimate_ptr.batch_align2D_region.cur_px_estimate.gep">16, 16, 2, 1, 1, 16, yes</column>
-<column name="- memcpy.my_inv_out.">72, 72, 2, 1, 1, 72, yes</column>
 </table>
 </item>
 </section>

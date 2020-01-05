@@ -1,5 +1,5 @@
 // ==============================================================
-// File generated on Sat Jan 04 20:14:03 CET 2020
+// File generated on Sun Jan 05 20:39:47 CET 2020
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -22,8 +22,8 @@ using namespace sc_dt;
 struct batch_align2D_region_pyr_region_data_0_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 8;
-  static const unsigned AddressRange = 1024;
-  static const unsigned AddressWidth = 10;
+  static const unsigned AddressRange = 4096;
+  static const unsigned AddressWidth = 12;
 
 //latency = 1
 //input_reg = 1
@@ -44,7 +44,7 @@ sc_lv<DataWidth> ram[AddressRange];
 
 
    SC_CTOR(batch_align2D_region_pyr_region_data_0_ram) {
-        for (unsigned i = 0; i < 1024; i = i + 1) {
+        for (unsigned i = 0; i < 4096; i = i + 1) {
             ram[i] = 0;
         }
 
@@ -101,8 +101,8 @@ SC_MODULE(batch_align2D_region_pyr_region_data_0) {
 
 
 static const unsigned DataWidth = 8;
-static const unsigned AddressRange = 1024;
-static const unsigned AddressWidth = 10;
+static const unsigned AddressRange = 4096;
+static const unsigned AddressWidth = 12;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

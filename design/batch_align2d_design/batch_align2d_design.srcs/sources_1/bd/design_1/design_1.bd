@@ -10,7 +10,6 @@
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
-      "batch_align2D_region_0": "",
       "ps8_0_axi_periph": {
         "xbar": "",
         "s00_couplers": {
@@ -25,7 +24,8 @@
         "m01_couplers": {}
       },
       "rst_ps8_0_96M": "",
-      "smartconnect_0": ""
+      "smartconnect_0": "",
+      "batch_align2D_region_0": ""
     },
     "components": {
       "zynq_ultra_ps_e_0": {
@@ -1069,10 +1069,6 @@
           }
         }
       },
-      "batch_align2D_region_0": {
-        "vlnv": "xilinx.com:hls:batch_align2D_region:1.0",
-        "xci_name": "design_1_batch_align2D_region_0_1"
-      },
       "ps8_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_name": "design_1_ps8_0_axi_periph_1",
@@ -1245,7 +1241,7 @@
             "components": {
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "xci_name": "design_1_auto_ds_2",
+                "xci_name": "design_1_auto_ds_0",
                 "parameters": {
                   "MI_DATA_WIDTH": {
                     "value": "32"
@@ -1257,7 +1253,7 @@
               },
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "design_1_auto_pc_2",
+                "xci_name": "design_1_auto_pc_0",
                 "parameters": {
                   "MI_PROTOCOL": {
                     "value": "AXI4LITE"
@@ -1275,16 +1271,16 @@
                   "auto_ds/S_AXI"
                 ]
               },
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "auto_ds_to_auto_pc": {
                 "interface_ports": [
                   "auto_ds/M_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1353,7 +1349,7 @@
             "components": {
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "xci_name": "design_1_auto_ds_3",
+                "xci_name": "design_1_auto_ds_1",
                 "parameters": {
                   "MI_DATA_WIDTH": {
                     "value": "32"
@@ -1365,7 +1361,7 @@
               },
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "xci_name": "design_1_auto_pc_3",
+                "xci_name": "design_1_auto_pc_1",
                 "parameters": {
                   "MI_PROTOCOL": {
                     "value": "AXI4LITE"
@@ -1523,6 +1519,36 @@
           }
         },
         "interface_nets": {
+          "ps8_0_axi_periph_to_s01_couplers": {
+            "interface_ports": [
+              "S01_AXI",
+              "s01_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_ps8_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "s01_couplers_to_xbar": {
+            "interface_ports": [
+              "s01_couplers/M_AXI",
+              "xbar/S01_AXI"
+            ]
+          },
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
           "ps8_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
@@ -1535,40 +1561,10 @@
               "xbar/S00_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
-          "ps8_0_axi_periph_to_s01_couplers": {
-            "interface_ports": [
-              "S01_AXI",
-              "s01_couplers/S_AXI"
-            ]
-          },
           "m00_couplers_to_ps8_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
-            ]
-          },
-          "m01_couplers_to_ps8_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "s01_couplers_to_xbar": {
-            "interface_ports": [
-              "s01_couplers/M_AXI",
-              "xbar/S01_AXI"
             ]
           }
         },
@@ -1663,19 +1659,17 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
         }
+      },
+      "batch_align2D_region_0": {
+        "vlnv": "xilinx.com:hls:batch_align2D_region:1.0",
+        "xci_name": "design_1_batch_align2D_region_0_1"
       }
     },
     "interface_nets": {
-      "zynq_ultra_ps_e_0_M_AXI_HPM1_FPD": {
+      "smartconnect_0_M00_AXI": {
         "interface_ports": [
-          "zynq_ultra_ps_e_0/M_AXI_HPM1_FPD",
-          "ps8_0_axi_periph/S01_AXI"
-        ]
-      },
-      "batch_align2D_region_0_m_axi_my_region_fcoord": {
-        "interface_ports": [
-          "batch_align2D_region_0/m_axi_my_region_fcoord",
-          "smartconnect_0/S01_AXI"
+          "smartconnect_0/M00_AXI",
+          "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
         ]
       },
       "batch_align2D_region_0_m_axi_my_patches": {
@@ -1684,10 +1678,10 @@
           "smartconnect_0/S02_AXI"
         ]
       },
-      "ps8_0_axi_periph_M00_AXI": {
+      "batch_align2D_region_0_m_axi_my_region_fcoord": {
         "interface_ports": [
-          "ps8_0_axi_periph/M00_AXI",
-          "batch_align2D_region_0/s_axi_ctrl"
+          "batch_align2D_region_0/m_axi_my_region_fcoord",
+          "smartconnect_0/S01_AXI"
         ]
       },
       "batch_align2D_region_0_m_axi_my_region_data": {
@@ -1696,16 +1690,22 @@
           "smartconnect_0/S00_AXI"
         ]
       },
+      "ps8_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps8_0_axi_periph/M00_AXI",
+          "batch_align2D_region_0/s_axi_ctrl"
+        ]
+      },
       "zynq_ultra_ps_e_0_M_AXI_HPM0_FPD": {
         "interface_ports": [
           "zynq_ultra_ps_e_0/M_AXI_HPM0_FPD",
           "ps8_0_axi_periph/S00_AXI"
         ]
       },
-      "smartconnect_0_M00_AXI": {
+      "zynq_ultra_ps_e_0_M_AXI_HPM1_FPD": {
         "interface_ports": [
-          "smartconnect_0/M00_AXI",
-          "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
+          "zynq_ultra_ps_e_0/M_AXI_HPM1_FPD",
+          "ps8_0_axi_periph/S01_AXI"
         ]
       },
       "ps8_0_axi_periph_M01_AXI": {
@@ -1739,7 +1739,6 @@
           "zynq_ultra_ps_e_0/pl_clk0",
           "ps8_0_axi_periph/S00_ACLK",
           "rst_ps8_0_96M/slowest_sync_clk",
-          "batch_align2D_region_0/ap_clk",
           "ps8_0_axi_periph/M00_ACLK",
           "ps8_0_axi_periph/ACLK",
           "ps8_0_axi_periph/M01_ACLK",
@@ -1747,7 +1746,8 @@
           "ps8_0_axi_periph/S01_ACLK",
           "zynq_ultra_ps_e_0/maxihpm1_fpd_aclk",
           "smartconnect_0/aclk",
-          "zynq_ultra_ps_e_0/saxihp0_fpd_aclk"
+          "zynq_ultra_ps_e_0/saxihp0_fpd_aclk",
+          "batch_align2D_region_0/ap_clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
@@ -1760,12 +1760,12 @@
         "ports": [
           "rst_ps8_0_96M/peripheral_aresetn",
           "ps8_0_axi_periph/S00_ARESETN",
-          "batch_align2D_region_0/ap_rst_n",
           "ps8_0_axi_periph/M00_ARESETN",
           "ps8_0_axi_periph/ARESETN",
           "ps8_0_axi_periph/M01_ARESETN",
           "ps8_0_axi_periph/S01_ARESETN",
-          "smartconnect_0/aresetn"
+          "smartconnect_0/aresetn",
+          "batch_align2D_region_0/ap_rst_n"
         ]
       }
     },

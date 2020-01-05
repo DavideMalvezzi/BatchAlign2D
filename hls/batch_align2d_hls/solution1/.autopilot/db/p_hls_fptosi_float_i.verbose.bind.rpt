@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'p_hls_fptosi_float_i'
 ================================================================
-* Date:           Sat Jan  4 20:05:05 2020
+* Date:           Sun Jan  5 20:30:28 2020
 
 * Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
 * Project:        batch_align2d_hls
@@ -90,13 +90,13 @@ ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_i_i_cast = sext i8 %tmp_i_i to
 ST_1 : Operation 14 [1/1] (0.39ns)   --->   "%ush = select i1 %isNeg, i9 %tmp_i_i_cast, i9 %sh_assign" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 14 'select' 'ush' <Predicate = true> <Delay = 0.39> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%sh_assign_4_cast = sext i9 %ush to i32" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 15 'sext' 'sh_assign_4_cast' <Predicate = (!isNeg)> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%sh_assign_4_cast_cas = sext i9 %ush to i25" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 16 'sext' 'sh_assign_4_cast_cas' <Predicate = (isNeg)> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%tmp_i_i_1183 = zext i32 %sh_assign_4_cast to i79" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 17 'zext' 'tmp_i_i_1183' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%tmp_i_i_1182 = zext i32 %sh_assign_4_cast to i79" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 17 'zext' 'tmp_i_i_1182' <Predicate = (!isNeg)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%r_V = lshr i25 %mantissa_V, %sh_assign_4_cast_cas" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 18 'lshr' 'r_V' <Predicate = (isNeg)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%r_V_2 = shl i79 %mantissa_V_2_cast2, %tmp_i_i_1183" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 19 'shl' 'r_V_2' <Predicate = (!isNeg)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%r_V_2 = shl i79 %mantissa_V_2_cast2, %tmp_i_i_1182" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 19 'shl' 'r_V_2' <Predicate = (!isNeg)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.38> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %r_V, i32 24)" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:20->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 20 'bitselect' 'tmp' <Predicate = (isNeg)> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%tmp_s = zext i1 %tmp to i32" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:20->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 21 'zext' 'tmp_s' <Predicate = (isNeg)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%tmp_1435 = call i32 @_ssdm_op_PartSelect.i32.i79.i32.i32(i79 %r_V_2, i32 24, i32 55)" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:20->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 22 'partselect' 'tmp_1435' <Predicate = (!isNeg)> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (1.38ns) (out node of the LUT)   --->   "%p_Val2_31 = select i1 %isNeg, i32 %tmp_s, i32 %tmp_1435" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 23 'select' 'p_Val2_31' <Predicate = true> <Delay = 1.38> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_31)   --->   "%tmp_1434 = call i32 @_ssdm_op_PartSelect.i32.i79.i32.i32(i79 %r_V_2, i32 24, i32 55)" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:20->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 22 'partselect' 'tmp_1434' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.38ns) (out node of the LUT)   --->   "%p_Val2_31 = select i1 %isNeg, i32 %tmp_s, i32 %tmp_1434" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 23 'select' 'p_Val2_31' <Predicate = true> <Delay = 1.38> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 24 [1/1] (1.01ns)   --->   "%result_V_1 = sub i32 0, %p_Val2_31" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:58->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 24 'sub' 'result_V_1' <Predicate = (p_Result_s)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 25 [1/1] (0.44ns)   --->   "%p_Val2_32 = select i1 %p_Result_s, i32 %result_V_1, i32 %p_Val2_31" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:58->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116->/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 25 'select' 'p_Val2_32' <Predicate = true> <Delay = 0.44> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "ret i32 %p_Val2_32" [/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50]   --->   Operation 26 'ret' <Predicate = true> <Delay = 0.00>
@@ -135,12 +135,12 @@ tmp_i_i_cast         (sext          ) [ 00]
 ush                  (select        ) [ 00]
 sh_assign_4_cast     (sext          ) [ 00]
 sh_assign_4_cast_cas (sext          ) [ 00]
-tmp_i_i_1183         (zext          ) [ 00]
+tmp_i_i_1182         (zext          ) [ 00]
 r_V                  (lshr          ) [ 00]
 r_V_2                (shl           ) [ 00]
 tmp                  (bitselect     ) [ 00]
 tmp_s                (zext          ) [ 00]
-tmp_1435             (partselect    ) [ 00]
+tmp_1434             (partselect    ) [ 00]
 p_Val2_31            (select        ) [ 00]
 result_V_1           (sub           ) [ 00]
 p_Val2_32            (select        ) [ 00]
@@ -501,14 +501,14 @@ StgValue_26          (ret           ) [ 00]
 </bind>
 </comp>
 
-<comp id="128" class="1004" name="tmp_i_i_1183_fu_128">
+<comp id="128" class="1004" name="tmp_i_i_1182_fu_128">
 <pin_list>
 <pin id="129" dir="0" index="0" bw="9" slack="0"/>
 <pin id="130" dir="1" index="1" bw="79" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_i_i_1183/1 "/>
+<opset="tmp_i_i_1182/1 "/>
 </bind>
 </comp>
 
@@ -560,7 +560,7 @@ StgValue_26          (ret           ) [ 00]
 </bind>
 </comp>
 
-<comp id="156" class="1004" name="tmp_1435_fu_156">
+<comp id="156" class="1004" name="tmp_1434_fu_156">
 <pin_list>
 <pin id="157" dir="0" index="0" bw="32" slack="0"/>
 <pin id="158" dir="0" index="1" bw="79" slack="0"/>
@@ -570,7 +570,7 @@ StgValue_26          (ret           ) [ 00]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_1435/1 "/>
+<opset="tmp_1434/1 "/>
 </bind>
 </comp>
 
@@ -741,12 +741,12 @@ StgValue_26          (ret           ) [ 00]
 		ush : 5
 		sh_assign_4_cast : 6
 		sh_assign_4_cast_cas : 6
-		tmp_i_i_1183 : 7
+		tmp_i_i_1182 : 7
 		r_V : 7
 		r_V_2 : 8
 		tmp : 8
 		tmp_s : 9
-		tmp_1435 : 9
+		tmp_1434 : 9
 		p_Val2_31 : 10
 		result_V_1 : 11
 		p_Val2_32 : 12
@@ -781,7 +781,7 @@ StgValue_26          (ret           ) [ 00]
 |          |          tmp_fu_144         |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |partselect|         tmp_V_fu_56         |    0    |    0    |
-|          |       tmp_1435_fu_156       |    0    |    0    |
+|          |       tmp_1434_fu_156       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |   trunc  |        tmp_V_38_fu_66       |    0    |    0    |
 |----------|-----------------------------|---------|---------|
@@ -789,7 +789,7 @@ StgValue_26          (ret           ) [ 00]
 |----------|-----------------------------|---------|---------|
 |          |   mantissa_V_2_cast2_fu_80  |    0    |    0    |
 |   zext   |    tmp_i_i_i_cast1_fu_84    |    0    |    0    |
-|          |     tmp_i_i_1183_fu_128     |    0    |    0    |
+|          |     tmp_i_i_1182_fu_128     |    0    |    0    |
 |          |         tmp_s_fu_152        |    0    |    0    |
 |----------|-----------------------------|---------|---------|
 |          |     tmp_i_i_cast_fu_108     |    0    |    0    |

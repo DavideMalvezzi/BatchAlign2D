@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Sat Jan  4 20:28:33 2020
+//Date        : Sun Jan  5 20:42:30 2020
 //Host        : compute.eees.dei.unibo.it running 64-bit CentOS Linux release 7.6.1810 (Core)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper

@@ -1,5 +1,5 @@
 // ==============================================================
-// File generated on Sat Jan 04 20:14:03 CET 2020
+// File generated on Sun Jan 05 20:39:47 CET 2020
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -9,8 +9,8 @@
 module batch_align2D_region_pyr_region_data_0_ram (addr0, ce0, d0, we0, q0, addr1, ce1, q1,  clk);
 
 parameter DWIDTH = 8;
-parameter AWIDTH = 10;
-parameter MEM_SIZE = 1024;
+parameter AWIDTH = 12;
+parameter MEM_SIZE = 4096;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -68,8 +68,8 @@ module batch_align2D_region_pyr_region_data_0(
     q1);
 
 parameter DataWidth = 32'd8;
-parameter AddressRange = 32'd1024;
-parameter AddressWidth = 32'd10;
+parameter AddressRange = 32'd4096;
+parameter AddressWidth = 32'd12;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

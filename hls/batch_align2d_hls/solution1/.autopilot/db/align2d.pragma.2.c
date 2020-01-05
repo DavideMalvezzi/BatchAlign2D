@@ -6260,7 +6260,7 @@ typedef unsigned int __attribute__ ((bitwidth(64))) uint64;
 
 
 typedef struct PyrRegion{
- uint8 data[32*32];
+ uint8 data[64*64];
  uint8 cols;
  uint8 rows;
  uint8 fcoord_x;
@@ -6298,7 +6298,7 @@ void batch_align2D_region(
    float* my_debug_array_ptr
 );
 # 3 "batch_align2d_hls/align2d.c" 2
-# 12 "batch_align2d_hls/align2d.c"
+# 13 "batch_align2d_hls/align2d.c"
 void compute_inverse_hessian(const PatchBorder ref_patch_with_border, Matrix3f H_inv, float* ref_patch_dx, float* ref_patch_dy){_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(H_inv, 9);
 _ssdm_InlineSelf(0, "");
 
@@ -6403,6 +6403,8 @@ void gauss_newton_optim_region(
   ){_ssdm_SpecArrayDimSize(f_coord, 2);_ssdm_SpecArrayDimSize(Hinv, 9);_ssdm_SpecArrayDimSize(ref_patch_with_border, 100);_ssdm_SpecArrayDimSize(cur_px_estimate, 2);
 _ssdm_InlineSelf(0, "");
 
+ int i;
+
  uint1 converged = 0;
  float mean_diff = 0;
 
@@ -6410,8 +6412,11 @@ _ssdm_InlineSelf(0, "");
  float px = f_coord[0] + (cur_px_estimate[0] - (int)cur_px_estimate[0]);
  float py = f_coord[1] + (cur_px_estimate[1] - (int)cur_px_estimate[1]);
 
- uint8 px_r;
- uint8 py_r;
+ float dx = 0;
+ float dy = 0;
+
+
+ const int cur_step = 64;
 
 
  Vector3f update;
@@ -6419,21 +6424,22 @@ _ssdm_InlineSelf(0, "");
  update[1] = 0;
  update[2] = 0;
  Vector3f Jres;
-
- uint8* it;
- int pos;
- float search_pixel, res;
- float subpix_x, subpix_y;
- float wTL, wTR, wBL, wBR;
-# 154 "batch_align2d_hls/align2d.c"
+# 153 "batch_align2d_hls/align2d.c"
  int iter = 0;
- gn_iter: for(iter = 0; iter < n_iter; iter++){
-# 167 "batch_align2d_hls/align2d.c"
-  px_r = floorf(px);
-  py_r = floorf(py);
+ gn_iter: for(iter = 0; iter < 5; iter++){
+# 166 "batch_align2d_hls/align2d.c"
+  uint8 px_r;
+  uint8 py_r;
+  if (iter != 0) {
+   px_r = floorf(px);
+   py_r = floorf(py);
+  } else {
+   px_r = f_coord[0] ;
+   py_r = f_coord[0] ;
+  }
 
   if(px_r < 4 || py_r < 4||
-    px_r >= 32 - 4 || py_r >= 32 - 4){
+    px_r >= 64 - 4 || py_r >= 64 - 4){
    break;
   }
 
@@ -6447,34 +6453,42 @@ _ssdm_InlineSelf(0, "");
 
 
 
-  subpix_x = px - px_r;
-  subpix_y = py - py_r;
-  wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
-  wTR = subpix_x * (1.0 - subpix_y);
-  wBL = (1.0 - subpix_x) * subpix_y;
-  wBR = subpix_x * subpix_y;
+  float subpix_x = px - px_r;
+  float subpix_y = py - py_r;
+  float wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
+  float wTR = subpix_x * (1.0 - subpix_y);
+  float wBL = (1.0 - subpix_x) * subpix_y;
+  float wBR = subpix_x * subpix_y;
 
 
-  pos = 0;
+
+  float* it_ref_dx = ref_patch_dx;
+  float* it_ref_dy = ref_patch_dy;
+
+
   Jres[0] = 0;
   Jres[1] = 0;
   Jres[2] = 0;
 
-
   compute_err: for(int y = 0; y < 8; ++y) {
-   it = (uint8*) pyr_region_data + (py_r + y - 4 ) * 32 + px_r - 4;
+   uint8* it = (uint8*) pyr_region_data + (py_r + y - 4 ) * cur_step +
+      px_r - 4;
 
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
- for(int x = 0; x < 8; ++x, ++it, ++pos){
+
+ for(int x = 0; x < 8; ++x, ++it,
+
+        ++it_ref_dx, ++it_ref_dy){
 
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
- search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[32] + wBR * it[32 + 1];
-    res = search_pixel - ref_patch_with_border[(y + 1) * (8 +2) + 1 + x] + mean_diff;
 
-    Jres[0] -= res * ref_patch_dx[pos];
-    Jres[1] -= res * ref_patch_dy[pos];
+ float search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[cur_step] + wBR * it[cur_step + 1];
+    float res = search_pixel - ref_patch_with_border[(y + 1) * (8 +2) + 1 + x] + mean_diff;
+
+    Jres[0] -= res * (*it_ref_dx);
+    Jres[1] -= res * (*it_ref_dy);
     Jres[2] -= res;
    }
 
@@ -6487,9 +6501,13 @@ _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
   Jres[1] /= 2;
 
   matrix_vector_mul(Hinv, Jres, update);
-# 244 "batch_align2d_hls/align2d.c"
+# 257 "batch_align2d_hls/align2d.c"
   px += update[0];
   py += update[1];
+
+
+  dx += update[0];
+  dy += update[1];
   mean_diff += update[2];
 
   if(update[0] * update[0] + update[1] * update[1] < (0.03 * 0.03)) {
@@ -6502,9 +6520,9 @@ _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
 
  }
 
- cur_px_estimate[0] += px;
- cur_px_estimate[1] += py;
-# 273 "batch_align2d_hls/align2d.c"
+ cur_px_estimate[0] += dx;
+ cur_px_estimate[1] += dy;
+# 290 "batch_align2d_hls/align2d.c"
 }
 
 void batch_align2D_region(
@@ -6537,7 +6555,7 @@ _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "ctrl", "", "", 0, 0, 0, 
  static float debug_array[8][100];
 
 
- static uint8 pyr_region_data[8][32*32];
+ static uint8 pyr_region_data[8][64*64];
  static Vector2d pyr_region_fcoord[8];
  static PatchBorder ref_patch_with_border[8];
  static Vector2f cur_px_estimate[8];
@@ -6568,7 +6586,7 @@ _ssdm_SpecArrayPartition( &cur_px_estimate, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( ref_patch_dx, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( ref_patch_dy, 0, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( H_inv, 0, "COMPLETE", 0, "");
-# 346 "batch_align2d_hls/align2d.c"
+# 363 "batch_align2d_hls/align2d.c"
  int k = 0;
 
 
@@ -6579,7 +6597,7 @@ _ssdm_Unroll(0,0,0, "");
 
 
  compute_inverse_hessian(ref_patch_with_border[k], H_inv[k], ref_patch_dx[k], ref_patch_dy[k]);
-# 366 "batch_align2d_hls/align2d.c"
+# 383 "batch_align2d_hls/align2d.c"
   gauss_newton_optim_region(
     pyr_region_data[k], pyr_region_fcoord[k],
     H_inv[k], ref_patch_dx[k], ref_patch_dy[k],
@@ -6587,16 +6605,8 @@ _ssdm_Unroll(0,0,0, "");
     10
   );
  }
-# 383 "batch_align2d_hls/align2d.c"
+# 400 "batch_align2d_hls/align2d.c"
  memcpy((Vector2f*)my_cur_px_estimate_ptr, cur_px_estimate, sizeof(cur_px_estimate));
-
-
- memcpy(my_inv_out, H_inv, sizeof(H_inv));
-
-
-
-
-
-
+# 410 "batch_align2d_hls/align2d.c"
  return;
 }

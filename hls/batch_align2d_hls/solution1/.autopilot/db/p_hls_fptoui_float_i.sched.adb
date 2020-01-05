@@ -949,7 +949,7 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>tmp_i_i_1182</name>
+						<name>tmp_i_i_1181</name>
 						<fileName>/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h</fileName>
 						<fileDirectory>/wrk/2018.3/continuous/2018_12_06_2405991/src/products</fileDirectory>
 						<lineNumber>70</lineNumber>
@@ -1137,7 +1137,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>tmp_1506</name>
+						<name>tmp_1505</name>
 						<fileName>/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h</fileName>
 						<fileDirectory>/wrk/2018.3/continuous/2018_12_06_2405991/src/products</fileDirectory>
 						<lineNumber>73</lineNumber>

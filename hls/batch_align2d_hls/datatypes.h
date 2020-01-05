@@ -18,7 +18,7 @@
 #include <ap_cint.h>
 
 
-#define REGION_SIZE 32
+#define REGION_SIZE 64
 typedef struct PyrRegion{
 	uint8 data[REGION_SIZE*REGION_SIZE];
 	uint8 cols;

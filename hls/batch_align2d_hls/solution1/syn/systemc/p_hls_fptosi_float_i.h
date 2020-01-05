@@ -42,12 +42,12 @@ struct p_hls_fptosi_float_i : public sc_module {
     sc_signal< sc_lv<32> > sh_assign_4_cast_fu_120_p1;
     sc_signal< sc_lv<25> > sh_assign_4_cast_cas_fu_124_p1;
     sc_signal< sc_lv<79> > mantissa_V_2_cast2_fu_80_p1;
-    sc_signal< sc_lv<79> > tmp_i_i_1183_fu_128_p1;
+    sc_signal< sc_lv<79> > tmp_i_i_1182_fu_128_p1;
     sc_signal< sc_lv<25> > r_V_fu_132_p2;
     sc_signal< sc_lv<1> > tmp_fu_144_p3;
     sc_signal< sc_lv<79> > r_V_2_fu_138_p2;
     sc_signal< sc_lv<32> > tmp_s_fu_152_p1;
-    sc_signal< sc_lv<32> > tmp_1435_fu_156_p4;
+    sc_signal< sc_lv<32> > tmp_1434_fu_156_p4;
     sc_signal< sc_lv<32> > p_Val2_31_fu_166_p3;
     sc_signal< sc_lv<1> > p_Result_s_fu_48_p3;
     sc_signal< sc_lv<32> > result_V_1_fu_174_p2;
@@ -80,11 +80,11 @@ struct p_hls_fptosi_float_i : public sc_module {
     void thread_sh_assign_4_cast_cas_fu_124_p1();
     void thread_sh_assign_4_cast_fu_120_p1();
     void thread_sh_assign_fu_88_p2();
-    void thread_tmp_1435_fu_156_p4();
+    void thread_tmp_1434_fu_156_p4();
     void thread_tmp_V_38_fu_66_p1();
     void thread_tmp_V_fu_56_p4();
     void thread_tmp_fu_144_p3();
-    void thread_tmp_i_i_1183_fu_128_p1();
+    void thread_tmp_i_i_1182_fu_128_p1();
     void thread_tmp_i_i_cast_fu_108_p1();
     void thread_tmp_i_i_fu_102_p2();
     void thread_tmp_i_i_i_cast1_fu_84_p1();

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:hls:batch_align2D_region:1.0
--- IP Revision: 2001042014
+-- IP Revision: 2001052040
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

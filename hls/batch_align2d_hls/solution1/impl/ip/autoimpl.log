@@ -9,7 +9,6 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_region_ap_dcmp_0_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1478.867 ; gain = 41.754 ; free physical = 6541 ; free virtual = 51316
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'batch_align2D_region_ap_dcmp_0_no_dsp_64'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_region_ap_dcmp_0_no_dsp_64'...
 WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_region_ap_dmul_6_max_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
@@ -45,4 +44,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_reg
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/Vivado/2018.3/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat Jan  4 20:16:09 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  5 20:41:11 2020...

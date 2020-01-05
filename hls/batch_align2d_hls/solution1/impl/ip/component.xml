@@ -3560,7 +3560,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fdc38dec</spirit:value>
+            <spirit:value>0416d69c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3579,7 +3579,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f3bd186f</spirit:value>
+            <spirit:value>08649de9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3598,7 +3598,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ad2fb602</spirit:value>
+            <spirit:value>c1800d52</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3617,7 +3617,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>93fe1d1a</spirit:value>
+            <spirit:value>5c9cee8a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3631,7 +3631,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>41fdc46f</spirit:value>
+            <spirit:value>dec576d4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -9672,14 +9672,6 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/batch_align2D_region_mux_727_32_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/batch_align2D_region_my_debug_m_axi.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/batch_align2D_region_my_patches_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -9817,16 +9809,6 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/batch_align2D_region_mux_32_32_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/batch_align2D_region_mux_727_32_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/batch_align2D_region_my_debug_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -10078,14 +10060,6 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/batch_align2D_region_mux_727_32_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/batch_align2D_region_my_debug_m_axi.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/batch_align2D_region_my_patches_m_axi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -10140,7 +10114,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
       <spirit:file>
         <spirit:name>hdl/vhdl/batch_align2D_region.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_782925ab</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_308873cb</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -10212,16 +10186,6 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/batch_align2D_region_mux_32_32_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/batch_align2D_region_mux_727_32_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/batch_align2D_region_my_debug_m_axi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -11102,7 +11066,7 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="77">17184</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="77">41660</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -11119,18 +11083,18 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
       </xilinx:taxonomies>
       <xilinx:displayName>Batch_align2d_region</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2001042014</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-01-04T19:16:08Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2001052040</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-01-05T19:41:11Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="6c2c25ad"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="6f7dfc9f"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="b6d98e54"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5dd88554"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d41291df"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="11372038"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b51797f9"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="48bb84a0"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ddc9dcdf"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

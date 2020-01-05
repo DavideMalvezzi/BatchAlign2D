@@ -1,5 +1,5 @@
 -- ==============================================================
--- File generated on Sat Jan 04 20:14:03 CET 2020
+-- File generated on Sun Jan 05 20:39:47 CET 2020
 -- Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 -- SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 -- IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -14,8 +14,8 @@ entity batch_align2D_region_pyr_region_data_0_ram is
     generic(
             MEM_TYPE    : string := "block"; 
             DWIDTH     : integer := 8; 
-            AWIDTH     : integer := 10; 
-            MEM_SIZE    : integer := 1024
+            AWIDTH     : integer := 12; 
+            MEM_SIZE    : integer := 4096
     ); 
     port (
           addr0     : in std_logic_vector(AWIDTH-1 downto 0); 
@@ -100,8 +100,8 @@ use IEEE.std_logic_1164.all;
 entity batch_align2D_region_pyr_region_data_0 is
     generic (
         DataWidth : INTEGER := 8;
-        AddressRange : INTEGER := 1024;
-        AddressWidth : INTEGER := 10);
+        AddressRange : INTEGER := 4096;
+        AddressWidth : INTEGER := 12);
     port (
         reset : IN STD_LOGIC;
         clk : IN STD_LOGIC;

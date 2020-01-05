@@ -5,34 +5,34 @@
 <ModuleName>batch_align2D_region</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_generic_floor_float_s_fu_10044</InstName>
+<InstName>grp_generic_floor_float_s_fu_10386</InstName>
 <ModuleName>generic_floor_float_s</ModuleName>
-<ID>10044</ID>
+<ID>10386</ID>
 </Instance>
 <Instance>
-<InstName>grp_generic_floor_float_s_fu_10052</InstName>
+<InstName>grp_generic_floor_float_s_fu_10394</InstName>
 <ModuleName>generic_floor_float_s</ModuleName>
-<ID>10052</ID>
+<ID>10394</ID>
 </Instance>
 <Instance>
-<InstName>grp_p_hls_fptosi_float_i_fu_10074</InstName>
+<InstName>grp_p_hls_fptosi_float_i_fu_10416</InstName>
 <ModuleName>p_hls_fptosi_float_i</ModuleName>
-<ID>10074</ID>
+<ID>10416</ID>
 </Instance>
 <Instance>
-<InstName>grp_p_hls_fptosi_float_i_fu_10079</InstName>
+<InstName>grp_p_hls_fptosi_float_i_fu_10421</InstName>
 <ModuleName>p_hls_fptosi_float_i</ModuleName>
-<ID>10079</ID>
+<ID>10421</ID>
 </Instance>
 <Instance>
-<InstName>grp_p_hls_fptoui_float_i_fu_10084</InstName>
+<InstName>grp_p_hls_fptoui_float_i_fu_10426</InstName>
 <ModuleName>p_hls_fptoui_float_i</ModuleName>
-<ID>10084</ID>
+<ID>10426</ID>
 </Instance>
 <Instance>
-<InstName>grp_p_hls_fptoui_float_i_fu_10089</InstName>
+<InstName>grp_p_hls_fptoui_float_i_fu_10431</InstName>
 <ModuleName>p_hls_fptoui_float_i</ModuleName>
-<ID>10089</ID>
+<ID>10431</ID>
 </Instance>
 </InstancesList>
 </TopModule>
@@ -286,26 +286,26 @@
 <EstimatedClockPeriod>7.456</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>17184</Best-caseLatency>
-<Average-caseLatency>32416</Average-caseLatency>
-<Worst-caseLatency>51664</Worst-caseLatency>
-<PipelineInitiationInterval>17185 ~ 51665</PipelineInitiationInterval>
+<Best-caseLatency>41660</Best-caseLatency>
+<Average-caseLatency>49324</Average-caseLatency>
+<Worst-caseLatency>57244</Worst-caseLatency>
+<PipelineInitiationInterval>41661 ~ 57245</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <memcpy..myRegion_data_ptr>
 <Name>memcpy..myRegion_data_ptr</Name>
-<TripCount>8192</TripCount>
-<Latency>8193</Latency>
+<TripCount>32768</TripCount>
+<Latency>32769</Latency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>3</PipelineDepth>
 </memcpy..myRegion_data_ptr>
 <memcpy..myRegion_fcoord_ptr>
 <Name>memcpy..myRegion_fcoord_ptr</Name>
 <TripCount>16</TripCount>
-<Latency>16</Latency>
+<Latency>18</Latency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>2</PipelineDepth>
+<PipelineDepth>3</PipelineDepth>
 </memcpy..myRegion_fcoord_ptr>
 <memcpy..my_ref_patch_with_border_ptr>
 <Name>memcpy..my_ref_patch_with_border_ptr</Name>
@@ -333,12 +333,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -380,12 +385,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -427,12 +437,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -474,12 +489,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -521,12 +541,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -568,12 +593,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -615,12 +645,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -662,12 +697,17 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>10</max>
+<max>5</max>
 </range>
 </TripCount>
-<Latency>473 ~ 4783</Latency>
-<IterationLatency>473</IterationLatency>
-<PipelineDepth>473</PipelineDepth>
+<Latency>470 ~ 2418</Latency>
+<IterationLatency>
+<range>
+<min>470</min>
+<max>473</max>
+</range>
+</IterationLatency>
+<PipelineDepth>470 ~ 473</PipelineDepth>
 <compute_err>
 <Name>compute_err</Name>
 <TripCount>8</TripCount>
@@ -704,21 +744,14 @@
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 </memcpy.my_cur_px_estimate_ptr.batch_align2D_region.cur_px_estimate.gep>
-<memcpy.my_inv_out.>
-<Name>memcpy.my_inv_out.</Name>
-<TripCount>72</TripCount>
-<Latency>72</Latency>
-<PipelineII>1</PipelineII>
-<PipelineDepth>2</PipelineDepth>
-</memcpy.my_inv_out.>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>18</BRAM_18K>
-<DSP48E>71</DSP48E>
-<FF>70220</FF>
-<LUT>72554</LUT>
+<BRAM_18K>24</BRAM_18K>
+<DSP48E>65</DSP48E>
+<FF>68739</FF>
+<LUT>72414</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>

@@ -949,7 +949,7 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>tmp_i_i_1182</name>
+              <name>tmp_i_i_1181</name>
               <fileName>/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h</fileName>
               <fileDirectory>../../../../../wrk/2018.3/continuous/2018_12_06_2405991/src/products</fileDirectory>
               <lineNumber>70</lineNumber>
@@ -987,7 +987,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_i_i_1182_fu_114_p1</rtlName>
+              <rtlName>tmp_i_i_1181_fu_114_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>55</bitwidth>
@@ -1137,7 +1137,7 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>tmp_1506</name>
+              <name>tmp_1505</name>
               <fileName>/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h</fileName>
               <fileDirectory>../../../../../wrk/2018.3/continuous/2018_12_06_2405991/src/products</fileDirectory>
               <lineNumber>73</lineNumber>
@@ -1175,7 +1175,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1506_fu_130_p3</rtlName>
+              <rtlName>tmp_1505_fu_130_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2780,7 +2780,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_1506_fu_130</first>
+        <first>tmp_1505_fu_130</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2812,7 +2812,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_i_i_1182_fu_114</first>
+        <first>tmp_i_i_1181_fu_114</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

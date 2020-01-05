@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="batch_align2D_region" xd:componentRef="batch_align2D_region" xd:initiationInterval="51665" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="batch_align2D_region" xd:componentRef="batch_align2D_region" xd:initiationInterval="57245" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="*(myRegion_data_ptr)" xd:originalName="myRegion_data_ptr" xd:direction="inout" xd:interfaceRef="m_axi_my_region_data" xd:busTypeRef="aximm" xd:arraySize="64" xd:dataWidth="8" xd:bufferDirection="in"/>
   <xd:arg xd:name="myRegion_fcoord_ptr[]" xd:originalName="myRegion_fcoord_ptr" xd:direction="inout" xd:interfaceRef="m_axi_my_region_fcoord" xd:busTypeRef="aximm" xd:arraySize="2" xd:dataWidth="8" xd:bufferDirection="in"/>
   <xd:arg xd:name="my_ref_patch_with_border_ptr[]" xd:originalName="my_ref_patch_with_border_ptr" xd:direction="inout" xd:interfaceRef="m_axi_my_patches" xd:busTypeRef="aximm" xd:arraySize="100" xd:dataWidth="8" xd:bufferDirection="in"/>
   <xd:arg xd:name="my_cur_px_estimate_ptr[]" xd:originalName="my_cur_px_estimate_ptr" xd:direction="inout" xd:interfaceRef="m_axi_my_pos" xd:busTypeRef="aximm" xd:arraySize="2" xd:dataWidth="32" xd:bufferDirection="inout"/>
-  <xd:arg xd:name="my_inv_out[]" xd:originalName="my_inv_out" xd:direction="inout" xd:interfaceRef="m_axi_my_debug" xd:busTypeRef="aximm" xd:arraySize="9" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="my_inv_out[]" xd:originalName="my_inv_out" xd:direction="inout" xd:interfaceRef="m_axi_my_debug" xd:busTypeRef="aximm" xd:arraySize="9" xd:dataWidth="32" xd:bufferDirection="in"/>
   <xd:arg xd:name="*(my_debug_array_ptr)" xd:originalName="my_debug_array_ptr" xd:direction="inout" xd:interfaceRef="m_axi_my_debug_array" xd:busTypeRef="aximm" xd:arraySize="64" xd:dataWidth="32" xd:bufferDirection="in"/>
   <xd:arg xd:name="myRegion_data_ptr" xd:originalName="myRegion_data_ptr" xd:direction="in" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_my_region_data" xd:dataWidth="32" xd:offset="0x10" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="myRegion_fcoord_ptr" xd:originalName="myRegion_fcoord_ptr" xd:direction="in" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_my_region_fcoord" xd:dataWidth="32" xd:offset="0x18" xd:handshakeRef="ap_none"/>
@@ -15,6 +15,6 @@
   <xd:arg xd:name="n_iter" xd:originalName="n_iter" xd:direction="in" xd:interfaceRef="s_axi_param" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x1C" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="my_inv_out" xd:originalName="my_inv_out" xd:direction="in" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_my_debug" xd:dataWidth="32" xd:offset="0x30" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="my_debug_array_ptr" xd:originalName="my_debug_array_ptr" xd:direction="in" xd:interfaceRef="s_axi_ctrl" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_my_debug_array" xd:dataWidth="32" xd:offset="0x38" xd:handshakeRef="ap_none"/>
-  <xd:latencyEstimates xd:best-case="17184" xd:worst-case="51664" xd:average-case="32416"/>
-  <xd:resourceEstimates xd:LUT="72554" xd:FF="70220" xd:BRAM="18" xd:DSP="71"/>
+  <xd:latencyEstimates xd:best-case="41660" xd:worst-case="57244" xd:average-case="49324"/>
+  <xd:resourceEstimates xd:LUT="72414" xd:FF="68739" xd:BRAM="24" xd:DSP="65"/>
 </xd:acceleratorMap>

@@ -44,9 +44,9 @@ architecture behav of p_hls_fptoui_float_i is
     signal sh_assign_2_cast_fu_106_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal sh_assign_2_cast_cas_fu_110_p1 : STD_LOGIC_VECTOR (24 downto 0);
     signal mantissa_V_1_cast2_fu_66_p1 : STD_LOGIC_VECTOR (54 downto 0);
-    signal tmp_i_i_1182_fu_114_p1 : STD_LOGIC_VECTOR (54 downto 0);
+    signal tmp_i_i_1181_fu_114_p1 : STD_LOGIC_VECTOR (54 downto 0);
     signal r_V_fu_118_p2 : STD_LOGIC_VECTOR (24 downto 0);
-    signal tmp_1506_fu_130_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_1505_fu_130_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal r_V_1_fu_124_p2 : STD_LOGIC_VECTOR (54 downto 0);
     signal tmp_fu_138_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp_s_fu_142_p4 : STD_LOGIC_VECTOR (7 downto 0);
@@ -64,18 +64,18 @@ begin
     mantissa_V_1_cast2_fu_66_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(mantissa_V_fu_56_p4),55));
     mantissa_V_fu_56_p4 <= ((ap_const_lv1_1 & tmp_V_37_fu_52_p1) & ap_const_lv1_0);
     p_Val2_s_fu_38_p1 <= x;
-    r_V_1_fu_124_p2 <= std_logic_vector(shift_left(unsigned(mantissa_V_1_cast2_fu_66_p1),to_integer(unsigned('0' & tmp_i_i_1182_fu_114_p1(31-1 downto 0)))));
+    r_V_1_fu_124_p2 <= std_logic_vector(shift_left(unsigned(mantissa_V_1_cast2_fu_66_p1),to_integer(unsigned('0' & tmp_i_i_1181_fu_114_p1(31-1 downto 0)))));
     r_V_fu_118_p2 <= std_logic_vector(shift_right(unsigned(mantissa_V_fu_56_p4),to_integer(unsigned('0' & sh_assign_2_cast_cas_fu_110_p1(25-1 downto 0)))));
         sh_assign_2_cast_cas_fu_110_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(ush_fu_98_p3),25));
 
         sh_assign_2_cast_fu_106_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(ush_fu_98_p3),32));
 
     sh_assign_fu_74_p2 <= std_logic_vector(signed(ap_const_lv9_181) + signed(tmp_i_i_i_cast1_fu_70_p1));
-    tmp_1506_fu_130_p3 <= r_V_fu_118_p2(24 downto 24);
+    tmp_1505_fu_130_p3 <= r_V_fu_118_p2(24 downto 24);
     tmp_V_37_fu_52_p1 <= p_Val2_s_fu_38_p1(23 - 1 downto 0);
     tmp_V_fu_42_p4 <= p_Val2_s_fu_38_p1(30 downto 23);
-    tmp_fu_138_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_1506_fu_130_p3),8));
-    tmp_i_i_1182_fu_114_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(sh_assign_2_cast_fu_106_p1),55));
+    tmp_fu_138_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_1505_fu_130_p3),8));
+    tmp_i_i_1181_fu_114_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(sh_assign_2_cast_fu_106_p1),55));
         tmp_i_i_cast_fu_94_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_i_i_fu_88_p2),9));
 
     tmp_i_i_fu_88_p2 <= std_logic_vector(unsigned(ap_const_lv8_7F) - unsigned(tmp_V_fu_42_p4));

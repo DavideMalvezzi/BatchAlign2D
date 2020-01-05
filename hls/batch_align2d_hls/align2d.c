@@ -9,6 +9,7 @@
 //#define USE_DEBUG_ARRAY
 #define DEBUG_ARRAY_LENGTH 100
 
+// Compute the hessian matrix inverse
 void compute_inverse_hessian(const PatchBorder ref_patch_with_border, Matrix3f H_inv, float* ref_patch_dx, float* ref_patch_dy){
 	#pragma HLS INLINE
 	//#pragma HLS FUNCTION_INSTANTIATE variable=ref_patch_with_border
@@ -113,15 +114,20 @@ void gauss_newton_optim_region(
 		){
 	#pragma HLS INLINE
 
+	int i;
+
 	bool converged = false;
 	float mean_diff = 0;
 
 	// Compute pixel location in new image:
 	float px = f_coord[0] /*fcoord_x*/ + (cur_px_estimate[0] - (int)cur_px_estimate[0]);
 	float py = f_coord[1] /*fcoord_y*/ + (cur_px_estimate[1] - (int)cur_px_estimate[1]);
+	// tracking differences
+	float dx = 0;
+	float dy = 0;
 
-	uint8 px_r;
-	uint8 py_r;
+	// termination condition
+	const int cur_step = REGION_SIZE; //pyr_region_cols;
 
 	// Update vector
 	Vector3f update;
@@ -130,29 +136,22 @@ void gauss_newton_optim_region(
 	update[2] = 0;
 	Vector3f Jres;
 
-	uint8* it;
-	int pos;
-	float search_pixel, res;
-	float subpix_x, subpix_y;
-	float wTL, wTR, wBL, wBR;
-
 	#ifdef USE_DEBUG_ARRAY
-		int i;
-		for (i = 0 ; i < DEBUG_ARRAY_LENGTH ; i++) {
-				debug_array[i] = 0;
-		}
+	for (i = 0 ; i < DEBUG_ARRAY_LENGTH ; i++) {
+			debug_array[i] = 0;
+	}
 	#endif
 
 	#ifdef USE_DEBUG_ARRAY
-		debug_array[8] += px; // se passa di qui incremento
-		for (i = 0 ; i < 5; i++) {
-			debug_array[10 + i] = ref_patch_dx[i];
-			debug_array[20 + i] = ref_patch_dy[i];
-		}
+			debug_array[8] += px; // se passa di qui incremento
+			for (i = 0 ; i < 5; i++) {
+				debug_array[10 + i] = ref_patch_dx[i];
+				debug_array[20 + i] = ref_patch_dy[i];
+			}
 	#endif
 
 	int iter = 0;
-	gn_iter: for(iter = 0; iter < n_iter; iter++){
+	gn_iter: for(iter = 0; iter < 5; iter++){
 		#ifdef OPT_GAUSS_NEWTON
 			//#pragma HLS PIPELINE II=1
 			//#pragma HLS DEPENDENCE variable=px inter true
@@ -164,8 +163,15 @@ void gauss_newton_optim_region(
 		#endif
 
 		// Get integer coordinates
-		px_r = floorf(px);
-		py_r = floorf(py);
+		uint8 px_r;
+		uint8 py_r;
+		if (iter != 0) {
+			px_r = floorf(px);
+			py_r = floorf(py);
+		} else {
+			px_r = f_coord[0]/*fcoord_x*/;
+			py_r = f_coord[0]/*fcoord_y*/;
+		}
 
 		if(px_r < HALFPATCH_SIZE_ || py_r < HALFPATCH_SIZE_||
 				px_r >= REGION_SIZE/*pyr_region_cols*/ - HALFPATCH_SIZE_ || py_r >= REGION_SIZE/*pyr_region_rows*/ - HALFPATCH_SIZE_){
@@ -182,34 +188,42 @@ void gauss_newton_optim_region(
 		#endif
 
 		// compute interpolation weights
-		subpix_x = px - px_r;
-		subpix_y = py - py_r;
-		wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
-		wTR = subpix_x * (1.0 - subpix_y);
-		wBL = (1.0 - subpix_x) * subpix_y;
-		wBR = subpix_x * subpix_y;
+		float subpix_x = px - px_r;
+		float subpix_y = py - py_r;
+		float wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
+		float wTR = subpix_x * (1.0 - subpix_y);
+		float wBL = (1.0 - subpix_x) * subpix_y;
+		float wBR = subpix_x * subpix_y;
+
+		// loop through search_patch, interpolate
+		//uint8* it_ref = ref_patch;
+		float* it_ref_dx = ref_patch_dx;
+		float* it_ref_dy = ref_patch_dy;
 
 		// Reset
-		pos = 0;
 		Jres[0] = 0;
 		Jres[1] = 0;
 		Jres[2] = 0;
-
 		// Compute current error
 		compute_err: for(int y = 0; y < PATCH_SIZE; ++y) {
-			it = (uint8*) pyr_region_data + (py_r + y - HALFPATCH_SIZE_ ) * REGION_SIZE + px_r - HALFPATCH_SIZE_;
+			uint8* it = (uint8*) pyr_region_data + (py_r + y - HALFPATCH_SIZE_ ) * cur_step +
+						px_r - HALFPATCH_SIZE_;
 			#ifdef OPT_GAUSS_NEWTON
 				#pragma HLS PIPELINE II=1
+				//#pragma HLS DEPENDENCE variable = Jres inter true
 			#endif
-			for(int x = 0; x < PATCH_SIZE; ++x, ++it, ++pos){
+			for(int x = 0; x < PATCH_SIZE; ++x, ++it,
+								//++it_ref,
+								++it_ref_dx, ++it_ref_dy){
 				#ifdef OPT_GAUSS_NEWTON
 					#pragma HLS PIPELINE II=1
+					//#pragma HLS DEPENDENCE variable = Jres inter true
 				#endif
-				search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[REGION_SIZE] + wBR * it[REGION_SIZE + 1];
-				res = search_pixel - ref_patch_with_border[(y + 1) * (PATCH_SIZE +2) + 1 + x] + mean_diff;
+				float search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[cur_step] + wBR * it[cur_step + 1];
+				float res = search_pixel - ref_patch_with_border[(y + 1) * (PATCH_SIZE +2) + 1 + x] + mean_diff;
 
-				Jres[0] -= res * ref_patch_dx[pos];
-				Jres[1] -= res * ref_patch_dy[pos];
+				Jres[0] -= res * (*it_ref_dx);
+				Jres[1] -= res * (*it_ref_dy);
 				Jres[2] -= res;
 			}
 
@@ -240,9 +254,12 @@ void gauss_newton_optim_region(
 			}
 		#endif
 
-		// apply differences
 		px += update[0];
 		py += update[1];
+
+		// apply differences
+		dx += update[0];
+		dy += update[1];
 		mean_diff += update[2];
 
 		if(update[0] * update[0] + update[1] * update[1] < MIN_SQUARED_UPDATE) {
@@ -255,8 +272,8 @@ void gauss_newton_optim_region(
 		#endif
 	}
 
-	cur_px_estimate[0] += px;
-	cur_px_estimate[1] += py;
+	cur_px_estimate[0] += dx;
+	cur_px_estimate[1] += dy;
 
 	#ifdef USE_DEBUG_ARRAY
 		// #Hinv[2] = dx;
@@ -383,7 +400,7 @@ void batch_align2D_region(
 	memcpy((Vector2f*)my_cur_px_estimate_ptr, cur_px_estimate, sizeof(cur_px_estimate));
 
 	// Debug
-	memcpy(my_inv_out, H_inv, sizeof(H_inv));
+	//memcpy(my_inv_out, H_inv, sizeof(H_inv));
 
 	#ifdef USE_DEBUG_ARRAY
 		for (k = 0 ; k < BATCH_SIZE ; k++)
@@ -393,318 +410,3 @@ void batch_align2D_region(
 	return;
 }
 
-
-/*void batch_align2D_region(
-			//volatile const PyrRegion* pyr_region_ptr,
-			volatile const uint8** pyr_region_data,
-			volatile const uint8* region_cols,
-			volatile const uint8* region_rows,
-			volatile const uint8* fcoord_x,
-			volatile const uint8* fcoord_y,
-
-			volatile const PatchBorder* ref_patch_with_border_ptr,
-			volatile Vector2f* cur_px_estimate_ptr,
-			uint64* converged, // consideriamo fino a 64 batchsize, quindi 64 bit
-			const int n_iter,
-			Matrix3f* inv_out
-){
-	// Define m_axi ports
-	// For better performance set the latency and read/write parameter
-	#pragma HLS INTERFACE m_axi depth=64 port=pyr_region_ptr offset=slave bundle=pyr num_write_outstanding=0
-	#pragma HLS INTERFACE m_axi depth=64 port=ref_patch_with_border_ptr offset=slave bundle=patches num_write_outstanding=0
-	#pragma HLS INTERFACE m_axi depth=64 port=cur_px_estimate_ptr offset=slave bundle=pos
-	#pragma HLS INTERFACE m_axi depth=64 port=inv_out offset=slave bundle=debug
-
-	// Define control signals
-	#pragma HLS INTERFACE s_axilite port=converged bundle=param
-	#pragma HLS INTERFACE s_axilite port=n_iter bundle=param
-	#pragma HLS INTERFACE s_axilite port=return bundle=ctrl
-
-	// Temp buffer
-	static uint8 pyr_region_data[BATCH_SIZE][REGION_SIZE*REGION_SIZE];
-	static uint8 pyr_region_cols, pyr_region_rows;
-	static uint8 pyr_region_fcoord_x[BATCH_SIZE], pyr_region_fcoord_y[BATCH_SIZE];
-	static PatchBorder ref_patch_with_border[BATCH_SIZE];
-	static Vector2f cur_px_estimate[BATCH_SIZE];
-
-	// Partition variable to increase the throughput
-	#pragma HLS ARRAY_PARTITION variable=pyr_region_data complete dim=1
-	#pragma HLS ARRAY_PARTITION variable=pyr_region_fcoord_x complete dim=1
-	#pragma HLS ARRAY_PARTITION variable=pyr_region_fcoord_y complete dim=1
-	#pragma HLS ARRAY_PARTITION variable=ref_patch_with_border complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=cur_px_estimate complete dim=1
-
-	// Burst copy data from RAM to FPGA
-	memcpy(&pyr_region_cols, 	(const uint8*)&pyr_region_ptr[0].cols, sizeof(uint8));
-	memcpy(&pyr_region_rows, 	(const uint8*)&pyr_region_ptr[0].rows, sizeof(uint8));
-	int i;
-	for (i = 0 ; i < BATCH_SIZE ; i++) {
-		memcpy(&pyr_region_data[i], 	(const uint8*)&pyr_region_ptr[i].data, sizeof(uint8)*REGION_SIZE*REGION_SIZE);
-		memcpy(&pyr_region_fcoord_x[i], (const uint8*)&pyr_region_ptr[i].fcoord_x, sizeof(uint8));
-		memcpy(&pyr_region_fcoord_y[i], (const uint8*)&pyr_region_ptr[i].fcoord_y, sizeof(uint8));
-	}
-	//sizeof(pyr_region);
-	memcpy(ref_patch_with_border, 	(const PatchBorder*)ref_patch_with_border_ptr, sizeof(ref_patch_with_border));
-	memcpy(cur_px_estimate, 		(const Vector2f*)cur_px_estimate_ptr, sizeof(cur_px_estimate));
-
-	// Reset flag
-	(*converged) = 0;
-
-	//Jacobians
-	float ref_patch_dx[BATCH_SIZE][PATCH_AREA];
-	float ref_patch_dy[BATCH_SIZE][PATCH_AREA];
-
-	// Inverse hessians
-	Matrix3f H_inv[BATCH_SIZE];
-
-	// Partition variable to increase the throughput
-	#pragma HLS ARRAY_PARTITION variable=ref_patch_dx complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=ref_patch_dy complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=Hinv complete dim=0
-
-	// Apply align2D to each element in the batch
-	int k = 0;
-	batch_align2d_loop: for(k = 0; k < BATCH_SIZE; k++){
-		#ifdef PAR_BATCH
-			#pragma HLS UNROLL
-		#endif
-
-		// -------------- Initialization ---------------------------
-
-		//initialization:
-		// Compute the inverse Hessian matrix for the patch
-		compute_inverse_hessian(ref_patch_with_border[k], H_inv[k], ref_patch_dx[k], ref_patch_dy[k]);
-
-		// --------------- Gauss Newton ---------------------------
-
-		//gn_step:
-
-		#ifdef PAR_BATCH
-			#pragma HLS DEPENDENCE variable=pyr_region_data inter false
-			#pragma HLS DEPENDENCE variable=pyr_region_cols inter false
-			#pragma HLS DEPENDENCE variable=pyr_region_rows inter false
-			#pragma HLS DEPENDENCE variable=pyr_region_fcoord_y inter false
-			#pragma HLS DEPENDENCE variable=pyr_region_fcoord_x inter false
-			#pragma HLS DEPENDENCE variable=n_iter inter false
-		#endif
-
-		// Get image pyramid level size
-		// Run Gauss-Newton optimization
-		// COMMENTO LA GAUSS NEWTON PER MOTIVI DI TEST
-		gauss_newton_optim_region(pyr_region_data[k],
-				pyr_region_cols, pyr_region_rows,
-				pyr_region_fcoord_x[k], pyr_region_fcoord_y[k],
-				H_inv[k], ref_patch_dx[k], ref_patch_dx[k],
-				ref_patch_with_border[k], cur_px_estimate[k],
-				n_iter
-		);
-	}
-
-	memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));
-
-	// Burst copy data from FPGA to RAM
-	memcpy((Vector2f*)cur_px_estimate_ptr, cur_px_estimate, sizeof(cur_px_estimate));
-
-	return;
-} */
-
-
-/* Te la commento per non doverci fare il design block
-
-void gauss_newton_optim(const uint8* img, const uint16 img_w, const uint16 img_h,
-		const Matrix3f H_inv, const float* dx, const float* dy,
-		const PatchBorder patch, Vector2f cur_px_estimate, const int n_iter){
-	#pragma HLS INLINE off
-
-	bool converged = false;
-	float mean_diff = 0;
-
-	// Compute pixel location in new image:
-	float u = cur_px_estimate[0];
-	float v = cur_px_estimate[1];
-
-	// Update vector
-	Vector3f update = {0};
-	Vector3f Jres;
-
-	int u_r, v_r;
-	float subpix_x, subpix_y;
-	float wTL, wTR, wBL, wBR;
-	uint8* it;
-	float search_pixel, res;
-
-	gn_iter: for(int iter = 0; iter < 10; iter++){
-
-		// Get integer coordinates
-		u_r = floorf(u);
-		v_r = floorf(v);
-
-		// Check if patch is still inside the image
-		if(u_r < HALF_PATCH_SIZE || v_r < HALF_PATCH_SIZE || u_r >= img_w - HALF_PATCH_SIZE || v_r >= img_h - HALF_PATCH_SIZE){
-			//break;
-		}
-
-		// Check valid coordinates
-		if(isnan(u) || isnan(v)) {
-			//break;
-		}
-
-		// Compute interpolation weights
-		subpix_x = u - u_r;
-		subpix_y = v - v_r;
-		wTL = (1.0 - subpix_x) * (1.0 - subpix_y);
-		wTR = subpix_x * (1.0 - subpix_y);
-		wBL = (1.0 - subpix_x) * subpix_y;
-		wBR = subpix_x * subpix_y;
-
-		// Reset
-		Jres[0] = 0;
-		Jres[1] = 0;
-		Jres[2] = 0;
-
-		// Compute current error
-		compute_err: for(int y = 0; y < PATCH_SIZE; y++){
-			it = (uint8*) img + (v_r + y - HALF_PATCH_SIZE) * img_w + u_r - HALF_PATCH_SIZE;
-			for(int x = 0; x < PATCH_SIZE; x++, it++){
-				search_pixel = wTL * it[0] + wTR * it[1] + wBL * it[img_w] + wBR * it[img_w + 1];
-				res = search_pixel - patch[(y + 1) * REF_STEP + x + 1] + mean_diff;
-
-				Jres[0] -= res * dx[y * PATCH_SIZE + x];
-				Jres[1] -= res * dy[y * PATCH_SIZE + x];
-				Jres[2] -= res;
-			}
-		}
-
-		// Compute the update
-		matrix_vector_mul(H_inv, Jres, update);
-
-		// Update the position
-		u += update[0] / 2;
-		v += update[1] / 2;
-		mean_diff += update[2];
-
-		// Check for convergence
-		if(update[0] * update[0] + update[1] * update[1] < MIN_SQUARED_UPDATE) {
-			converged = true;
-			break;
-		}
-	}
-
-	// Save final result
-	cur_px_estimate[0] = u;
-	cur_px_estimate[1] = v;
-
-
-	//printf("Final pos %f %f \n", u, v);
-}
-
-// Read write test for axi master protocol
-void batch_align2D(
-			volatile const uint8* pyr_data_ptr,
-			const uint16 img_w,
-			const uint16 img_h,
-			volatile const PatchBorder* ref_patch_with_border_ptr,
-			volatile Vector2f* cur_px_estimate_ptr,
-			const uint128 levels,
-			uint64* converged,
-			const int n_iter,
-			bool transfer_pyr,
-			Matrix3f* inv_out
-){
-	// Define m_axi ports
-	// For better performance set the latency and read/write parameter
-	#pragma HLS INTERFACE m_axi depth=64 port=pyr_data_ptr offset=slave bundle=pyr num_write_outstanding=0
-	#pragma HLS INTERFACE m_axi depth=64 port=ref_patch_with_border_ptr offset=slave bundle=patches num_write_outstanding=0
-	#pragma HLS INTERFACE m_axi depth=64 port=cur_px_estimate_ptr offset=slave bundle=pos
-	#pragma HLS INTERFACE m_axi depth=64 port=inv_out offset=slave bundle=debug
-
-	// Define control signals
-	#pragma HLS INTERFACE s_axilite port=img_w bundle=param
-	#pragma HLS INTERFACE s_axilite port=img_h bundle=param
-	#pragma HLS INTERFACE s_axilite port=levels bundle=param
-	#pragma HLS INTERFACE s_axilite port=converged bundle=param
-	#pragma HLS INTERFACE s_axilite port=n_iter bundle=param
-	#pragma HLS INTERFACE s_axilite port=transfer_pyr bundle=param
-	#pragma HLS INTERFACE s_axilite port=return bundle=ctrl
-
-	// Temp buffer
-	static uint8 pyr_data[PYR_SIZE];
-	static PatchBorder ref_patch_with_border[BATCH_SIZE];
-	static Vector2f cur_px_estimate[BATCH_SIZE];
-
-	// Partition variable to increase the throughput
-	#pragma HLS ARRAY_PARTITION variable=ref_patch_with_border complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=cur_px_estimate complete dim=1
-
-	// Burst copy data from RAM to FPGA
-	// The pyramid is copied only if the pointer is not NULL, so we can copy only once per set of patch
-	// then it will be stored into a static variable
-	if(transfer_pyr){
-		memcpy(pyr_data, 			(const uint8*)pyr_data_ptr, 					PYR_SIZE);
-	}
-	memcpy(ref_patch_with_border, 	(const PatchBorder*)ref_patch_with_border_ptr, 	sizeof(ref_patch_with_border));
-	memcpy(cur_px_estimate, 		(const Vector2f*)cur_px_estimate_ptr, 			sizeof(cur_px_estimate));
-
-	// Reset flag
-	(*converged) = 0;
-
-	//Jacobians
-	float ref_patch_dx[BATCH_SIZE][PATCH_AREA];
-	float ref_patch_dy[BATCH_SIZE][PATCH_AREA];
-
-	// Inverse hessians
-	Matrix3f H_inv[BATCH_SIZE];
-
-	// Partition variable to increase the throughput
-	#pragma HLS ARRAY_PARTITION variable=ref_patch_dx complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=ref_patch_dy complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=Hinv complete dim=0
-
-	int k;
-	// Apply align2D to each element in the batch
-	init_loop: for(k = 0; k < BATCH_SIZE; k++){
-		#ifdef PAR_BATCH
-			#pragma HLS UNROLL
-		#endif
-
-		// Compute the inverse Hessian matrix for the patch
-		compute_inverse_hessian(ref_patch_with_border[k], H_inv[k], ref_patch_dx[k], ref_patch_dy[k]);
-	}
-
-	optim_loop: for(k = 0; k < BATCH_SIZE; k++){
-		#ifdef PAR_BATCH
-			#pragma HLS UNROLL
-			#pragma HLS DEPENDENCE variable=pyr_data inter false
-			#pragma HLS DEPENDENCE variable=img_w inter false
-			#pragma HLS DEPENDENCE variable=img_h inter false
-			#pragma HLS DEPENDENCE variable=n_iter inter false
-		#endif
-
-		// Get image level pointer
-		int offset = 0;
-		int level = apint_get_range(levels, k+1, k);
-		get_pyr_level: for(int l = 0; l < level; l++){
-			offset += (img_w * img_h) / ((1 << l) * (1 << l));
-		}
-		uint8* cur_img = pyr_data + offset;
-
-		// Get image pyramid level size
-		uint16 cur_img_cols = img_w / (1 << level);
-		uint16 cur_img_rows = img_h / (1 << level);
-
-		// Run Gauss-Newton optimization
-		gauss_newton_optim(cur_img, img_w, img_h,
-				H_inv[k], ref_patch_dx[k], ref_patch_dx[k],
-				ref_patch_with_border[k], cur_px_estimate[k],
-				n_iter
-		);
-	}
-
-	memcpy((Matrix3f*)inv_out, H_inv, sizeof(H_inv));
-
-	// Burst copy data from FPGA to RAM
-	memcpy((Vector2f*)cur_px_estimate_ptr, cur_px_estimate, sizeof(cur_px_estimate));
-
-	return;
-}
-*/
