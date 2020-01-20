@@ -1,0 +1,75 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'batch_align2D_region'" level="0">
+<item name = "Date">Sat Jan 18 10:27:10 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">batch_align2d_hls</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 7.456, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">102738, 107039, 102738, 107039, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_gauss_newton_optim_r_fu_21504">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_21655">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_21806">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_21957">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_22108">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_22259">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_22410">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_22561">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_22712">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_22863">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23014">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23165">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23316">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23467">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23618">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23769">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_23920">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24071">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24222">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24373">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24524">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24675">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24826">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+<column name="grp_gauss_newton_optim_r_fu_24977">gauss_newton_optim_r, 501, 4802, 501, 4802, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- memcpy..myRegion_data_ptr">98305, 98305, 3, 1, 1, 98304, yes</column>
+<column name="- memcpy..myRegion_fcoord_ptr">48, 48, 2, 1, 1, 48, yes</column>
+<column name="- memcpy..my_ref_patch_with_border_ptr">2401, 2401, 3, 1, 1, 2400, yes</column>
+<column name="- memcpy.batch_align2D_region.cur_px_estimate.gep3.my_cur_px_estimate_ptr">49, 49, 3, 1, 1, 48, yes</column>
+<column name="- init_loop">1343, 1343, 240, 48, 1, 24, yes</column>
+<column name="- memcpy.my_cur_px_estimate_ptr.batch_align2D_region.cur_px_estimate.gep">48, 48, 2, 1, 1, 48, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

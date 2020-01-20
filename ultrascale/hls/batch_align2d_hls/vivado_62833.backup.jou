@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 15 20:01:01 2019
+# Process ID: 62833
+# Current directory: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls
+# Command line: vivado
+# Log file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/vivado.log
+# Journal file: /home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.xpr
+update_compile_order -fileset sources_1
+file mkdir /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk
+file copy -force /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.runs/impl_1/design_1.sysdef /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
+
+launch_sdk -workspace /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk -hwspec /home/dmalvezzi/batch_align2d/design/batch_align2d_design/batch_align2d_design.sdk/design_1.hdf
