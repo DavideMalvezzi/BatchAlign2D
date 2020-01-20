@@ -1,28 +1,555 @@
-INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'davide' on host 'davide-X550CL' (Linux_x86_64 version 5.0.0-29-generic) on Tue Oct 08 20:43:16 CEST 2019
-INFO: [HLS 200-10] On os Ubuntu 18.04.2 LTS
-INFO: [HLS 200-10] In directory '/home/davide/Desktop/svo_batch_align2d/ultrascale/hls'
-Sourcing Tcl script '/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/solution1/export.tcl'
-INFO: [HLS 200-10] Opening project '/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls'.
-INFO: [HLS 200-10] Opening solution '/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/solution1'.
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-10] Running '/cad/xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'dmalvezzi' on host 'compute.eees.dei.unibo.it' (Linux_x86_64 version 3.10.0-957.21.3.el7.x86_64) on Sat Jan 18 10:02:05 CET 2020
+INFO: [HLS 200-10] On os "CentOS Linux release 7.6.1810 (Core) "
+INFO: [HLS 200-10] In directory '/home/dmalvezzi/batch_align2d/hls'
+INFO: [HLS 200-10] Opening project '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls'.
+INFO: [HLS 200-10] Adding design file 'batch_align2d_hls/datatypes.h' to the project
+INFO: [HLS 200-10] Adding design file 'batch_align2d_hls/align2d.h' to the project
+INFO: [HLS 200-10] Adding design file 'batch_align2d_hls/align2d.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'batch_align2d_hls/solution1/test.c' to the project
+INFO: [HLS 200-10] Opening solution '/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'batch_align2d_hls/align2d.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 18769 ; free virtual = 31921
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 533.414 ; gain = 4.242 ; free physical = 18771 ; free virtual = 31923
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'mv_mul' (batch_align2d_hls/align2d.c:84) in function 'matrix_vector_mul': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-603] Inlining function 'compute_inverse_hessian' into 'batch_align2D_region' (batch_align2d_hls/align2d.c:281).
+INFO: [XFORM 203-603] Inlining function 'matrix_vector_mul' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:192).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 725.301 ; gain = 196.129 ; free physical = 18682 ; free virtual = 31847
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC2Ef14' into '_ZN9fp_structIfEC1Ef10' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:319) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC1Ef10' into 'generic_copysign<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:11) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_copysign<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:13) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC1Ef10' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZNK9fp_structIfE9__signbitEv12' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_copysign<float>' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:39) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:67) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:70) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:90) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:62) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC1Ef10' into 'generic_isnan<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_isnan.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<float>' into '__isnanf' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/c/isnanfloat.cpp:7) automatically.
+INFO: [XFORM 203-602] Inlining function 'floorf' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function '__isnanf' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:152) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 743.410 ; gain = 214.238 ; free physical = 18539 ; free virtual = 31708
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'init_loop' (batch_align2d_hls/align2d.c:275) in function 'batch_align2D_region' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'compute_hessian' (batch_align2d_hls/align2d.c:21) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'compute_err' (batch_align2d_hls/align2d.c:171) in function 'gauss_newton_optim_region' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1.1' (batch_align2d_hls/align2d.c:176) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'memset_H' in function 'batch_align2D_region' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'compute_hessian' (batch_align2d_hls/align2d.c:21) in function 'batch_align2D_region' completely with a factor of 64.
+INFO: [HLS 200-489] Unrolling loop 'optim_loop' (batch_align2d_hls/align2d.c:285) in function 'batch_align2D_region' completely with a factor of 24.
+INFO: [XFORM 203-501] Unrolling loop 'mv_mul' (batch_align2d_hls/align2d.c:84) in function 'gauss_newton_optim_region': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (batch_align2d_hls/align2d.c:176) in function 'gauss_newton_optim_region' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'mv_mul' (batch_align2d_hls/align2d.c:84) in function 'gauss_newton_optim_region' completely with a factor of 3.
+INFO: [XFORM 203-102] Partitioning array 'update' (batch_align2d_hls/align2d.c:127) automatically.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_data'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_patch_with_border'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_patch_dx' (batch_align2d_hls/align2d.c:261) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_patch_dy' (batch_align2d_hls/align2d.c:262) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_inv' (batch_align2d_hls/align2d.c:265) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H' (batch_align2d_hls/align2d.c:14) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'Jres' (batch_align2d_hls/align2d.c:132) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_patch_dx' (batch_align2d_hls/align2d.c:261) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ref_patch_dy' (batch_align2d_hls/align2d.c:262) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_inv' (batch_align2d_hls/align2d.c:265) in dimension 2 completely.
+WARNING: [XFORM 203-104] Completely partitioning array 'ref_patch_dx' (batch_align2d_hls/align2d.c:261) accessed through non-constant indices on dimension 1 (batch_align2d_hls/align2d.c:183:5), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'ref_patch_dy' (batch_align2d_hls/align2d.c:262) accessed through non-constant indices on dimension 1 (batch_align2d_hls/align2d.c:184:5), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC2Ef14' into '_ZN9fp_structIfEC1Ef10' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:319) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC1Ef10' into 'generic_copysign<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:11) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_copysign<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:13) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC1Ef10' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZNK9fp_structIfE9__signbitEv12' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_copysign<float>' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'generic_floor<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:39) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:67) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:70) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<unsigned char, float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<unsigned char, float>' into '__hls_fptoui_float_i8' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:62) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIfEC1Ef10' into 'generic_isnan<float>' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_isnan.h:16) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_isnan<float>' into '__isnanf' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/c/isnanfloat.cpp:7) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'floorf' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_float_i8' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function '__isnanf' into 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:152) automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'myRegion_fcoord_ptr' in function 'batch_align2D_region' (batch_align2d_hls/align2d.c:253:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'my_ref_patch_with_border_ptr' in function 'batch_align2D_region' (batch_align2d_hls/align2d.c:254:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'my_cur_px_estimate_ptr' in function 'batch_align2D_region' (batch_align2d_hls/align2d.c:255:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'my_cur_px_estimate_ptr' in function 'batch_align2D_region' (batch_align2d_hls/align2d.c:299:2).
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.9' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.8' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.23' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.22' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.21' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.20' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.19' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.18' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.17' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.16' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.15' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.14' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.13' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.12' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.11' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.10' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'pyr_region_fcoord.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.9' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.8' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.23' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.22' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.21' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.20' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.19' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.18' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.17' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.16' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.15' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.14' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.13' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.12' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.11' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.10' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'cur_px_estimate.0' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.9' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.8' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.23' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.22' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.21' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.20' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.19' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.18' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.17' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.16' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.15' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.14' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.13' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.12' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.11' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.10' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'pyr_region_fcoord.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.9' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.8' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.23' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.22' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.21' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.20' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.19' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.18' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.17' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.16' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.15' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.14' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.13' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.12' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.11' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.10' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'cur_px_estimate.0' in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:12:19) to (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_floor.h:41:1) in function 'generic_floor<float>'... converting 9 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'generic_floor<float>' into 'gauss_newton_optim_region' (/wrk/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/c/floorfloat.cpp:6->batch_align2d_hls/align2d.c:144) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'gauss_newton_optim_region' (batch_align2d_hls/align2d.c:102)...27 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'batch_align2D_region' (batch_align2d_hls/align2d.c:214)...315 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:06 ; elapsed = 00:02:09 . Memory (MB): peak = 1189.305 ; gain = 660.133 ; free physical = 18470 ; free virtual = 31651
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'gn_iter' (batch_align2d_hls/align2d.c:141:44) in function 'gauss_newton_optim_region' : 
 
-****** Vivado v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'batch_align2D_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-create_ip: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.379 ; gain = 42.137 ; free physical = 332 ; free virtual = 4555
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'batch_align2D_ap_fmul_0_max_dsp_32'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'batch_align2D_ap_fmul_0_max_dsp_32'...
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 20:43:42 2019...
+more than one sub loop.
+WARNING: [XFORM 203-631] Renaming function 'gauss_newton_optim_region' to 'gauss_newton_optim_r' (batch_align2d_hls/align2d.c:14:36)
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2400 on port 'my_patches' (batch_align2d_hls/align2d.c:254:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 48 on port 'my_pos' (batch_align2d_hls/align2d.c:255:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 48 on port 'my_region_fcoord' (batch_align2d_hls/align2d.c:253:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 98304 on port 'my_region_data' (batch_align2d_hls/align2d.c:252:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 48 on port 'my_pos' (batch_align2d_hls/align2d.c:299:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:08:18 ; elapsed = 00:08:22 . Memory (MB): peak = 1189.305 ; gain = 660.133 ; free physical = 18381 ; free virtual = 31572
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'batch_align2D_region' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gauss_newton_optim_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'compute_err'.
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 18, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 26, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 30, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+WARNING: [SCHED 204-68] The II Violation in module 'gauss_newton_optim_r': Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 0)
+   between 'fsub' operation ('Jres[2]', batch_align2d_hls/align2d.c:185) and 'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 32, Depth = 87.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'fsub' operation ('tmp_65') to 'fsub' operation ('tmp_110_1') (combination delay: 8.176 ns) to honor II or Latency constraint in region 'compute_err'.
+WARNING: [SCHED 204-21] Estimated clock period (7.456ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns).
+WARNING: [SCHED 204-21] The critical path in module 'gauss_newton_optim_r' consists of the following:
+	'fsub' operation ('tmp_72', batch_align2d_hls/align2d.c:185) [582]  (3.73 ns)
+	'fsub' operation ('tmp_113_1', batch_align2d_hls/align2d.c:185) [617]  (3.73 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 552.91 seconds; current allocated memory: 490.035 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 5 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 6.16 seconds; current allocated memory: 496.257 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'batch_align2D_region' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy..myRegion_data_ptr'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy..myRegion_fcoord_ptr'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy..my_ref_patch_with_border_ptr'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.batch_align2D_region.cur_px_estimate.gep3.my_cur_px_estimate_ptr'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'init_loop'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('ref_patch_with_borde_112', batch_align2d_hls/align2d.c:32->batch_align2d_hls/align2d.c:281) on array 'ref_patch_with_borde_23' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'ref_patch_with_borde_23'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 48, Depth = 240.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.my_cur_px_estimate_ptr.batch_align2D_region.cur_px_estimate.gep'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 804.3 seconds; current allocated memory: 568.854 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 142.26 seconds; current allocated memory: 634.968 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gauss_newton_optim_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_dcmp_64ns_64ns_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_dmul_64ns_64ns_64_8_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_dsub_64ns_64ns_64_8_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_faddfsub_32ns_32ns_32_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fpext_32ns_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fptrunc_64ns_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fsub_32ns_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_mux_32_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_mux_646_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_mux_94_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_sitofp_32ns_32_6_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gauss_newton_optim_r'.
+INFO: [HLS 200-111]  Elapsed time: 91.99 seconds; current allocated memory: 648.241 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'batch_align2D_region' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_region_data' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_region_fcoord' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_patches' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_pos' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_debug' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/myRegion_data_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/myRegion_fcoord_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_ref_patch_with_border_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_cur_px_estimate_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_converged' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/n_iter' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'batch_align2D_region/my_inv_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'batch_align2D_region' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_0_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_0_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_0_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_1_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_1_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_2_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_2_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_2_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_3_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_3_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_3_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_3_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_4_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_4_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_4_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_4_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_5_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_5_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_6_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_7_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_7_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_8_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_8_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_9_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_10_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_10_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_10_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_11_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_11_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_11_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_12_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_12_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_12_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_13_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_13_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_13_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_14_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_14_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_14_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_15_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_15_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_15_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_16_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_16_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_16_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_17_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_17_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_17_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_18_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_18_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_18_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_19_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_19_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_19_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_20_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_20_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_20_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_21_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_21_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_21_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_22_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_22_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_22_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pyr_region_fcoord_23_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_23_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cur_px_estimate_23_1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return', 'myRegion_data_ptr', 'myRegion_fcoord_ptr', 'my_ref_patch_with_border_ptr', 'my_cur_px_estimate_ptr' and 'my_inv_out' to AXI-Lite port ctrl.
+INFO: [RTGEN 206-100] Bundling port 'my_converged' and 'n_iter' to AXI-Lite port param.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWID' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_AWUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_WVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_WDATA' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WSTRB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_WLAST' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_WID' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_WUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_WUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARID' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_ARUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_RREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_RRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_BVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_BREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'batch_align2D_region/m_axi_my_debug_BREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_BRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_BID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'batch_align2D_region/m_axi_my_debug_BUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fadd_32ns_32ns_32_7_full_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_faddfsub_32ns_32ns_32_7_full_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fdiv_32ns_32ns_32_12_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_fmul_32ns_32ns_32_4_max_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_mux_245_8_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_mux_486_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'batch_align2D_region_sitofp_32s_32_6_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'batch_align2D_region'.
+INFO: [HLS 200-111]  Elapsed time: 130.69 seconds; current allocated memory: 714.467 MB.
+INFO: [RTMG 210-279] Implementing memory 'gauss_newton_optim_r_mask_table1_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'batch_align2D_region_pyr_region_data_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'batch_align2D_region_ref_patch_with_borde_23_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:29:44 ; elapsed = 00:30:44 . Memory (MB): peak = 1653.320 ; gain = 1124.148 ; free physical = 17869 ; free virtual = 31297
+INFO: [SYSC 207-301] Generating SystemC RTL for batch_align2D_region.
+INFO: [VHDL 208-304] Generating VHDL RTL for batch_align2D_region.
+INFO: [VLOG 209-307] Generating Verilog RTL for batch_align2D_region.
+INFO: [HLS 200-112] Total elapsed time: 1844.39 seconds; peak allocated memory: 714.467 MB.

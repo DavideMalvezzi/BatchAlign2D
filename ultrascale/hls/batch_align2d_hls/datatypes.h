@@ -1,4 +1,5 @@
-/*
+/*#include <ap_cint.h>
+ *
  * datatypes.h
  *
  *  Created on: Oct 1, 2019
@@ -8,43 +9,36 @@
 #ifndef DATATYPES_H_
 #define DATATYPES_H_
 
-#include <stdbool.h>
+//#include <stdbool.h>
 #include <inttypes.h>
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
-#include <ap_int.h>
-#include <string.h>
-#include <hls_math.h>
+#include <ap_cint.h>
 
-typedef ap_uint<1> 	flag;
-typedef ap_uint<2> 	uint2;
-typedef ap_uint<8> 	uint8;
-typedef ap_uint<16> uint16;
-typedef ap_uint<32> uint32;
 
-// Images max size
-#define MAX_IMG_W	752
-#define MAX_IMG_H	480
-#define IMG_LEN	(MAX_IMG_H * MAX_IMG_W)
-#define PYR_SIZE  (int)(MAX_IMG_H * MAX_IMG_W * (1 + 0.25f + 0.0625))
-typedef struct PyrImage{
-	uint8 data[PYR_SIZE];
-	uint16 cols;
-	uint16 rows;
-	uint16 step;
-}PyrImage;
+#define REGION_SIZE 64
+#define REGION_AREA (REGION_SIZE*REGION_SIZE)
+typedef struct PyrRegion{
+	uint8 data[REGION_SIZE*REGION_SIZE];
+	uint8 cols;
+	uint8 rows;
+	uint8 fcoord_x;
+	uint8 fcoord_y;
+}PyrRegion;
 
 // Patch size
 #define HALF_PATCH_SIZE	4
 #define PATCH_SIZE		8
 #define PATCH_AREA		64
 #define REF_STEP		(PATCH_SIZE + 2)
+
 // Patch
-typedef uint8		Patch[PATCH_SIZE * PATCH_SIZE];
 typedef uint8 		PatchBorder[REF_STEP * REF_STEP];
 
 // Vectors and matrix
+typedef uint8 	Vector2d[2];
 typedef float 	Vector2f[2];
 typedef float 	Vector3f[3];
 typedef float 	Matrix3f[9];

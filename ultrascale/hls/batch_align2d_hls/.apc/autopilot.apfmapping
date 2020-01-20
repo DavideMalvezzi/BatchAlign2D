@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="datatypes.h" path="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/datatypes.h"/>
-    <originFiles name="align2d.h" path="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/align2d.h"/>
-    <originFiles name="align2d.cpp" path="/home/davide/Desktop/svo_batch_align2d/ultrascale/hls/batch_align2d_hls/align2d.cpp"/>
+    <originFiles name="datatypes.h" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/datatypes.h"/>
+    <originFiles name="align2d.h" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/align2d.h"/>
+    <originFiles name="align2d.c" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/align2d.c"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="test.c" path="/home/dmalvezzi/batch_align2d/hls/batch_align2d_hls/solution1/test.c"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
